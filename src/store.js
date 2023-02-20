@@ -6,7 +6,12 @@ const mutations = {
     }
   },
   state = {
-    counter: 0
+    users: {
+      klarab: {
+        password: 'klarab',
+        favorites: []
+      }
+    }
   }
 
 export default createStore({ mutations, state, strict: true })
