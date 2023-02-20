@@ -355,7 +355,7 @@
     },
     "humidity": "Monstera trivs i en hög luftfuktighet, så se till att spraya växten regelbundet med vatten eller placera en luftfuktare i närheten av växten. En annan möjlighet är att ställa Monstera på en bricka med vatten.",
     "fertilization": {
-      "short": "Regelbunden",
+      "short": "Medel",
       "description": "Monstera gynnas av gödsling under växtsäsongen, som vanligtvis är mellan vår och höst. Använd en allroundgödsel för krukväxter en gång i månaden."
     },
     "pruning": "Monstera kan växa mycket stora, så beskärning kan vara nödvändigt för att hålla växten i en acceptabel storlek. Beskär försiktigt bort döda eller sjuka blad och klipp av skott som växer för långt ut från växtens stam.",
@@ -510,7 +510,7 @@
     "latin-name": "nthurium Andreanum",
     "plant-description": "Rosenkallor är vackra och populära växter som trivs i Sverige.",
     "placement": {
-      "short": "Ljus placering",
+      "short": "Ljus",
       "description": "Trivs bäst på en ljus plats, men undvik direkt solljus. Placera din rosenkalla i ett fönster som vetter mot norr eller öster. Undvik platser med drag eller temperaturförändringar."
     },
     "temperature": {
@@ -539,7 +539,7 @@
     "latin-name": "Areca palm",
     "plant-description": " En populär inomhusväxt som är relativt lättskött och trivs i ljus till halvskugga. Här är några tips för att ta hand om en gulpalm i Sverige ",
     "placement": {
-      "short": "Ljus placering",
+      "short": "Ljus",
       "description": "Gulpalmen trivs bäst i ljusa, men inte direkt solbelysta platser. Placera den gärna nära ett fönster som inte exponeras för stark sol under sommaren. På vintern kan den behöva extra belysning om det är för mörkt inomhus."
     },
     "temperature": {
