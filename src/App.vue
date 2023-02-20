@@ -1,20 +1,10 @@
 <script>
-  import CitiesList from './components/CitiesList.vue'
-  import CounterButton from './components/CounterButton.vue'
-  import HelloWorld from './components/HelloWorld.vue'
-
-  export default {
-    components: {
-      CitiesList,
-      CounterButton,
-      HelloWorld
-    }
-  }
+  export default {}
 </script>
 
 <template>
   <nav>
-    <ul>
+    <!-- <ul>
       <li>
         <RouterLink to="/">Hem</RouterLink>
       </li>
@@ -24,11 +14,11 @@
       <li>
         <RouterLink to="/contact">Kontakt</RouterLink>
       </li>
-    </ul>
+    </ul> -->
   </nav>
-  <HelloWorld msg="Hello World!" />
+  <!-- <HelloWorld msg="Hello World!" />
   <CitiesList />
-  <CounterButton />
+  <CounterButton /> -->
   <main>
     <RouterView />
   </main>
