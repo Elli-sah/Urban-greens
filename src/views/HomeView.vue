@@ -25,5 +25,6 @@
   <h1>ProduktListan</h1>
   <ul v-for="plant in result" :key="plant">
     <li>{{ plant.name }}</li>
+    <img :src="plant.image" alt="" />
   </ul>
 </template>
