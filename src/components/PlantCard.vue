@@ -11,6 +11,7 @@
 
 <template>
   <div class="plantBox">
+    <i class="bi bi-heart-fill" />
     <img alt="" :src="plant.image" />
     <p>{{ plant.name }}</p>
   </div>
