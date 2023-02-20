@@ -2,10 +2,18 @@
   import { mapState } from 'vuex'
   export default {
     data() {
-      return { userName: '', password: '', users: null, showMessage: false }
+      return {
+        userName: '',
+        password: '',
+        users: null,
+        showMessage: false,
+        logedInMessage: false,
+        logedInName: ''
+      }
     },
     created() {
       this.showMessage = false
+      this.logedInMessage = false
     },
     computed: {
       ...mapState({
@@ -19,7 +27,9 @@
           this.users[this.userName] !== undefined &&
           this.users[this.userName].password === this.password
         ) {
+          this.logedInName = this.users[this.userName].name
           console.log('hej')
+          this.logedInMessage = true
         } else {
           console.log('hejdå')
           this.showMessage = true
@@ -36,6 +46,9 @@
     <label>Lösenord<input type="password" v-model="password" /></label>
     <button type="submit">Logga in</button>
   </form>
+  <div v-if="logedInMessage">
+    <h2>Välkommen {{ logedInName }}!</h2>
+  </div>
   <div v-if="showMessage">
     <p>Du verkar inte ha något konto!</p>
   </div>

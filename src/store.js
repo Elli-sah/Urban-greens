@@ -8,22 +8,27 @@ const mutations = {
   state = {
     users: {
       klarab: {
+        name: 'Klara',
         password: 'klarab',
         favorites: []
       },
       sannaa: {
+        name: 'Sanna',
         password: 'sannaa',
         favorites: []
       },
       ellinors: {
+        name: 'Ellinor',
         password: 'ellinors',
         favorites: []
       },
       tovek: {
+        name: 'Tove',
         password: 'tovek',
         favorites: []
       },
       isabelll: {
+        name: 'Isabell',
         password: 'isabelll',
         favorites: []
       }
