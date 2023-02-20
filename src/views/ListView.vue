@@ -27,6 +27,12 @@
 
 <template>
   <h1>ProduktListan</h1>
+  <ul>
+    <li>Alla växter</li>
+    <li>Gröna växter</li>
+    <li>Blommande</li>
+    <li>Succulenter</li>
+  </ul>
   <div>
     <PlantCard v-for="plant in result" :key="plant" :plant="plant" />
   </div>
