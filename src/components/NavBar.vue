@@ -1,10 +1,6 @@
 <script></script>
 
-<style scoped>
-  .navbar {
-    width: 100%;
-  }
-</style>
+<style lang="scss"></style>
 
 <template>
   <div>

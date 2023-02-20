@@ -53,8 +53,9 @@ body {
   height: 2000px;
 }
 
-// .navbar {
-//   background-color: $bg-navcolor;
-// }
+.navbar {
+  background-color: $color-yellow;
+  width: 100%;
+}
 
 @import 'bootstrap/scss/bootstrap';
