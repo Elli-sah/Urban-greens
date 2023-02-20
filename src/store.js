@@ -86,7 +86,7 @@ const state = {
 
 const mutations = {
   addUser(state, newUser) {
-    state.users[newUser.userName] = {
+    state.users[newUser.user] = {
       name: newUser.name,
       password: newUser.password,
       favorites: []

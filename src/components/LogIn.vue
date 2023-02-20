@@ -5,7 +5,6 @@
       return {
         userName: '',
         password: '',
-        createUser: {},
         createName: '',
         createUserName: '',
         createPassword: '',
@@ -39,7 +38,13 @@
           this.showMessage = true
         }
       },
-      AtCreateAccount() {}
+      AtCreateAccount() {
+        this.$store.commit('addUser', {
+          user: this.createUserName,
+          name: this.createName,
+          password: this.createPassword
+        })
+      }
     }
   }
 </script>
