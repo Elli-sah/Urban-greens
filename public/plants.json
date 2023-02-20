@@ -61,25 +61,46 @@
     "name": "Begonia",
     "latin-name": "Begonia",
     "plant-description": "Begoniasläktet omfattar många olika arter och sorter av växter som ursprungligen kommer från subtropiska och tropiska områden runt om i världen. Begonior finns i många olika färger, former och storlekar och odlas ofta som prydnadsväxter.",
-    "placement": "Begonior trivs bäst på en ljus plats, men undvik direkt solljus. Placera din Begonia i ett fönster som vetter mot norr eller öster. Undvik platser med drag eller temperaturförändringar.",
-    "temperature": "Begonior trivs bäst vid temperaturer mellan 15 och 25 grader Celsius. Undvik höga temperaturer, särskilt över 30 grader Celsius, eftersom det kan göra att bladen torkar ut och att blomningen minskar.",
-    "watering": "Begonior behöver regelbunden vattning för att trivas. Ge dem tillräckligt med vatten så att jorden är fuktig, men undvik att övervattna eftersom det kan leda till röta i rötterna. En tumregel är att vatten när jorden känns torr på toppen.",
+    "placement": {
+      "short": "Halvskugga",
+      "description": "Begonior trivs bäst på en ljus plats, men undvik direkt solljus. Placera din Begonia i ett fönster som vetter mot norr eller öster. Undvik platser med drag eller temperaturförändringar."
+    },
+    "temperature": {
+      "short": "15-25°C",
+      "description": "Begonior trivs bäst vid temperaturer mellan 15 och 25 grader Celsius. Undvik höga temperaturer, särskilt över 30 grader Celsius, eftersom det kan göra att bladen torkar ut och att blomningen minskar."
+    },
+    "watering": {
+      "short": "",
+      "description": "Begonior behöver regelbunden vattning för att trivas. Ge dem tillräckligt med vatten så att jorden är fuktig, men undvik att övervattna eftersom det kan leda till röta i rötterna. En tumregel är att vatten när jorden känns torr på toppen."
+    },
     "humidity": "Begonior trivs i hög luftfuktighet, så att placera en skål med vatten nära växten kan hjälpa till att höja luftfuktigheten. Undvik dock att vattna direkt på bladen, eftersom det kan orsaka svampangrepp.",
-    "fertilization": "Begonior behöver regelbunden gödsling för att trivas. Du kan ge dem en liten mängd kvalitetsgödsel en gång i månaden under växtsäsongen.",
+    "fertilization": {
+      "short": "",
+      "description": "Begonior behöver regelbunden gödsling för att trivas. Du kan ge dem en liten mängd kvalitetsgödsel en gång i månaden under växtsäsongen."
+    },
     "pruning": "Begonior behöver inte beskäras, men ta bort döda eller sjuka blad för att hålla din Begonia frisk och fräsch.",
     "pests": "Begonior kan drabbas av bladlöss, spinnkvalster och mjöldagg, så det är viktigt att hålla växten ren och att ta itu med skadedjur eller sjukdomar snabbt.",
     "other": "",
     "category": "",
-    "image": ""
+    "image": "/images/begonia.png"
   },
   {
     "id": 4,
     "name": "Elefantöra",
     "latin-name": "Alocasia",
-    "description": "Elefantöra, även känd som Alocasia eller Elefantörsblad, är en växtart som tillhör familjen Araceae.",
-    "placement": "Elefantöra trivs bäst i ett ljust och indirekt ljus, men undvik direkt solljus som kan bränna bladen. Placera växten i närheten av ett fönster som får ljust men inte direkt solljus. Under vintermånaderna kan det behövas extra belysning eftersom dagsljuset är begränsat.",
-    "temperature": "Elefantöra trivs bäst i en varm och fuktig miljö, med en temperatur på mellan 18 och 25 grader Celsius. Eftersom det kan vara kallt och torrt i Sverige under vintermånaderna, kan det vara en bra idé att placera Elefantöra på en bricka med vatten för att öka luftfuktigheten runt växten. Undvik utkast från dörrar och fönster som kan sänka temperaturen.",
-    "watering": "Elefantöra trivs bäst i en fuktig jord. Vattna regelbundet så att jorden hålls fuktig men undvik att övervattna vilket kan leda till röta i rötterna. Du kan kontrollera om det är dags att vattna genom att känna på jorden och vattna när den börjar kännas torr. Under vintermånaderna kan det vara nödvändigt att minska bevattningen eftersom växten inte växer lika aktivt.",
+    "plant-description": "Elefantöra, även känd som Alocasia eller Elefantörsblad, är en växtart som tillhör familjen Araceae.",
+    "placement": {
+      "short": "Sol-Halvskugga",
+      "description": "Elefantöra trivs bäst i ett ljust och indirekt ljus, men undvik direkt solljus som kan bränna bladen. Placera växten i närheten av ett fönster som får ljust men inte direkt solljus. Under vintermånaderna kan det behövas extra belysning eftersom dagsljuset är begränsat."
+    },
+    "temperature": {
+      "short": "18-25°C",
+      "description": "Elefantöra trivs bäst i en varm och fuktig miljö, med en temperatur på mellan 18 och 25 grader Celsius. Eftersom det kan vara kallt och torrt i Sverige under vintermånaderna, kan det vara en bra idé att placera Elefantöra på en bricka med vatten för att öka luftfuktigheten runt växten. Undvik utkast från dörrar och fönster som kan sänka temperaturen."
+    },
+    "watering": {
+      "short": "Medel",
+      "description": "Elefantöra trivs bäst i en fuktig jord. Vattna regelbundet så att jorden hålls fuktig men undvik att övervattna vilket kan leda till röta i rötterna. Du kan kontrollera om det är dags att vattna genom att känna på jorden och vattna när den börjar kännas torr. Under vintermånaderna kan det vara nödvändigt att minska bevattningen eftersom växten inte växer lika aktivt."
+    },
     "humidity": "Elefantöra trivs i en hög luftfuktighet, så se till att spraya växten regelbundet med vatten eller placera en luftfuktare i närheten av växten. Under vintermånaderna, när uppvärmningen kan torka ut luften i hemmet, kan det vara nödvändigt att öka luftfuktigheten runt växten med hjälp av en luftfuktare.",
     "fertilization": "Elefantöra gynnas av gödsling under växtsäsongen, som vanligtvis är mellan vår och höst. Använd en allroundgödsel för krukväxter en gång i månaden. Under vintermånaderna kan gödsling behöva minskas eftersom Elefantöra växer långsammare under den tiden.",
     "pruning": "Elefantöra kan växa mycket stora, så beskärning kan vara nödvändigt för att hålla växten i en acceptabel storlek. Beskär försiktigt bort döda eller sjuka blad och klipp av skott som växer för långt ut från växtens stam.",
