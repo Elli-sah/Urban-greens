@@ -1,13 +1,18 @@
 import { createStore } from 'vuex'
-// import VuexPersist from 'vuex-persist'
+import VuexPersist from 'vuex-persist'
 
-// VuexPersist =
-const mutations = {
-    increment(state) {
-      state.counter += 1
-    }
-  },
-  state = {
+// const vuexLocal = new VuexPersist({
+//   storage: window.localstorage
+// })
+
+// const mutations = {
+//   increment(state) {
+//     state.counter += 1
+//   }
+// }
+
+const usersModules = {
+  state: {
     users: {
       klarab: {
         name: 'Klara',
@@ -34,7 +39,32 @@ const mutations = {
         password: 'isabelll',
         favorites: []
       }
+    },
+    loggedInUser: ''
+  },
+  mutations: {
+    addUser(state, newUser) {
+      state.users[newUser.userName] = {
+        name: newUser.name,
+        password: newUser.password,
+        favorites: []
+      }
     }
   }
+}
 
-export default createStore({ mutations, state, strict: true })
+createStore.Store({
+  modules: {
+    userObjects: usersModules
+  },
+  plugins: [
+    new VuexPersist({
+      modules: {
+        userObjects: {
+          path: ['users']
+        }
+      }
+    })
+  ]
+})
+// export default createStore({ mutations, plugins, state, strict: true })
