@@ -10,6 +10,22 @@ const mutations = {
       klarab: {
         password: 'klarab',
         favorites: []
+      },
+      sannaa: {
+        password: 'sannaa',
+        favorites: []
+      },
+      ellinors: {
+        password: 'ellinors',
+        favorites: []
+      },
+      tovek: {
+        password: 'tovek',
+        favorites: []
+      },
+      isabelll: {
+        password: 'isabelll',
+        favorites: []
       }
     }
   }
