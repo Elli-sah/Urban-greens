@@ -1,5 +1,7 @@
 import { createStore } from 'vuex'
+// import VuexPersist from 'vuex-persist'
 
+// VuexPersist =
 const mutations = {
     increment(state) {
       state.counter += 1
