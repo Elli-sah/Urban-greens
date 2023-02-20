@@ -13,6 +13,7 @@
   <CitiesList />
   <CounterButton /> -->
   <main>
+    <NavBar />
     <RouterView />
   </main>
 </template>
