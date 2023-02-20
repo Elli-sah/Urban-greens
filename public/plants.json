@@ -337,12 +337,24 @@
     "id": 5,
     "name": "Rosenkalla",
     "latin-name": "nthurium Andreanum",
-    "description": "Rosenkallor är vackra och populära växter som trivs i Sverige.",
-    "placement": "Trivs bäst på en ljus plats, men undvik direkt solljus. Placera din rosenkalla i ett fönster som vetter mot norr eller öster. Undvik platser med drag eller temperaturförändringar.",
-    "temperature": "Rosenkalla trivs bäst vid temperaturer mellan 15 och 25 grader Celsius. Undvik höga temperaturer, särskilt över 30 grader Celsius, eftersom det kan göra att bladen torkar ut och att blomningen minskar. ",
-    "watering": "Behöver regelbunden vattning för att trivas. Ge dem tillräckligt med vatten så att jorden är fuktig, men undvik att övervattna eftersom det kan leda till röta i rötterna. En tumregel är att vatten när jorden känns torr på toppen.",
+    "plant-description": "Rosenkallor är vackra och populära växter som trivs i Sverige.",
+    "placement": {
+      "short": "Ljus placering",
+      "description": "Trivs bäst på en ljus plats, men undvik direkt solljus. Placera din rosenkalla i ett fönster som vetter mot norr eller öster. Undvik platser med drag eller temperaturförändringar."
+    },
+    "temperature": {
+      "short": "15-25°C",
+      "description": "Rosenkalla trivs bäst vid temperaturer mellan 15 och 25 grader Celsius. Undvik höga temperaturer, särskilt över 30 grader Celsius, eftersom det kan göra att bladen torkar ut och att blomningen minskar."
+    },
+    "watering": {
+      "short": "Regelbunden",
+      "description": "Behöver regelbunden vattning för att trivas. Ge dem tillräckligt med vatten så att jorden är fuktig, men undvik att övervattna eftersom det kan leda till röta i rötterna. En tumregel är att vatten när jorden känns torr på toppen."
+    },
     "humidity": "Rosenkalla trivs i hög luftfuktighet, så att placera en skål med vatten nära växten kan hjälpa till att höja luftfuktigheten. Undvik dock att vattna direkt på bladen, eftersom det kan orsaka svampangrepp.",
-    "fertilization": "Rosenkalla behöver regelbunden gödsling för att trivas. Du kan ge dem en liten mängd kvalitetsgödsel en gång i månaden under växtsäsongen.",
+    "fertilization": {
+      "short": "Regelbunden",
+      "description": "Rosenkalla behöver regelbunden gödsling för att trivas. Du kan ge dem en liten mängd kvalitetsgödsel en gång i månaden under växtsäsongen."
+    },
     "pruning": "Rosenkalla behöver inte beskäras, men ta bort döda eller sjuka blad för att hålla din rosenkalla frisk och fräsch.",
     "pests": "Rosenkalla kan drabbas av bladlöss, spinnkvalster och mjöldagg, så det är viktigt att hålla växten ren och att ta itu med skadedjur eller sjukdomar snabbt.",
     "other": "",
@@ -350,6 +362,35 @@
     "image": ""
   },
 
+  {
+    "id": 5,
+    "name": "Guldpalm",
+    "latin-name": "Areca palm",
+    "plant-description": " En populär inomhusväxt som är relativt lättskött och trivs i ljus till halvskugga. Här är några tips för att ta hand om en gulpalm i Sverige ",
+    "placement": {
+      "short": "Ljus placering",
+      "description": "Gulpalmen trivs bäst i ljusa, men inte direkt solbelysta platser. Placera den gärna nära ett fönster som inte exponeras för stark sol under sommaren. På vintern kan den behöva extra belysning om det är för mörkt inomhus."
+    },
+    "temperature": {
+      "short": "18-24°C",
+      "description": "Trivs i normal rumstemperatur, 18–24°C"
+    },
+
+    "watering": {
+      "short": "Regelbundet",
+      "description": "Vattna din gulpalm 1-2 ggr/vecka och se till att jorden alltid är fuktig men inte blöt. Under sommaren kan det behövas att vattna den oftare, medan på vintern kan du minska på vattningen. Se till att inte vattna för mycket, då det kan leda till rötterna ruttnar."
+    },
+    "humidity": "Gulpalmen trivs i hög luftfuktighet. Placera en vattenskål bredvid plantan eller använd en luftfuktare för att öka fuktigheten.",
+    "fertilization": {
+      "short": "Regelbundet",
+      "description": "Gulpalmen behöver gödslas regelbundet under växtsäsongen (vår och sommar) med en gödsel speciellt avsedd för inomhusväxter. Följ anvisningarna på gödselmedlet noggrant."
+    },
+    "pruning": "Gulpalmen behöver inte beskäras ofta, men om den blir för hög kan du beskära toppen av plantan för att få den att växa mer buskigt.",
+    "pests": "Gulpalmen kan drabbas av skadedjur som spinnkvalster och bladlöss. Se till att ta bort skadedjur manuellt och använd gärna en mild insektsbekämpning om det behövs.",
+    "other": "",
+    "category": "",
+    "image": ""
+  },
   {
     "id": 5,
     "name": "",
