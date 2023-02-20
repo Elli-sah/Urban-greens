@@ -1,5 +1,5 @@
 import { createStore } from 'vuex'
-import VuexPersist from 'vuex-persist'
+// import VuexPersist from 'vuex-persist'
 
 // const vuexLocal = new VuexPersist({
 //   storage: window.localstorage
@@ -11,60 +11,101 @@ import VuexPersist from 'vuex-persist'
 //   }
 // }
 
-const usersModules = {
-  state: {
-    users: {
-      klarab: {
-        name: 'Klara',
-        password: 'klarab',
-        favorites: []
-      },
-      sannaa: {
-        name: 'Sanna',
-        password: 'sannaa',
-        favorites: []
-      },
-      ellinors: {
-        name: 'Ellinor',
-        password: 'ellinors',
-        favorites: []
-      },
-      tovek: {
-        name: 'Tove',
-        password: 'tovek',
-        favorites: []
-      },
-      isabelll: {
-        name: 'Isabell',
-        password: 'isabelll',
-        favorites: []
-      }
+// const usersModules = {
+//   state: {
+//     users: {
+//       klarab: {
+//         name: 'Klara',
+//         password: 'klarab',
+//         favorites: []
+//       },
+//       sannaa: {
+//         name: 'Sanna',
+//         password: 'sannaa',
+//         favorites: []
+//       },
+//       ellinors: {
+//         name: 'Ellinor',
+//         password: 'ellinors',
+//         favorites: []
+//       },
+//       tovek: {
+//         name: 'Tove',
+//         password: 'tovek',
+//         favorites: []
+//       },
+//       isabelll: {
+//         name: 'Isabell',
+//         password: 'isabelll',
+//         favorites: []
+//       }
+//     },
+//     loggedInUser: ''
+//   },
+//   mutations: {
+//     addUser(state, newUser) {
+//       state.users[newUser.userName] = {
+//         name: newUser.name,
+//         password: newUser.password,
+//         favorites: []
+//       }
+//     }
+//   }
+// }
+
+const state = {
+  users: {
+    klarab: {
+      name: 'Klara',
+      password: 'klarab',
+      favorites: []
     },
-    loggedInUser: ''
+    sannaa: {
+      name: 'Sanna',
+      password: 'sannaa',
+      favorites: []
+    },
+    ellinors: {
+      name: 'Ellinor',
+      password: 'ellinors',
+      favorites: []
+    },
+    tovek: {
+      name: 'Tove',
+      password: 'tovek',
+      favorites: []
+    },
+    isabelll: {
+      name: 'Isabell',
+      password: 'isabelll',
+      favorites: []
+    }
   },
-  mutations: {
-    addUser(state, newUser) {
-      state.users[newUser.userName] = {
-        name: newUser.name,
-        password: newUser.password,
-        favorites: []
-      }
+  loggedInUser: ''
+}
+
+const mutations = {
+  addUser(state, newUser) {
+    state.users[newUser.userName] = {
+      name: newUser.name,
+      password: newUser.password,
+      favorites: []
     }
   }
 }
 
-createStore.Store({
-  modules: {
-    userObjects: usersModules
-  },
-  plugins: [
-    new VuexPersist({
-      modules: {
-        userObjects: {
-          path: ['users']
-        }
-      }
-    })
-  ]
-})
-// export default createStore({ mutations, plugins, state, strict: true })
+// createStore.Store({
+//   modules: {
+//     userObjects: usersModules
+//   },
+//   plugins: [
+//     new VuexPersist({
+//       modules: {
+//         userObjects: {
+//           path: ['users']
+//         }
+//       }
+//     })
+//   ]
+// })
+export default createStore({ mutations, state, strict: true })
