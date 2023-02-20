@@ -1,9 +1,11 @@
 <script></script>
 
 <template>
+  <h1>Logga in</h1>
   <form>
-    <input :v-model="userName" />
-    <input type="password" :v-model="password" />
+    <label>Användarnamn <input :v-model="userName" /></label>
+    <label>Lösenord<input type="password" :v-model="password" /></label>
+    <button type="submit">Logga in</button>
   </form>
 </template>
 
