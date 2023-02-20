@@ -5,6 +5,7 @@
       return {
         userName: '',
         password: '',
+        createUser: {},
         createName: '',
         createUserName: '',
         createPassword: '',
@@ -37,7 +38,8 @@
           console.log('hejdå')
           this.showMessage = true
         }
-      }
+      },
+      AtCreateAccount() {}
     }
   }
 </script>
