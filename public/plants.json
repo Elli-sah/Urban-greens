@@ -3,12 +3,25 @@
     "id": 1,
     "name": "Aloe vera",
     "latin-name": "Aloe barbadensis",
-    "description": "Aloe vera är en växt som ursprungligen kommer från torra områden i Afrika, men som också kan trivas inomhus i Sverige om den sköts på rätt sätt.",
-    "placement": "Aloe vera trivs på en ljus plats med direkt solljus, men den kan också tåla att stå i lätt skugga. Placera den inte i direkt solljus under sommarmånaderna när solen är som starkast då det kan skada bladen.",
-    "temperature": "Trivs i en temperatur mellan 15-25°C och tål inte temperaturer under 5°C. Placera den på en plats som inte utsätts för drag eller kalla temperaturer.",
-    "watering": "Aloe Vera är en tålig växt som kan klara sig utan vatten under långa perioder. Vattna sparsamt och se till att jorden torkar ut helt mellan vattningarna. För mycket vatten kan leda till röta i rötterna.",
+    "plant-description": "Aloe vera är en växt som ursprungligen kommer från torra områden i Afrika, men som också kan trivas inomhus i Sverige om den sköts på rätt sätt.",
+    "placement": {
+      "short": "Sol till lätt skugga",
+      "description": "Aloe vera trivs på en ljus plats med direkt solljus, men den kan också tåla att stå i lätt skugga. Placera den inte i direkt solljus under sommarmånaderna när solen är som starkast då det kan skada bladen."
+    },
+    "temperature": {
+      "short": "15-25°C",
+      "description": "Trivs i en temperatur mellan 15-25°C och tål inte temperaturer under 5°C. Placera den på en plats som inte utsätts för drag eller kalla temperaturer."
+    },
+    "watering": {
+      "short": "Sparamt",
+      "description": "Aloe Vera är en tålig växt som kan klara sig utan vatten under långa perioder. Vattna sparsamt och se till att jorden torkar ut helt mellan vattningarna. För mycket vatten kan leda till röta i rötterna."
+    },
+
     "humidity": "Trivs i torra förhållanden och behöver inte hög luftfuktighet.",
-    "fertilization": "Aloe Vera behöver inte mycket gödsel, men kan gynnas av en liten mängd kaktusgödsel eller annan näring under växtsäsongen (vår-sommar). Aloe vera trivs i en väldränerad jord med hög sandhalt. Använd en kaktusjord eller en annan jordblandning som är speciellt anpassad för växter som trivs i torra förhållanden.",
+    "fertilization": {
+      "short": "Sparsamt",
+      "description": "Aloe Vera behöver inte mycket gödsel, men kan gynnas av en liten mängd kaktusgödsel eller annan näring under växtsäsongen (vår-sommar). Aloe vera trivs i en väldränerad jord med hög sandhalt. Använd en kaktusjord eller en annan jordblandning som är speciellt anpassad för växter som trivs i torra förhållanden."
+    },
     "pruning": "Ta bort eventuella torra eller döda blad regelbundet och beskär inte mer än nödvändigt. Använd en ren och skarp sekatör för att undvika att skada växten.",
     "pests": "Aloe Vera är en relativt tålig växt, men kan drabbas av skadedjur som spinnkvalster eller mjöllöss. Inspektera växten regelbundet och använd ett lämpligt insektsmedel för att bekämpa skadedjur.",
     "other": "",
@@ -19,12 +32,24 @@
     "id": 2,
     "name": "Ampellilja",
     "latin-name": "Chlorophytum",
-    "description": "Ampelliljan är en vacker och tacksam växt som är vanlig att ha hängande i kruka eller ampel.",
-    "placement": "mpelliljan trivs bäst i en ljus plats utan direkt solljus. Undvik att placera den i för dragiga platser då den kan torka ut för snabbt.",
-    "temperature": "Ampellilja trivs bäst vid en jämn temperatur mellan 15-25°C. Den tål dock temperaturer ner till 10°C och upp till 30°C, men om temperaturen är för hög eller låg under längre perioder kan det påverka växtens hälsa och tillväxt negativt. Det är också viktigt att undvika kalla dragiga platser och att inte placera ampelliljan i direkt solljus, vilket kan göra att bladen bränns och torkar ut.",
-    "watering": "Ampelliljan behöver regelbunden bevattning, men se upp så att den inte övervattnas. Det kan vara en bra idé att vattna i ett fat och låta växten suga upp vattnet under en stund, istället för att vattna direkt i krukan. Se till att inte vattna för sällan då detta kan torka ut växten.",
+    "plant-description": "Ampelliljan är en vacker och tacksam växt som är vanlig att ha hängande i kruka eller ampel.",
+    "placement": {
+      "short": "Halvskugga",
+      "description": "Ampelliljan trivs bäst i en ljus plats utan direkt solljus. Undvik att placera den i för dragiga platser då den kan torka ut för snabbt."
+    },
+    "temperature": {
+      "short": "15-25°C",
+      "description": "Ampellilja trivs bäst vid en jämn temperatur mellan 15-25°C. Den tål dock temperaturer ner till 10°C och upp till 30°C, men om temperaturen är för hög eller låg under längre perioder kan det påverka växtens hälsa och tillväxt negativt. Det är också viktigt att undvika kalla dragiga platser och att inte placera ampelliljan i direkt solljus, vilket kan göra att bladen bränns och torkar ut."
+    },
+    "watering": {
+      "short": "Lite",
+      "description": "Ampelliljan behöver regelbunden bevattning, men se upp så att den inte övervattnas. Det kan vara en bra idé att vattna i ett fat och låta växten suga upp vattnet under en stund, istället för att vattna direkt i krukan. Se till att inte vattna för sällan då detta kan torka ut växten."
+    },
     "humidity": "Ampelliljan trivs i hög luftfuktighet, så om den placeras i ett rum med låg luftfuktighet kan det vara bra att spraya den med vatten eller placera den bredvid andra växter för att öka luftfuktigheten.",
-    "fertilization": "Ampelliljan behöver regelbunden gödsling för att blomma rikligt. Använd en lämplig växtnäring för inomhusväxter och följ doseringsanvisningarna på förpackningen.",
+    "fertilization": {
+      "short": "Medel",
+      "description": "Ampelliljan behöver regelbunden gödsling för att blomma rikligt. Använd en lämplig växtnäring för inomhusväxter och följ doseringsanvisningarna på förpackningen."
+    },
     "pruning": "Ampelliljan behöver inte beskäras i samma utsträckning som andra växter, men det kan vara bra att ta bort vissna blommor och skadade blad när de upptäcks.",
     "pests": "Ampelliljan kan drabbas av skadedjur och sjukdomar, särskilt om den står för fuktigt eller om den utsätts för stress. Se upp för tecken på bladlöss, spinnkvalster eller trips. Om du upptäcker något av detta kan du använda ett insektsmedel som är lämpligt för ampelliljor.",
     "other": "",
@@ -35,7 +60,7 @@
     "id": 3,
     "name": "Begonia",
     "latin-name": "Begonia",
-    "description": "Begoniasläktet omfattar många olika arter och sorter av växter som ursprungligen kommer från subtropiska och tropiska områden runt om i världen. Begonior finns i många olika färger, former och storlekar och odlas ofta som prydnadsväxter.",
+    "plant-description": "Begoniasläktet omfattar många olika arter och sorter av växter som ursprungligen kommer från subtropiska och tropiska områden runt om i världen. Begonior finns i många olika färger, former och storlekar och odlas ofta som prydnadsväxter.",
     "placement": "Begonior trivs bäst på en ljus plats, men undvik direkt solljus. Placera din Begonia i ett fönster som vetter mot norr eller öster. Undvik platser med drag eller temperaturförändringar.",
     "temperature": "Begonior trivs bäst vid temperaturer mellan 15 och 25 grader Celsius. Undvik höga temperaturer, särskilt över 30 grader Celsius, eftersom det kan göra att bladen torkar ut och att blomningen minskar.",
     "watering": "Begonior behöver regelbunden vattning för att trivas. Ge dem tillräckligt med vatten så att jorden är fuktig, men undvik att övervattna eftersom det kan leda till röta i rötterna. En tumregel är att vatten när jorden känns torr på toppen.",
@@ -75,6 +100,22 @@
     "fertilization": "Fiolfikusen behöver gödslas regelbundet under växtsäsongen, vanligtvis från vår till höst. Använd lämpligt gödsel för inomhusväxter och följ doseringsanvisningarna på förpackningen.",
     "pruning": "Fiolfikusen kan behöva beskäras för att hålla den i en bra form och för att ta bort skadade eller sjuka grenar. Beskärning kan också hjälpa till att hålla storleken på växten i schack.",
     "pests": "Fiolfikusen kan drabbas av skadedjur, till exempel spinnkvalster och sköldlöss. Om du märker tecken på skadedjur eller sjukdomar kan du behandla dem med ett lämpligt bekämpningsmedel.",
+    "other": "",
+    "category": "",
+    "image": ""
+  },
+  {
+    "id": 5,
+    "name": "Guldpalm",
+    "latin-name": "Areca palm",
+    "description": " En populär inomhusväxt som är relativt lättskött och trivs i ljus till halvskugga. Här är några tips för att ta hand om en gulpalm i Sverige ",
+    "placement": "Gulpalmen trivs bäst i ljusa, men inte direkt solbelysta platser. Placera den gärna nära ett fönster som inte exponeras för stark sol under sommaren. På vintern kan den behöva extra belysning om det är för mörkt inomhus.",
+    "temperature": "Trivs i normal rumstemperatur, 18–24°C",
+    "watering": "Vattna din gulpalm regelbundet och se till att jorden alltid är fuktig men inte blöt. Under sommaren kan det behövas att vattna den oftare, medan på vintern kan du minska på vattningen. Se till att inte vattna för mycket, då det kan leda till rötterna ruttnar.",
+    "humidity": "Gulpalmen trivs i hög luftfuktighet. Placera en vattenskål bredvid plantan eller använd en luftfuktare för att öka fuktigheten.",
+    "fertilization": "Gulpalmen behöver gödslas regelbundet under växtsäsongen (vår och sommar) med en gödsel speciellt avsedd för inomhusväxter. Följ anvisningarna på gödselmedlet noggrant.",
+    "pruning": "Gulpalmen behöver inte beskäras ofta, men om den blir för hög kan du beskära toppen av plantan för att få den att växa mer buskigt.",
+    "pests": "Gulpalmen kan drabbas av skadedjur som spinnkvalster och bladlöss. Se till att ta bort skadedjur manuellt och använd gärna en mild insektsbekämpning om det behövs.",
     "other": "",
     "category": "",
     "image": ""
@@ -275,7 +316,7 @@
     "id": 5,
     "name": "Rosenkalla",
     "latin-name": "nthurium Andreanum",
-    "description": "Rosenkallor är vackra och populära växter som trivs i Sverige.",
+    "plant-description": "Rosenkallor är vackra och populära växter som trivs i Sverige.",
     "placement": {
       "short": "Ljus placering",
       "description": "Trivs bäst på en ljus plats, men undvik direkt solljus. Placera din rosenkalla i ett fönster som vetter mot norr eller öster. Undvik platser med drag eller temperaturförändringar."
@@ -299,11 +340,12 @@
     "category": "",
     "image": ""
   },
+
   {
     "id": 5,
     "name": "Guldpalm",
     "latin-name": "Areca palm",
-    "description": " En populär inomhusväxt som är relativt lättskött och trivs i ljus till halvskugga. Här är några tips för att ta hand om en gulpalm i Sverige ",
+    "plant-description": " En populär inomhusväxt som är relativt lättskött och trivs i ljus till halvskugga. Här är några tips för att ta hand om en gulpalm i Sverige ",
     "placement": {
       "short": "Ljus placering",
       "description": "Gulpalmen trivs bäst i ljusa, men inte direkt solbelysta platser. Placera den gärna nära ett fönster som inte exponeras för stark sol under sommaren. På vintern kan den behöva extra belysning om det är för mörkt inomhus."
