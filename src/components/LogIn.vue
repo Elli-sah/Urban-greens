@@ -5,6 +5,9 @@
       return {
         userName: '',
         password: '',
+        createName: '',
+        createUserName: '',
+        createPassword: '',
         users: null,
         showMessage: false,
         logedInMessage: false,
@@ -34,6 +37,13 @@
           console.log('hejdå')
           this.showMessage = true
         }
+      },
+      AtCreateAccount() {
+        this.$store.commit('addUser', {
+          user: this.createUserName,
+          name: this.createName,
+          password: this.createPassword
+        })
       }
     }
   }
@@ -52,6 +62,13 @@
   <div v-if="showMessage">
     <p>Du verkar inte ha något konto!</p>
   </div>
+  <h1>Skapa konto</h1>
+  <form @submit.prevent="AtCreateAccount">
+    <label>Namn <input v-model="createName" /></label>
+    <label>Användarnamn <input v-model="createUserName" /></label>
+    <label>Lösenord<input type="password" v-model="createPassword" /></label>
+    <button type="submit">Skapa konto</button>
+  </form>
 </template>
 
 <style></style>
