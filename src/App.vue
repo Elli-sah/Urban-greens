@@ -4,17 +4,17 @@
 
 <template>
   <nav>
-    <!-- <ul>
+    <ul>
       <li>
         <RouterLink to="/">Hem</RouterLink>
       </li>
       <li>
-        <RouterLink to="/about">Om</RouterLink>
+        <RouterLink to="/login">Logga in</RouterLink>
       </li>
       <li>
-        <RouterLink to="/contact">Kontakt</RouterLink>
+        <RouterLink to="/plantlist/all">Växtguide</RouterLink>
       </li>
-    </ul> -->
+    </ul>
   </nav>
   <!-- <HelloWorld msg="Hello World!" />
   <CitiesList />
