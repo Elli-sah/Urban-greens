@@ -5,13 +5,25 @@
     components: {
       PlantCard
     },
+
+    computed: {
+      filterdPlants() {
+        if (this.category === 'all') {
+          return this.result
+        } else {
+          return this.result.filter((plant) => plant.category === this.category)
+        }
+      }
+    },
+
     created() {
       this.axiosGetPlants()
     },
 
     data() {
       return {
-        result: ''
+        result: '',
+        category: 'all'
       }
     },
 
@@ -28,17 +40,21 @@
 <template>
   <h1>ProduktListan</h1>
   <ul>
-    <li>Alla växter</li>
-    <li>Gröna växter</li>
-    <li>Blommande</li>
-    <li>Succulenter</li>
+    <li @click="category = 'all'">Alla växter</li>
+    <li @click="category = 'Gröna växter'">Gröna växter</li>
+    <li @click="category = 'Blommande'">Blommande</li>
+    <li @click="category = 'Suckulent'">Suckulenter</li>
   </ul>
   <div>
-    <PlantCard v-for="plant in result" :key="plant" :plant="plant" />
+    <PlantCard
+      v-for="plant in filterdPlants"
+      :key="plant.name"
+      :plant="plant"
+    />
   </div>
 </template>
 
-<style>
+<style scoped>
   div {
     display: flex;
     flex-wrap: wrap;
@@ -46,5 +62,8 @@
     gap: 10px;
     width: 100%;
     justify-content: center;
+  }
+  li {
+    cursor: pointer;
   }
 </style>

@@ -141,34 +141,6 @@
     "image": "/images/fiolfikus.png"
   },
   {
-    "id": 5,
-    "name": "Guldpalm",
-    "latin": "Areca palm",
-    "description": " En populär inomhusväxt som är relativt lättskött och trivs i ljus till halvskugga. Här är några tips för att ta hand om en gulpalm i Sverige ",
-    "placement": {
-      "short": "Halvskugga",
-      "description": "Gulpalmen trivs bäst i ljusa, men inte direkt solbelysta platser. Placera den gärna nära ett fönster som inte exponeras för stark sol under sommaren. På vintern kan den behöva extra belysning om det är för mörkt inomhus."
-    },
-    "temperature": {
-      "short": "18–24°C",
-      "description": "Trivs i normal rumstemperatur, 18–24°C"
-    },
-    "watering": {
-      "short": "Medel",
-      "description": "Vattna din gulpalm regelbundet och se till att jorden alltid är fuktig men inte blöt. Under sommaren kan det behövas att vattna den oftare, medan på vintern kan du minska på vattningen. Se till att inte vattna för mycket, då det kan leda till rötterna ruttnar."
-    },
-    "humidity": "Gulpalmen trivs i hög luftfuktighet. Placera en vattenskål bredvid plantan eller använd en luftfuktare för att öka fuktigheten.",
-    "fertilization": {
-      "short": "Medel",
-      "description": "Gulpalmen behöver gödslas regelbundet under växtsäsongen (vår och sommar) med en gödsel speciellt avsedd för inomhusväxter. Följ anvisningarna på gödselmedlet noggrant."
-    },
-    "pruning": "Gulpalmen behöver inte beskäras ofta, men om den blir för hög kan du beskära toppen av plantan för att få den att växa mer buskigt.",
-    "pests": "Gulpalmen kan drabbas av skadedjur som spinnkvalster och bladlöss. Se till att ta bort skadedjur manuellt och använd gärna en mild insektsbekämpning om det behövs.",
-    "other": "",
-    "category": "Gröna växter",
-    "image": "/images/guldpalm.png"
-  },
-  {
     "id": 6,
     "name": "Zamiakalla",
     "latin": "Zamioculcas zamiifolia",
