@@ -1,19 +1,19 @@
 <script>
   import NavBar from './components/NavBar.vue'
+  import MyFooter from './components/MyFooter.vue'
 
   export default {
     components: {
-      NavBar
+      NavBar,
+      MyFooter
     }
   }
 </script>
 
 <template>
-  <!-- <HelloWorld msg="Hello World!" />
-  <CitiesList />
-  <CounterButton /> -->
+  <NavBar />
   <main>
-    <NavBar />
     <RouterView />
   </main>
+  <MyFooter />
 </template>
