@@ -310,34 +310,6 @@
   },
   {
     "id": 5,
-    "name": "Kanariepalm",
-    "latin": "Phoenix canariensis",
-    "description": "Kanariepalmen är en palm som härstammar från Kanarieöarna och Madeira, men som också kan trivas inomhus i Sverige om den sköts på rätt sätt.",
-    "placement": {
-      "short": "Sol-Halvskugga",
-      "description": "Kanariepalmen trivs på en ljus plats med indirekt solsken, men den kan också tåla att stå i skugga. Placera inte palmen i direkt solljus då det kan skada bladen."
-    },
-    "temperature": {
-      "short": "18-25°C",
-      "description": "Kanariepalmen trivs i en temperatur mellan 18-25°C och tål inte temperaturer under 5°C. Placera den på en plats som inte utsätts för drag eller kalla temperaturer."
-    },
-    "watering": {
-      "short": "Medel",
-      "description": "Vattna palmen regelbundet och se till att jorden håller sig jämnt fuktig, men undvik övervattning som kan leda till röta i rötterna. Låt jorden torka ut något mellan vattningarna."
-    },
-    "humidity": "Kanariepalmen trivs i hög luftfuktighet så spraya gärna bladen regelbundet med vatten eller placera en skål med vatten bredvid palmen.",
-    "fertilization": {
-      "short": "Sparsamt",
-      "description": "Gödsla kanariepalmen regelbundet under växtsäsongen (vår-sommar) med en palmgödsel eller en allroundgödsel som innehåller extra kalium och magnesium."
-    },
-    "pruning": "Ta bort eventuella torra eller döda blad regelbundet och beskär inte mer än nödvändigt.",
-    "pests": "Kanariepalmen kan drabbas av skadedjur som spinnkvalster, mjöllöss eller trips. Inspektera plantan regelbundet och använd ett lämpligt insektsmedel för att bekämpa skadedjur.",
-    "other": "",
-    "category": "",
-    "image": ""
-  },
-  {
-    "id": 5,
     "name": "Monstera",
     "latin": "Monstera deliciosa",
     "description": "Monstera är en relativt lättodlad växt som är lämplig för odling inomhus i Sverige.",
@@ -536,7 +508,7 @@
   {
     "id": 5,
     "name": "Guldpalm",
-    "latin": "Areca palm",
+    "latin": "Dypsis lutescens",
     "description": " En populär inomhusväxt som är relativt lättskött och trivs i ljus till halvskugga. Här är några tips för att ta hand om en gulpalm i Sverige ",
     "placement": {
       "short": "Ljus",
@@ -560,7 +532,7 @@
     "pests": "Gulpalmen kan drabbas av skadedjur som spinnkvalster och bladlöss. Se till att ta bort skadedjur manuellt och använd gärna en mild insektsbekämpning om det behövs.",
     "other": "",
     "category": "",
-    "image": ""
+    "image": "/images/guldpalm.png"
   },
   {
     "id": 5,
