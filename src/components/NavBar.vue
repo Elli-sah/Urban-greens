@@ -3,8 +3,6 @@
 <style>
   .navbar {
     background-color: #e8cac3;
-    display: flex;
-    align-items: self-end;
   }
 </style>
 
@@ -15,7 +13,7 @@
         <h1 class="p-2">Brand Name</h1>
         <b-navbar-toggle target="nav-collapse" class="p-2" />
       </div>
-      <div d-flex flex-column>
+      <div>
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav>
             <b-nav-form>
