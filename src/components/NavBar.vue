@@ -5,7 +5,7 @@
 <template>
   <div>
     <b-navbar toggleable="lg" fixed="top">
-      <div class="d-flex justify-content-end navbar">
+      <div class="d-flex justify-content-between navbar">
         <h1 class="p-2">Brand Name</h1>
         <b-navbar-toggle target="nav-collapse" class="p-2" />
       </div>
