@@ -1,1 +1,13 @@
-<template><h1>Om</h1></template>
+<script>
+  import MyShelf from '../components/MyShelf.vue'
+
+  export default {
+    components: {
+      MyShelf
+    }
+  }
+</script>
+
+<template><MyShelf /></template>
+
+<style></style>
