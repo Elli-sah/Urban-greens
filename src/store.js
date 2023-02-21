@@ -94,7 +94,7 @@ const mutations = {
     }
   },
   addPlant(state, newPlant) {
-    state.users[newPlant.user].favorites.push(newPlant.plant)
+    state.users[newPlant.user].favorites.push(newPlant.addplant)
   }
 }
 
