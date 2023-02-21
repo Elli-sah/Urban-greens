@@ -7,14 +7,25 @@
         type: Object,
         default: () => ({})
       }
+    },
+    data() {
+      return {}
+    },
+    methods: {
+      addPlant() {
+        this.$store.dispatch('addPlant', {
+          user: 'sannaa',
+          addplant: this.plant
+        })
+      }
+      // components: { RouterLink }
     }
-    // components: { RouterLink }
   }
 </script>
 
 <template>
   <RouterLink :to="`/plant/${plant.name}`" class="plantBox">
-    <i class="bi bi-heart-fill" />
+    <i @click="addPlant" class="bi bi-heart-fill" />
     <img alt="" :src="plant.image" />
     <p>{{ plant.name }}</p>
   </RouterLink>
