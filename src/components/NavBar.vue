@@ -2,6 +2,7 @@
   // import { Vue } from 'vue'
   // import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
   import PlantSearch from './PlantSearch.vue'
+  import { mapState } from 'vuex'
 
   // Vue.use(BootstrapVue)
   // Vue.use(IconsPlugin)
@@ -9,6 +10,11 @@
   export default {
     components: {
       PlantSearch
+    },
+    computed: {
+      ...mapState({
+        loggedInUser: (state) => state.loggedInUser
+      })
     }
   }
 </script>
@@ -45,8 +51,11 @@
 
               <b-container>
                 <b-row align="right">
-                  <b-link class="nav-link" to="/login">Logga in</b-link>
                   <b-link class="nav-link" to="/">Hem</b-link>
+                  <b-link class="nav-link" to="/login">Logga in</b-link>
+                  <b-link class="nav-link" :to="`/profile/${loggedInUser.user}`"
+                    >Min fönsterbräda</b-link
+                  >
                   <b-link class="nav-link" to="/plantlist/all"
                     >Växtguide</b-link
                   >
