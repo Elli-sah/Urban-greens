@@ -31,12 +31,7 @@
           <b-collapse id="nav-collapse" is-nav>
             <b-navbar-nav>
               <b-nav-form>
-                <b-form-input
-                  v-model="message"
-                  size="sm"
-                  class="mr-sm-2"
-                  placeholder="Sök..."
-                />
+                <b-form-input size="sm" class="mr-sm-2" placeholder="Sök..." />
 
                 <b-button variant="" size="m" class="my-2 my-sm-0" type="submit"
                   >Sök

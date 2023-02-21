@@ -13,6 +13,13 @@
         } else {
           return this.result.filter((plant) => plant.category === this.category)
         }
+      },
+      filterdPlantsName() {
+        if (this.name === 'all') {
+          return this.result
+        } else {
+          return this.result.filter((plant) => plant.name === this.name)
+        }
       }
     },
 
@@ -24,7 +31,8 @@
       return {
         result: '',
         category: 'all',
-        message: ''
+        message: '',
+        name: 'all'
       }
     },
 
@@ -34,12 +42,21 @@
           this.result = response.data
         })
       }
+    },
+
+    watch: {
+      message(newValue) {
+        console.log(newValue)
+        this.name = newValue
+      }
     }
   }
 </script>
 
 <template>
   <h1>ProduktListan</h1>
+  <input type="text" v-model="message" />
+  <button @click="submit">Sök</button>
   <ul>
     <li @click="category = 'all'">Alla växter</li>
     <li @click="category = 'Gröna växter'">Gröna växter</li>
