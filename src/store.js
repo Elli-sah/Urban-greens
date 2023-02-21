@@ -81,36 +81,7 @@ const state = {
       favorites: []
     }
   },
-<<<<<<< HEAD
-  state = {
-    users: {
-      klarab: {
-        name: 'Klara',
-        password: 'klarab',
-        favorites: []
-      },
-      sannaa: {
-        name: 'Sanna',
-        password: 'sannaa',
-        favorites: []
-      },
-      ellinors: {
-        name: 'Ellinor',
-        password: 'ellinors',
-        favorites: []
-      },
-      tovek: {
-        name: 'Tove',
-        password: 'tovek',
-        favorites: []
-      },
-      isabelll: {
-        name: 'Isabell',
-        password: 'isabelll',
-        favorites: []
-      }
-    },
-=======
+
   loggedInUser: ''
 }
 
@@ -121,13 +92,9 @@ const mutations = {
       password: newUser.password,
       favorites: []
     }
->>>>>>> 529a94e036bcce5c7fa6c9ce692bcbe30a8ac45a
   }
 }
 
-<<<<<<< HEAD
-
-=======
 // createStore.Store({
 //   modules: {
 //     userObjects: usersModules
@@ -142,5 +109,5 @@ const mutations = {
 //     })
 //   ]
 // })
->>>>>>> 529a94e036bcce5c7fa6c9ce692bcbe30a8ac45a
+
 export default createStore({ mutations, state, strict: true })
