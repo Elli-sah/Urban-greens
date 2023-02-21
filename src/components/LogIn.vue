@@ -55,7 +55,7 @@
   <form @submit.prevent="AtLogin">
     <label>Användarnamn <input v-model="userName" /></label>
     <label>Lösenord<input type="password" v-model="password" /></label>
-    <button type="submit">Logga in</button>
+    <button class="button" type="submit">Logga in</button>
   </form>
   <div v-if="logedInMessage">
     <h2>Välkommen {{ logedInName }}!</h2>
@@ -68,7 +68,7 @@
     <label>Namn <input v-model="createName" /></label>
     <label>Användarnamn <input v-model="createUserName" /></label>
     <label>Lösenord<input type="password" v-model="createPassword" /></label>
-    <button type="submit">Skapa konto</button>
+    <button class="button" type="submit">Skapa konto</button>
   </form>
 </template>
 

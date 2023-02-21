@@ -18,8 +18,8 @@
     },
     methods: {
       addPlant() {
-        this.$store.dispatch('addPlant', {
-          user: this.loggedInUser,
+        this.$store.commit('addPlant', {
+          user: this.loggedInUser.user,
           addplant: this.plant
         })
       }
@@ -28,11 +28,13 @@
 </script>
 
 <template>
-  <RouterLink :to="`/plant/${plant.name}`" class="plantBox">
+  <div class="plantBox">
     <i @click="addPlant" class="bi bi-heart-fill" />
-    <img alt="" :src="plant.image" />
-    <p>{{ plant.name }}</p>
-  </RouterLink>
+    <RouterLink :to="`/plant/${plant.name}`">
+      <img alt="" :src="plant.image" />
+      <p>{{ plant.name }}</p>
+    </RouterLink>
+  </div>
 </template>
 
 <style scoped>

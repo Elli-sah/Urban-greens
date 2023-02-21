@@ -1,14 +1,17 @@
 <script>
   // import { Vue } from 'vue'
   // import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
-  import PlantSearch from './PlantSearch.vue'
+
+  import { mapState } from 'vuex'
 
   // Vue.use(BootstrapVue)
   // Vue.use(IconsPlugin)
 
   export default {
-    components: {
-      PlantSearch
+    computed: {
+      ...mapState({
+        loggedInUser: (state) => state.loggedInUser
+      })
     }
   }
 </script>
@@ -28,14 +31,7 @@
           <b-collapse id="nav-collapse" is-nav>
             <b-navbar-nav>
               <b-nav-form>
-                <b-form-input
-                  v-model="message"
-                  size="sm"
-                  class="mr-sm-2"
-                  placeholder="Sök..."
-                >
-                  <PlantSearch :message="message" />
-                </b-form-input>
+                <b-form-input size="sm" class="mr-sm-2" placeholder="Sök..." />
 
                 <b-button variant="" size="m" class="my-2 my-sm-0" type="submit"
                   >Sök
@@ -45,8 +41,11 @@
 
               <b-container>
                 <b-row align="right">
-                  <b-link class="nav-link" to="/login">Logga in</b-link>
                   <b-link class="nav-link" to="/">Hem</b-link>
+                  <b-link class="nav-link" to="/login">Logga in</b-link>
+                  <b-link class="nav-link" :to="`/profile/${loggedInUser.user}`"
+                    >Min fönsterbräda</b-link
+                  >
                   <b-link class="nav-link" to="/plantlist/all"
                     >Växtguide</b-link
                   >

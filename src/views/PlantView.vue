@@ -15,7 +15,6 @@
       ...mapState({
         loggedInUser: (state) => state.loggedInUser
       })
-
       // selectedPlant() {
       //   return this.result.filter((plant) => plant.name === this.name)
       // }
@@ -31,7 +30,7 @@
       },
       atAddPlant() {
         this.$store.commit('addPlant', {
-          user: this.loggedInUser,
+          user: this.loggedInUser.user,
           addplant: this.plant
         })
         console.log(this.plant)

@@ -1,13 +1,25 @@
 <script>
   import MyShelf from '../components/MyShelf.vue'
+  import { mapState } from 'vuex'
 
   export default {
+    data() {
+      return { profile: null }
+    },
     components: {
       MyShelf
+    },
+    computed: {
+      ...mapState({
+        loggedInUser: (state) => state.loggedInUser
+      })
     }
   }
 </script>
 
-<template><MyShelf /></template>
+<template>
+  <h1>Här är din fönsterbräda, {{ loggedInUser.name }}!</h1>
+  <MyShelf />
+</template>
 
 <style></style>
