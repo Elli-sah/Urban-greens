@@ -1,5 +1,5 @@
 <script>
-  // import { RouterLink } from 'vue-router'
+  import mapState from 'vuex'
 
   export default {
     props: {
@@ -11,14 +11,18 @@
     data() {
       return {}
     },
+    computed: {
+      ...mapState({
+        loggedInUser: (state) => state.loggedInUser
+      })
+    },
     methods: {
       addPlant() {
         this.$store.dispatch('addPlant', {
-          user: 'sannaa',
+          user: this.loggedInUser,
           addplant: this.plant
         })
       }
-      // components: { RouterLink }
     }
   }
 </script>
