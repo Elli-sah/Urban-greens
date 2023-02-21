@@ -32,7 +32,9 @@
       och glada. Lär dig allt du behöver veta om att odla växter med vår
       växt-app!
     </p>
-    <button id="komigang">Kom igång</button>
+    <RouterLink to="/login">
+      <button class="button">Kom igång</button>
+    </RouterLink>
   </div>
   <!-- <h1>ProduktListan</h1>
   <ul v-for="plant in result" :key="plant">
