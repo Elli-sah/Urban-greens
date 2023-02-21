@@ -18,7 +18,7 @@
     },
     methods: {
       addPlant() {
-        this.$store.dispatch('addPlant', {
+        this.$store.commit('addPlant', {
           user: this.loggedInUser,
           addplant: this.plant
         })
