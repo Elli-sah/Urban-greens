@@ -61,4 +61,13 @@ main {
   width: 100%;
 }
 
+footer {
+  background-color: $color-green;
+  font-family: poiret;
+}
+@font-face {
+  font-family: poiret;
+  src: url(../../assets/Poiret_One/PoiretOne-Regular.ttf);
+}
+
 @import 'bootstrap/scss/bootstrap';
