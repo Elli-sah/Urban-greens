@@ -1,5 +1,6 @@
 <script>
   import axios from 'axios'
+  import { mapState } from 'vuex'
 
   export default {
     props: {
@@ -11,6 +12,9 @@
       }
     },
     computed: {
+      ...mapState({
+        loggedInUser: (state) => state.loggedInUser
+      })
       // selectedPlant() {
       //   return this.result.filter((plant) => plant.name === this.name)
       // }
@@ -26,7 +30,7 @@
       },
       atAddPlant() {
         this.$store.commit('addPlant', {
-          user: 'klarab',
+          user: this.loggedInUser.user,
           addplant: this.plant
         })
         console.log(this.plant)
