@@ -1,11 +1,17 @@
-<script></script>
+<script>
+  // import { Vue } from 'vue'
+  // import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+
+  // Vue.use(BootstrapVue)
+  // Vue.use(IconsPlugin)
+</script>
 
 <style lang="scss"></style>
 
 <template>
   <div>
     <b-navbar toggleable="lg" fixed="top">
-      <div class="d-flex justify-content-end navbar">
+      <div class="d-flex justify-content-between navbar">
         <h1 class="p-2">Brand Name</h1>
         <b-navbar-toggle target="nav-collapse" class="p-2" />
       </div>
@@ -15,17 +21,21 @@
           <b-collapse id="nav-collapse" is-nav>
             <b-navbar-nav>
               <b-nav-form>
-                <b-form-input size="sm" class="mr-sm-2" placeholder="Search" />
-                <b-button size="sm" class="my-2 my-sm-0" type="submit"
-                  >Search</b-button
-                >
+                <b-form-input size="sm" class="mr-sm-2" placeholder="Sök..." />
+
+                <b-button variant="" size="m" class="my-2 my-sm-0" type="submit"
+                  >Sök
+                  <!-- <b-icon-{search} /> -->
+                </b-button>
               </b-nav-form>
 
               <b-container>
-                <b-row>
-                  <b-link to="/">Home</b-link>
-                  <b-link to="/login">Logga in</b-link>
-                  <b-link to="/plantlist/all">Växtguide</b-link>
+                <b-row align="right">
+                  <b-link class="nav-link" to="/">Hem</b-link>
+                  <b-link class="nav-link" to="/login">Logga in</b-link>
+                  <b-link class="nav-link" to="/plantlist/all"
+                    >Växtguide</b-link
+                  >
                 </b-row>
               </b-container>
             </b-navbar-nav>
