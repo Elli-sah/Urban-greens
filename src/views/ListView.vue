@@ -23,7 +23,8 @@
     data() {
       return {
         result: '',
-        category: 'all'
+        category: 'all',
+        message: ''
       }
     },
 

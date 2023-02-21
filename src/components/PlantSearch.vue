@@ -19,7 +19,9 @@
           this.result = response.data
         })
       }
-    }
+    },
+
+    computed: {}
   }
 </script>
 
