@@ -15,7 +15,8 @@ export default createRouter({
     },
     {
       component: PlantView,
-      path: '/plant/:plantId'
+      path: '/plant/:name',
+      props: true
     },
     {
       component: HomeView,
