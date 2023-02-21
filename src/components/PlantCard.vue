@@ -45,13 +45,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: antiquewhite;
+    background-color: white;
     margin: 10px;
+    border-radius: 10px;
   }
   img {
     width: 200px;
     height: 300px;
-
+    border-radius: 10px;
     object-fit: cover;
   }
   p {
