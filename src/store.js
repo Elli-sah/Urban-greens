@@ -34,7 +34,8 @@ const mutations = {
         password: 'isabelll',
         favorites: []
       }
-    }
+    },
   }
+
 
 export default createStore({ mutations, state, strict: true })
