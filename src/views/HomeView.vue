@@ -1,4 +1,10 @@
 <script>
+  import PlantCategory from '../components/PlantCategory.vue'
+  export default {
+    components: {
+      PlantCategory
+    }
+  }
   // import axios from 'axios'
   // export default {
   //   created() {
@@ -33,7 +39,9 @@
       växt-app!
     </p>
     <button id="komigang">Kom igång</button>
+    <PlantCategory />
   </div>
+
   <!-- <h1>ProduktListan</h1>
   <ul v-for="plant in result" :key="plant">
     <li>{{ plant.name }}</li>
@@ -41,4 +49,8 @@
   </ul> -->
 </template>
 
-<style lang="scss"></style>
+<style lang="scss" scoped>
+  #start-div {
+    margin-top: 70px;
+  }
+</style>

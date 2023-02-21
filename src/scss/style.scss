@@ -46,8 +46,18 @@ main {
   height: 40px;
   border-radius: 20px;
   border: none;
+  margin: 15px;
 }
-
+.categoryLinks {
+  background-color: $color-cream;
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  display: inline-block;
+  flex: 0 0 auto;
+  margin: 15px;
+}
 #start-div {
   padding: 20px;
   background-image: url(/public/images/Mobil-start-ny.png);
