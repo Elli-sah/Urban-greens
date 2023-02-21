@@ -9,11 +9,37 @@
     computed: {
       filterdPlants() {
         if (this.category === 'all') {
-          return this.result
+          return this.result.filter((plant) => {
+            if (!this.searchText) {
+              return true
+            } else {
+              const lowerCaseName = plant.name.toLowerCase()
+              const lowerCaseSearchText = this.searchText.toLowerCase()
+              return lowerCaseName.includes(lowerCaseSearchText)
+            }
+          })
         } else {
-          return this.result.filter((plant) => plant.category === this.category)
+          return this.result.filter(
+            (plant) =>
+              plant.category === this.category &&
+              plant.name.toLowerCase().includes(this.searchText.toLowerCase())
+          )
         }
       }
+      // filterdPlants() {
+      //   if (this.category === 'all') {
+      //     return this.result
+      //   } else {
+      //     return this.result.filter((plant) => plant.category === this.category)
+      //   }
+      // },
+      // filterdPlantsName() {
+      //   if (this.name === 'all') {
+      //     return this.result
+      //   } else {
+      //     return this.result.filter((plant) => plant.name === this.name)
+      //   }
+      // }
     },
 
     created() {
@@ -24,7 +50,9 @@
       return {
         result: '',
         category: 'all',
-        message: ''
+        message: '',
+        name: 'all',
+        searchText: ''
       }
     },
 
@@ -34,12 +62,25 @@
           this.result = response.data
         })
       }
+    },
+
+    watch: {
+      message(newValue) {
+        console.log(newValue)
+        this.name = newValue
+        this.useNameFilter = true
+      },
+      name(newValue) {
+        this.useNameFilter = newValue !== 'all'
+      }
     }
   }
 </script>
 
 <template>
   <h1>ProduktListan</h1>
+  <input type="text" v-model="searchText" />
+  <button @click="submit">Sök</button>
   <ul>
     <li @click="category = 'all'">Alla växter</li>
     <li @click="category = 'Gröna växter'">Gröna växter</li>
