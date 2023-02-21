@@ -44,12 +44,55 @@
 
 <template>
   <h1>Om</h1>
-  <div>
+  <div class="plantBox">
     <img class="image" :src="plant.image" />
-    <h2>{{ plant.name }}</h2>
-    <p>{{ plant.placement.short }}</p>
-    <p>{{ plant.temperature.short }}</p>
-    <p>{{ plant.watering.short }}</p>
-    <button @click="atAddPlant">Lägg till på fönsterbrädan</button>
+    <!-- <hr class="line" /> -->
+    <!-- <hr style="height: 1px; background: #000; color: #000" /> -->
+
+    <h1>{{ plant.name }}</h1>
+    <h2>{{ plant.latin }}</h2>
+    <hr />
+    <div class="plantDesc">
+      <p>Ljusbehov: {{ plant.placement.short }}</p>
+      <p>Temperatur: {{ plant.temperature.short }}</p>
+    </div>
+    <div class="plantDesc">
+      <p>Vatten: {{ plant.watering.short }}</p>
+      <p>Näring:{{ plant.fertilization.short }}</p>
+    </div>
+    <button class="button" @click="atAddPlant">
+      Lägg till på fönsterbrädan
+    </button>
   </div>
 </template>
+
+<style>
+  .plantBox {
+    width: 500px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    margin: 10px;
+    border-radius: 10px;
+  }
+
+  img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+
+    object-fit: cover;
+  }
+
+  .plantDesc {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  hr {
+    border-style: 1px solid rgba(0, 0, 0, 0.15);
+  }
+</style>

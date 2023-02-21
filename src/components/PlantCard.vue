@@ -29,11 +29,12 @@
 
 <template>
   <div class="plantBox">
-    <i @click="addPlant" class="bi bi-heart-fill" />
-    <RouterLink :to="`/plant/${plant.name}`">
-      <img alt="" :src="plant.image" />
-      <p>{{ plant.name }}</p>
-    </RouterLink>
+    <i @click="addPlant" class="bi bi-suit-heart-fill">
+      <RouterLink :to="`/plant/${plant.name}`">
+        <img alt="" :src="plant.image" />
+        <p>{{ plant.name }}</p>
+      </RouterLink>
+    </i>
   </div>
 </template>
 
@@ -45,13 +46,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: antiquewhite;
+    background-color: white;
     margin: 10px;
+    border-radius: 10px;
   }
   img {
     width: 200px;
     height: 300px;
-
+    border-radius: 10px;
     object-fit: cover;
   }
   p {

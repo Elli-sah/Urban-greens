@@ -43,7 +43,9 @@
     <RouterLink to="/login">
       <button class="button">Kom igång</button>
     </RouterLink>
+    <PlantCategory />
   </div>
+
   <!-- <h1>ProduktListan</h1>
   <ul v-for="plant in result" :key="plant">
     <li>{{ plant.name }}</li>
@@ -51,4 +53,8 @@
   </ul> -->
 </template>
 
-<style lang="scss"></style>
+<style lang="scss" scoped>
+  #start-div {
+    margin-top: 70px;
+  }
+</style>
