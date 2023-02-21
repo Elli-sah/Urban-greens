@@ -26,20 +26,6 @@
           )
         }
       }
-      // filterdPlants() {
-      //   if (this.category === 'all') {
-      //     return this.result
-      //   } else {
-      //     return this.result.filter((plant) => plant.category === this.category)
-      //   }
-      // },
-      // filterdPlantsName() {
-      //   if (this.name === 'all') {
-      //     return this.result
-      //   } else {
-      //     return this.result.filter((plant) => plant.name === this.name)
-      //   }
-      // }
     },
 
     created() {
@@ -48,7 +34,7 @@
 
     data() {
       return {
-        result: '',
+        result: [],
         category: 'all',
         message: '',
         name: 'all',
@@ -65,13 +51,9 @@
     },
 
     watch: {
-      message(newValue) {
+      searchText(newValue) {
         console.log(newValue)
         this.name = newValue
-        this.useNameFilter = true
-      },
-      name(newValue) {
-        this.useNameFilter = newValue !== 'all'
       }
     }
   }
