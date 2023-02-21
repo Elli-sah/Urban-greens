@@ -50,14 +50,18 @@
     <!-- <hr style="height: 1px; background: #000; color: #000" /> -->
 
     <h1>{{ plant.name }}</h1>
-    <h2>{{ plant.latin }}</h2>
+    <h3>{{ plant.latin }}</h3>
     <hr />
     <div class="plantDesc">
+      <i class="bi bi-brightness-high"></i>
       <p>Ljusbehov: {{ plant.placement.short }}</p>
+      <i class="bi bi-thermometer-low"></i>
       <p>Temperatur: {{ plant.temperature.short }}</p>
     </div>
     <div class="plantDesc">
+      <i class="bi bi-moisture"></i>
       <p>Vatten: {{ plant.watering.short }}</p>
+      <i class="bi bi-flower1"></i>
       <p>Näring:{{ plant.fertilization.short }}</p>
     </div>
     <button class="button" @click="atAddPlant">
@@ -68,20 +72,20 @@
 
 <style>
   .plantBox {
-    width: 500px;
-    height: 700px;
+    width: 300px;
+    height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     background-color: white;
     margin: 10px;
     border-radius: 10px;
   }
 
   img {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     border-radius: 10px;
 
     object-fit: cover;
