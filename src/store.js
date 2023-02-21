@@ -92,6 +92,9 @@ const mutations = {
       password: newUser.password,
       favorites: []
     }
+  },
+  addPlant(state, newPlant) {
+    state.users[newPlant.user].favorites.push(newPlant.addplant)
   }
 }
 

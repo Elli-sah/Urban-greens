@@ -1,9 +1,16 @@
 <script>
   // import { Vue } from 'vue'
   // import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+  import PlantSearch from './PlantSearch.vue'
 
   // Vue.use(BootstrapVue)
   // Vue.use(IconsPlugin)
+
+  export default {
+    components: {
+      PlantSearch
+    }
+  }
 </script>
 
 <style lang="scss"></style>
@@ -21,7 +28,14 @@
           <b-collapse id="nav-collapse" is-nav>
             <b-navbar-nav>
               <b-nav-form>
-                <b-form-input size="sm" class="mr-sm-2" placeholder="Sök..." />
+                <b-form-input
+                  v-model="message"
+                  size="sm"
+                  class="mr-sm-2"
+                  placeholder="Sök..."
+                >
+                  <PlantSearch :message="message" />
+                </b-form-input>
 
                 <b-button variant="" size="m" class="my-2 my-sm-0" type="submit"
                   >Sök
