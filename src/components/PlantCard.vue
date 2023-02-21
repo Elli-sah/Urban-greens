@@ -7,8 +7,19 @@
         type: Object,
         default: () => ({})
       }
+    },
+    data() {
+      return {}
+    },
+    methods: {
+      addPlant() {
+        this.$store.dispatch('addPlant', {
+          user: 'sannaa',
+          plant: this.plant.name
+        })
+      }
+      // components: { RouterLink }
     }
-    // components: { RouterLink }
   }
 </script>
 
