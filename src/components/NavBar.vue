@@ -13,7 +13,7 @@
     <b-navbar toggleable="lg" fixed="top">
       <div class="d-flex justify-content-between navbar">
         <h1 class="p-2">Brand Name</h1>
-        <b-navbar-toggle target="nav-collapse" class="p-2" />
+        <b-navbar-toggle target="nav-collapse" />
       </div>
 
       <div class="d-flex justify-content-end navbar">
@@ -31,8 +31,8 @@
 
               <b-container>
                 <b-row align="right">
-                  <b-link class="nav-link" to="/">Hem</b-link>
                   <b-link class="nav-link" to="/login">Logga in</b-link>
+                  <b-link class="nav-link" to="/">Hem</b-link>
                   <b-link class="nav-link" to="/plantlist/all"
                     >Växtguide</b-link
                   >
