@@ -1,5 +1,5 @@
 <script>
-  // import { RouterLink } from 'vue-router'
+  import mapState from 'vuex'
 
   export default {
     props: {
@@ -7,14 +7,29 @@
         type: Object,
         default: () => ({})
       }
+    },
+    data() {
+      return {}
+    },
+    computed: {
+      ...mapState({
+        loggedInUser: (state) => state.loggedInUser
+      })
+    },
+    methods: {
+      addPlant() {
+        this.$store.dispatch('addPlant', {
+          user: this.loggedInUser,
+          addplant: this.plant
+        })
+      }
     }
-    // components: { RouterLink }
   }
 </script>
 
 <template>
   <RouterLink :to="`/plant/${plant.name}`" class="plantBox">
-    <i class="bi bi-heart-fill" />
+    <i @click="addPlant" class="bi bi-heart-fill" />
     <img alt="" :src="plant.image" />
     <p>{{ plant.name }}</p>
   </RouterLink>

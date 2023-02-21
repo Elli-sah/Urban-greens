@@ -33,6 +33,7 @@
           this.logedInName = this.users[this.userName].name
           console.log('hej')
           this.logedInMessage = true
+          this.$store.commit('addLoggedInUser', this.userName)
         } else {
           console.log('hejdå')
           this.showMessage = true
