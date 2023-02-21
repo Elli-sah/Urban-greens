@@ -14,7 +14,6 @@
         myProfile: (state) => state.users[this.loggedInUser.user],
         loggedInUser: (state) => state.loggedInUser
       })
-      this.profile = this.loggedInUser
     }
   }
 </script>
