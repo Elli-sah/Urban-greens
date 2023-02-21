@@ -11,7 +11,6 @@
     },
     computed: {
       ...mapState({
-        myProfile: (state) => state.users[this.loggedInUser.user],
         loggedInUser: (state) => state.loggedInUser
       })
     }
@@ -20,7 +19,7 @@
 
 <template>
   <h1>Här är din fönsterbräda, {{ loggedInUser.name }}!</h1>
-  <MyShelf :profile="myProfile" />
+  <MyShelf />
 </template>
 
 <style></style>
