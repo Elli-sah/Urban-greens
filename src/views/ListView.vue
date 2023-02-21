@@ -61,8 +61,8 @@
 
 <template>
   <h1>ProduktListan</h1>
-  <input type="text" v-model="searchText" />
-  <button @click="submit">Sök</button>
+  <input type="text" v-model="searchText" placeholder="Sök..." />
+
   <ul>
     <li @click="category = 'all'">Alla växter</li>
     <li @click="category = 'Gröna växter'">Gröna växter</li>
