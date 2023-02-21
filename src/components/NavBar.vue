@@ -4,13 +4,16 @@
   export default {
     data() {
       return {
-        visible: true,
+        visible: false,
         searchText: ''
       }
     },
     methods: {
       setText() {
         this.$store.commit('setSearchText', this.searchText)
+      },
+      closeMenu() {
+        this.visible = false // set the menu state to be closed when the user clicks a link
       }
       // searchText(newValue) {
       //   console.log(newValue)
@@ -37,7 +40,7 @@
 
       <div class="d-flex justify-content-end navbar">
         <div>
-          <b-collapse id="nav-collapse" is-nav>
+          <b-collapse id="nav-collapse" is-nav v-model="visible">
             <b-navbar-nav>
               <b-nav-form>
                 <b-form-input
@@ -60,12 +63,18 @@
 
               <b-container>
                 <b-row align="right">
-                  <b-nav-item to="/">Hem</b-nav-item>
-                  <b-nav-item to="/login">Logga in</b-nav-item>
-                  <b-nav-item :to="`/profile/${loggedInUser.user}`"
+                  <b-nav-item @click="closeMenu" to="/">Hem</b-nav-item>
+                  <b-nav-item @click="closeMenu" to="/login"
+                    >Logga in</b-nav-item
+                  >
+                  <b-nav-item
+                    @click="closeMenu"
+                    :to="`/profile/${loggedInUser.user}`"
                     >Min fönsterbräda</b-nav-item
                   >
-                  <b-nav-item to="/plantlist/all">Växtguide</b-nav-item>
+                  <b-nav-item @click="closeMenu" to="/plantlist/all"
+                    >Växtguide</b-nav-item
+                  >
                 </b-row>
               </b-container>
             </b-navbar-nav>
