@@ -1,4 +1,6 @@
 <script>
+  // import { RouterLink } from 'vue-router'
+
   export default {
     props: {
       plant: {
@@ -6,15 +8,16 @@
         default: () => ({})
       }
     }
+    // components: { RouterLink }
   }
 </script>
 
 <template>
-  <div class="plantBox">
+  <RouterLink :to="`/plant/${plant.name}`" class="plantBox">
     <i class="bi bi-heart-fill" />
     <img alt="" :src="plant.image" />
     <p>{{ plant.name }}</p>
-  </div>
+  </RouterLink>
 </template>
 
 <style scoped>

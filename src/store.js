@@ -81,6 +81,7 @@ const state = {
       favorites: []
     }
   },
+
   loggedInUser: ''
 }
 
@@ -108,4 +109,5 @@ const mutations = {
 //     })
 //   ]
 // })
+
 export default createStore({ mutations, state, strict: true })
