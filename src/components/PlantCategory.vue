@@ -31,7 +31,6 @@
     white-space: nowrap;
     display: flex;
     justify-content: center;
-    text-decoration: none;
   }
 
   .scrolling-wrapper-flexbox {
