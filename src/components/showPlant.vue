@@ -12,9 +12,7 @@
     },
 
     methods: {
-      close() {
-        this.$emit('close')
-      }
+      close() {}
     }
   }
 </script>

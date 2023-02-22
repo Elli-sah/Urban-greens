@@ -9,7 +9,8 @@
     data() {
       return {
         plant: null,
-        showText: false
+        showText: false,
+        slide: 0
       }
     },
     computed: {
@@ -83,6 +84,11 @@
         <div>
           <p v-show="showText">{{ plant.placement }}</p>
         </div>
+
+        <button @click="toggleText" />
+        <p v-if="showText">{{ plant.description }}</p>
+        <i class="bi bi-brightness-high" />
+        <p>Ljusbehov: {{ plant.placement.short }}</p>
       </div>
       <div class="plantTemp">
         <i @click="toggleText" class="bi bi-thermometer-low" />
