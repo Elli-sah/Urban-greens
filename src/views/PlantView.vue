@@ -64,6 +64,7 @@
     <div id="ccc">
       <b-carousel v-model="slide" indicators>
         <b-carousel-slide
+          class="carouselImg"
           v-for="(image, index) in plant.image"
           :key="index"
           :img-src="image"
@@ -87,7 +88,7 @@
         <p v-if="showText">{{ plant.description }}</p>
       </div>
       <div class="plantTemp">
-        <i @click="openModal(product)" class="bi bi-thermometer-low" />
+        <i @click="openModal(plant)" class="bi bi-thermometer-low" />
         <p>Temperatur: {{ plant.temperature.short }}</p>
         <div>
           <p v-if="showText">{{ plant.temperature }}</p>
@@ -96,11 +97,11 @@
     </div>
     <div class="plantDescTwo">
       <div class="plantWater">
-        <i @click="openModal(product)" class="bi bi-moisture" />
+        <i @click="openModal(plant)" class="bi bi-moisture" />
         <p>Vatten: {{ plant.watering.short }}</p>
       </div>
       <div class="plantFert">
-        <i @click="openModal(product)" class="bi bi-flower1" />
+        <i @click="openModal(plant)" class="bi bi-flower1" />
         <p>Näring:{{ plant.fertilization.short }}</p>
       </div>
     </div>
@@ -121,7 +122,7 @@
 
 <style>
   .plantBox {
-    width: 400px;
+    width: 90%;
     padding: 45px 20px 20px 20px;
     display: flex;
     flex-direction: column;
@@ -132,7 +133,7 @@
     border-radius: 10px;
   }
   .secondPlantBox {
-    width: 400px;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -149,7 +150,7 @@
     height: 300px;
   }
 
-  img {
+  .carouselImg {
     object-fit: cover;
     width: 300px;
     height: 300px;
