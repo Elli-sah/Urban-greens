@@ -13,12 +13,8 @@
         this.$store.commit('setSearchText', this.searchText)
       },
       closeMenu() {
-        this.visible = false // set the menu state to be closed when the user clicks a link
+        this.visible = false
       }
-      // searchText(newValue) {
-      //   console.log(newValue)
-      //   this.$store.commit('setSearchText', newValue)
-      // }
     },
     computed: {
       ...mapState({
@@ -33,11 +29,10 @@
 <template>
   <div>
     <b-navbar toggleable="lg" fixed="top">
-      <div class="d-flex justify-content-between navbar">
+      <div id="navbar" class="d-flex justify-content-between navbar" fluid>
         <h1 class="p-2">Brand Name</h1>
         <b-navbar-toggle target="nav-collapse" is-nav />
       </div>
-
       <div class="d-flex justify-content-end navbar">
         <div>
           <b-collapse id="nav-collapse" is-nav v-model="visible">

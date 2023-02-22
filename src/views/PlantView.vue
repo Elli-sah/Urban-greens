@@ -9,7 +9,8 @@
     data() {
       return {
         plant: null,
-        showText: false
+        showText: false,
+        slide: 0
       }
     },
     computed: {
