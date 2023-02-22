@@ -1,7 +1,8 @@
 <script>
   export default {
     props: {
-      selectedPlant: { required: true, type: Object }
+      selectedPlant: { required: true, type: Object },
+      longDescription: { required: true, type: String }
     },
     data() {
       return {}
@@ -29,27 +30,13 @@
     margin: 200px 10% 0 10%;
     text-align: center;
   }
-  /* .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 250px;
-    overflow-x: hidden;
-    overflow-y: auto;
-    margin: 200px 10% 0 10%;
-    text-align: center;
-  } */
 </style>
 
 <template>
   <div class="container">
-    <!-- <div class="modal"> -->
-    <!-- <h3>Ljusbehov</h3> -->
     <p>{{ selectedPlant.title }}</p>
-    <p>{{ selectedPlant.description }}</p>
+    <p>{{ longDescription }}</p>
 
     <button class="button" @click="$emit('close')">close</button>
   </div>
-  <!-- </div> -->
 </template>
