@@ -90,7 +90,7 @@
     "pests": "Begonior kan drabbas av bladlöss, spinnkvalster och mjöldagg, så det är viktigt att hålla växten ren och att ta itu med skadedjur eller sjukdomar snabbt.",
     "other": "",
     "category": "Blommande",
-    "image": "/images/begonia.png"
+    "image": ["/images/begonia.png"]
   },
   {
     "id": 4,
@@ -150,7 +150,11 @@
     "pests": "Fiolfikusen kan drabbas av skadedjur, till exempel spinnkvalster och sköldlöss. Om du märker tecken på skadedjur eller sjukdomar kan du behandla dem med ett lämpligt bekämpningsmedel.",
     "other": "",
     "category": "Gröna växter",
-    "image": "/images/fiolfikus.png"
+    "image": [
+      "/images/fiolfikus3.jpg",
+      "/images/fiolfikus2.jpg",
+      "/images/fiolfikus.jpg"
+    ]
   },
   {
     "id": 6,
@@ -178,7 +182,11 @@
     "pests": "Garderobsblomman är tålig och drabbas sällan av skadedjur eller sjukdomar. Om du ändå upptäcker något problem kan du använda ett insektsmedel eller svampmedel som är lämpligt för krukväxter.",
     "other": "Den behöver inte omplanteras så ofta, men om du ser att rötterna börjar tränga ut genom dräneringshålen i krukan eller om växten blir för stor för sin nuvarande kruka, är det dags att omplantera den i en något större kruka.",
     "category": "Gröna växter",
-    "image": "/images/garderobsblomma.png"
+    "image": [
+      "/images/zamiakalla1.jpg",
+      "/images/zamiakalla2.jpg",
+      "/images/zamiakalla3.jpg"
+    ]
   },
   {
     "id": 5,
@@ -238,7 +246,11 @@
     "pests": "Primula kan drabbas av bladlöss och spinnkvalster, men det är relativt ovanligt. Om du upptäcker skadedjur eller sjukdomar, ta itu med dem genom att använda lämpliga bekämpningsmedel eller att ta bort sjuka blad.",
     "other": "",
     "category": "Blommande",
-    "image": "/images/primula.png"
+    "image": [
+      "/images/primula.jpg",
+      "/images/primula2.jpg",
+      "/images/primula3.jpg"
+    ]
   },
   {
     "id": 5,
@@ -394,7 +406,11 @@
     "pests": "Orkidéer kan drabbas av skadedjur som spinnkvalster och trips, samt sjukdomar som svampsjukdomar och virus. Om du upptäcker skadedjur eller sjukdomar på din orkidé, kan du använda ett insektsmedel eller svampmedel som är speciellt utformat för orkidéer.",
     "other": "",
     "category": "Blommande",
-    "image": "/images/orkide.png"
+    "image": [
+      "/images/orkide.jpg",
+      "/images/orkide2.jpg",
+      "/images/orkide3.jpg"
+    ]
   },
   {
     "id": 5,
@@ -422,7 +438,7 @@
     "pests": "Pelargoner kan drabbas av skadedjur som spinnkvalster och bladlöss. Om du upptäcker skadedjur eller sjukdomar på din pelargon, kan du använda ett insektsmedel eller svampmedel som är speciellt utformat för växten.",
     "other": "",
     "category": "Blommande",
-    "image": "/images/pelargon.png"
+    "image": ["/images/pelargon.png"]
   },
   {
     "id": 5,
@@ -450,7 +466,11 @@
     "pests": "Porslinsblomma är vanligtvis inte en växt som drabbas av skadedjur, men ibland kan den påverkas av några vanliga skadedjur som förekommer på andra växter.Det är viktigt att inspektera din Porslinsblomma regelbundet för att upptäcka skadedjur och vidta åtgärder så snart som möjligt för att förhindra spridning och skador på växten.",
     "other": "",
     "category": "Gröna växter",
-    "image": "/images/porslinsblomma.png"
+    "image": [
+      "/images/porslinsblomma.jpg",
+      "/images/porslinsblomma2.jpg",
+      "/images/porslinsblomma3.jpg"
+    ]
   },
   {
     "id": 3,
@@ -478,7 +498,7 @@
     "pests": "",
     "other": "",
     "category": "Blommande",
-    "image": "/images/rosenskarm.png"
+    "image": ["/images/rosenskarm.png"]
   },
   {
     "id": 5,
@@ -506,7 +526,11 @@
     "pests": "Rosenkalla kan drabbas av bladlöss, spinnkvalster och mjöldagg, så det är viktigt att hålla växten ren och att ta itu med skadedjur eller sjukdomar snabbt.",
     "other": "",
     "category": "Blommande",
-    "image": "/images/rosenkalla.png"
+    "image": [
+      "/images/rosenkalla1.jpg",
+      "/images/rosenkalla2.jpg",
+      "/images/rosenkalla3.jpg"
+    ]
   },
 
   {
@@ -536,7 +560,11 @@
     "pests": "Gulpalmen kan drabbas av skadedjur som spinnkvalster och bladlöss. Se till att ta bort skadedjur manuellt och använd gärna en mild insektsbekämpning om det behövs.",
     "other": "",
     "category": "Gröna växter",
-    "image": "/images/guldpalm.png"
+    "image": [
+      "/images/guldpalm.png",
+      "/images/guldpalm2.jpg",
+      "/images/guldpalm3.jpg"
+    ]
   },
   {
     "id": 5,
