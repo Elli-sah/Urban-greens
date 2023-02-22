@@ -60,34 +60,36 @@
 </script>
 
 <template>
-  <h1>Växtguide</h1>
-  <div class="input-div">
-    <input type="text" v-model="searchText" />
-    <i @click="submit" class="bi bi-search" />
-  </div>
-  <div class="scrolling-wrapper">
-    <button class="categoryLinks button" @click="category = 'all'">
-      Alla växter
-    </button>
-    <button class="categoryLinks button" @click="category = 'Blommande'">
-      Blommande växter
-    </button>
-    <button class="categoryLinks button" @click="category = 'Suckulent'">
-      Succulenter
-    </button>
-    <button class="categoryLinks button" @click="category = 'Gröna växter'">
-      Gröna växter
-    </button>
-    <button class="categoryLinks button" @click="category = 'Giftiga växter'">
-      Giftiga växter
-    </button>
-  </div>
-  <div id="filteredPlants">
-    <PlantCard
-      v-for="plant in filterdPlants"
-      :key="plant.name"
-      :plant="plant"
-    />
+  <div class="view-divs">
+    <h1>Växtguide</h1>
+    <div class="input-div">
+      <input type="text" v-model="searchText" />
+      <i @click="submit" class="bi bi-search" />
+    </div>
+    <div class="scrolling-wrapper">
+      <button class="categoryLinks button" @click="category = 'all'">
+        Alla växter
+      </button>
+      <button class="categoryLinks button" @click="category = 'Blommande'">
+        Blommande växter
+      </button>
+      <button class="categoryLinks button" @click="category = 'Suckulent'">
+        Succulenter
+      </button>
+      <button class="categoryLinks button" @click="category = 'Gröna växter'">
+        Gröna växter
+      </button>
+      <button class="categoryLinks button" @click="category = 'Giftiga växter'">
+        Giftiga växter
+      </button>
+    </div>
+    <div id="filteredPlants">
+      <PlantCard
+        v-for="plant in filterdPlants"
+        :key="plant.name"
+        :plant="plant"
+      />
+    </div>
   </div>
 </template>
 
@@ -100,30 +102,9 @@
     width: 100%;
     justify-content: center;
   }
-
-  .input-div i {
-    position: absolute;
+  li {
+    cursor: pointer;
   }
-
-  .input-div {
-    width: 90%;
-    margin: auto;
-  }
-
-  input {
-    width: 100%;
-    padding: 10px;
-    border-radius: 30px;
-    border: none;
-  }
-
-  i {
-    position: relative;
-    right: 45px;
-    z-index: 6;
-    padding: 10px;
-  }
-
   .categoryLinks {
     display: inline-block;
     /* flex: auto; */

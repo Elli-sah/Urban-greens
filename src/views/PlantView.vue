@@ -110,7 +110,7 @@
     </button>
     <ShowPlant
       v-if="selectedPlant"
-      :selectedPlant="selectedPlant"
+      :selected-plant="selectedPlant"
       @close="closeModal"
     />
   </div>
