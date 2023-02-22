@@ -95,22 +95,22 @@
           <b-collapse id="nav-collapse" is-nav v-model="visible">
             <b-navbar-nav>
               <b-nav-form>
-                <b-form-input
-                  @click="onClickPlants"
-                  v-model="searchText"
-                  size="sm"
-                  class="mr-sm-2"
-                  placeholder="Sök..."
-                />
-
-                <b-button
-                  @click="onClick"
-                  size="m"
-                  class="my-2 my-sm-0"
-                  type="submit"
-                  to="/plantlist"
-                  >Sök
-                </b-button>
+                <div>
+                  <b-form-input
+                    @input="onClickPlants"
+                    v-model="searchText"
+                    size="sm"
+                    class="mr-sm-2"
+                    placeholder="Sök..."
+                  />
+                  <PlantItem
+                    v-model="visible"
+                    @click="onClick"
+                    v-for="plant in filterdPlants"
+                    :key="plant.name"
+                    :plant="plant"
+                  />
+                </div>
               </b-nav-form>
 
               <b-container>
@@ -132,13 +132,5 @@
         </div>
       </div>
     </b-navbar>
-  </div>
-  <div>
-    <PlantItem
-      v-model="visible"
-      v-for="plant in filterdPlants"
-      :key="plant.name"
-      :plant="plant"
-    />
   </div>
 </template>
