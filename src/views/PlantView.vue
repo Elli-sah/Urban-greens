@@ -88,7 +88,7 @@
         <p v-if="showText">{{ plant.description }}</p>
       </div>
       <div class="plantTemp">
-        <i @click="openModal(product)" class="bi bi-thermometer-low" />
+        <i @click="openModal(plant)" class="bi bi-thermometer-low" />
         <p>Temperatur: {{ plant.temperature.short }}</p>
         <div>
           <p v-if="showText">{{ plant.temperature }}</p>
@@ -97,11 +97,11 @@
     </div>
     <div class="plantDescTwo">
       <div class="plantWater">
-        <i @click="openModal(product)" class="bi bi-moisture" />
+        <i @click="openModal(plant)" class="bi bi-moisture" />
         <p>Vatten: {{ plant.watering.short }}</p>
       </div>
       <div class="plantFert">
-        <i @click="openModal(product)" class="bi bi-flower1" />
+        <i @click="openModal(plant)" class="bi bi-flower1" />
         <p>Näring:{{ plant.fertilization.short }}</p>
       </div>
     </div>
