@@ -26,7 +26,11 @@
     "pests": "Aloe Vera är en relativt tålig växt, men kan drabbas av skadedjur som spinnkvalster eller mjöllöss. Inspektera växten regelbundet och använd ett lämpligt insektsmedel för att bekämpa skadedjur.",
     "other": "",
     "category": "Suckulent",
-    "image": "/images/alovera.png"
+    "image": [
+      "/images/aloe_vera1.jpg",
+      "/images/aloe_vera2.jpg",
+      "/images/aloe_vera3.jpg"
+    ]
   },
   {
     "id": 2,

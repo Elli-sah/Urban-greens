@@ -9,7 +9,7 @@
     data() {
       return {
         plant: null,
-        slide: 0
+        showText: false
       }
     },
     computed: {
@@ -39,6 +39,9 @@
     },
     created() {
       this.axiosGetPlants()
+    },
+    toggleText() {
+      this.showText = !this.showText
     }
   }
 </script>
@@ -47,9 +50,11 @@
   <h1>Om</h1>
   <div class="plantBox">
     <b-carousel v-model="slide" indicators>
-      <b-carousel-slide :img-src="plant.image" />
-      <b-carousel-slide :img-src="plant.image" />
-      <b-carousel-slide :img-src="plant.image" />
+      <b-carousel-slide
+        v-for="(image, index) in plant.image"
+        :key="index"
+        :img-src="image"
+      />
     </b-carousel>
 
     <!-- <hr class="line" /> -->
@@ -58,20 +63,22 @@
     <h1>{{ plant.name }}</h1>
 
     <h3>{{ plant.latin }}</h3>
-    <hr />
+    <hr class="line" />
     <div class="plantDesc">
-      <i class="bi bi-brightness-high" />
-      <p>Ljusbehov: {{ plant.placement.short }}</p>
-      <i class="bi bi-thermometer-low" />
-      <p>Temperatur: {{ plant.temperature.short }}</p>
+      <!-- <i class="bi bi-brightness-high" />
+      <p>Ljusbehov: {{ plant.placement.short }}</p> -->
+      <!-- <i class="bi bi-thermometer-low" />
+      <p>Temperatur: {{ plant.temperature.short }}</p> -->
     </div>
     <div class="plantDesc">
-      <i class="bi bi-moisture" />
-      <p>Vatten: {{ plant.watering.short }}</p>
-      <i class="bi bi-flower1" />
-      <p>Näring:{{ plant.fertilization.short }}</p>
+      <!-- <i class="bi bi-moisture" />
+      <p>Vatten: {{ plant.watering.short }}</p> -->
+      <!-- <i class="bi bi-flower1" />
+      <p>Näring:{{ plant.fertilization.short }}</p> -->
 
       <div class="plantPlace">
+        <button @click="toggleText"></button>
+        <p v-if="showText">{{ plant.description }}</p>
         <i class="bi bi-brightness-high" />
         <p>Ljusbehov: {{ plant.placement.short }}</p>
       </div>
@@ -145,7 +152,7 @@
     justify-content: space-around;
   }
 
-  hr {
+  .line {
     border-style: 1px solid rgba(0, 0, 0, 0.15);
   }
 
