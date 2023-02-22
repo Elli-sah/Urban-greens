@@ -1,8 +1,10 @@
 <script>
   import axios from 'axios'
   import { mapState } from 'vuex'
+  import ShowPlant from '../components/ShowPlant.vue'
 
   export default {
+    components: { ShowPlant },
     props: {
       name: { type: String, required: true }
     },
@@ -10,7 +12,8 @@
       return {
         plant: null,
         showText: false,
-        slide: 0
+        slide: 0,
+        selectedPlant: null
       }
     },
     computed: {
@@ -36,8 +39,17 @@
           addplant: this.plant
         })
         console.log(this.plant)
+      },
+      openModal(plant) {
+        this.selectedPlant = plant
+        document.body.style.overflow = 'hidden'
+      },
+      closeModal() {
+        this.selectedPlant = null
+        document.body.style.overflow = 'auto'
       }
     },
+
     created() {
       this.axiosGetPlants()
     },
@@ -48,10 +60,9 @@
 </script>
 
 <template>
-  <h1>Om</h1>
   <div class="plantBox">
     <div id="ccc">
-      <b-carousel class="carousel" v-model="slide" indicators>
+      <b-carousel v-model="slide" indicators>
         <b-carousel-slide
           v-for="(image, index) in plant.image"
           :key="index"
@@ -60,40 +71,23 @@
       </b-carousel>
     </div>
 
-    <!-- <hr class="line" /> -->
-    <!-- <hr style="height: 1px; background: #000; color: #000" /> -->
-
     <h1>{{ plant.name }}</h1>
 
     <h3>{{ plant.latin }}</h3>
     <hr class="line" />
     <div class="plantDesc">
-      <!-- <i class="bi bi-brightness-high" />
-      <p>Ljusbehov: {{ plant.placement.short }}</p> -->
-      <!-- <i class="bi bi-thermometer-low" />
-      <p>Temperatur: {{ plant.temperature.short }}</p> -->
-    </div>
-    <div class="plantDesc">
-      <!-- <i class="bi bi-moisture" />
-      <p>Vatten: {{ plant.watering.short }}</p> -->
-      <!-- <i class="bi bi-flower1" />
-      <p>Näring:{{ plant.fertilization.short }}</p> -->
-
       <div class="plantPlace">
-        <i @click="toggleText" class="bi bi-brightness-high" />
+        <i @click="openModal(product)" class="bi bi-brightness-high" />
 
         <p @click="toggleText">Ljusbehov: {{ plant.placement.short }}</p>
         <div>
           <p v-show="showText">{{ plant.placement }}</p>
         </div>
 
-        <button @click="toggleText" />
         <p v-if="showText">{{ plant.description }}</p>
-        <i class="bi bi-brightness-high" />
-        <p>Ljusbehov: {{ plant.placement.short }}</p>
       </div>
       <div class="plantTemp">
-        <i @click="toggleText" class="bi bi-thermometer-low" />
+        <i @click="openModal(product)" class="bi bi-thermometer-low" />
         <p>Temperatur: {{ plant.temperature.short }}</p>
         <div>
           <p v-if="showText">{{ plant.temperature }}</p>
@@ -102,17 +96,22 @@
     </div>
     <div class="plantDescTwo">
       <div class="plantWater">
-        <i class="bi bi-moisture" />
+        <i @click="openModal(product)" class="bi bi-moisture" />
         <p>Vatten: {{ plant.watering.short }}</p>
       </div>
       <div class="plantFert">
-        <i class="bi bi-flower1" />
+        <i @click="openModal(product)" class="bi bi-flower1" />
         <p>Näring:{{ plant.fertilization.short }}</p>
       </div>
     </div>
     <button class="button" @click="atAddPlant">
       Lägg till på fönsterbrädan
     </button>
+    <ShowPlant
+      v-if="selectedPlant"
+      :selectedPlant="selectedPlant"
+      @close="closeModal"
+    />
   </div>
   <div class="secondPlantBox">
     <h2>Mer information</h2>
@@ -123,35 +122,37 @@
 <style>
   .plantBox {
     width: 400px;
-    height: 400px;
+    padding: 45px 20px 20px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     background-color: white;
-    margin: 10px;
+    margin: auto;
     border-radius: 10px;
   }
   .secondPlantBox {
     width: 400px;
-    /* height: 600px; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     background-color: white;
-    margin: 10px;
+    margin: auto;
+    margin-top: 20px;
     border-radius: 10px;
     padding: 20px;
   }
 
   #ccc {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
   }
 
   img {
     object-fit: cover;
+    width: 300px;
+    height: 300px;
   }
 
   .plantDesc {

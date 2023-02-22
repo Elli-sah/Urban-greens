@@ -1,11 +1,11 @@
 <script>
-  // import PlantSearch from '../components/PlantSearch.vue'
-  // export default {
-  //   components: {
-
-  //     PlantSearch
-  //   }
-  // }
+  import PlantCategory from '../components/PlantCategory.vue'
+  export default {
+    components: {
+      PlantCategory
+      // PlantSearch
+    }
+  }
   // import axios from 'axios'
   // export default {
   //   created() {
@@ -43,6 +43,7 @@
     <RouterLink to="/login">
       <button class="button">Kom igång</button>
     </RouterLink>
+    <PlantCategory />
   </div>
 </template>
 
