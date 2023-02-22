@@ -29,7 +29,7 @@
 
 <template>
   <div class="plantBox">
-    <RouterLink :to="`/plant/${plant.name}`" class="plant-container">
+    <RouterLink :to="`/plants/${plant.name}`" class="plant-container">
       <img alt="plant.name" :src="plant.image[0]" />
       <h2>{{ plant.name }}</h2>
     </RouterLink>

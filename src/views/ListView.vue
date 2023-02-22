@@ -8,7 +8,7 @@
 
     computed: {
       filterdPlants() {
-        if (this.category === 'all') {
+        if (this.category === 'Alla växter') {
           return this.result.filter((plant) => {
             if (!this.searchText) {
               return true
@@ -35,9 +35,9 @@
     data() {
       return {
         result: [],
-        category: 'all',
+        category: 'Alla växter',
         message: '',
-        name: 'all',
+
         searchText: ''
       }
     },
@@ -67,7 +67,7 @@
       <i @click="submit" class="bi bi-search" />
     </div>
     <div class="scrolling-wrapper">
-      <button class="categoryLinks button" @click="category = 'all'">
+      <button class="categoryLinks button" @click="category = 'Alla växter'">
         Alla växter
       </button>
       <button class="categoryLinks button" @click="category = 'Blommande'">
@@ -83,6 +83,7 @@
         Giftiga växter
       </button>
     </div>
+    <h2>{{ category }}</h2>
     <div id="filteredPlants">
       <PlantCard
         v-for="plant in filterdPlants"

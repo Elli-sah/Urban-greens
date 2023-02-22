@@ -11,11 +11,11 @@ export default createRouter({
   routes: [
     {
       component: ListView,
-      path: '/plantlist'
+      path: '/plants'
     },
     {
       component: PlantView,
-      path: '/plant/:name',
+      path: '/plants/:name',
       props: true
     },
     {
