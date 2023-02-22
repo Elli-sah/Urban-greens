@@ -9,7 +9,8 @@
     data() {
       return {
         plant: null,
-        showText: false
+        showText: false,
+        slide: 0
       }
     },
     computed: {
@@ -77,7 +78,7 @@
       <p>Näring:{{ plant.fertilization.short }}</p> -->
 
       <div class="plantPlace">
-        <button @click="toggleText"></button>
+        <button @click="toggleText" />
         <p v-if="showText">{{ plant.description }}</p>
         <i class="bi bi-brightness-high" />
         <p>Ljusbehov: {{ plant.placement.short }}</p>

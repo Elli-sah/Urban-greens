@@ -282,7 +282,11 @@
     "pests": "Krukrosor kan drabbas av olika skadedjur och sjukdomar, såsom bladlöss, spindelkvalster och svartfläcksjuka. Håll ett öga på dina rosor och ta itu med problemen så fort du upptäcker dem, genom att använda lämpliga bekämpningsmedel eller att ta bort sjuka blad och grenar.",
     "other": "",
     "category": "Blommande",
-    "image": "/images/krukros.jpg"
+    "image": [
+      "/images/krukros.jpg",
+      "/images/krukros2.jpg",
+      "/images/krukros3.jpg"
+    ]
   },
   {
     "id": 5,
