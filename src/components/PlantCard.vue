@@ -64,7 +64,6 @@
 
   i {
     align-self: end;
-    padding-right: 20px;
   }
 
   h2 {
