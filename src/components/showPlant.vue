@@ -1,24 +1,14 @@
 <script>
   export default {
-    // emits: ['showPlant'],
     props: {
-      // title: { required: true, type: String },
-      // temperature: { required: true, type: String },
       selectedPlant: { required: true, type: Object }
     },
     data() {
-      return {
-        // showModal: false,
-        // selectedPlant: null
-      }
+      return {}
     },
     emits: ['close'],
 
-    methods: {
-      // viewPlant(plant) {
-      //   this.$emit('showPlant', plant)
-      // }
-    },
+    methods: {},
     close() {
       this.$emit('close')
     }
@@ -37,7 +27,7 @@
   <div class="container">
     <p>{{ selectedPlant.title }}</p>
     <p>{{ selectedPlant.temperature }}</p>
-    <!-- <button @click="viewPlant({ title, temperature })">Test</button> -->
+
     <button @click="$emit('close')">close</button>
   </div>
 </template>
