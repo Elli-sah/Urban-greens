@@ -11,7 +11,7 @@ export default createRouter({
   routes: [
     {
       component: ListView,
-      path: '/plantlist/:category'
+      path: '/plantlist'
     },
     {
       component: PlantView,
