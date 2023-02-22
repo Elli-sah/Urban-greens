@@ -60,7 +60,7 @@
 </script>
 
 <template>
-  <h1>ProduktListan</h1>
+  <h1>Växtguide</h1>
   <input type="text" v-model="searchText" placeholder="Sök..." />
 
   <ul>
