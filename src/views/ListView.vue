@@ -98,9 +98,7 @@
     width: 100%;
     justify-content: center;
   }
-  li {
-    cursor: pointer;
-  }
+
   .categoryLinks {
     display: inline-block;
     /* flex: auto; */
