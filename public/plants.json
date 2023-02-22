@@ -58,7 +58,11 @@
     "pests": "Ampelliljan kan drabbas av skadedjur och sjukdomar, särskilt om den står för fuktigt eller om den utsätts för stress. Se upp för tecken på bladlöss, spinnkvalster eller trips. Om du upptäcker något av detta kan du använda ett insektsmedel som är lämpligt för ampelliljor.",
     "other": "",
     "category": "Gröna växter",
-    "image": "/images/ampellilja.png"
+    "image": [
+      "/images/ampellilja1.jpg",
+      "/images/ampellilja2.jpg",
+      "/images/ampellilja3.jpg"
+    ]
   },
   {
     "id": 3,
@@ -198,7 +202,11 @@
     "pests": "Kan drabbas av skadedjur och sjukdomar, särskilt om den står för fuktigt eller om den utsätts för stress. Se upp för tecken på mjöldagg, bladlöss, spinnkvalster eller trips. Om du upptäcker något av detta kan du använda ett insektsmedel som är lämpligt för hortensior.",
     "other": "",
     "category": "Blommande",
-    "image": "/images/hortensia.png"
+    "image": [
+      "/images/hortensia.png",
+      "/images/hortensia2.jpg",
+      "/images/hortensia3.jpg"
+    ]
   },
   {
     "id": 5,
