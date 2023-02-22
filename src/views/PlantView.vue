@@ -64,6 +64,7 @@
     <div id="ccc">
       <b-carousel v-model="slide" indicators>
         <b-carousel-slide
+          class="carouselImg"
           v-for="(image, index) in plant.image"
           :key="index"
           :img-src="image"
@@ -121,7 +122,7 @@
 
 <style>
   .plantBox {
-    width: 400px;
+    width: 90%;
     padding: 45px 20px 20px 20px;
     display: flex;
     flex-direction: column;
@@ -132,7 +133,7 @@
     border-radius: 10px;
   }
   .secondPlantBox {
-    width: 400px;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -149,7 +150,7 @@
     height: 300px;
   }
 
-  img {
+  .carouselImg {
     object-fit: cover;
     width: 300px;
     height: 300px;
