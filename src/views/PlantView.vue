@@ -50,13 +50,15 @@
 <template>
   <h1>Om</h1>
   <div class="plantBox">
-    <b-carousel v-model="slide" indicators>
-      <b-carousel-slide
-        v-for="(image, index) in plant.image"
-        :key="index"
-        :img-src="image"
-      />
-    </b-carousel>
+    <div id="ccc">
+      <b-carousel class="carousel" v-model="slide" indicators>
+        <b-carousel-slide
+          v-for="(image, index) in plant.image"
+          :key="index"
+          :img-src="image"
+        />
+      </b-carousel>
+    </div>
 
     <!-- <hr class="line" /> -->
     <!-- <hr style="height: 1px; background: #000; color: #000" /> -->
@@ -133,11 +135,12 @@
     padding: 20px;
   }
 
-  img {
+  #ccc {
     width: 200px;
     height: 200px;
-    border-radius: 10px;
+  }
 
+  img {
     object-fit: cover;
   }
 
