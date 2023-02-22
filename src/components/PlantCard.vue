@@ -29,33 +29,61 @@
 
 <template>
   <div class="plantBox">
-    <i @click="addPlant" class="bi bi-suit-heart-fill">
-      <RouterLink :to="`/plant/${plant.name}`">
-        <img alt="" :src="plant.image" />
-        <p>{{ plant.name }}</p>
-      </RouterLink>
-    </i>
+    <RouterLink :to="`/plant/${plant.name}`" class="plant-container">
+      <img alt="plant.name" :src="plant.image" />
+      <h2>{{ plant.name }}</h2>
+    </RouterLink>
+    <i @click="addPlant" class="bi bi-suit-heart-fill" />
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
   .plantBox {
-    width: 300px;
-    height: 400px;
+    width: 250px;
+    height: 300px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     background-color: white;
     margin: 10px;
     border-radius: 10px;
   }
+
+  .plantBox:hover {
+    transition: all 0.3s ease-out;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.1);
+    top: -4px;
+    // border: 1px solid #cccccc;
+  }
+  .plant-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    // margin-top: 10px;
+  }
+
+  i {
+    align-self: end;
+    padding-right: 20px;
+  }
+
   img {
     width: 200px;
-    height: 300px;
+    height: 200px;
     border-radius: 10px;
     object-fit: cover;
   }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  a:hover {
+    color: inherit;
+  }
+
   p {
     font-weight: bold;
   }
