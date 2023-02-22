@@ -30,7 +30,7 @@
 <template>
   <div class="plantBox">
     <RouterLink :to="`/plant/${plant.name}`" class="plant-container">
-      <img alt="plant.name" :src="plant.image" />
+      <img alt="plant.name" :src="plant.image[0]" />
       <h2>{{ plant.name }}</h2>
     </RouterLink>
     <i @click="addPlant" class="bi bi-suit-heart-fill" />
@@ -52,7 +52,6 @@
     transition: all 0.3s ease-out;
     box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.1);
     top: -4px;
-    // border: 1px solid #cccccc;
   }
   .plant-container {
     display: flex;
@@ -82,9 +81,5 @@
 
   a:hover {
     color: inherit;
-  }
-
-  p {
-    font-weight: bold;
   }
 </style>

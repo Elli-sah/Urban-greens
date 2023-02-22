@@ -80,14 +80,24 @@
       <p>Näring:{{ plant.fertilization.short }}</p> -->
 
       <div class="plantPlace">
+        <i @click="toggleText" class="bi bi-brightness-high" />
+
+        <p @click="toggleText">Ljusbehov: {{ plant.placement.short }}</p>
+        <div>
+          <p v-show="showText">{{ plant.placement }}</p>
+        </div>
+
         <button @click="toggleText" />
         <p v-if="showText">{{ plant.description }}</p>
         <i class="bi bi-brightness-high" />
         <p>Ljusbehov: {{ plant.placement.short }}</p>
       </div>
       <div class="plantTemp">
-        <i class="bi bi-thermometer-low" />
+        <i @click="toggleText" class="bi bi-thermometer-low" />
         <p>Temperatur: {{ plant.temperature.short }}</p>
+        <div>
+          <p v-if="showText">{{ plant.temperature }}</p>
+        </div>
       </div>
     </div>
     <div class="plantDescTwo">
@@ -146,7 +156,7 @@
 
   .plantDesc {
     display: flex;
-    /* justify-content: flex-start; */
+    justify-content: space-around;
     flex-direction: row;
   }
 
