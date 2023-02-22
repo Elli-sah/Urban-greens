@@ -50,30 +50,43 @@
     <!-- <hr style="height: 1px; background: #000; color: #000" /> -->
 
     <h1>{{ plant.name }}</h1>
+
     <h3>{{ plant.latin }}</h3>
     <hr />
     <div class="plantDesc">
-      <i class="bi bi-brightness-high"></i>
-      <p>Ljusbehov: {{ plant.placement.short }}</p>
-      <i class="bi bi-thermometer-low"></i>
-      <p>Temperatur: {{ plant.temperature.short }}</p>
+      <div class="plantPlace">
+        <i class="bi bi-brightness-high"></i>
+        <p>Ljusbehov: {{ plant.placement.short }}</p>
+      </div>
+      <div class="plantTemp">
+        <i class="bi bi-thermometer-low"></i>
+        <p>Temperatur: {{ plant.temperature.short }}</p>
+      </div>
     </div>
-    <div class="plantDesc">
-      <i class="bi bi-moisture"></i>
-      <p>Vatten: {{ plant.watering.short }}</p>
-      <i class="bi bi-flower1"></i>
-      <p>Näring:{{ plant.fertilization.short }}</p>
+    <div class="plantDescTwo">
+      <div class="plantWater">
+        <i class="bi bi-moisture"></i>
+        <p>Vatten: {{ plant.watering.short }}</p>
+      </div>
+      <div class="plantFert">
+        <i class="bi bi-flower1"></i>
+        <p>Näring:{{ plant.fertilization.short }}</p>
+      </div>
     </div>
     <button class="button" @click="atAddPlant">
       Lägg till på fönsterbrädan
     </button>
   </div>
+  <div class="secondPlantBox">
+    <h2>Mer information</h2>
+    <p>{{ plant.description }}</p>
+  </div>
 </template>
 
 <style>
   .plantBox {
-    width: 300px;
-    height: 600px;
+    width: 400px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -81,6 +94,18 @@
     background-color: white;
     margin: 10px;
     border-radius: 10px;
+  }
+  .secondPlantBox {
+    width: 400px;
+    /* height: 600px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 20px;
   }
 
   img {
@@ -93,10 +118,33 @@
 
   .plantDesc {
     display: flex;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
+    flex-direction: row;
+  }
+
+  .plantDescTwo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
 
   hr {
     border-style: 1px solid rgba(0, 0, 0, 0.15);
+  }
+
+  .plantPlace {
+    display: flex;
+  }
+
+  .plantTemp {
+    display: flex;
+  }
+
+  .plantWater {
+    display: flex;
+  }
+
+  .plantWater {
+    display: flex;
   }
 </style>
