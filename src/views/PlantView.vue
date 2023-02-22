@@ -50,9 +50,11 @@
   <h1>Om</h1>
   <div class="plantBox">
     <b-carousel v-model="slide" indicators>
-      <b-carousel-slide :img-src="plant.image" />
-      <b-carousel-slide :img-src="plant.image" />
-      <b-carousel-slide :img-src="plant.image" />
+      <b-carousel-slide
+        v-for="(image, index) in plant.image"
+        :key="index"
+        :img-src="image"
+      />
     </b-carousel>
 
     <!-- <hr class="line" /> -->
