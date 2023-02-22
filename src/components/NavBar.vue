@@ -25,7 +25,7 @@
       },
       onClick() {
         this.visible = false
-        this.$store.commit('setSearchText', this.searchText)
+        // this.$store.commit('setSearchText', this.searchText)
       },
       axiosGetPlants() {
         axios.get('/plants.json').then((response) => {
@@ -100,7 +100,7 @@
                     @input="onClickPlants"
                     v-model="searchText"
                     size="sm"
-                    class="mr-sm-2"
+                    class="mr-sm-2 d-flex justify-content-start"
                     placeholder="Sök..."
                   />
                   <PlantItem

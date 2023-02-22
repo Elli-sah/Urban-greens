@@ -10,7 +10,7 @@
 </script>
 
 <template>
-  <RouterLink :to="`/plant/${plant.name}`" class="plant-container">
-    <p>{{ plant.name }}</p></RouterLink
+  <b-link :to="`/plants/${plant.name}`" class="list-group-item">
+    <p>{{ plant.name }}</p></b-link
   >
 </template>
