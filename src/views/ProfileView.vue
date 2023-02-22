@@ -3,9 +3,6 @@
   import { mapState } from 'vuex'
 
   export default {
-    data() {
-      return { profile: null }
-    },
     components: {
       MyShelf
     },

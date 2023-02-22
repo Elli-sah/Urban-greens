@@ -41,6 +41,7 @@ body {
 
 main {
   margin-top: 100px;
+  padding: 20px;
 }
 
 h1 {
@@ -68,12 +69,19 @@ p {
 
 .button {
   background-color: $color-cream;
+  font-family: Lato, sans-serif;
   width: 150px;
   height: 40px;
   border-radius: 20px;
   border: none;
   margin: 15px;
   font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.button:hover {
+  background-color: $color-lightpink;
+  transition: 0.3s ease-in-out;
 }
 
 #start-div {
