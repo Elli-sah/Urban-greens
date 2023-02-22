@@ -15,8 +15,10 @@
 </script>
 
 <template>
-  <h1>Här är din fönsterbräda, {{ loggedInUser.name }}!</h1>
-  <MyShelf />
+  <div class="view-divs">
+    <h1>Här är din fönsterbräda, {{ loggedInUser.name }}!</h1>
+    <MyShelf />
+  </div>
 </template>
 
 <style lang="scss"></style>

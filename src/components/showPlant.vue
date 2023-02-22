@@ -1,43 +1,43 @@
 <script>
   export default {
-    // emits: ['showPlant'],
     props: {
-      // title: { required: true, type: String },
-      // temperature: { required: true, type: String },
       selectedPlant: { required: true, type: Object }
     },
     data() {
-      return {
-        // showModal: false,
-        // selectedPlant: null
-      }
+      return {}
     },
     emits: ['close'],
 
-    methods: {
-      // viewPlant(plant) {
-      //   this.$emit('showPlant', plant)
-      // }
-    },
+    methods: {},
     close() {
       this.$emit('close')
     }
   }
 </script>
 
-<style>
+<style scoped>
   .container {
-    width: 200px;
-    height: 200px;
+    /* width: 100px;
+    height: 100px; */
     background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 250px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 200px 10% 0 10%;
+    text-align: center;
   }
 </style>
 
 <template>
   <div class="container">
+    <h3>Ljusbehov</h3>
     <p>{{ selectedPlant.title }}</p>
-    <p>{{ selectedPlant.temperature }}</p>
-    <!-- <button @click="viewPlant({ title, temperature })">Test</button> -->
+    <p>{{ selectedPlant.temperature.description }}</p>
+
     <button @click="$emit('close')">close</button>
   </div>
 </template>
