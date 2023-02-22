@@ -1,11 +1,11 @@
 <script>
   // import PlantSearch from '../components/PlantSearch.vue'
+  // export default {
+  //   components: {
 
-  export default {
-    // components: {
-    //   PlantSearch
-    // }
-  }
+  //     PlantSearch
+  //   }
+  // }
   // import axios from 'axios'
   // export default {
   //   created() {
@@ -43,14 +43,7 @@
     <RouterLink to="/login">
       <button class="button">Kom igång</button>
     </RouterLink>
-    <PlantCategory />
   </div>
-
-  <!-- <h1>ProduktListan</h1>
-  <ul v-for="plant in result" :key="plant">
-    <li>{{ plant.name }}</li>
-    <img :src="plant.image" alt="" />
-  </ul> -->
 </template>
 
 <style lang="scss" scoped>

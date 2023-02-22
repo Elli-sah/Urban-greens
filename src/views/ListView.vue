@@ -80,7 +80,7 @@
       Giftiga växter
     </button>
   </div>
-  <div>
+  <div id="filteredPlants">
     <PlantCard
       v-for="plant in filterdPlants"
       :key="plant.name"
