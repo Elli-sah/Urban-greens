@@ -1,15 +1,13 @@
 <script>
   import { mapState } from 'vuex'
   import axios from 'axios'
-  import PlantCard from '../components/PlantCard.vue'
+  import PlantItem from '../components/PlantItem.vue'
 
   export default {
     components: {
-      PlantCard
+      PlantItem
     },
-    // created() {
-    //   this.axiosGetPlants()
-    // },
+
     data() {
       return {
         visible: false,
@@ -135,10 +133,12 @@
       </div>
     </b-navbar>
   </div>
-  <PlantCard
-    v-model="visible"
-    v-for="plant in filterdPlants"
-    :key="plant.name"
-    :plant="plant"
-  />
+  <div>
+    <PlantItem
+      v-model="visible"
+      v-for="plant in filterdPlants"
+      :key="plant.name"
+      :plant="plant"
+    />
+  </div>
 </template>
