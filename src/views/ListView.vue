@@ -102,30 +102,9 @@
     width: 100%;
     justify-content: center;
   }
-
-  .input-div i {
-    position: absolute;
+  li {
+    cursor: pointer;
   }
-
-  .input-div {
-    width: 90%;
-    margin: auto;
-  }
-
-  input {
-    width: 100%;
-    padding: 10px;
-    border-radius: 30px;
-    border: none;
-  }
-
-  i {
-    position: relative;
-    right: 45px;
-    z-index: 6;
-    padding: 10px;
-  }
-
   .categoryLinks {
     display: inline-block;
     /* flex: auto; */

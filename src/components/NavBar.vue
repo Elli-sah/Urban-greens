@@ -1,24 +1,66 @@
 <script>
   import { mapState } from 'vuex'
+  import axios from 'axios'
+  import PlantItem from '../components/PlantItem.vue'
 
   export default {
+    components: {
+      PlantItem
+    },
+
     data() {
       return {
         visible: false,
-        searchText: ''
+        searchText: '',
+        result: [],
+        category: 'all',
+        message: '',
+        name: 'all'
       }
     },
     methods: {
+      onClickPlants() {
+        this.visible = true
+        this.axiosGetPlants()
+      },
       onClick() {
         this.visible = false
-
         this.$store.commit('setSearchText', this.searchText)
+      },
+      axiosGetPlants() {
+        axios.get('/plants.json').then((response) => {
+          this.result = response.data
+        })
       }
     },
     computed: {
+      filterdPlants() {
+        if (this.category === 'all') {
+          return this.result.filter((plant) => {
+            if (!this.searchText) {
+              return true
+            } else {
+              const lowerCaseName = plant.name.toLowerCase()
+              const lowerCaseSearchText = this.searchText.toLowerCase()
+              return lowerCaseName.includes(lowerCaseSearchText)
+            }
+          })
+        } else {
+          return this.result.filter(
+            (plant) =>
+              plant.category === this.category &&
+              plant.name.toLowerCase().includes(this.searchText.toLowerCase())
+          )
+        }
+      },
       ...mapState({
         loggedInUser: (state) => state.loggedInUser
       })
+    },
+    watch: {
+      searchText(newValue) {
+        console.log(newValue)
+      }
     }
   }
 </script>
@@ -54,6 +96,7 @@
             <b-navbar-nav>
               <b-nav-form>
                 <b-form-input
+                  @click="onClickPlants"
                   v-model="searchText"
                   size="sm"
                   class="mr-sm-2"
@@ -62,11 +105,10 @@
 
                 <b-button
                   @click="onClick"
-                  variant=""
                   size="m"
                   class="my-2 my-sm-0"
                   type="submit"
-                  to="/plantList"
+                  to="/plantlist"
                   >Sök
                 </b-button>
               </b-nav-form>
@@ -90,5 +132,13 @@
         </div>
       </div>
     </b-navbar>
+  </div>
+  <div>
+    <PlantItem
+      v-model="visible"
+      v-for="plant in filterdPlants"
+      :key="plant.name"
+      :plant="plant"
+    />
   </div>
 </template>
