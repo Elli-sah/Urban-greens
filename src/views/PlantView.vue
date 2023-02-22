@@ -8,7 +8,8 @@
     },
     data() {
       return {
-        plant: null
+        plant: null,
+        slide: 0
       }
     },
     computed: {
@@ -45,7 +46,12 @@
 <template>
   <h1>Om</h1>
   <div class="plantBox">
-    <img class="image" :src="plant.image" />
+    <b-carousel v-model="slide" indicators>
+      <b-carousel-slide :img-src="plant.image" />
+      <b-carousel-slide :img-src="plant.image" />
+      <b-carousel-slide :img-src="plant.image" />
+    </b-carousel>
+
     <!-- <hr class="line" /> -->
     <!-- <hr style="height: 1px; background: #000; color: #000" /> -->
 
@@ -54,22 +60,33 @@
     <h3>{{ plant.latin }}</h3>
     <hr />
     <div class="plantDesc">
+      <i class="bi bi-brightness-high" />
+      <p>Ljusbehov: {{ plant.placement.short }}</p>
+      <i class="bi bi-thermometer-low" />
+      <p>Temperatur: {{ plant.temperature.short }}</p>
+    </div>
+    <div class="plantDesc">
+      <i class="bi bi-moisture" />
+      <p>Vatten: {{ plant.watering.short }}</p>
+      <i class="bi bi-flower1" />
+      <p>Näring:{{ plant.fertilization.short }}</p>
+
       <div class="plantPlace">
-        <i class="bi bi-brightness-high"></i>
+        <i class="bi bi-brightness-high" />
         <p>Ljusbehov: {{ plant.placement.short }}</p>
       </div>
       <div class="plantTemp">
-        <i class="bi bi-thermometer-low"></i>
+        <i class="bi bi-thermometer-low" />
         <p>Temperatur: {{ plant.temperature.short }}</p>
       </div>
     </div>
     <div class="plantDescTwo">
       <div class="plantWater">
-        <i class="bi bi-moisture"></i>
+        <i class="bi bi-moisture" />
         <p>Vatten: {{ plant.watering.short }}</p>
       </div>
       <div class="plantFert">
-        <i class="bi bi-flower1"></i>
+        <i class="bi bi-flower1" />
         <p>Näring:{{ plant.fertilization.short }}</p>
       </div>
     </div>

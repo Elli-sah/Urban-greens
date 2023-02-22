@@ -278,7 +278,7 @@
     "pests": "Krukrosor kan drabbas av olika skadedjur och sjukdomar, såsom bladlöss, spindelkvalster och svartfläcksjuka. Håll ett öga på dina rosor och ta itu med problemen så fort du upptäcker dem, genom att använda lämpliga bekämpningsmedel eller att ta bort sjuka blad och grenar.",
     "other": "",
     "category": "Blommande",
-    "image": ""
+    "image": "/images/krukros.jpg"
   },
   {
     "id": 5,
@@ -306,7 +306,7 @@
     "pests": "Monstera kan drabbas av skadedjur som spinnkvalster, mjöldagg och trips. Spinnkvalster bildar ett spindelnät på undersidan av bladen, mjöldagg orsakar ett vitt, mjöligt lager på bladens yta och trips är små insekter som suger saft från växten och kan orsaka missfärgade och skadade blad. För att förebygga skadedjur är det viktigt att undvika övervattning och se till att växten har god luftcirkulation. Om växten drabbas av skadedjur kan man behandla den med ett lämpligt insektsmedel.",
     "other": "",
     "category": "Gröna växter",
-    "image": "/images/monstrera.png"
+    "image": "/images/monstera.png"
   },
   {
     "id": 5,
