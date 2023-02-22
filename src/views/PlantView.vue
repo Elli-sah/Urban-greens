@@ -77,7 +77,7 @@
     <hr class="line" />
     <div class="plantDesc">
       <div class="plantPlace">
-        <i @click="openModal(product)" class="bi bi-brightness-high" />
+        <i @click="openModal(plant)" class="bi bi-brightness-high" />
 
         <p @click="toggleText">Ljusbehov: {{ plant.placement.short }}</p>
         <div>
