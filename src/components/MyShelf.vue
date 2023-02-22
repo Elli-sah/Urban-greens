@@ -2,12 +2,6 @@
   import { mapState } from 'vuex'
 
   export default {
-    props: {
-      profile: {
-        type: Object,
-        default: () => ({})
-      }
-    },
     computed: {
       ...mapState({
         myPlants: (state) => state.users[state.loggedInUser.user].favorites

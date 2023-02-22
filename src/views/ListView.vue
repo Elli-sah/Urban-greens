@@ -61,8 +61,10 @@
 
 <template>
   <h1>Växtguide</h1>
-  <input type="text" v-model="searchText" />
-  <button @click="submit">Sök</button>
+  <div class="input-div">
+    <input type="text" v-model="searchText" />
+    <i @click="submit" class="bi bi-search" />
+  </div>
   <div class="scrolling-wrapper">
     <button class="categoryLinks button" @click="category = 'all'">
       Alla växter
@@ -71,7 +73,7 @@
       Blommande växter
     </button>
     <button class="categoryLinks button" @click="category = 'Suckulent'">
-      Suckulenter
+      Succulenter
     </button>
     <button class="categoryLinks button" @click="category = 'Gröna växter'">
       Gröna växter
@@ -97,6 +99,29 @@
     gap: 10px;
     width: 100%;
     justify-content: center;
+  }
+
+  .input-div i {
+    position: absolute;
+  }
+
+  .input-div {
+    width: 90%;
+    margin: auto;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+  }
+
+  i {
+    position: relative;
+    right: 45px;
+    z-index: 6;
+    padding: 10px;
   }
 
   .categoryLinks {
