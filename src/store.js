@@ -82,10 +82,13 @@ const state = {
     }
   },
 
-  loggedInUser: ''
+  loggedInUser: '',
+  searchText: ''
 }
-
 const mutations = {
+  setSearchText(state, searchText) {
+    state.searchText = searchText
+  },
   addLoggedInUser(state, loggedUser) {
     state.loggedInUser = {
       user: loggedUser,

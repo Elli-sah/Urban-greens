@@ -31,7 +31,7 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
   #plantShelfBox {
     display: flex;
     flex-direction: column;

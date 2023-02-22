@@ -29,11 +29,12 @@
 
 <template>
   <div class="plantBox">
-    <i @click="addPlant" class="bi bi-heart-fill" />
-    <RouterLink :to="`/plant/${plant.name}`">
-      <img alt="" :src="plant.image" />
-      <p>{{ plant.name }}</p>
-    </RouterLink>
+    <i @click="addPlant" class="bi bi-suit-heart-fill">
+      <RouterLink :to="`/plant/${plant.name}`">
+        <img alt="" :src="plant.image" />
+        <p>{{ plant.name }}</p>
+      </RouterLink>
+    </i>
   </div>
 </template>
 

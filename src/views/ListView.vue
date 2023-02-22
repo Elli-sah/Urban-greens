@@ -80,14 +80,7 @@
       Giftiga växter
     </button>
   </div>
-
-  <!-- <ul>
-    <li class="button" @click="category = 'all'">Alla växter</li>
-    <li @click="category = 'Gröna växter'">Gröna växter</li>
-    <li @click="category = 'Blommande'">Blommande</li>
-    <li @click="category = 'Suckulent'">Suckulenter</li>
-  </ul> -->
-  <div id="filteredPlants">
+  <div>
     <PlantCard
       v-for="plant in filterdPlants"
       :key="plant.name"
