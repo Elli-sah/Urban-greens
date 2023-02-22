@@ -51,7 +51,7 @@
                   size="m"
                   class="my-2 my-sm-0"
                   type="submit"
-                  to="/PlantList/all"
+                  to="/plantList"
                   >Sök
                 </b-button>
               </b-nav-form>
@@ -67,7 +67,7 @@
                     :to="`/profile/${loggedInUser.user}`"
                     >Min fönsterbräda</b-nav-item
                   >
-                  <b-nav-item @click="closeMenu" to="/plantlist/all"
+                  <b-nav-item @click="closeMenu" to="/plantlist"
                     >Växtguide</b-nav-item
                   >
                 </b-row>

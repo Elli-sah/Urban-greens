@@ -60,16 +60,27 @@
 </script>
 
 <template>
-  <h1>ProduktListan</h1>
-  <input type="text" v-model="searchText" placeholder="Sök..." />
-
-  <ul>
-    <li @click="category = 'all'">Alla växter</li>
-    <li @click="category = 'Gröna växter'">Gröna växter</li>
-    <li @click="category = 'Blommande'">Blommande</li>
-    <li @click="category = 'Suckulent'">Suckulenter</li>
-  </ul>
-  <div>
+  <h1>Växtguide</h1>
+  <input type="text" v-model="searchText" />
+  <button @click="submit">Sök</button>
+  <div class="scrolling-wrapper">
+    <button class="categoryLinks button" @click="category = 'all'">
+      Alla växter
+    </button>
+    <button class="categoryLinks button" @click="category = 'Blommande'">
+      Blommande växter
+    </button>
+    <button class="categoryLinks button" @click="category = 'Suckulent'">
+      Suckulenter
+    </button>
+    <button class="categoryLinks button" @click="category = 'Gröna växter'">
+      Gröna växter
+    </button>
+    <button class="categoryLinks button" @click="category = 'Giftiga växter'">
+      Giftiga växter
+    </button>
+  </div>
+  <div id="filteredPlants">
     <PlantCard
       v-for="plant in filterdPlants"
       :key="plant.name"
@@ -79,7 +90,7 @@
 </template>
 
 <style scoped>
-  div {
+  #filteredPlants {
     display: flex;
     flex-wrap: wrap;
     align-items: start;
@@ -89,5 +100,16 @@
   }
   li {
     cursor: pointer;
+  }
+  .categoryLinks {
+    display: inline-block;
+    /* flex: auto; */
+  }
+
+  .scrolling-wrapper {
+    overflow-y: hidden;
+    white-space: nowrap;
+    /* display: flex; */
+    flex-wrap: nowrap;
   }
 </style>
