@@ -61,6 +61,10 @@ p {
   font-size: 0.8rem;
 }
 
+label {
+  font-family: Lato, sans-serif;
+}
+
 #app {
   display: flex;
   flex-direction: column;
@@ -72,6 +76,7 @@ p {
 
 .button {
   background-color: $color-cream;
+  // border: 1px solid #e8cac3;
   font-family: Lato, sans-serif;
   width: 150px;
   height: 40px;

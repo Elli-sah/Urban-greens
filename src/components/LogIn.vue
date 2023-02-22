@@ -52,9 +52,11 @@
 
 <template>
   <h1>Logga in</h1>
-  <form @submit.prevent="AtLogin">
-    <label>Användarnamn <input v-model="userName" /></label>
-    <label>Lösenord<input type="password" v-model="password" /></label>
+  <form @submit.prevent="AtLogin" class="form">
+    <label for="username">Användarnamn</label
+    ><input id="username" v-model="userName" />
+    <label for="password">Lösenord</label
+    ><input id="password" type="password" v-model="password" />
     <button class="button" type="submit">Logga in</button>
   </form>
   <div v-if="logedInMessage">
@@ -63,13 +65,21 @@
   <div v-if="showMessage">
     <p>Du verkar inte ha något konto!</p>
   </div>
+  <p>Eller..</p>
   <h1>Skapa konto</h1>
-  <form @submit.prevent="AtCreateAccount">
-    <label>Namn <input v-model="createName" /></label>
-    <label>Användarnamn <input v-model="createUserName" /></label>
-    <label>Lösenord<input type="password" v-model="createPassword" /></label>
+  <form @submit.prevent="AtCreateAccount" class="form">
+    <label for="name">Namn</label><input id="name" v-model="createName" />
+    <label for="create-user">Användarnamn</label
+    ><input id="create-user" v-model="createUserName" />
+    <label for="create-password">Lösenord</label
+    ><input id="create-password" type="password" v-model="createPassword" />
     <button class="button" type="submit">Skapa konto</button>
   </form>
 </template>
 
-<style></style>
+<style>
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+</style>
