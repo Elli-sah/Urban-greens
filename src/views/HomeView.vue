@@ -47,8 +47,4 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
-  #start-div {
-    margin-top: 70px;
-  }
-</style>
+<style lang="scss" scoped></style>
