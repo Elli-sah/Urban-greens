@@ -118,7 +118,11 @@
     "pests": "Elefantöra kan drabbas av skadedjur som spinnkvalster, trips och bladlöss. Spinnkvalster orsakar en väv som täcker undersidan av bladen, trips suger växtsaft och kan orsaka missfärgade och skadade blad, och bladlöss suger också på bladen och kan orsaka gulnade blad. För att förebygga skadedjur är det viktigt att undvika övervattning och se till att växten har god luftcirkulation. Om växten drabbas av skadedjur kan man behandla den med ett lämpligt insektsmedel.",
     "other": "",
     "category": "Gröna växter",
-    "image": "/images/elefantora.png"
+    "image": [
+      "/images/elefantora1.jpg",
+      "/images/elefantora2.jpg",
+      "/images/elefantora3.jpg"
+    ]
   },
   {
     "id": 5,
@@ -262,7 +266,11 @@
     "pests": "Kalanchoe kan drabbas av bladlöss och spinnkvalster, men det är relativt ovanligt. Om du upptäcker skadedjur eller sjukdomar, ta itu med dem genom att använda lämpliga bekämpningsmedel eller att ta bort sjuka blad.",
     "other": "",
     "category": "Blommande",
-    "image": "/images/kalanchoe.png"
+    "image": [
+      "/images/kalanchoe.png",
+      "/images/kalanchoe2.jpg",
+      "/images/kalanchoe3.jpg"
+    ]
   },
   {
     "id": 5,
@@ -354,7 +362,11 @@
     "pests": "Murgröna kan drabbas av spinnkvalster och bladlöss, så det är viktigt att hålla växten ren och att ta itu med skadedjur eller sjukdomar snabbt.",
     "other": "",
     "category": "Gröna växter",
-    "image": "/images/murgrona.png"
+    "image": [
+      "/images/murgrona.png",
+      "/images/murgrona2.jpg",
+      "/images/murgrona3.jpg"
+    ]
   },
   {
     "id": 5,
