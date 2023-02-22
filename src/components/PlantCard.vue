@@ -67,6 +67,10 @@
     padding-right: 20px;
   }
 
+  h2 {
+    margin-top: 5px;
+  }
+
   img {
     width: 200px;
     height: 200px;

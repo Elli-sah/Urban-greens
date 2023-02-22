@@ -9,5 +9,7 @@
 </script>
 
 <template>
-  <LogIn />
+  <div class="view-divs">
+    <LogIn />
+  </div>
 </template>
