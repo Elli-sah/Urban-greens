@@ -9,11 +9,10 @@
       }
     },
     methods: {
-      setText() {
-        this.$store.commit('setSearchText', this.searchText)
-      },
-      closeMenu() {
+      onClick() {
         this.visible = false
+
+        this.$store.commit('setSearchText', this.searchText)
       }
     },
     computed: {
@@ -24,7 +23,23 @@
   }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+  #navbar {
+    background-color: rgba(225, 186, 107);
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: none;
+  }
+
+  #nav-collapse {
+    background-color: rgba(225, 186, 107, 0.9);
+    padding: 20px;
+    width: 100%;
+    margin: none;
+    box-sizing: border-box;
+  }
+</style>
 
 <template>
   <div>
@@ -46,7 +61,7 @@
                 />
 
                 <b-button
-                  @click="setText"
+                  @click="onClick"
                   variant=""
                   size="m"
                   class="my-2 my-sm-0"
@@ -58,16 +73,14 @@
 
               <b-container>
                 <b-row align="right">
-                  <b-nav-item @click="closeMenu" to="/">Hem</b-nav-item>
-                  <b-nav-item @click="closeMenu" to="/login"
-                    >Logga in</b-nav-item
-                  >
+                  <b-nav-item @click="onClick" to="/">Hem</b-nav-item>
+                  <b-nav-item @click="onClick" to="/login">Logga in</b-nav-item>
                   <b-nav-item
-                    @click="closeMenu"
+                    @click="onClick"
                     :to="`/profile/${loggedInUser.user}`"
                     >Min fönsterbräda</b-nav-item
                   >
-                  <b-nav-item @click="closeMenu" to="/plantlist"
+                  <b-nav-item @click="onClick" to="/plantlist"
                     >Växtguide</b-nav-item
                   >
                 </b-row>

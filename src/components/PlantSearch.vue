@@ -1,6 +1,7 @@
 <script>
   import axios from 'axios'
   import PlantCard from '../components/PlantCard.vue'
+
   export default {
     components: {
       PlantCard
