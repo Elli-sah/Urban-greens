@@ -8,7 +8,8 @@
     },
     data() {
       return {
-        plant: null
+        plant: null,
+        showText: false
       }
     },
     computed: {
@@ -38,6 +39,9 @@
     },
     created() {
       this.axiosGetPlants()
+    },
+    toggleText() {
+      this.showText = !this.showText
     }
   }
 </script>
@@ -52,7 +56,7 @@
     <h1>{{ plant.name }}</h1>
 
     <h3>{{ plant.latin }}</h3>
-    <hr />
+    <hr class="line" />
     <div class="plantDesc">
       <div class="plantPlace">
         <i class="bi bi-brightness-high"></i>
@@ -128,7 +132,7 @@
     justify-content: space-around;
   }
 
-  hr {
+  .line {
     border-style: 1px solid rgba(0, 0, 0, 0.15);
   }
 
