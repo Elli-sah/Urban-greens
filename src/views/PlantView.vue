@@ -8,7 +8,8 @@
     },
     data() {
       return {
-        plant: null
+        plant: null,
+        showText: false
       }
     },
     computed: {
@@ -62,18 +63,20 @@
     <h3>{{ plant.latin }}</h3>
     <hr class="line" />
     <div class="plantDesc">
-      <i class="bi bi-brightness-high" />
-      <p>Ljusbehov: {{ plant.placement.short }}</p>
-      <i class="bi bi-thermometer-low" />
-      <p>Temperatur: {{ plant.temperature.short }}</p>
+      <!-- <i class="bi bi-brightness-high" />
+      <p>Ljusbehov: {{ plant.placement.short }}</p> -->
+      <!-- <i class="bi bi-thermometer-low" />
+      <p>Temperatur: {{ plant.temperature.short }}</p> -->
     </div>
     <div class="plantDesc">
-      <i class="bi bi-moisture" />
-      <p>Vatten: {{ plant.watering.short }}</p>
-      <i class="bi bi-flower1" />
-      <p>Näring:{{ plant.fertilization.short }}</p>
+      <!-- <i class="bi bi-moisture" />
+      <p>Vatten: {{ plant.watering.short }}</p> -->
+      <!-- <i class="bi bi-flower1" />
+      <p>Näring:{{ plant.fertilization.short }}</p> -->
 
       <div class="plantPlace">
+        <button @click="toggleText"></button>
+        <p v-if="showText">{{ plant.description }}</p>
         <i class="bi bi-brightness-high" />
         <p>Ljusbehov: {{ plant.placement.short }}</p>
       </div>
