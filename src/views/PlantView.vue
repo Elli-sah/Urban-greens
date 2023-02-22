@@ -1,8 +1,10 @@
 <script>
   import axios from 'axios'
   import { mapState } from 'vuex'
+  import ShowPlant from '../components/ShowPlant.vue'
 
   export default {
+    components: { ShowPlant },
     props: {
       name: { type: String, required: true }
     },
@@ -10,7 +12,8 @@
       return {
         plant: null,
         showText: false,
-        slide: 0
+        slide: 0,
+        selectedPlant: null
       }
     },
     computed: {
@@ -36,8 +39,17 @@
           addplant: this.plant
         })
         console.log(this.plant)
+      },
+      openModal(plant) {
+        this.selectedPlant = plant
+        document.body.style.overflow = 'hidden'
+      },
+      closeModal() {
+        this.selectedPlant = null
+        document.body.style.overflow = 'auto'
       }
     },
+
     created() {
       this.axiosGetPlants()
     },
@@ -63,10 +75,9 @@
 
     <h3>{{ plant.latin }}</h3>
     <hr class="line" />
-    <div class="plantDesc" />
     <div class="plantDesc">
       <div class="plantPlace">
-        <i @click="toggleText" class="bi bi-brightness-high" />
+        <i @click="openModal(product)" class="bi bi-brightness-high" />
 
         <p @click="toggleText">Ljusbehov: {{ plant.placement.short }}</p>
         <div>
@@ -76,7 +87,7 @@
         <p v-if="showText">{{ plant.description }}</p>
       </div>
       <div class="plantTemp">
-        <i @click="toggleText" class="bi bi-thermometer-low" />
+        <i @click="openModal(product)" class="bi bi-thermometer-low" />
         <p>Temperatur: {{ plant.temperature.short }}</p>
         <div>
           <p v-if="showText">{{ plant.temperature }}</p>
@@ -85,17 +96,22 @@
     </div>
     <div class="plantDescTwo">
       <div class="plantWater">
-        <i class="bi bi-moisture" />
+        <i @click="openModal(product)" class="bi bi-moisture" />
         <p>Vatten: {{ plant.watering.short }}</p>
       </div>
       <div class="plantFert">
-        <i class="bi bi-flower1" />
+        <i @click="openModal(product)" class="bi bi-flower1" />
         <p>Näring:{{ plant.fertilization.short }}</p>
       </div>
     </div>
     <button class="button" @click="atAddPlant">
       Lägg till på fönsterbrädan
     </button>
+    <ShowPlant
+      v-if="selectedPlant"
+      :selectedPlant="selectedPlant"
+      @close="closeModal"
+    />
   </div>
   <div class="secondPlantBox">
     <h2>Mer information</h2>
