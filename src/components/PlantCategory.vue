@@ -8,42 +8,6 @@
 </script>
 
 <template>
-  <div class="scrolling-wrapper">
-    <button class="categoryLinks, button">
-      <RouterLink id="plants" to="/plant/:name'"> Alla växter</RouterLink>
-    </button>
-    <button class="categoryLinks, button">
-      <RouterLink id="plants" to="/plant/:name'"> Blommande växter</RouterLink>
-    </button>
-    <button class="categoryLinks, button">
-      <RouterLink id="plants" to="/plant/:name'"> Suckulenter</RouterLink>
-    </button>
-    <button class="categoryLinks, button">
-      <RouterLink id="plants" to="/plant/:name'"> Gröna växter</RouterLink>
-    </button>
-    <button class="categoryLinks, button">
-      <RouterLink id="plants" to="/plant/:name'"> Giftiga växter</RouterLink>
-    </button>
-  </div>
-  <PlantCard />
+  <h1><PlantCard /></h1>
 </template>
-
-<style scoped>
-  .scrolling-wrapper {
-    overflow-y: hidden;
-    white-space: nowrap;
-    display: flex;
-    justify-content: center;
-  }
-  .categoryLinks {
-    display: inline-block;
-    flex: 0 0 auto;
-  }
-
-  .scrolling-wrapper-flexbox {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    justify-content: center;
-  }
-</style>
+<style scoped></style>
