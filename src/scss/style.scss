@@ -10,6 +10,8 @@ $color-green: #577751;
 $text-decoration: none;
 $link-decoration: none;
 $link-color: black;
+$heading-font-family: 'Lustria', sans-serif;
+$body-font-family: 'Lato', sans serif;
 
 $theme-colors: (
   'primary': #166285,
@@ -27,8 +29,8 @@ html {
 }
 
 body {
-  background-image: url(/public/images/Mobil-alla\ sidor.png);
-  background-repeat: no-repeat;
+  background-image: url(/public/images/Mobil-allasidor-ny.png);
+  background-repeat: repeat-y;
   background-size: 100%;
 }
 
@@ -41,6 +43,7 @@ h1 {
 }
 
 p {
+  // font-family: Lato, sans-serif;
   font-size: 0.8rem;
 }
 
@@ -64,7 +67,8 @@ p {
   background-image: url(/public/images/Mobil-start-ny.png);
   background-repeat: no-repeat;
   background-size: 100%;
-  height: 2000px;
+  background-position: top;
+  height: 1500px;
 }
 
 .navbar {
@@ -79,6 +83,16 @@ footer {
 @font-face {
   font-family: poiret;
   src: url(../../assets/Poiret_One/PoiretOne-Regular.ttf);
+}
+
+@font-face {
+  font-family: Lustria;
+  src: url(../../assets/Lustria/Lustria-Regular.ttf);
+}
+
+@font-face {
+  font-family: Lato;
+  src: url(../../assets/Lato/Lato-Light.ttf);
 }
 
 @import 'bootstrap/scss/bootstrap';
