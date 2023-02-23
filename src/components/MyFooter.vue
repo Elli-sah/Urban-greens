@@ -5,8 +5,13 @@
 
 <template>
   <footer class="text-center text-lg-start">
-    <div class="container p-4">
-      <h1 class="row d-flex justify-content-start">Logga?</h1>
+    <div class="container-fluid p-3">
+      <img
+        id="footLoggo"
+        class="row d-flex justify-content-start"
+        src="../../assets/Logo-primary-svart.png"
+        alt="Loggo"
+      />
 
       <div class="row">
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
@@ -14,13 +19,13 @@
 
           <ul class="list-unstyled mb-0">
             <li>
-              <a href="#!" class="text-dark">Link 1</a>
+              <a href="#!" class="text-dark">Om oss</a>
             </li>
             <li>
-              <a href="#!" class="text-dark">Link 2</a>
+              <a href="#!" class="text-dark">Vårt syfte</a>
             </li>
             <li>
-              <a href="#!" class="text-dark">Link 3</a>
+              <a href="#!" class="text-dark">blabla</a>
             </li>
             <li>
               <a href="#!" class="text-dark">Link 4</a>
@@ -33,17 +38,16 @@
 
           <ul class="list-unstyled">
             <li>
-              <a href="#!" class="text-dark">Link 1</a>
+              <p>UrbanGreens & co</p>
             </li>
             <li>
-              <a href="#!" class="text-dark">Link 2</a>
+              <p>0731234567</p>
             </li>
             <li>
-              <a href="#!" class="text-dark">Link 3</a>
+              <p>Urbangreens@gmail.com</p>
             </li>
-            <li>
-              <a href="#!" class="text-dark">Link 4</a>
-            </li>
+            <li><p>BlablablaVägen 23</p></li>
+            <li><p>22243 Lund</p></li>
           </ul>
         </div>
       </div>
@@ -55,7 +59,7 @@
           <div class="row d-flex justify-content-center">
             <div class="col-auto">
               <p class="pt-2">
-                <strong>Sign up for our newsletter</strong>
+                <strong>Prenumerera på vårat nyhetsbrev</strong>
               </p>
             </div>
 
@@ -72,7 +76,7 @@
 
             <div class="col-auto">
               <button type="submit" class="btn btn-outline-dark mb-4">
-                Subscribe
+                Prenumerera
               </button>
             </div>
           </div>
@@ -91,3 +95,9 @@
     </div>
   </footer>
 </template>
+
+<style>
+  #footLoggo {
+    width: 100px;
+  }
+</style>

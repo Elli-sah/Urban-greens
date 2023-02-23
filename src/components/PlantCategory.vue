@@ -2,7 +2,7 @@
 
 <template>
   <div id="plantBoxContainer">
-    <RouterLink to="/plants">
+    <RouterLink class="link-dark text-decoration-none" to="/plants">
       <div class="plantBoxCategory">
         <h4>Alla växter</h4>
 
@@ -14,7 +14,7 @@
           />
         </div></div
     ></RouterLink>
-    <RouterLink to="/plants/Blommande"
+    <RouterLink class="link-dark text-decoration-none" to="/plants/Blommande"
       ><div class="plantBoxCategory">
         <div>
           <h4>Blommande växter</h4>
@@ -25,7 +25,7 @@
           />
         </div></div
     ></RouterLink>
-    <RouterLink to="plants/Suckulent"
+    <RouterLink class="link-dark text-decoration-none" to="plants/Suckulent"
       ><div class="plantBoxCategory">
         <div>
           <h4>Suckulenter</h4>
@@ -37,7 +37,7 @@
           />
         </div></div
     ></RouterLink>
-    <RouterLink to="/plants/Gröna_växter"
+    <RouterLink class="link-dark text-decoration-none" to="/plants/Gröna_växter"
       ><div class="plantBoxCategory">
         <div>
           <h4>Gröna Växter</h4>
@@ -49,7 +49,9 @@
           />
         </div></div
     ></RouterLink>
-    <RouterLink to="/plants/Giftiga_växter"
+    <RouterLink
+      class="link-dark text-decoration-none"
+      to="/plants/Giftiga_växter"
       ><div class="plantBoxCategory">
         <div>
           <h4>Giftiga Växter</h4>

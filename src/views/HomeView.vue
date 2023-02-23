@@ -36,7 +36,7 @@
       src="../../assets/Logo-primary-svart.png"
       alt="Primary logo"
     />
-    <p id="slogan">Don’t kill your plants</p>
+    <h2><em id="slogan">Don’t be a plant-killer</em></h2>
 
     <p>
       Upptäck en värld av grönska med BRANDNAMN! Hitta och lär dig om olika
@@ -46,7 +46,7 @@
       växt-app!
     </p>
     <RouterLink to="/login">
-      <button class="button">Kom igång</button>
+      <button id="komIgang" class="button">Kom igång</button>
     </RouterLink>
     <PlantCategory />
   </div>
@@ -56,5 +56,11 @@
   #primarylogo {
     width: 50%;
     height: auto;
+  }
+  #slogan {
+    display: flex;
+  }
+  #komIgang {
+    margin: 10px;
   }
 </style>
