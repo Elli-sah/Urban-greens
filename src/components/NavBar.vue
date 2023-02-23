@@ -1,6 +1,5 @@
 <script>
   import { mapState } from 'vuex'
-  // import { mapActions } from 'vuex'
   import axios from 'axios'
   import PlantItem from '../components/PlantItem.vue'
   // import PlantSearch from './PlantSearch.vue'
@@ -22,6 +21,10 @@
       }
     },
     methods: {
+      onLogoutClick() {
+        this.visible = false
+        this.$store.commit('logutUser')
+      },
       onClickPlants() {
         this.visible = true
         this.axiosGetPlants()
@@ -29,10 +32,6 @@
       onClick() {
         this.visible = false
         // this.$store.commit('setSearchText', this.searchText)
-      },
-      onLogoutClick() {
-        this.visible = false
-        this.$store.commit('logutUser')
       },
       axiosGetPlants() {
         axios.get('/plants.json').then((response) => {
@@ -42,10 +41,9 @@
     },
     computed: {
       filterdPlants() {
-        // const searchText = this.$route.query.search
         if (this.category === 'all') {
           return this.result.filter((plant) => {
-            if (this.searchText) {
+            if (!this.searchText) {
               return true
             } else {
               const lowerCaseName = plant.name.toLowerCase()
@@ -139,6 +137,7 @@
                   <b-nav-item @click="onClick" to="/plantlist/Alla_växter"
                     >Växtguide</b-nav-item
                   >
+
                   <b-nav-item
                     @click="onClick"
                     :to="`/profile/${loggedInUser.user}`"
