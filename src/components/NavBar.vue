@@ -42,22 +42,22 @@
     },
     computed: {
       filterdPlants() {
-        const searchText = this.$route.query.search
-        if (this.category === 'Alla_växter') {
+        // const searchText = this.$route.query.search
+        if (this.category === 'all') {
           return this.result.filter((plant) => {
-            if (!searchText) {
+            if (this.searchText) {
               return true
             } else {
               const lowerCaseName = plant.name.toLowerCase()
-              const lowerCaseSearchText = searchText.toLowerCase()
+              const lowerCaseSearchText = this.searchText.toLowerCase()
               return lowerCaseName.includes(lowerCaseSearchText)
             }
           })
         } else {
           return this.result.filter(
             (plant) =>
-              plant.category ===
-              plant.name.toLowerCase().includes(searchText.toLowerCase())
+              plant.category === this.category &&
+              plant.name.toLowerCase().includes(this.searchText.toLowerCase())
           )
         }
       },
@@ -135,7 +135,7 @@
               <b-container>
                 <b-row align="right">
                   <b-nav-item @click="onClick" to="/">Hem</b-nav-item>
-                  <b-nav-item @click="onClick" to="/plants/Alla_växter"
+                  <b-nav-item @click="onClick" to="/plantlist/Alla_växter"
                     >Växtguide</b-nav-item
                   >
                   <b-nav-item
