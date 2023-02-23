@@ -37,15 +37,13 @@
 
     computed: {
       filterdPlants() {
-        const searchText = this.$route.query.search
-
         if (this.category === 'all') {
           return this.result.filter((plant) => {
-            if (!searchText) {
+            if (this.searchText) {
               return true
             } else {
               const lowerCaseName = plant.name.toLowerCase()
-              const lowerCaseSearchText = searchText.toLowerCase()
+              const lowerCaseSearchText = this.searchText.toLowerCase()
               return lowerCaseName.includes(lowerCaseSearchText)
             }
           })
@@ -53,7 +51,7 @@
           return this.result.filter(
             (plant) =>
               plant.category === this.category &&
-              plant.name.toLowerCase().includes(searchText.toLowerCase())
+              plant.name.toLowerCase().includes(this.searchText.toLowerCase())
           )
         }
       }

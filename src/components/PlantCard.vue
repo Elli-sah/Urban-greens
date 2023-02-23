@@ -18,11 +18,11 @@
     },
     methods: {
       addPlant() {
-        this.$store.commit('addPlant', {
-          user: this.loggedInUser.user,
-          addplant: this.plant
-        })
-        if (this.loggedInUser !== undefined) {
+        if (this.loggedInUser !== '') {
+          this.$store.commit('addPlant', {
+            user: this.loggedInUser.user,
+            addplant: this.plant
+          })
           this.Addedplant = true
         } else {
           this.NotLoggedIn = true
@@ -39,8 +39,19 @@
       <h2>{{ plant.name }}</h2>
     </RouterLink>
     <i @click="addPlant" class="bi bi-suit-heart-fill" />
-    <div v-show="Addedplant">Tillagd!</div>
-    <div v-show="NotLoggedIn">Du behöver logga in först!</div>
+    <div class="popup-divs" v-show="Addedplant">Tillagd på fönsterbrädan!</div>
+    <div class="popup-divs" v-show="NotLoggedIn">
+      <i class="bi bi-x" />
+      <p>Du behöver logga in först</p>
+      <b-button
+        variant="link"
+        to="/login"
+        type="button"
+        id="button-secondary"
+        class="btn btn-link"
+        >Logga in här!</b-button
+      >
+    </div>
   </div>
 </template>
 
@@ -75,6 +86,19 @@
 
   h2 {
     margin-top: 5px;
+  }
+
+  .popup-divs {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: darkred;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.1);
+  }
+
+  p {
+    margin: 0;
   }
 
   img {
