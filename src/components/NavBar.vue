@@ -43,7 +43,7 @@
     computed: {
       filterdPlants() {
         const searchText = this.$route.query.search
-        if (this.category === 'all') {
+        if (this.category === 'Alla_växter') {
           return this.result.filter((plant) => {
             if (!searchText) {
               return true
