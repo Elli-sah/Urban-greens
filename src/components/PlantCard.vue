@@ -24,9 +24,15 @@
             addplant: this.plant
           })
           this.Addedplant = true
+          setTimeout(() => {
+            this.Addedplant = false
+          }, 3000)
         } else {
           this.NotLoggedIn = true
         }
+      },
+      onClick() {
+        this.NotLoggedIn = false
       }
     }
   }
@@ -39,24 +45,29 @@
       <h2>{{ plant.name }}</h2>
     </RouterLink>
     <i @click="addPlant" class="bi bi-suit-heart-fill" />
-    <div class="popup-divs" v-show="Addedplant">Tillagd på fönsterbrädan!</div>
+    <div class="popup-divs" v-show="Addedplant">
+      <p id="added-paragraph">Tillagd på din fönsterbräda!</p>
+    </div>
     <div class="popup-divs" v-show="NotLoggedIn">
-      <i class="bi bi-x" />
-      <p>Du behöver logga in först</p>
-      <b-button
-        variant="link"
-        to="/login"
-        type="button"
-        id="button-secondary"
-        class="btn btn-link"
-        >Logga in här!</b-button
-      >
+      <i @click="onClick" class="bi bi-x-lg" />
+      <div id="login-div">
+        <p>Du behöver logga in först</p>
+        <b-button
+          variant="link"
+          to="/login"
+          type="button"
+          id="button-secondary"
+          class="btn btn-link"
+          >Logga in här!</b-button
+        >
+      </div>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
   .plantBox {
+    position: relative;
     width: 250px;
     height: 300px;
     display: flex;
@@ -69,7 +80,7 @@
   .plantBox:hover {
     transition: all 0.3s ease-out;
     box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.1);
-    top: -4px;
+    top: -1px;
   }
   .plant-container {
     display: flex;
@@ -89,12 +100,30 @@
   }
 
   .popup-divs {
+    width: 95%;
+    height: 98%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 5px;
+    background-color: rgba(255, 255, 255, 0.776);
     border-radius: 10px;
-    background-color: darkred;
-    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.1);
+    position: absolute;
+    bottom: 4px;
+  }
+
+  #login-div {
+    padding: 40px;
+  }
+
+  #added-paragraph {
+    text-align: center;
+    margin: auto;
+    padding: 40px;
+  }
+
+  #button-secondary {
+    padding: 0;
   }
 
   p {
