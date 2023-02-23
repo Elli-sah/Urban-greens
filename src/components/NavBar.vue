@@ -1,5 +1,6 @@
 <script>
   import { mapState } from 'vuex'
+  // import { mapActions } from 'vuex'
   import axios from 'axios'
   import PlantItem from '../components/PlantItem.vue'
   // import PlantSearch from './PlantSearch.vue'
@@ -37,13 +38,14 @@
     },
     computed: {
       filterdPlants() {
+        const searchText = this.$route.query.search
         if (this.category === 'all') {
           return this.result.filter((plant) => {
-            if (!this.searchText) {
+            if (!searchText) {
               return true
             } else {
               const lowerCaseName = plant.name.toLowerCase()
-              const lowerCaseSearchText = this.searchText.toLowerCase()
+              const lowerCaseSearchText = searchText.toLowerCase()
               return lowerCaseName.includes(lowerCaseSearchText)
             }
           })
@@ -51,7 +53,7 @@
           return this.result.filter(
             (plant) =>
               plant.category === this.category &&
-              plant.name.toLowerCase().includes(this.searchText.toLowerCase())
+              plant.name.toLowerCase().includes(searchText.toLowerCase())
           )
         }
       },
