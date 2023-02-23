@@ -66,7 +66,7 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
   h4 {
     margin-top: 15px;
     display: flex;

@@ -1,9 +1,11 @@
 <script>
   import PlantCategory from '../components/PlantCategory.vue'
+  // import PlantSearch from '../components/PlantSearch.vue'
 
   export default {
     components: {
       PlantCategory
+      // PlantSearch
     }
   }
   // import axios from 'axios'
@@ -38,6 +40,7 @@
     />
     <h2><em id="slogan">Don’t be a plant-killer</em></h2>
 
+    <p id="slogan">Don’t kill your plants!</p>
     <p>
       Upptäck en värld av grönska med BRANDNAMN! Hitta och lär dig om olika
       växtarter och deras skötselråd med vår omfattande databas. Få påminnelser
@@ -57,10 +60,8 @@
     width: 50%;
     height: auto;
   }
+
   #slogan {
-    display: flex;
-  }
-  #komIgang {
-    margin: 10px;
+    margin-left: 50px;
   }
 </style>

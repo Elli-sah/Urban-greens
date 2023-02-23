@@ -86,6 +86,9 @@ const state = {
   searchText: ''
 }
 const mutations = {
+  logutUser(state) {
+    state.loggedInUser = ''
+  },
   setSearchText(state, searchText) {
     state.searchText = searchText
   },
@@ -106,6 +109,7 @@ const mutations = {
     state.users[newPlant.user].favorites.push(newPlant.addplant)
   }
 }
+const actions = {}
 
 // createStore.Store({
 //   modules: {
@@ -122,4 +126,4 @@ const mutations = {
 //   ]
 // })
 
-export default createStore({ mutations, state, strict: true })
+export default createStore({ mutations, state, actions, strict: true })

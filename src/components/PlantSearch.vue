@@ -17,10 +17,28 @@
       //   default: () => ({})
       // }
     },
+    data() {
+      return {
+        result: [],
+        category: 'all',
+        // message: '',
+        name: 'all',
+        searchText: ''
+      }
+    },
+
+    methods: {
+      axiosGetPlants() {
+        axios.get('/plants.json').then((response) => {
+          this.result = response.data
+        })
+      }
+    },
 
     computed: {
       filterdPlants() {
         const searchText = this.$route.query.search
+
         if (this.category === 'all') {
           return this.result.filter((plant) => {
             if (!searchText) {
@@ -41,24 +59,6 @@
       }
     },
 
-    data() {
-      return {
-        result: [],
-        category: 'all',
-        message: '',
-        name: 'all',
-        searchText: ''
-      }
-    },
-
-    methods: {
-      axiosGetPlants() {
-        axios.get('/plants.json').then((response) => {
-          this.result = response.data
-        })
-      }
-    },
-
     watch: {
       searchText(newValue) {
         console.log(newValue)
@@ -72,7 +72,7 @@
 
   <input type="text" v-model="searchText" placeholder="Sök..." />
   <b-link :to="`/plants/${plant.name}`" class="list-group-item">
-    <p>{{}}</p></b-link
+    <p>{{ plant.name }}</p></b-link
   >
 </template>
 

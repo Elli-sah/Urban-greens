@@ -11,7 +11,9 @@
         users: null,
         showMessage: false,
         logedInMessage: false,
-        logedInName: ''
+        logedInName: '',
+        showCreateForm: false,
+        showLoginForm: true
       }
     },
     created() {
@@ -39,6 +41,10 @@
           this.showMessage = true
         }
       },
+      createAccount() {
+        this.showCreateForm = true
+        this.showLoginForm = false
+      },
       AtCreateAccount() {
         this.$store.commit('addUser', {
           user: this.createUserName,
@@ -54,41 +60,58 @@
   <h1>Logga in</h1>
   <p>
     Att logga in på Urban Greens ger dig tillgång till en mer personlig
-    upplevelse med skräddarsydda funktioner. Dessutom får du tillgång till fler
-    funktioner och tjänster som endast är tillgängliga för registrerade
-    användare. Logga in ökar också säkerheten genom skydd av din personliga
-    information och ger dig kontroll över dina åtgärder på plattformen. Sist men
-    inte minst kan logga in göra det enklare för dig att återvända till
-    plattformen och fortsätta där du slutade sist.
+    upplevelse med skräddarsydda funktioner. Skapa din egen fönsterbräda med
+    dina växter för att få en översikt över hur dina växter ska tas omhand.
   </p>
-  <form @submit.prevent="AtLogin" class="form">
-    <label for="username">Användarnamn</label
-    ><input id="username" v-model="userName" />
-    <label for="password">Lösenord</label
-    ><input id="password" type="password" v-model="password" />
-    <button class="button" type="submit">Logga in</button>
-  </form>
-  <div v-if="logedInMessage">
-    <h2>Välkommen {{ logedInName }}!</h2>
+  <div v-show="showLoginForm">
+    <form @submit.prevent="AtLogin" class="form">
+      <label for="username">Användarnamn</label
+      ><input id="username" v-model="userName" />
+      <label for="password">Lösenord</label
+      ><input id="password" type="password" v-model="password" />
+      <button class="button" type="submit">Logga in</button>
+    </form>
+    <div v-if="logedInMessage">
+      <h2>Välkommen {{ logedInName }}!</h2>
+    </div>
+    <div v-if="showMessage">
+      <p>Du verkar inte ha något konto!</p>
+    </div>
+    <p id="p-ingetkonto">Har du inget konto än?</p>
+    <button
+      @click="createAccount"
+      type="button"
+      id="button-secondary"
+      class="btn btn-link"
+    >
+      Skapa konto
+    </button>
   </div>
-  <div v-if="showMessage">
-    <p>Du verkar inte ha något konto!</p>
+  <div id="createAccountDiv" v-show="showCreateForm">
+    <h2>Skapa konto</h2>
+    <form @submit.prevent="AtCreateAccount" class="form">
+      <label for="name">Namn</label><input id="name" v-model="createName" />
+      <label for="create-user">Användarnamn</label
+      ><input id="create-user" v-model="createUserName" />
+      <label for="create-password">Lösenord</label
+      ><input id="create-password" type="password" v-model="createPassword" />
+      <button class="button" type="submit">Skapa konto</button>
+    </form>
   </div>
-  <p>Eller..</p>
-  <h2>Skapa konto</h2>
-  <form @submit.prevent="AtCreateAccount" class="form">
-    <label for="name">Namn</label><input id="name" v-model="createName" />
-    <label for="create-user">Användarnamn</label
-    ><input id="create-user" v-model="createUserName" />
-    <label for="create-password">Lösenord</label
-    ><input id="create-password" type="password" v-model="createPassword" />
-    <button class="button" type="submit">Skapa konto</button>
-  </form>
 </template>
 
-<style>
+<style lang="scss">
   .form {
     display: flex;
     flex-direction: column;
+  }
+
+  #p-ingetkonto {
+    margin-bottom: 0;
+  }
+
+  #button-secondary {
+    color: black;
+    font-size: 0.8rem;
   }
 </style>

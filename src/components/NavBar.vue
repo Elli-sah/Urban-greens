@@ -1,5 +1,6 @@
 <script>
   import { mapState } from 'vuex'
+  // import { mapActions } from 'vuex'
   import axios from 'axios'
   import PlantItem from '../components/PlantItem.vue'
   // import PlantSearch from './PlantSearch.vue'
@@ -29,6 +30,10 @@
         this.visible = false
         // this.$store.commit('setSearchText', this.searchText)
       },
+      onLogoutClick() {
+        this.visible = false
+        this.$store.commit('logutUser')
+      },
       axiosGetPlants() {
         axios.get('/plants.json').then((response) => {
           this.result = response.data
@@ -37,21 +42,22 @@
     },
     computed: {
       filterdPlants() {
+        const searchText = this.$route.query.search
         if (this.category === 'all') {
           return this.result.filter((plant) => {
-            if (!this.searchText) {
+            if (!searchText) {
               return true
             } else {
               const lowerCaseName = plant.name.toLowerCase()
-              const lowerCaseSearchText = this.searchText.toLowerCase()
+              const lowerCaseSearchText = searchText.toLowerCase()
               return lowerCaseName.includes(lowerCaseSearchText)
             }
           })
         } else {
           return this.result.filter(
             (plant) =>
-              plant.category === this.category &&
-              plant.name.toLowerCase().includes(this.searchText.toLowerCase())
+              plant.category ===
+              plant.name.toLowerCase().includes(searchText.toLowerCase())
           )
         }
       },
@@ -129,15 +135,15 @@
               <b-container>
                 <b-row align="right">
                   <b-nav-item @click="onClick" to="/">Hem</b-nav-item>
-                  <b-nav-item @click="onClick" to="/login">Logga in</b-nav-item>
+                  <b-nav-item @click="onClick" to="/plants/Alla_växter"
+                    >Växtguide</b-nav-item
+                  >
                   <b-nav-item
                     @click="onClick"
                     :to="`/profile/${loggedInUser.user}`"
                     >Min fönsterbräda</b-nav-item
                   >
-                  <b-nav-item @click="onClick" to="/plants"
-                    >Växtguide</b-nav-item
-                  >
+                  <b-nav-item @click="onLogoutClick">Logga ut</b-nav-item>
                 </b-row>
               </b-container>
             </b-navbar-nav>
