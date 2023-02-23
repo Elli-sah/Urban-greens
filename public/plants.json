@@ -5,6 +5,7 @@
     "latin": "Aloe barbadensis",
     "description": "Aloe vera är en växt som ursprungligen kommer från torra områden i Afrika, men som också kan trivas inomhus i Sverige om den sköts på rätt sätt. Trivs i torra förhållanden och behöver inte hög luftfuktighet.",
     "placement": {
+      "plantdescription": "Ljusbehov",
       "short": "Sol till lätt skugga",
       "description": "Aloe vera trivs på en ljus plats med direkt solljus, men den kan också tåla att stå i lätt skugga. Placera den inte i direkt solljus under sommarmånaderna när solen är som starkast då det kan skada bladen."
     },
