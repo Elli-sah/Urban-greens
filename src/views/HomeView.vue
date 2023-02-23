@@ -1,11 +1,9 @@
 <script>
   import PlantCategory from '../components/PlantCategory.vue'
-  import PlantSearch from '../components/PlantSearch.vue'
 
   export default {
     components: {
-      PlantCategory,
-      PlantSearch
+      PlantCategory
     }
   }
   // import axios from 'axios'
@@ -51,7 +49,6 @@
       <button id="komIgang" class="button">Kom igång</button>
     </RouterLink>
     <PlantCategory />
-    <PlantSearch :plant="plant" />
 
     <div id="textContainer">
       <div id="startTextMiddle">

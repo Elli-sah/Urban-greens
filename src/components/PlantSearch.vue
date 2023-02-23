@@ -1,17 +1,8 @@
 <script>
   import axios from 'axios'
-  // import PlantCard from './PlantCard.vue'
-  // import PlantItem from './PlantItem.vue'
 
   export default {
-    components: {
-      // PlantCard
-      // PlantItem
-      // PlantSearch
-    },
-
     props: {
-      // name: { type: String, required: true }
       plant: {
         type: Object,
         default: () => ({})
@@ -21,7 +12,6 @@
       return {
         result: [],
         category: 'all',
-        // message: '',
         name: 'all',
         searchText: ''
       }
@@ -43,11 +33,11 @@
         if (this.category === 'all') {
           return this.result.filter((plant) => {
             if (this.searchText) {
-              return true
-            } else {
               const lowerCaseName = plant.name.toLowerCase()
               const lowerCaseSearchText = this.searchText.toLowerCase()
               return lowerCaseName.includes(lowerCaseSearchText)
+            } else {
+              return true
             }
           })
         } else {
@@ -84,8 +74,8 @@
       :to="`/plants/${plantan.name}`"
       class="list-group-item"
     >
-      {{ plantan.name }}</b-link
-    >
+      {{ plantan.name }}
+    </b-link>
   </div>
 </template>
 
