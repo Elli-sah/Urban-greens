@@ -38,9 +38,8 @@
       src="../../assets/Logo-primary-svart.png"
       alt="Primary logo"
     />
-    <h2><em id="slogan">Don’t be a plant-killer</em></h2>
+    <h2 id="slogan">Don’t kill your plants!</h2>
 
-    <p id="slogan">Don’t kill your plants!</p>
     <p>
       Upptäck en värld av grönska med BRANDNAMN! Hitta och lär dig om olika
       växtarter och deras skötselråd med vår omfattande databas. Få påminnelser
@@ -52,6 +51,19 @@
       <button id="komIgang" class="button">Kom igång</button>
     </RouterLink>
     <PlantCategory />
+    <!-- <div id="spaceBetween">
+      <p>hej</p>
+    </div>
+    <div id="textContainer">
+      <div id="startTextMiddle">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum
+          quia, saepe doloremque corrupti suscipit magnam vel maiores a id
+          quaerat amet eaque, libero aspernatur excepturi alias assumenda sed
+          fugit ipsam.
+        </p>
+      </div>
+    </div> -->
   </div>
 </template>
 
@@ -62,6 +74,24 @@
   }
 
   #slogan {
+    display: flex;
     margin-left: 50px;
+  }
+  #komIgang {
+    margin: 30px;
+  }
+  #startTextMiddle {
+    display: flex;
+    background-color: aliceblue;
+    width: 300px;
+  }
+  p {
+    text-align: center;
+    width: 300px;
+  }
+  #textContainer {
+    display: flex;
+
+    flex-direction: column;
   }
 </style>
