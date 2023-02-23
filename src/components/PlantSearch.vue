@@ -1,10 +1,21 @@
 <script>
   import axios from 'axios'
-  import PlantCard from '../components/PlantCard.vue'
+  // import PlantCard from './PlantCard.vue'
+  // import PlantItem from './PlantItem.vue'
 
   export default {
     components: {
-      PlantCard
+      // PlantCard
+      // PlantItem
+      // PlantSearch
+    },
+
+    props: {
+      // name: { type: String, required: true }
+      // plant: {
+      //   type: Object,
+      //   default: () => ({})
+      // }
     },
 
     computed: {
@@ -28,10 +39,6 @@
           )
         }
       }
-    },
-
-    created() {
-      this.axiosGetPlants()
     },
 
     data() {
@@ -62,21 +69,11 @@
 
 <template>
   <h1>TEST SÖK</h1>
-  <input type="text" v-model="searchText" placeholder="Sök..." />
 
-  <ul>
-    <li @click="category = 'all'">Alla växter</li>
-    <li @click="category = 'Gröna växter'">Gröna växter</li>
-    <li @click="category = 'Blommande'">Blommande</li>
-    <li @click="category = 'Suckulent'">Suckulenter</li>
-  </ul>
-  <div>
-    <PlantCard
-      v-for="plant in filterdPlants"
-      :key="plant.name"
-      :plant="plant"
-    />
-  </div>
+  <input type="text" v-model="searchText" placeholder="Sök..." />
+  <b-link :to="`/plants/${plant.name}`" class="list-group-item">
+    <p>{{}}</p></b-link
+  >
 </template>
 
 <style scoped>

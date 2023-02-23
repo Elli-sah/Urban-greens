@@ -2,6 +2,7 @@
   export default {
     props: {
       selectedPlant: { required: true, type: Object },
+      plantheading: { required: true, type: String },
       longDescription: { required: true, type: String }
     },
     data() {
@@ -34,6 +35,9 @@
 
 <template>
   <div class="container">
+    <!-- <p>{{ selectedPlant.title }}</p> -->
+    <h3>{{ plantheading }}</h3>
+
     <p>{{ selectedPlant.title }}</p>
 
     <p>{{ selectedPlant.temperature }}</p>
