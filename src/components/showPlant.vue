@@ -4,6 +4,7 @@
       selectedPlant: { required: true, type: Object },
       plantheading: { required: true, type: String },
       longDescription: { required: true, type: String }
+      // plantplacement: { required: true, type: String }
     },
     data() {
       return {}
@@ -36,14 +37,16 @@
 <template>
   <div class="container">
     <!-- <p>{{ selectedPlant.title }}</p> -->
-    <h3>{{ plantheading }}</h3>
 
-    <p>{{ selectedPlant.title }}</p>
+    <p>{{ plantheading }}</p>
+    <p>{{ description }}</p>
 
-    <p>{{ selectedPlant.temperature }}</p>
+    <!-- <p>{{ selectedPlant.title }}</p>
+
+    <p>{{ selectedPlant.temperature }}</p> -->
 
     <p>{{ longDescription }}</p>
 
-    <button class="button" @click="$emit('close')">close</button>
+    <button class="button" @click="$emit('close')">Stäng</button>
   </div>
 </template>
