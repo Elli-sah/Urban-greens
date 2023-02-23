@@ -41,11 +41,11 @@
     <h2 id="slogan">Don’t kill your plants!</h2>
 
     <p>
-      Upptäck en värld av grönska med BRANDNAMN! Hitta och lär dig om olika
+      Upptäck en värld av grönska med Urban Greens. Hitta och lär dig om olika
       växtarter och deras skötselråd med vår omfattande databas. Få påminnelser
-      om när det är dags att vattna eller gödsla dina växter och håll dem friska
-      och glada. Lär dig allt du behöver veta om att odla växter med vår
-      växt-app!
+      om när det är dags att vattna eller ge näring till dina växter och håll
+      dem friska och glada. Lär dig allt du behöver veta om att odla växter med
+      oss!
     </p>
     <RouterLink to="/login">
       <button id="komIgang" class="button">Kom igång</button>

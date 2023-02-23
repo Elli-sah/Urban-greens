@@ -9,16 +9,26 @@
       }
     },
     data() {
-      return { Addedplant: false, NotLoggedIn: false }
+      return { Addedplant: false, NotLoggedIn: false, AlreadyAddedplant: false }
     },
     computed: {
       ...mapState({
-        loggedInUser: (state) => state.loggedInUser
+        loggedInUser: (state) => state.loggedInUser,
+        userFavorites: (state) => state.users[state.loggedInUser.user].favorites
       })
     },
     methods: {
       addPlant() {
-        if (this.loggedInUser !== '') {
+        console.log(
+          this.userFavorites.some((plant) => plant.name === this.plant.name)
+        )
+        console.log(this.plant.name)
+        if (
+          this.loggedInUser !== '' &&
+          this.userFavorites.length !== undefined &&
+          this.userFavorites.some((plant) => plant.name !== this.plant.name)
+        ) {
+          console.log(this.userFavorites)
           this.$store.commit('addPlant', {
             user: this.loggedInUser.user,
             addplant: this.plant
@@ -26,6 +36,13 @@
           this.Addedplant = true
           setTimeout(() => {
             this.Addedplant = false
+          }, 3000)
+        } else if (
+          this.userFavorites.some((plant) => plant.name === this.plant.name)
+        ) {
+          this.AlreadyAddedplant = true
+          setTimeout(() => {
+            this.AlreadyAddedplant = false
           }, 3000)
         } else {
           this.NotLoggedIn = true
@@ -46,7 +63,10 @@
     </RouterLink>
     <i @click="addPlant" class="bi bi-suit-heart-fill" />
     <div class="popup-divs" v-show="Addedplant">
-      <p id="added-paragraph">Tillagd på din fönsterbräda!</p>
+      <p class="added-paragraph">Tillagd på din fönsterbräda!</p>
+    </div>
+    <div class="popup-divs" v-show="AlreadyAddedplant">
+      <p class="added-paragraph">Redan tillagd på din fönsterbräda!</p>
     </div>
     <div class="popup-divs" v-show="NotLoggedIn">
       <i @click="onClick" class="bi bi-x-lg" />
@@ -116,7 +136,7 @@
     padding: 40px;
   }
 
-  #added-paragraph {
+  .added-paragraph {
     text-align: center;
     margin: auto;
     padding: 40px;
