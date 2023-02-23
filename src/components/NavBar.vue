@@ -30,6 +30,10 @@
         this.visible = false
         // this.$store.commit('setSearchText', this.searchText)
       },
+      onLogoutClick() {
+        this.visible = false
+        this.$store.commit('logutUser')
+      },
       axiosGetPlants() {
         axios.get('/plants.json').then((response) => {
           this.result = response.data
@@ -131,15 +135,15 @@
               <b-container>
                 <b-row align="right">
                   <b-nav-item @click="onClick" to="/">Hem</b-nav-item>
-                  <b-nav-item @click="onClick" to="/login">Logga in</b-nav-item>
+                  <b-nav-item @click="onClick" to="/plants"
+                    >Växtguide</b-nav-item
+                  >
                   <b-nav-item
                     @click="onClick"
                     :to="`/profile/${loggedInUser.user}`"
                     >Min fönsterbräda</b-nav-item
                   >
-                  <b-nav-item @click="onClick" to="/plants"
-                    >Växtguide</b-nav-item
-                  >
+                  <b-nav-item @click="onLogoutClick">Logga ut</b-nav-item>
                 </b-row>
               </b-container>
             </b-navbar-nav>

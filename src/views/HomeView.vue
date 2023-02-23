@@ -36,8 +36,7 @@
       src="../../assets/Logo-primary-svart.png"
       alt="Primary logo"
     />
-    <p id="slogan">Don’t kill your plants</p>
-
+    <p id="slogan">Don’t kill your plants!</p>
     <p>
       Upptäck en värld av grönska med BRANDNAMN! Hitta och lär dig om olika
       växtarter och deras skötselråd med vår omfattande databas. Få påminnelser
@@ -56,5 +55,9 @@
   #primarylogo {
     width: 50%;
     height: auto;
+  }
+
+  #slogan {
+    margin-left: 50px;
   }
 </style>
