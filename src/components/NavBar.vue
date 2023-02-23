@@ -135,7 +135,7 @@
               <b-container>
                 <b-row align="right">
                   <b-nav-item @click="onClick" to="/">Hem</b-nav-item>
-                  <b-nav-item @click="onClick" to="/plants"
+                  <b-nav-item @click="onClick" to="/plants/Alla_växter"
                     >Växtguide</b-nav-item
                   >
                   <b-nav-item
