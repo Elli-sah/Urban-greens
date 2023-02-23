@@ -86,6 +86,9 @@ const state = {
   searchText: ''
 }
 const mutations = {
+  logutUser(state) {
+    state.loggedInUser = ''
+  },
   setSearchText(state, searchText) {
     state.searchText = searchText
   },

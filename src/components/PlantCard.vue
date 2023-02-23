@@ -9,7 +9,7 @@
       }
     },
     data() {
-      return {}
+      return { Addedplant: false, NotLoggedIn: false }
     },
     computed: {
       ...mapState({
@@ -22,6 +22,11 @@
           user: this.loggedInUser.user,
           addplant: this.plant
         })
+        if (this.loggedInUser !== undefined) {
+          this.Addedplant = true
+        } else {
+          this.NotLoggedIn = true
+        }
       }
     }
   }
@@ -34,6 +39,8 @@
       <h2>{{ plant.name }}</h2>
     </RouterLink>
     <i @click="addPlant" class="bi bi-suit-heart-fill" />
+    <div v-show="Addedplant">Tillagd!</div>
+    <div v-show="NotLoggedIn">Du behöver logga in först!</div>
   </div>
 </template>
 
