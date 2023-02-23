@@ -12,10 +12,10 @@
 
     props: {
       // name: { type: String, required: true }
-      // plant: {
-      //   type: Object,
-      //   default: () => ({})
-      // }
+      plant: {
+        type: Object,
+        default: () => ({})
+      }
     },
     data() {
       return {
@@ -32,6 +32,9 @@
         axios.get('/plants.json').then((response) => {
           this.result = response.data
         })
+      },
+      onClickPlants() {
+        this.axiosGetPlants()
       }
     },
 
@@ -68,10 +71,22 @@
 <template>
   <h1>TEST SÖK</h1>
 
-  <input type="text" v-model="searchText" placeholder="Sök..." />
-  <b-link :to="`/plants/${plant.name}`" class="list-group-item">
-    <p>{{ plant.name }}</p></b-link
-  >
+  <input
+    @input="onClickPlants"
+    type="text"
+    v-model="searchText"
+    placeholder="Sök..."
+  />
+  <div>
+    <b-link
+      v-for="plantan in filterdPlants"
+      :key="plantan.name"
+      :to="`/plants/${plantan.name}`"
+      class="list-group-item"
+    >
+      {{ plantan.name }}</b-link
+    >
+  </div>
 </template>
 
 <style scoped>
