@@ -2,12 +2,12 @@
   import axios from 'axios'
 
   export default {
-    props: {
-      plant: {
-        type: Object,
-        default: () => ({})
-      }
-    },
+    // props: {
+    //   plant: {
+    //     type: Object,
+    //     default: () => ({})
+    //   }
+    // },
     data() {
       return {
         result: [],
@@ -59,8 +59,6 @@
 </script>
 
 <template>
-  <h1>TEST SÖK</h1>
-
   <input
     @input="onClickPlants"
     type="text"
@@ -68,19 +66,29 @@
     placeholder="Sök..."
   />
   <div>
-    <b-link
-      v-for="plantan in filterdPlants"
-      :key="plantan.name"
-      :to="`/plants/${plantan.name}`"
-      class="list-group-item"
-    >
-      {{ plantan.name }}
-    </b-link>
+    <div id="linkdiv">
+      <b-link
+        v-for="plant in filterdPlants"
+        :key="plant.name"
+        :to="`/plants/${plant.name}`"
+        class="list-group-item"
+      >
+        {{ plant.name }}
+      </b-link>
+    </div>
   </div>
 </template>
 
 <style scoped>
+  #linkdiv {
+    display: block;
+    height: 150px;
+    overflow-x: scroll;
+    position: absolute;
+    background-color: rgba(225, 186, 107, 0.1);
+  }
   div {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     align-items: start;
