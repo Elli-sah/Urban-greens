@@ -51,19 +51,18 @@
       <button id="komIgang" class="button">Kom igång</button>
     </RouterLink>
     <PlantCategory />
-    <!-- <div id="spaceBetween">
-      <p>hej</p>
-    </div>
     <div id="textContainer">
       <div id="startTextMiddle">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum
-          quia, saepe doloremque corrupti suscipit magnam vel maiores a id
-          quaerat amet eaque, libero aspernatur excepturi alias assumenda sed
-          fugit ipsam.
+        <p id="text2">
+          <strong>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum
+            quia, saepe doloremque corrupti suscipit magnam vel maiores a id
+            quaerat amet eaque, libero aspernatur excepturi alias assumenda sed
+            fugit ipsam.
+          </strong>
         </p>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -82,16 +81,17 @@
   }
   #startTextMiddle {
     display: flex;
-    background-color: aliceblue;
-    width: 300px;
-  }
-  p {
+    width: 400px;
+    border-radius: 10px;
+    margin-top: 100px;
+    padding: 20px;
     text-align: center;
-    width: 300px;
   }
+  #text2 {
+    font-size: large;
+  }
+
   #textContainer {
     display: flex;
-
-    flex-direction: column;
   }
 </style>
