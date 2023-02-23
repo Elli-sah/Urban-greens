@@ -56,7 +56,7 @@
         } else {
           return this.result.filter(
             (plant) =>
-              plant.category === this.category &&
+              plant.category ===
               plant.name.toLowerCase().includes(searchText.toLowerCase())
           )
         }

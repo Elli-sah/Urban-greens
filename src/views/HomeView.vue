@@ -1,9 +1,11 @@
 <script>
   import PlantCategory from '../components/PlantCategory.vue'
+  // import PlantSearch from '../components/PlantSearch.vue'
 
   export default {
     components: {
       PlantCategory
+      // PlantSearch
     }
   }
   // import axios from 'axios'
@@ -36,6 +38,8 @@
       src="../../assets/Logo-primary-svart.png"
       alt="Primary logo"
     />
+    <h2><em id="slogan">Don’t be a plant-killer</em></h2>
+
     <p id="slogan">Don’t kill your plants!</p>
     <p>
       Upptäck en värld av grönska med BRANDNAMN! Hitta och lär dig om olika
@@ -45,7 +49,7 @@
       växt-app!
     </p>
     <RouterLink to="/login">
-      <button class="button">Kom igång</button>
+      <button id="komIgang" class="button">Kom igång</button>
     </RouterLink>
     <PlantCategory />
   </div>
