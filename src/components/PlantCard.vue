@@ -19,16 +19,11 @@
     },
     methods: {
       addPlant() {
-        console.log(
-          this.userFavorites.some((plant) => plant.name === this.plant.name)
-        )
-        console.log(this.plant.name)
         if (
           this.loggedInUser !== '' &&
           this.userFavorites.length !== undefined &&
           this.userFavorites.some((plant) => plant.name !== this.plant.name)
         ) {
-          console.log(this.userFavorites)
           this.$store.commit('addPlant', {
             user: this.loggedInUser.user,
             addplant: this.plant

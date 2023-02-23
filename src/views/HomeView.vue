@@ -67,7 +67,8 @@
 
 <style lang="scss" scoped>
   #primarylogo {
-    width: 50%;
+    margin-left: 20px;
+    width: 80%;
     height: auto;
   }
 

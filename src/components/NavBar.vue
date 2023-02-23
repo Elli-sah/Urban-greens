@@ -29,11 +29,15 @@
   }
 </script>
 
-<style lang="scss">
-  #navbar {
-    background-color: rgba(225, 186, 107);
-    width: 100%;
+<style lang="scss" scoped>
+  #navbar-container {
     padding: 10px;
+    width: 100%;
+    background-color: rgba(225, 186, 107);
+  }
+
+  #navbar {
+    width: 100%;
     box-sizing: border-box;
     margin: none;
   }
@@ -53,47 +57,47 @@
 </style>
 
 <template>
-  <div>
-    <b-navbar toggleable="lg" fixed="top">
-      <div id="navbar" class="d-flex justify-content-between navbar" fluid>
-        <RouterLink to="/"
-          ><img
-            id="secondarylogo"
-            src="../../assets/logo-secondary.png"
-            alt="Primary logo"
-        /></RouterLink>
-        <!-- <h1 class="p-2">Brand Name</h1> -->
-        <b-navbar-toggle target="nav-collapse" is-nav />
-      </div>
-      <div class="d-flex justify-content-end navbar">
-        <div>
-          <b-collapse id="nav-collapse" is-nav v-model="visible">
-            <b-navbar-nav>
-              <b-nav-form>
-                <div>
-                  <PlantSearch :plant="plant" />
-                </div>
-              </b-nav-form>
+  <!-- <div> -->
+  <b-navbar id="navbar-container" toggleable="lg" fixed="top">
+    <div id="navbar" class="d-flex justify-content-between navbar" fluid>
+      <RouterLink to="/"
+        ><img
+          id="secondarylogo"
+          src="../../assets/logo-secondary.png"
+          alt="Primary logo"
+      /></RouterLink>
+      <!-- <h1 class="p-2">Brand Name</h1> -->
+      <b-navbar-toggle target="nav-collapse" is-nav />
+    </div>
+    <div class="d-flex justify-content-end navbar">
+      <div>
+        <b-collapse id="nav-collapse" is-nav v-model="visible">
+          <b-navbar-nav>
+            <b-nav-form>
+              <div>
+                <PlantSearch :plant="plant" />
+              </div>
+            </b-nav-form>
 
-              <b-container>
-                <b-row align="right">
-                  <b-nav-item @click="onClick" to="/">Hem</b-nav-item>
-                  <b-nav-item @click="onClick" to="/plantlist/Alla_växter"
-                    >Växtguide</b-nav-item
-                  >
+            <b-container>
+              <b-row align="right">
+                <b-nav-item @click="onClick" to="/">Hem</b-nav-item>
+                <b-nav-item @click="onClick" to="/plantlist/Alla_växter"
+                  >Växtguide</b-nav-item
+                >
 
-                  <b-nav-item
-                    @click="onClick"
-                    :to="`/profile/${loggedInUser.user}`"
-                    >Min fönsterbräda</b-nav-item
-                  >
-                  <b-nav-item @click="onLogoutClick">Logga ut</b-nav-item>
-                </b-row>
-              </b-container>
-            </b-navbar-nav>
-          </b-collapse>
-        </div>
+                <b-nav-item
+                  @click="onClick"
+                  :to="`/profile/${loggedInUser.user}`"
+                  >Min fönsterbräda</b-nav-item
+                >
+                <b-nav-item @click="onLogoutClick">Logga ut</b-nav-item>
+              </b-row>
+            </b-container>
+          </b-navbar-nav>
+        </b-collapse>
       </div>
-    </b-navbar>
-  </div>
+    </div>
+  </b-navbar>
+  <!-- </div> -->
 </template>
