@@ -14,6 +14,7 @@
         longDescription: '',
         plantheading: '',
         plantdescription: '',
+        plantplacement: '',
         showText: false,
         slide: 0,
         selectedPlant: null,
@@ -41,9 +42,9 @@
         })
         console.log(this.plant)
       },
-      openModal(plant, plantdescription, description) {
+      openModal(plant, plantheading, description) {
         this.selectedPlant = plant
-        this.plantheading = plantdescription
+        this.plantheading = plantheading
         this.longDescription = description
 
         document.body.style.overflow = 'hidden'
@@ -80,51 +81,57 @@
 
     <h3>{{ plant.latin }}</h3>
     <hr class="line" />
-    <div class="plantDesc">
-      <div class="plantPlace">
-        <i
-          @click="
-            openModal(
-              plant,
-              plant.placement.plantdescription,
-              plant.placement.description
-            )
-          "
-          class="bi bi-brightness-high"
-        />
+    <div class="plantContainer">
+      <div class="plantDesc">
+        <div class="plantPlace">
+          <i
+            @click="
+              openModal(
+                plant,
+                plant.placement.plantheading,
+                plant.placement.description
+              )
+            "
+            class="bi bi-brightness-high"
+            style="font-size: 2em"
+          />
 
-        <p @click="toggleText">{{ plant.placement.short }}</p>
-        <div>
-          <!-- <p v-show="showText">{{ plant.placement }}</p> -->
+          <p>{{ plant.placement.short }}</p>
+          <div>
+            <!-- <p v-show="showText">{{ plant.placement }}</p> -->
+          </div>
+
+          <!-- <p v-if="showText">{{ plant.description }}</p> -->
         </div>
+        <div class="plantTemp">
+          <i
+            @click="openModal(plant, plant.temperature.description)"
+            class="bi bi-thermometer-low"
+            style="font-size: 2em"
+          />
 
-        <!-- <p v-if="showText">{{ plant.description }}</p> -->
-      </div>
-      <div class="plantTemp">
-        <i
-          @click="openModal(plant, plant.temperature.description)"
-          class="bi bi-thermometer-low"
-        />
-
-        <div>
-          <p @click="toggleText">{{ plant.temperature.short }}</p>
+          <p>{{ plant.temperature.short }}</p>
         </div>
       </div>
-    </div>
-    <div class="plantDescTwo">
-      <div class="plantWater">
-        <i
-          @click="openModal(plant, plant.watering.description)"
-          class="bi bi-moisture"
-        />
-        <p>{{ plant.watering.short }}</p>
-      </div>
-      <div class="plantFert">
-        <i
-          @click="openModal(plant, plant.fertilization.description)"
-          class="bi bi-flower1"
-        />
-        <p>{{ plant.fertilization.short }}</p>
+      <div class="plantDescTwo">
+        <div class="plantWater">
+          <i
+            @click="openModal(plant, plant.watering.description)"
+            class="bi bi-moisture iconsize"
+            style="font-size: 2em"
+          />
+          <p>{{ plant.watering.short }}</p>
+        </div>
+        <div class="plantFert">
+          <i
+            @click="openModal(plant, plant.fertilization.description)"
+            class="bi bi-flower1"
+            style="font-size: 2em"
+          />
+          <div class="test">
+            <p>{{ plant.fertilization.short }}</p>
+          </div>
+        </div>
       </div>
     </div>
     <button class="button" @click="atAddPlant">
@@ -133,6 +140,7 @@
     <ShowPlant
       v-if="selectedPlant"
       :selected-plant="selectedPlant"
+      :plant-placement="plantPlacement"
       :plant-heading="plantheading"
       :long-description="longDescription"
       @close="closeModal"
@@ -140,7 +148,12 @@
   </div>
   <div class="secondPlantBox">
     <h2>Mer information</h2>
+
     <p>{{ plant.description }}</p>
+    <p class="heading">Beskärning</p>
+    <p>{{ plant.pruning }}</p>
+    <p class="heading">Skadedjur</p>
+    <p class="heading">{{ plant.pests }}</p>
   </div>
 </template>
 
@@ -155,6 +168,11 @@
     background-color: white;
     margin: auto;
     border-radius: 10px;
+  }
+
+  .plantContainer {
+    display: flex;
+    flex-direction: column;
   }
   .secondPlantBox {
     width: 90%;
@@ -199,6 +217,7 @@
 
   .plantPlace {
     display: flex;
+    justify-content: space-around;
   }
 
   .plantTemp {
@@ -212,4 +231,17 @@
   .plantFert {
     display: flex;
   }
+
+  p {
+    margin: 50px;
+  }
+
+  .heading {
+    font-weight: bold;
+  }
+
+  /* .iconsize {
+    width: 20%;
+    height: 20%;
+  } */ ;
 </style>
