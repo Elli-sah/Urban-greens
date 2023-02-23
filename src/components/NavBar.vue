@@ -71,7 +71,7 @@
             <b-navbar-nav>
               <b-nav-form>
                 <div>
-                  <PlantSearch :plant="plant" />
+                  <PlantSearch />
                 </div>
               </b-nav-form>
 
