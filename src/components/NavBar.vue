@@ -2,10 +2,12 @@
   import { mapState } from 'vuex'
   import axios from 'axios'
   import PlantItem from '../components/PlantItem.vue'
+  // import PlantSearch from './PlantSearch.vue'
 
   export default {
     components: {
       PlantItem
+      // PlantSearch
     },
 
     data() {
@@ -14,8 +16,8 @@
         searchText: '',
         result: [],
         category: 'all',
-        message: '',
-        name: 'all'
+        message: ''
+        // name: 'all'
       }
     },
     methods: {
@@ -103,6 +105,7 @@
                     class="mr-sm-2 d-flex justify-content-start"
                     placeholder="Sök..."
                   />
+
                   <PlantItem
                     v-model="visible"
                     @click="onClick"

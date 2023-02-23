@@ -1,9 +1,9 @@
 <script>
   import PlantCategory from '../components/PlantCategory.vue'
+
   export default {
     components: {
       PlantCategory
-      // PlantSearch
     }
   }
   // import axios from 'axios'
@@ -30,9 +30,10 @@
 
 <template>
   <div id="start-div">
-    <!-- <PlantSearch /> -->
     <h1>BRAND NAME</h1>
+
     <p id="slogan">Don’t kill your plants</p>
+
     <p>
       Upptäck en värld av grönska med BRANDNAMN! Hitta och lär dig om olika
       växtarter och deras skötselråd med vår omfattande databas. Få påminnelser
