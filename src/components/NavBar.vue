@@ -1,23 +1,14 @@
 <script>
   import { mapState } from 'vuex'
-  import axios from 'axios'
-  import PlantItem from '../components/PlantItem.vue'
-  // import PlantSearch from './PlantSearch.vue'
+  import PlantSearch from './PlantSearch.vue'
 
   export default {
     components: {
-      PlantItem
-      // PlantSearch
+      PlantSearch
     },
-
     data() {
       return {
-        visible: false,
-        searchText: '',
-        result: [],
-        category: 'all',
-        message: ''
-        // name: 'all'
+        visible: false
       }
     },
     methods: {
@@ -25,48 +16,15 @@
         this.visible = false
         this.$store.commit('logutUser')
       },
-      onClickPlants() {
-        this.visible = true
-        this.axiosGetPlants()
-      },
+
       onClick() {
         this.visible = false
-        // this.$store.commit('setSearchText', this.searchText)
-      },
-      axiosGetPlants() {
-        axios.get('/plants.json').then((response) => {
-          this.result = response.data
-        })
       }
     },
     computed: {
-      filterdPlants() {
-        if (this.category === 'all') {
-          return this.result.filter((plant) => {
-            if (!this.searchText) {
-              return true
-            } else {
-              const lowerCaseName = plant.name.toLowerCase()
-              const lowerCaseSearchText = this.searchText.toLowerCase()
-              return lowerCaseName.includes(lowerCaseSearchText)
-            }
-          })
-        } else {
-          return this.result.filter(
-            (plant) =>
-              plant.category === this.category &&
-              plant.name.toLowerCase().includes(this.searchText.toLowerCase())
-          )
-        }
-      },
       ...mapState({
         loggedInUser: (state) => state.loggedInUser
       })
-    },
-    watch: {
-      searchText(newValue) {
-        console.log(newValue)
-      }
     }
   }
 </script>
@@ -112,21 +70,7 @@
             <b-navbar-nav>
               <b-nav-form>
                 <div>
-                  <b-form-input
-                    @input="onClickPlants"
-                    v-model="searchText"
-                    size="sm"
-                    class="mr-sm-2 d-flex justify-content-start"
-                    placeholder="Sök..."
-                  />
-
-                  <PlantItem
-                    v-model="visible"
-                    @click="onClick"
-                    v-for="plant in filterdPlants"
-                    :key="plant.name"
-                    :plant="plant"
-                  />
+                  <PlantSearch :plant="plant" />
                 </div>
               </b-nav-form>
 
