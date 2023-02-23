@@ -38,6 +38,7 @@
       src="../../assets/Logo-primary-svart.png"
       alt="Primary logo"
     />
+    <h2><em id="slogan">Don’t be a plant-killer</em></h2>
 
     <p id="slogan">Don’t kill your plants!</p>
     <p>
@@ -48,7 +49,7 @@
       växt-app!
     </p>
     <RouterLink to="/login">
-      <button class="button">Kom igång</button>
+      <button id="komIgang" class="button">Kom igång</button>
     </RouterLink>
     <PlantCategory />
   </div>
