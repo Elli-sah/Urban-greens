@@ -47,7 +47,7 @@
     <!-- <div class="modal"> -->
     <!-- <h3>Ljusbehov</h3> -->
     <p>{{ selectedPlant.title }}</p>
-    <p>{{ selectedPlant.description }}</p>
+    <p>{{ selectedPlant.temperature }}</p>
 
     <button class="button" @click="$emit('close')">close</button>
   </div>
