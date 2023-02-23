@@ -1,9 +1,9 @@
 <script>
   import PlantCategory from '../components/PlantCategory.vue'
+
   export default {
     components: {
       PlantCategory
-      // PlantSearch
     }
   }
   // import axios from 'axios'
