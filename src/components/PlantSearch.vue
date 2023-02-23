@@ -1,27 +1,17 @@
 <script>
   import axios from 'axios'
-  // import PlantCard from './PlantCard.vue'
-  // import PlantItem from './PlantItem.vue'
 
   export default {
-    components: {
-      // PlantCard
-      // PlantItem
-      // PlantSearch
-    },
-
-    props: {
-      // name: { type: String, required: true }
-      // plant: {
-      //   type: Object,
-      //   default: () => ({})
-      // }
-    },
+    // props: {
+    //   plant: {
+    //     type: Object,
+    //     default: () => ({})
+    //   }
+    // },
     data() {
       return {
         result: [],
         category: 'all',
-        // message: '',
         name: 'all',
         searchText: ''
       }
@@ -32,6 +22,9 @@
         axios.get('/plants.json').then((response) => {
           this.result = response.data
         })
+      },
+      onClickPlants() {
+        this.axiosGetPlants()
       }
     },
 
@@ -40,11 +33,11 @@
         if (this.category === 'all') {
           return this.result.filter((plant) => {
             if (this.searchText) {
-              return true
-            } else {
               const lowerCaseName = plant.name.toLowerCase()
               const lowerCaseSearchText = this.searchText.toLowerCase()
               return lowerCaseName.includes(lowerCaseSearchText)
+            } else {
+              return true
             }
           })
         } else {
@@ -66,16 +59,36 @@
 </script>
 
 <template>
-  <h1>TEST SÖK</h1>
-
-  <input type="text" v-model="searchText" placeholder="Sök..." />
-  <b-link :to="`/plants/${plant.name}`" class="list-group-item">
-    <p>{{ plant.name }}</p></b-link
-  >
+  <input
+    @input="onClickPlants"
+    type="text"
+    v-model="searchText"
+    placeholder="Sök..."
+  />
+  <div>
+    <div id="linkdiv">
+      <b-link
+        v-for="plant in filterdPlants"
+        :key="plant.name"
+        :to="`/plants/${plant.name}`"
+        class="list-group-item"
+      >
+        {{ plant.name }}
+      </b-link>
+    </div>
+  </div>
 </template>
 
 <style scoped>
+  #linkdiv {
+    display: block;
+    height: 150px;
+    overflow-x: scroll;
+    position: absolute;
+    background-color: rgba(225, 186, 107, 0.1);
+  }
   div {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     align-items: start;

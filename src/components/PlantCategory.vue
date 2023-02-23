@@ -1,7 +1,7 @@
 <script></script>
 
 <template>
-  <h2>Kategorier</h2>
+  <h3><strong>Kategorier</strong></h3>
   <div id="plantBoxContainer">
     <RouterLink class="link-dark text-decoration-none" to="/plantlist">
       <div class="plantBoxCategory">
@@ -40,7 +40,7 @@
     ></RouterLink>
     <RouterLink
       class="link-dark text-decoration-none"
-      to="/plantlist/Gröna_växter"
+      to="/plantlist/Gröna växter"
       ><div class="plantBoxCategory">
         <div>
           <h4>Gröna Växter</h4>
@@ -70,9 +70,11 @@
 </template>
 
 <style lang="scss" scoped>
-  h2 {
+  h3 {
     display: flex;
     justify-content: center;
+    margin: 30px;
+    margin-top: 200px;
   }
   h4 {
     margin-top: 15px;

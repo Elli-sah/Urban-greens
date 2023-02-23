@@ -37,6 +37,8 @@ body {
   background-image: url(/assets/Mobil-allasidor-ny.png);
   background-repeat: repeat-y;
   background-size: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 main {
@@ -54,6 +56,10 @@ h4,
 h5,
 h6 {
   font-family: poiret, sans-serif;
+}
+
+i {
+  cursor: pointer;
 }
 
 p {
