@@ -11,18 +11,17 @@
     data() {
       return {
         plant: null,
+        longDescription: '',
         showText: false,
         slide: 0,
-        selectedPlant: null
+        selectedPlant: null,
+        selectedIcon: null
       }
     },
     computed: {
       ...mapState({
         loggedInUser: (state) => state.loggedInUser
       })
-      // selectedPlant() {
-      //   return this.result.filter((plant) => plant.name === this.name)
-      // }
     },
     methods: {
       axiosGetPlants() {
@@ -40,8 +39,10 @@
         })
         console.log(this.plant)
       },
-      openModal(plant) {
+      openModal(plant, description) {
         this.selectedPlant = plant
+        this.longDescription = description
+
         document.body.style.overflow = 'hidden'
       },
       closeModal() {
@@ -52,10 +53,10 @@
 
     created() {
       this.axiosGetPlants()
-    },
-    toggleText() {
-      this.showText = !this.showText
     }
+    // toggleText() {
+    //   this.showText = !this.showText
+    // }
   }
 </script>
 
@@ -78,7 +79,10 @@
     <hr class="line" />
     <div class="plantDesc">
       <div class="plantPlace">
-        <i @click="openModal(plant)" class="bi bi-brightness-high" />
+        <i
+          @click="openModal(plant, plant.placement.description)"
+          class="bi bi-brightness-high"
+        />
 
         <p @click="toggleText">Ljusbehov: {{ plant.placement.short }}</p>
         <div>
@@ -88,8 +92,11 @@
         <p v-if="showText">{{ plant.description }}</p>
       </div>
       <div class="plantTemp">
-        <i @click="openModal(plant)" class="bi bi-thermometer-low" />
-        <p>Temperatur: {{ plant.temperature.short }}</p>
+        <i
+          @click="openModal(plant, plant.temperature.description)"
+          class="bi bi-thermometer-low"
+        />
+        <p>Temperatur: {{ selectedIcon }}</p>
         <div>
           <p v-if="showText">{{ plant.temperature }}</p>
         </div>
@@ -97,11 +104,17 @@
     </div>
     <div class="plantDescTwo">
       <div class="plantWater">
-        <i @click="openModal(plant)" class="bi bi-moisture" />
+        <i
+          @click="openModal(plant, plant.watering.description)"
+          class="bi bi-moisture"
+        />
         <p>Vatten: {{ plant.watering.short }}</p>
       </div>
       <div class="plantFert">
-        <i @click="openModal(plant)" class="bi bi-flower1" />
+        <i
+          @click="openModal(plant, plant.fertilization.description)"
+          class="bi bi-flower1"
+        />
         <p>Näring:{{ plant.fertilization.short }}</p>
       </div>
     </div>
@@ -111,6 +124,7 @@
     <ShowPlant
       v-if="selectedPlant"
       :selected-plant="selectedPlant"
+      :long-description="longDescription"
       @close="closeModal"
     />
   </div>

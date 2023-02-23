@@ -25,7 +25,7 @@
       },
       onClick() {
         this.visible = false
-        this.$store.commit('setSearchText', this.searchText)
+        // this.$store.commit('setSearchText', this.searchText)
       },
       axiosGetPlants() {
         axios.get('/plants.json').then((response) => {
@@ -95,22 +95,22 @@
           <b-collapse id="nav-collapse" is-nav v-model="visible">
             <b-navbar-nav>
               <b-nav-form>
-                <b-form-input
-                  @click="onClickPlants"
-                  v-model="searchText"
-                  size="sm"
-                  class="mr-sm-2"
-                  placeholder="Sök..."
-                />
-
-                <b-button
-                  @click="onClick"
-                  size="m"
-                  class="my-2 my-sm-0"
-                  type="submit"
-                  to="/plantlist"
-                  >Sök
-                </b-button>
+                <div>
+                  <b-form-input
+                    @input="onClickPlants"
+                    v-model="searchText"
+                    size="sm"
+                    class="mr-sm-2 d-flex justify-content-start"
+                    placeholder="Sök..."
+                  />
+                  <PlantItem
+                    v-model="visible"
+                    @click="onClick"
+                    v-for="plant in filterdPlants"
+                    :key="plant.name"
+                    :plant="plant"
+                  />
+                </div>
               </b-nav-form>
 
               <b-container>
@@ -122,7 +122,7 @@
                     :to="`/profile/${loggedInUser.user}`"
                     >Min fönsterbräda</b-nav-item
                   >
-                  <b-nav-item @click="onClick" to="/plantlist"
+                  <b-nav-item @click="onClick" to="/plants"
                     >Växtguide</b-nav-item
                   >
                 </b-row>
@@ -132,13 +132,5 @@
         </div>
       </div>
     </b-navbar>
-  </div>
-  <div>
-    <PlantItem
-      v-model="visible"
-      v-for="plant in filterdPlants"
-      :key="plant.name"
-      :plant="plant"
-    />
   </div>
 </template>
