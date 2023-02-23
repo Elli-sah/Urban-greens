@@ -1,14 +1,27 @@
 <script>
   import axios from 'axios'
   import PlantCard from '../components/PlantCard.vue'
+
   export default {
     components: {
       PlantCard
     },
+    created() {
+      this.axiosGetPlants()
+      console.log(this.category)
+    },
+
+    // props: {
+    //   category: {
+    //     type: String,
+    //     default: 'Alla_väter'
+    //   }
+    // },
 
     computed: {
       filterdPlants() {
-        if (this.category === 'Alla växter') {
+        const category = this.$route.params.category
+        if (category === 'Alla_växter') {
           return this.result.filter((plant) => {
             if (!this.searchText) {
               return true
@@ -21,21 +34,17 @@
         } else {
           return this.result.filter(
             (plant) =>
-              plant.category === this.category &&
+              plant.category === category &&
               plant.name.toLowerCase().includes(this.searchText.toLowerCase())
           )
         }
       }
     },
 
-    created() {
-      this.axiosGetPlants()
-    },
-
     data() {
       return {
         result: [],
-        category: 'Alla växter',
+        // category: 'Alla växter',
         searchText: ''
       }
     },
@@ -65,23 +74,24 @@
       <i @click="submit" class="bi bi-search" />
     </div>
     <div class="scrolling-wrapper">
-      <button class="categoryLinks button" @click="category = 'Alla växter'">
+      <b-button to="/plants/Alla_växter" class="categoryLinks button">
         Alla växter
-      </button>
-      <button class="categoryLinks button" @click="category = 'Blommande'">
+      </b-button>
+
+      <b-button to="/plants/Blommande" class="categoryLinks button">
         Blommande växter
-      </button>
-      <button class="categoryLinks button" @click="category = 'Suckulent'">
-        Succulenter
-      </button>
-      <button class="categoryLinks button" @click="category = 'Gröna växter'">
+      </b-button>
+      <b-button to="/plants/Suckulent" class="categoryLinks button">
+        Suckulenter
+      </b-button>
+      <b-button to="/plants/Gröna växter" class="categoryLinks button">
         Gröna växter
-      </button>
-      <button class="categoryLinks button" @click="category = 'Giftiga växter'">
+      </b-button>
+      <b-button to="/plants/Giftiga_växter" class="categoryLinks button">
         Giftiga växter
-      </button>
+      </b-button>
     </div>
-    <h2>{{ category }}</h2>
+    <!-- <h2>{{ category }}</h2> -->
     <div id="filteredPlants">
       <PlantCard
         v-for="plant in filterdPlants"

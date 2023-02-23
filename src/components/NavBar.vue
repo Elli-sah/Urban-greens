@@ -132,7 +132,7 @@
                     :to="`/profile/${loggedInUser.user}`"
                     >Min fönsterbräda</b-nav-item
                   >
-                  <b-nav-item @click="onClick" to="/plants"
+                  <b-nav-item @click="onClick" to="/plants/Alla_växter"
                     >Växtguide</b-nav-item
                   >
                 </b-row>
