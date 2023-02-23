@@ -100,11 +100,12 @@
   <div>
     <b-navbar toggleable="lg" fixed="top">
       <div id="navbar" class="d-flex justify-content-between navbar" fluid>
-        <img
-          id="secondarylogo"
-          src="../../assets/logo-secondary.png"
-          alt="Primary logo"
-        />
+        <RouterLink to="/"
+          ><img
+            id="secondarylogo"
+            src="../../assets/logo-secondary.png"
+            alt="Primary logo"
+        /></RouterLink>
         <!-- <h1 class="p-2">Brand Name</h1> -->
         <b-navbar-toggle target="nav-collapse" is-nav />
       </div>
