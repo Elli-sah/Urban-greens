@@ -34,7 +34,7 @@ html {
 }
 
 body {
-  background-image: url(/public/images/Mobil-allasidor-ny.png);
+  background-image: url(/assets/Mobil-allasidor-ny.png);
   background-repeat: repeat-y;
   background-size: 100%;
 }
@@ -92,9 +92,13 @@ label {
   transition: 0.3s ease-in-out;
 }
 
+.button-secondary {
+  color: black;
+}
+
 #start-div {
   padding: 20px;
-  background-image: url(/public/images/Mobil-start-ny.png);
+  background-image: url(/assets/Mobil-start-ny.png);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: top;

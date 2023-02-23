@@ -2,10 +2,12 @@
   import { mapState } from 'vuex'
   import axios from 'axios'
   import PlantItem from '../components/PlantItem.vue'
+  // import PlantSearch from './PlantSearch.vue'
 
   export default {
     components: {
       PlantItem
+      // PlantSearch
     },
 
     data() {
@@ -14,8 +16,8 @@
         searchText: '',
         result: [],
         category: 'all',
-        message: '',
-        name: 'all'
+        message: ''
+        // name: 'all'
       }
     },
     methods: {
@@ -81,13 +83,23 @@
     margin: none;
     box-sizing: border-box;
   }
+
+  #secondarylogo {
+    width: 40px;
+    height: 40px;
+  }
 </style>
 
 <template>
   <div>
     <b-navbar toggleable="lg" fixed="top">
       <div id="navbar" class="d-flex justify-content-between navbar" fluid>
-        <h1 class="p-2">Brand Name</h1>
+        <img
+          id="secondarylogo"
+          src="../../assets/logo-secondary.png"
+          alt="Primary logo"
+        />
+        <!-- <h1 class="p-2">Brand Name</h1> -->
         <b-navbar-toggle target="nav-collapse" is-nav />
       </div>
       <div class="d-flex justify-content-end navbar">
@@ -103,6 +115,7 @@
                     class="mr-sm-2 d-flex justify-content-start"
                     placeholder="Sök..."
                   />
+
                   <PlantItem
                     v-model="visible"
                     @click="onClick"
