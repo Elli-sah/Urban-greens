@@ -57,7 +57,6 @@
 </style>
 
 <template>
-<<<<<<< HEAD
   <!-- <div> -->
   <b-navbar id="navbar-container" toggleable="lg" fixed="top">
     <div id="navbar" class="d-flex justify-content-between navbar" fluid>
@@ -76,32 +75,9 @@
           <b-navbar-nav>
             <b-nav-form>
               <div>
-                <PlantSearch :plant="plant" />
+                <PlantSearch />
               </div>
             </b-nav-form>
-=======
-  <div>
-    <b-navbar toggleable="lg" fixed="top">
-      <div id="navbar" class="d-flex justify-content-between navbar" fluid>
-        <RouterLink to="/"
-          ><img
-            id="secondarylogo"
-            src="../../assets/logo-secondary.png"
-            alt="Primary logo"
-        /></RouterLink>
-        <!-- <h1 class="p-2">Brand Name</h1> -->
-        <b-navbar-toggle target="nav-collapse" is-nav />
-      </div>
-      <div class="d-flex justify-content-end navbar">
-        <div>
-          <b-collapse id="nav-collapse" is-nav v-model="visible">
-            <b-navbar-nav>
-              <b-nav-form>
-                <div>
-                  <PlantSearch />
-                </div>
-              </b-nav-form>
->>>>>>> e46d5f64a22e2c65054fb11b7219bfcea48e34ac
 
             <b-container>
               <b-row align="right">
