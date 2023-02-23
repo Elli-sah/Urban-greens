@@ -83,13 +83,23 @@
     margin: none;
     box-sizing: border-box;
   }
+
+  #secondarylogo {
+    width: 40px;
+    height: 40px;
+  }
 </style>
 
 <template>
   <div>
     <b-navbar toggleable="lg" fixed="top">
       <div id="navbar" class="d-flex justify-content-between navbar" fluid>
-        <h1 class="p-2">Brand Name</h1>
+        <img
+          id="secondarylogo"
+          src="../../assets/logo-secondary.png"
+          alt="Primary logo"
+        />
+        <!-- <h1 class="p-2">Brand Name</h1> -->
         <b-navbar-toggle target="nav-collapse" is-nav />
       </div>
       <div class="d-flex justify-content-end navbar">

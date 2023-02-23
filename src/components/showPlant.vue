@@ -35,6 +35,9 @@
 <template>
   <div class="container">
     <p>{{ selectedPlant.title }}</p>
+
+    <p>{{ selectedPlant.temperature }}</p>
+
     <p>{{ longDescription }}</p>
 
     <button class="button" @click="$emit('close')">close</button>

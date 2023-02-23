@@ -30,8 +30,12 @@
 
 <template>
   <div id="start-div">
-    <h1>BRAND NAME</h1>
-
+    <!-- <PlantSearch /> -->
+    <img
+      id="primarylogo"
+      src="../../assets/Logo-primary-svart.png"
+      alt="Primary logo"
+    />
     <p id="slogan">Don’t kill your plants</p>
 
     <p>
@@ -48,4 +52,9 @@
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+  #primarylogo {
+    width: 50%;
+    height: auto;
+  }
+</style>

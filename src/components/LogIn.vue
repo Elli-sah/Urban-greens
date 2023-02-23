@@ -52,6 +52,15 @@
 
 <template>
   <h1>Logga in</h1>
+  <p>
+    Att logga in på Urban Greens ger dig tillgång till en mer personlig
+    upplevelse med skräddarsydda funktioner. Dessutom får du tillgång till fler
+    funktioner och tjänster som endast är tillgängliga för registrerade
+    användare. Logga in ökar också säkerheten genom skydd av din personliga
+    information och ger dig kontroll över dina åtgärder på plattformen. Sist men
+    inte minst kan logga in göra det enklare för dig att återvända till
+    plattformen och fortsätta där du slutade sist.
+  </p>
   <form @submit.prevent="AtLogin" class="form">
     <label for="username">Användarnamn</label
     ><input id="username" v-model="userName" />
@@ -66,7 +75,7 @@
     <p>Du verkar inte ha något konto!</p>
   </div>
   <p>Eller..</p>
-  <h1>Skapa konto</h1>
+  <h2>Skapa konto</h2>
   <form @submit.prevent="AtCreateAccount" class="form">
     <label for="name">Namn</label><input id="name" v-model="createName" />
     <label for="create-user">Användarnamn</label
