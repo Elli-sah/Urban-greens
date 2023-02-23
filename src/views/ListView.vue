@@ -74,20 +74,20 @@
       <i @click="submit" class="bi bi-search" />
     </div>
     <div class="scrolling-wrapper">
-      <b-button to="/plants/Alla_växter" class="categoryLinks button">
+      <b-button to="/plantlist/Alla_växter" class="categoryLinks button">
         Alla växter
       </b-button>
 
-      <b-button to="/plants/Blommande" class="categoryLinks button">
+      <b-button to="/plantlist/Blommande" class="categoryLinks button">
         Blommande växter
       </b-button>
-      <b-button to="/plants/Suckulent" class="categoryLinks button">
+      <b-button to="/plantlist/Suckulent" class="categoryLinks button">
         Suckulenter
       </b-button>
-      <b-button to="/plants/Gröna växter" class="categoryLinks button">
+      <b-button to="/plantlist/Gröna växter" class="categoryLinks button">
         Gröna växter
       </b-button>
-      <b-button to="/plants/Giftiga_växter" class="categoryLinks button">
+      <b-button to="/plantlist/Giftiga_växter" class="categoryLinks button">
         Giftiga växter
       </b-button>
     </div>
@@ -102,7 +102,7 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
   #filteredPlants {
     display: flex;
     flex-wrap: wrap;
