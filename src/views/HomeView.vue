@@ -31,7 +31,11 @@
 <template>
   <div id="start-div">
     <!-- <PlantSearch /> -->
-    <h1>BRAND NAME</h1>
+    <img
+      id="primarylogo"
+      src="../../assets/Logo-primary-svart.png"
+      alt="Primary logo"
+    />
     <p id="slogan">Don’t kill your plants</p>
     <p>
       Upptäck en värld av grönska med BRANDNAMN! Hitta och lär dig om olika
@@ -47,4 +51,9 @@
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+  #primarylogo {
+    width: 50%;
+    height: auto;
+  }
+</style>
