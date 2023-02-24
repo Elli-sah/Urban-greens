@@ -12,7 +12,7 @@
       return {
         plant: null,
         longDescription: '',
-        plantheading: '',
+        plantHeading: '',
         plantdescription: '',
         plantplacement: '',
         showText: false,
@@ -42,9 +42,9 @@
         })
         console.log(this.plant)
       },
-      openModal(plant, plantheading, description) {
+      openModal(plant, plantHeading, description) {
         this.selectedPlant = plant
-        this.plantheading = plantheading
+        this.plantHeading = plantHeading
         this.longDescription = description
 
         document.body.style.overflow = 'hidden'
@@ -88,7 +88,7 @@
             @click="
               openModal(
                 plant,
-                plant.placement.plantheading,
+                plant.placement.plantHeading,
                 plant.placement.description
               )
             "
@@ -96,7 +96,7 @@
             style="font-size: 2em"
           />
 
-          <p>{{ plant.placement.short }}</p>
+          <p class="shortText">{{ plant.placement.short }}</p>
           <div>
             <!-- <p v-show="showText">{{ plant.placement }}</p> -->
           </div>
@@ -105,32 +105,49 @@
         </div>
         <div class="plantTemp">
           <i
-            @click="openModal(plant, plant.temperature.description)"
+            @click="
+              openModal(
+                plant,
+                plant.temperature.plantHeading,
+                plant.temperature.description
+              )
+            "
             class="bi bi-thermometer-low"
             style="font-size: 2em"
           />
 
-          <p>{{ plant.temperature.short }}</p>
+          <p class="shortText">{{ plant.temperature.short }}</p>
         </div>
       </div>
       <div class="plantDescTwo">
         <div class="plantWater">
           <i
-            @click="openModal(plant, plant.watering.description)"
+            @click="
+              openModal(
+                plant,
+                plant.watering.plantHeading,
+                plant.watering.description
+              )
+            "
             class="bi bi-moisture iconsize"
             style="font-size: 2em"
           />
-          <p>{{ plant.watering.short }}</p>
+          <p class="shortText">{{ plant.watering.short }}</p>
         </div>
         <div class="plantFert">
           <i
-            @click="openModal(plant, plant.fertilization.description)"
+            @click="
+              openModal(
+                plant,
+                plant.fertilization.plantHeading,
+                plant.fertilization.description
+              )
+            "
             class="bi bi-flower1"
             style="font-size: 2em"
           />
-          <div class="test">
-            <p>{{ plant.fertilization.short }}</p>
-          </div>
+
+          <p class="shortText">{{ plant.fertilization.short }}</p>
         </div>
       </div>
     </div>
@@ -140,8 +157,7 @@
     <ShowPlant
       v-if="selectedPlant"
       :selected-plant="selectedPlant"
-      :plant-placement="plantPlacement"
-      :plant-heading="plantheading"
+      :plant-heading="plantHeading"
       :long-description="longDescription"
       @close="closeModal"
     />
@@ -232,8 +248,8 @@
     display: flex;
   }
 
-  p {
-    margin: 50px;
+  .shortText {
+    margin-left: 50px;
   }
 
   .heading {
