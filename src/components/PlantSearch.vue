@@ -2,6 +2,8 @@
   import axios from 'axios'
 
   export default {
+    emits: ['handle-click'],
+
     data() {
       return {
         result: [],
@@ -12,6 +14,10 @@
     },
 
     methods: {
+      // handleClick() {
+      //   console.log('Handle clicked!')
+      //   this.$emit('handle-click')
+      // },
       axiosGetPlants() {
         axios.get('/plants.json').then((response) => {
           this.result = response.data
@@ -71,6 +77,7 @@
   />
   <div>
     <div v-if="searchText !== ''" id="linkdiv">
+      <button @click="$emit('handle-click')" />
       <b-link
         v-for="plant in filterdPlants"
         :key="plant.name"

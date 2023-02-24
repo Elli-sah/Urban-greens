@@ -3,6 +3,8 @@
   import PlantSearch from './PlantSearch.vue'
 
   export default {
+    // emits: ['handleClick'],
+
     components: {
       PlantSearch
     },
@@ -12,24 +14,37 @@
       }
     },
     methods: {
-      onLogoutClick() {
+      handleLinkClicked() {
         this.visible = false
-        this.$store.commit('logutUser')
+        console.log('Stäng!')
       },
-
-      onClick() {
-        this.visible = false
+      onLogoutClick() {
+        // this.visible = false
+        this.$store.commit('logutUser')
       }
+
+      // onClick() {
+      //   this.visible = false
+      // }
     },
     computed: {
       ...mapState({
         loggedInUser: (state) => state.loggedInUser
       })
+    },
+
+    watch: {
+      '$route.params'() {
+        this.visible = false
+      }
     }
   }
 </script>
 
 <style lang="scss" scoped>
+  .container {
+    background-color: rgba(225, 186, 107, 0.9);
+  }
   #navbar-container {
     padding: 10px;
     width: 100%;
@@ -75,20 +90,16 @@
           <b-navbar-nav>
             <b-nav-form>
               <div>
-                <PlantSearch />
+                <PlantSearch @handle-click="handleLinkClicked" />
               </div>
             </b-nav-form>
 
             <b-container>
               <b-row align="right">
-                <b-nav-item @click="onClick" to="/">Hem</b-nav-item>
-                <b-nav-item @click="onClick" to="/plantlist/Alla_växter"
-                  >Växtguide</b-nav-item
-                >
+                <b-nav-item to="/">Hem</b-nav-item>
+                <b-nav-item to="/plantlist/Alla_växter">Växtguide</b-nav-item>
 
-                <b-nav-item
-                  @click="onClick"
-                  :to="`/profile/${loggedInUser.user}`"
+                <b-nav-item :to="`/profile/${loggedInUser.user}`"
                   >Min fönsterbräda</b-nav-item
                 >
                 <b-nav-item @click="onLogoutClick">Logga ut</b-nav-item>
