@@ -298,8 +298,9 @@
     }
     .plantBox {
       display: flex;
-      justify-content: flex-start;
+      /* justify-content: flex-start; */
       margin: 10px;
+      max-width: 500px;
     }
 
     .bigPlantBox {
@@ -311,7 +312,35 @@
       height: 50%;
       width: 50%;
       display: flex;
-      justify-content: flex-end;
+      /* justify-content: flex-end; */
+      max-width: 500px;
+    }
+    .plantPlace {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 10px;
+    }
+
+    .plantTemp {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 10px;
+    }
+
+    .plantWater {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 10px;
+    }
+
+    .plantFert {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 10px;
     }
   }
 </style>
