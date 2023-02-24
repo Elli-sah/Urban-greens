@@ -1,57 +1,60 @@
 <script>
   import axios from 'axios'
-  // import PlantCard from './PlantCard.vue'
-  // import PlantItem from './PlantItem.vue'
 
   export default {
-    components: {
-      // PlantCard
-      // PlantItem
-      // PlantSearch
-    },
+    emits: ['handle-click'],
 
-    props: {
-      // name: { type: String, required: true }
-      // plant: {
-      //   type: Object,
-      //   default: () => ({})
-      // }
-    },
     data() {
       return {
         result: [],
         category: 'all',
-        // message: '',
         name: 'all',
         searchText: ''
       }
     },
 
     methods: {
+      // handleClick() {
+      //   console.log('Handle clicked!')
+      //   this.$emit('handle-click')
+      // },
       axiosGetPlants() {
         axios.get('/plants.json').then((response) => {
           this.result = response.data
         })
+      },
+      onClickPlants() {
+        this.axiosGetPlants()
       }
     },
 
     computed: {
+      // Kunna söka på växtnamn och kategorier. Ska kategorier synas?? Räcker med att växterna i den kategorin dyker upp??
       filterdPlants() {
         if (this.category === 'all') {
           return this.result.filter((plant) => {
             if (this.searchText) {
-              return true
-            } else {
               const lowerCaseName = plant.name.toLowerCase()
+              const lowerCaseCategory = plant.category.toLowerCase()
               const lowerCaseSearchText = this.searchText.toLowerCase()
-              return lowerCaseName.includes(lowerCaseSearchText)
+              return (
+                lowerCaseName.includes(lowerCaseSearchText) ||
+                lowerCaseCategory.includes(lowerCaseSearchText)
+              )
+            } else {
+              return true
             }
           })
         } else {
           return this.result.filter(
             (plant) =>
               plant.category === this.category &&
-              plant.name.toLowerCase().includes(this.searchText.toLowerCase())
+              (plant.name
+                .toLowerCase()
+                .includes(this.searchText.toLowerCase()) ||
+                plant.category
+                  .toLowerCase()
+                  .includes(this.searchText.toLowerCase()))
           )
         }
       }
@@ -66,16 +69,44 @@
 </script>
 
 <template>
-  <h1>TEST SÖK</h1>
-
-  <input type="text" v-model="searchText" placeholder="Sök..." />
-  <b-link :to="`/plants/${plant.name}`" class="list-group-item">
-    <p>{{ plant.name }}</p></b-link
-  >
+  <input
+    @input="onClickPlants"
+    type="text"
+    v-model="searchText"
+    placeholder="Sök..."
+  />
+  <div>
+    <div v-if="searchText !== ''" id="linkdiv">
+      <button @click="$emit('handle-click')" />
+      <b-link
+        v-for="plant in filterdPlants"
+        :key="plant.name"
+        :to="`/plants/${plant.name}`"
+        class="list-group-item"
+      >
+        {{ plant.name }}
+        <!-- {{ plant.category }} -->
+      </b-link>
+    </div>
+  </div>
 </template>
 
 <style scoped>
+  input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+  }
+  #linkdiv {
+    display: block;
+    height: 150px;
+    overflow-x: scroll;
+    position: absolute;
+    background-color: rgba(225, 186, 107, 0.1);
+  }
   div {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     align-items: start;

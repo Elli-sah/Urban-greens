@@ -37,6 +37,8 @@ body {
   background-image: url(/assets/Mobil-allasidor-ny.png);
   background-repeat: repeat-y;
   background-size: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 main {
@@ -61,6 +63,10 @@ a:link {
 }
 a:visited {
   color: $link-color;
+}
+
+i {
+  cursor: pointer;
 }
 
 p {

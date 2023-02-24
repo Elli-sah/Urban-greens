@@ -12,7 +12,7 @@
       return {
         plant: null,
         longDescription: '',
-        plantheading: '',
+        plantHeading: '',
         plantdescription: '',
         plantplacement: '',
         showText: false,
@@ -42,9 +42,9 @@
         })
         console.log(this.plant)
       },
-      openModal(plant, plantheading, description) {
+      openModal(plant, plantHeading, description) {
         this.selectedPlant = plant
-        this.plantheading = plantheading
+        this.plantHeading = plantHeading
         this.longDescription = description
 
         document.body.style.overflow = 'hidden'
@@ -88,7 +88,7 @@
             @click="
               openModal(
                 plant,
-                plant.placement.plantheading,
+                plant.placement.plantHeading,
                 plant.placement.description
               )
             "
@@ -96,41 +96,53 @@
             style="font-size: 2em"
           />
 
-          <p>{{ plant.placement.short }}</p>
-          <div>
-            <!-- <p v-show="showText">{{ plant.placement }}</p> -->
-          </div>
-
-          <!-- <p v-if="showText">{{ plant.description }}</p> -->
+          <p class="shortText">{{ plant.placement.short }}</p>
         </div>
         <div class="plantTemp">
           <i
-            @click="openModal(plant, plant.temperature.description)"
+            @click="
+              openModal(
+                plant,
+                plant.temperature.plantHeading,
+                plant.temperature.description
+              )
+            "
             class="bi bi-thermometer-low"
             style="font-size: 2em"
           />
 
-          <p>{{ plant.temperature.short }}</p>
+          <p class="shortText">{{ plant.temperature.short }}</p>
         </div>
       </div>
       <div class="plantDescTwo">
         <div class="plantWater">
           <i
-            @click="openModal(plant, plant.watering.description)"
+            @click="
+              openModal(
+                plant,
+                plant.watering.plantHeading,
+                plant.watering.description
+              )
+            "
             class="bi bi-moisture iconsize"
             style="font-size: 2em"
           />
-          <p>{{ plant.watering.short }}</p>
+          <p class="shortText">{{ plant.watering.short }}</p>
         </div>
         <div class="plantFert">
           <i
-            @click="openModal(plant, plant.fertilization.description)"
+            @click="
+              openModal(
+                plant,
+                plant.fertilization.plantHeading,
+                plant.fertilization.description
+              )
+            "
             class="bi bi-flower1"
             style="font-size: 2em"
           />
-          <div class="test">
-            <p>{{ plant.fertilization.short }}</p>
-          </div>
+
+          <p class="shortText">{{ plant.fertilization.short }}</p>
         </div>
       </div>
     </div>
@@ -140,8 +152,7 @@
     <ShowPlant
       v-if="selectedPlant"
       :selected-plant="selectedPlant"
-      :plant-placement="plantPlacement"
-      :plant-heading="plantheading"
+      :plant-heading="plantHeading"
       :long-description="longDescription"
       @close="closeModal"
     />
@@ -152,12 +163,12 @@
     <p>{{ plant.description }}</p>
     <p class="heading">Beskärning</p>
     <p>{{ plant.pruning }}</p>
-    <p class="heading">Skadedjur</p>
-    <p class="heading">{{ plant.pests }}</p>
+    <!-- <p class="heading">Skadedjur</p>
+    <p class="heading">{{ plant.pests }}</p> -->
   </div>
 </template>
 
-<style>
+<style scoped>
   .plantBox {
     width: 90%;
     padding: 45px 20px 20px 20px;
@@ -185,6 +196,7 @@
     margin-top: 20px;
     border-radius: 10px;
     padding: 20px;
+    margin-bottom: 20px;
   }
 
   #ccc {
@@ -215,33 +227,56 @@
     width: 300px;
   }
 
+  .bi {
+    margin: 10px;
+  }
   .plantPlace {
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
   }
 
   .plantTemp {
     display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 
   .plantWater {
     display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 
   .plantFert {
     display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 
-  p {
-    margin: 50px;
+  .shortText {
+    display: flex;
+    text-align: center;
   }
 
   .heading {
     font-weight: bold;
   }
+  @media screen and (min-width: 600px) {
+    .plantDesc {
+      display: flex;
+      flex-direction: row;
+      margin: 10px;
+    }
 
-  /* .iconsize {
-    width: 20%;
-    height: 20%;
-  } */ ;
+    .plantDescTwo {
+      display: flex;
+      flex-direction: row;
+      margin: 10px;
+    }
+
+    .plantBox {
+      /* width: 90%; */
+    }
+  }
 </style>
