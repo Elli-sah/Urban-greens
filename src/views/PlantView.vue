@@ -147,9 +147,7 @@
           </div>
         </div>
       </div>
-      <button class="button" @click="atAddPlant">
-        Lägg till på fönsterbrädan
-      </button>
+      <button class="button" @click="atAddPlant">Ställ på fönsterbrädan</button>
       <ShowPlant
         v-if="selectedPlant"
         :selected-plant="selectedPlant"
@@ -165,14 +163,14 @@
       <div class="pruningDesc">
         <div class="pruning">
           <p class="heading">Beskärning</p>
-          <i class="bi bi-scissors"></i>
+          <i class="bi bi-scissors" />
         </div>
 
         <p>{{ plant.pruning }}</p>
       </div>
       <div class="bug">
         <p class="heading">Skadedjur</p>
-        <i class="bi bi-bug"></i>
+        <i class="bi bi-bug" />
       </div>
       <p class="heading">{{ plant.pests }}</p>
     </div>
