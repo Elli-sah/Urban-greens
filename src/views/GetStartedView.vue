@@ -1,9 +1,11 @@
 <script>
   import MyShelfInfo from '../components/MyShelfInfo.vue'
+  import StepByStep from '../components/StepByStep.vue'
 
   export default {
     components: {
-      MyShelfInfo
+      MyShelfInfo,
+      StepByStep
     }
   }
 </script>
@@ -19,6 +21,7 @@
       </p>
     </div>
     <MyShelfInfo />
+    <StepByStep />
     <RouterLink to="/login">
       <button id="komIgang" class="button">Logga in</button>
     </RouterLink>
@@ -30,5 +33,6 @@
     background-color: #577751;
     border-radius: 20px;
     padding: 10px;
+    max-width: 500px;
   }
 </style>

@@ -107,6 +107,9 @@ const mutations = {
   },
   addPlant(state, newPlant) {
     state.users[newPlant.user].favorites.push(newPlant.addplant)
+  },
+  removePlant(state, deletePlant) {
+    state.users[deletePlant.user].favorites.splice(deletePlant.index, 1)
   }
 }
 // const actions = {

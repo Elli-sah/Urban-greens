@@ -4,15 +4,29 @@
   export default {
     computed: {
       ...mapState({
-        myPlants: (state) => state.users[state.loggedInUser.user].favorites
+        myPlants: (state) => state.users[state.loggedInUser.user].favorites,
+        loggedInUser: (state) => state.loggedInUser
       })
+    },
+    methods: {
+      removePlant(index) {
+        console.log(index)
+        this.$store.commit('removePlant', {
+          user: this.loggedInUser.user,
+          index: index
+        })
+      }
     }
   }
 </script>
 
 <template>
   <div id="plantShelfBox" v-if="myPlants.length !== 0">
-    <div class="shelf-plants" :key="plant.name" v-for="plant in myPlants">
+    <div
+      class="shelf-plants"
+      :key="plant.name"
+      v-for="(plant, index) in myPlants"
+    >
       <img :src="plant.image[0]" :alt="plant.name" />
       <div class="descriptionBox">
         <h2>{{ plant.name }}</h2>
@@ -20,7 +34,7 @@
         <p>* {{ plant.watering.short }}</p>
         <p>* {{ plant.temperature.short }}</p>
       </div>
-      <i class="bi bi-x-lg" />
+      <i @click="removePlant(index)" class="bi bi-x-lg" />
     </div>
   </div>
 </template>
@@ -44,6 +58,7 @@
     width: 150px;
     height: 150px;
     object-fit: cover;
+    border-radius: 5px;
   }
 
   .descriptionBox {
@@ -51,7 +66,8 @@
   }
 
   i {
-    align-self: flex-end;
+    align-self: flex-start;
     cursor: pointer;
+    margin-left: 15px;
   }
 </style>
