@@ -55,6 +55,13 @@ h5,
 h6 {
   font-family: poiret, sans-serif;
 }
+a:link {
+  text-decoration: none;
+  color: $link-color;
+}
+a:visited {
+  color: $link-color;
+}
 
 p {
   font-family: Lato, sans-serif;

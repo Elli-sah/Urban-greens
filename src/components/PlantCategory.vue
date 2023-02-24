@@ -2,37 +2,37 @@
 
 <template>
   <h2><strong>Kategorier</strong></h2>
-  <div id="plantBoxContainer">
+  <div id="plantbox-container">
     <RouterLink class="link-dark text-decoration-none" to="/plantlist">
-      <div class="plantBoxCategory">
+      <div class="plantbox-category">
         <h4>Alla växter</h4>
 
         <div>
           <img
-            class="categoryPic"
+            class="category-pic"
             src="../../assets/Växter/feey-z-7QuRoqCE4-unsplash.jpg"
             alt="Alla växter"
           />
         </div></div
     ></RouterLink>
     <RouterLink class="link-dark text-decoration-none" to="/plantlist/Blommande"
-      ><div class="plantBoxCategory">
+      ><div class="plantbox-category">
         <div>
           <h4>Blommande växter</h4>
           <img
-            class="categoryPic"
-            src="../../assets/Växter/primrose-g26a64e07b_1920.jpg"
+            class="category-pic"
+            src="../../assets/Växter/pexels-julia-filirovska-7141249.jpg"
             alt="Blommande växter"
           />
         </div></div
     ></RouterLink>
     <RouterLink class="link-dark text-decoration-none" to="plantlist/Suckulent"
-      ><div class="plantBoxCategory">
+      ><div class="plantbox-category">
         <div>
           <h4>Suckulenter</h4>
 
           <img
-            class="categoryPic"
+            class="category-pic"
             src="../../assets/Växter/feey-nU9U66FMutc-unsplash.jpg"
             alt="Suckulenter"
           />
@@ -41,12 +41,12 @@
     <RouterLink
       class="link-dark text-decoration-none"
       to="/plantlist/Gröna växter"
-      ><div class="plantBoxCategory">
+      ><div class="plantbox-category">
         <div>
           <h4>Gröna Växter</h4>
 
           <img
-            class="categoryPic"
+            class="category-pic"
             src="../../assets/Växter/feey-R0_-WVpFQRI-unsplash.jpg"
             alt="Gröna Växter"
           />
@@ -55,12 +55,12 @@
     <RouterLink
       class="link-dark text-decoration-none"
       to="/plantlist/Giftiga_växter"
-      ><div class="plantBoxCategory">
+      ><div class="plantbox-category">
         <div>
           <h4>Giftiga Växter</h4>
 
           <img
-            class="categoryPic"
+            class="category-pic"
             src="../../assets/Växter/eslah-saad-QszuWY_zo7k-unsplash.jpg"
             alt="Giftiga Växter"
           />
@@ -80,7 +80,7 @@
     display: flex;
     justify-content: center;
   }
-  .plantBoxCategory {
+  .plantbox-category {
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -89,7 +89,7 @@
     cursor: pointer;
     align-items: center;
   }
-  .categoryPic {
+  .category-pic {
     object-fit: cover;
     border-radius: 15px;
     margin: 5px 20px 20px 20px;
@@ -98,7 +98,7 @@
     height: 220px;
   }
 
-  #plantBoxContainer {
+  #plantbox-container {
     display: flex;
     flex-direction: row;
     overflow-y: hidden;
