@@ -47,8 +47,6 @@
   }
 
   #nav-collapse {
-    background-color: white;
-
     padding: 20px;
     width: 100%;
     margin: none;
@@ -85,7 +83,7 @@
             </b-nav-form>
 
             <b-container>
-              <b-nav id="links" align="right">
+              <b-row id="links" align="right">
                 <b-nav-item to="/">Hem</b-nav-item>
                 <b-nav-item to="/plantlist/Alla_växter">Växtguide</b-nav-item>
 
@@ -93,7 +91,7 @@
                   >Min fönsterbräda</b-nav-item
                 >
                 <b-nav-item @click="onLogoutClick">Logga ut</b-nav-item>
-              </b-nav>
+              </b-row>
             </b-container>
           </b-navbar-nav>
         </b-collapse>
