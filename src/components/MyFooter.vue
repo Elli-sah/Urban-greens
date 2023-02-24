@@ -1,20 +1,29 @@
 <script>
   import 'bootstrap'
   import 'bootstrap/dist/css/bootstrap.min.css'
+  import moment from 'moment'
+  export default {
+    computed: {
+      currentYear() {
+        return moment().format('YYYY')
+      }
+    }
+  }
 </script>
 
 <template>
   <footer class="text-center text-lg-start">
-    <div class="container-fluid p-3">
+    <div class="container p-3">
       <img
-        id="footLoggo"
+        id="foot-loggo"
         class="row d-flex justify-content-start"
         src="../../assets/Logo-primary-svart.png"
         alt="Loggo"
       />
-
+    </div>
+    <div class="container p-3">
       <div class="row">
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <!-- <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
           <h5 class="text-uppercase">Om oss</h5>
 
           <ul class="list-unstyled mb-0">
@@ -28,26 +37,20 @@
               <a href="#!" class="text-dark">blabla</a>
             </li>
             <li>
-              <a href="#!" class="text-dark">Link 4</a>
+              <a href="#!" class="text-dark">blablabla</a>
             </li>
           </ul>
-        </div>
+        </div> -->
 
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase mb-0">Kontakt</h5>
+        <div class="col-lg text-center">
+          <h6 class="text-uppercase mb-0">Kontakt</h6>
 
           <ul class="list-unstyled">
-            <li>
-              <p>UrbanGreens & co</p>
-            </li>
-            <li>
-              <p>0731234567</p>
-            </li>
-            <li>
-              <p>Urbangreens@gmail.com</p>
-            </li>
-            <li><p>BlablablaVägen 23</p></li>
-            <li><p>22243 Lund</p></li>
+            <li>UrbanGreens & co</li>
+            <li>0731234567</li>
+            <li>Urbangreens@gmail.com</li>
+            <li>BlablablaVägen 23</li>
+            <li>22243 Lund</li>
           </ul>
         </div>
       </div>
@@ -56,7 +59,7 @@
     <div class="container p-4 pb-0">
       <section class="">
         <form action="">
-          <div class="row d-flex justify-content-center">
+          <!-- <div class="row d-flex justify-content-center">
             <div class="col-auto">
               <p class="pt-2">
                 <strong>Prenumerera på vårat nyhetsbrev</strong>
@@ -79,25 +82,28 @@
                 Prenumerera
               </button>
             </div>
-          </div>
-          <!-- <div id="policy">
+          </div> -->
+          <div id="policy" class="text-center">
             <ul class="list-unstyled">
               <li><a href="#">Terms of Service</a></li>
               <li><a href="#">Privacy Policy</a></li>
             </ul>
-          </div> -->
+          </div>
         </form>
       </section>
     </div>
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-      © 2020 Copyright:
+      © {{ currentYear }} Copyright:
       <a class="text-dark" href="#">UrbanGreens &co</a>
     </div>
   </footer>
 </template>
 
-<style>
-  #footLoggo {
+<style scoped>
+  #foot-loggo {
     width: 100px;
+  }
+  li {
+    font-size: small;
   }
 </style>
