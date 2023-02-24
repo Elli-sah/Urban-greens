@@ -14,31 +14,44 @@
     computed: {
       ...mapState({
         loggedInUser: (state) => state.loggedInUser,
-        userFavorites: (state) => state.users[state.loggedInUser.user].favorites
+        userFavorites: (state) => {
+          if (state.loggedInUser) {
+            return state.users[state.loggedInUser.user]?.favorites || []
+          } else {
+            return []
+          }
+        }
       })
     },
     methods: {
       addPlant() {
-        if (
-          this.loggedInUser !== '' &&
-          this.userFavorites.length !== undefined &&
-          this.userFavorites.some((plant) => plant.name !== this.plant.name)
-        ) {
-          this.$store.commit('addPlant', {
-            user: this.loggedInUser.user,
-            addplant: this.plant
-          })
-          this.Addedplant = true
-          setTimeout(() => {
-            this.Addedplant = false
-          }, 3000)
-        } else if (
+        console.log(this.userFavorites.length)
+        console.log(this.loggedInUser)
+        console.log(
           this.userFavorites.some((plant) => plant.name === this.plant.name)
-        ) {
-          this.AlreadyAddedplant = true
-          setTimeout(() => {
-            this.AlreadyAddedplant = false
-          }, 3000)
+        )
+        if (this.loggedInUser !== '') {
+          if (
+            this.userFavorites.length === 0 ||
+            this.userFavorites.some((plant) => plant.name !== this.plant.name)
+          ) {
+            this.$store.commit('addPlant', {
+              user: this.loggedInUser.user,
+              addplant: this.plant
+            })
+            this.Addedplant = true
+            setTimeout(() => {
+              this.Addedplant = false
+            }, 3000)
+          } else if (
+            this.userFavorites.length !== 0 &&
+            this.userFavorites.some((plant) => plant.name === this.plant.name)
+          ) {
+            this.AlreadyAddedplant = true
+            setTimeout(() => {
+              this.AlreadyAddedplant = false
+            }, 3000)
+          }
         } else {
           this.NotLoggedIn = true
         }
@@ -58,10 +71,14 @@
     </RouterLink>
     <i @click="addPlant" class="bi bi-suit-heart-fill" />
     <div class="popup-divs" v-show="Addedplant">
-      <p class="added-paragraph">Tillagd på din fönsterbräda!</p>
+      <p class="paragraph added-paragraph">
+        {{ plant.name }} är tillagd på din fönsterbräda!
+      </p>
     </div>
     <div class="popup-divs" v-show="AlreadyAddedplant">
-      <p class="added-paragraph">Redan tillagd på din fönsterbräda!</p>
+      <p class="paragraph added-paragraph">
+        Du har redan lagt till {{ plant.name }} på din fönsterbräda!
+      </p>
     </div>
     <div class="popup-divs" v-show="NotLoggedIn">
       <i @click="onClick" class="bi bi-x-lg" />
@@ -103,11 +120,12 @@
     align-items: center;
     justify-content: center;
     align-self: center;
-    // margin-top: 10px;
+    margin-top: 20px;
   }
 
   i {
     align-self: end;
+    margin-right: 20px;
   }
 
   h2 {

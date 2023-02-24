@@ -1,11 +1,9 @@
 <script>
   import PlantCategory from '../components/PlantCategory.vue'
-  import MyShelfInfo from '../components/MyShelfInfo.vue'
 
   export default {
     components: {
-      PlantCategory,
-      MyShelfInfo
+      PlantCategory
     }
   }
   // import axios from 'axios'
@@ -47,7 +45,7 @@
       dem friska och glada. Lär dig allt du behöver veta om att odla växter med
       oss!
     </p>
-    <RouterLink to="/login">
+    <RouterLink to="/get_started">
       <button id="komIgang" class="button">Kom igång</button>
     </RouterLink>
 
@@ -65,7 +63,6 @@
         </p>
       </div>
     </div>
-    <MyShelfInfo />
   </div>
 </template>
 
