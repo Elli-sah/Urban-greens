@@ -2,12 +2,6 @@
   import axios from 'axios'
 
   export default {
-    // props: {
-    //   plant: {
-    //     type: Object,
-    //     default: () => ({})
-    //   }
-    // },
     data() {
       return {
         result: [],
@@ -29,13 +23,18 @@
     },
 
     computed: {
+      // Kunna söka på växtnamn och kategorier. Ska kategorier synas?? Räcker med att växterna i den kategorin dyker upp??
       filterdPlants() {
         if (this.category === 'all') {
           return this.result.filter((plant) => {
             if (this.searchText) {
               const lowerCaseName = plant.name.toLowerCase()
+              const lowerCaseCategory = plant.category.toLowerCase()
               const lowerCaseSearchText = this.searchText.toLowerCase()
-              return lowerCaseName.includes(lowerCaseSearchText)
+              return (
+                lowerCaseName.includes(lowerCaseSearchText) ||
+                lowerCaseCategory.includes(lowerCaseSearchText)
+              )
             } else {
               return true
             }
@@ -44,7 +43,12 @@
           return this.result.filter(
             (plant) =>
               plant.category === this.category &&
-              plant.name.toLowerCase().includes(this.searchText.toLowerCase())
+              (plant.name
+                .toLowerCase()
+                .includes(this.searchText.toLowerCase()) ||
+                plant.category
+                  .toLowerCase()
+                  .includes(this.searchText.toLowerCase()))
           )
         }
       }
@@ -66,7 +70,7 @@
     placeholder="Sök..."
   />
   <div>
-    <div id="linkdiv">
+    <div v-if="searchText !== ''" id="linkdiv">
       <b-link
         v-for="plant in filterdPlants"
         :key="plant.name"
@@ -74,12 +78,19 @@
         class="list-group-item"
       >
         {{ plant.name }}
+        <!-- {{ plant.category }} -->
       </b-link>
     </div>
   </div>
 </template>
 
 <style scoped>
+  input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+  }
   #linkdiv {
     display: block;
     height: 150px;
