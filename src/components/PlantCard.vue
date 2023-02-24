@@ -9,7 +9,12 @@
       }
     },
     data() {
-      return { Addedplant: false, NotLoggedIn: false, AlreadyAddedplant: false }
+      return {
+        Addedplant: false,
+        NotLoggedIn: false,
+        AlreadyAddedplant: false,
+        showDescription: false
+      }
     },
     computed: {
       ...mapState({
@@ -69,7 +74,16 @@
       <img alt="plant.name" :src="plant.image[0]" />
       <h2>{{ plant.name }}</h2>
     </RouterLink>
-    <i @click="addPlant" class="bi bi-suit-heart-fill" />
+    <img
+      class="icon-image"
+      @mouseout="showDescription = false"
+      @mouseover="showDescription = true"
+      @click="addPlant"
+      src="../../assets/icons 8/icons8-potted-plant-100.png"
+      alt="potted-plant"
+    />
+    <p class="description" v-show="showDescription">Ställ på fönsterbrädan</p>
+    <!-- <i @click="addPlant" class="bi bi-suit-heart-fill" /> -->
     <div class="popup-divs" v-show="Addedplant">
       <p class="paragraph added-paragraph">
         {{ plant.name }} är tillagd på din fönsterbräda!
@@ -123,9 +137,27 @@
     margin-top: 20px;
   }
 
-  i {
+  .icon-image {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
     align-self: end;
     margin-right: 20px;
+    cursor: pointer;
+  }
+
+  .description {
+    position: absolute;
+    top: 75%;
+    left: 80%;
+    padding: 10px;
+    font-size: 0.5rem;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.1);
+  }
+
+  i {
+    align-self: flex-end;
   }
 
   h2 {

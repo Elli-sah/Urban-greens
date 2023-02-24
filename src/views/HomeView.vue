@@ -45,7 +45,7 @@
       dem friska och glada. Lär dig allt du behöver veta om att odla växter med
       oss!
     </p>
-    <RouterLink to="/login">
+    <RouterLink to="/get_started">
       <button id="kom-igang" class="button">Kom igång</button>
     </RouterLink>
 
