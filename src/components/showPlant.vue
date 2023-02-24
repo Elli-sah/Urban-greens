@@ -2,7 +2,7 @@
   export default {
     props: {
       selectedPlant: { required: true, type: Object },
-      plantheading: { required: true, type: String },
+      plantHeading: { required: true, type: String },
       longDescription: { required: true, type: String }
       // plantplacement: { required: true, type: String }
     },
@@ -38,8 +38,8 @@
   <div class="container">
     <!-- <p>{{ selectedPlant.title }}</p> -->
 
-    <p>{{ plantheading }}</p>
-    <p>{{ description }}</p>
+    <h3>{{ plantHeading }}</h3>
+    <!-- <p>{{ description }}</p> -->
 
     <!-- <p>{{ selectedPlant.title }}</p>
 
