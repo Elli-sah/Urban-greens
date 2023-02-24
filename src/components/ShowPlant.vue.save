@@ -3,7 +3,7 @@
     props: {
       selectedPlant: { required: true, type: Object },
       plantHeading: { required: true, type: String },
-      longDescription: { required: true, type: String }
+m      longDescription: { required: true, type: String }
       // plantplacement: { required: true, type: String }
     },
     data() {
@@ -18,6 +18,23 @@
   }
 </script>
 
+<style scoped>
+  .container {
+    width: 100px;
+    /* height: 200px; */
+    background-color: white;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    /* width: 50%; */
+    height: 350px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 200px 10% 0 10%;
+    text-align: center;
+    padding: 5%;
+  }
+</style>
+
 <template>
   <div class="container">
     <h3>{{ plantHeading }}</h3>
@@ -27,20 +44,3 @@
     <button class="button" @click="$emit('close')">Stäng</button>
   </div>
 </template>
-
-<style scoped>
-  .container {
-    width: 300px;
-    height: 100px;
-    background-color: #f8fbf8;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
-    position: absolute;
-    height: 350px;
-    overflow-x: hidden;
-    overflow-y: auto;
-    margin: 200px 10% 0 10%;
-    text-align: center;
-    padding: 5%;
-    border-radius: 10px;
-  }
-</style>

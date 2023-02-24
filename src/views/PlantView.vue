@@ -205,13 +205,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: space-around; */
     background-color: white;
     margin: auto;
     border-radius: 10px;
     margin-top: 10px;
-    /* padding: 20px; */
-    /* margin-bottom: 20px; */
     max-width: 500px;
   }
 
