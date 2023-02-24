@@ -21,7 +21,7 @@
       addPlant() {
         if (
           this.loggedInUser !== '' &&
-          this.userFavorites.length !== undefined &&
+          this.userFavorites !== undefined &&
           this.userFavorites.some((plant) => plant.name !== this.plant.name)
         ) {
           this.$store.commit('addPlant', {

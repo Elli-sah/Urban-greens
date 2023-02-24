@@ -173,7 +173,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
   .plantBox {
     width: 90%;
     padding: 45px 20px 20px 20px;
@@ -231,21 +231,32 @@
     width: 300px;
   }
 
+  .bi {
+    margin: 5px;
+  }
   .plantPlace {
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-around; */
   }
 
   .plantTemp {
     display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 
   .plantWater {
     display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 
   .plantFert {
     display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 
   .shortText {
