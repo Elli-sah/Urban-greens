@@ -97,11 +97,6 @@
           />
 
           <p class="shortText">{{ plant.placement.short }}</p>
-          <div>
-            <!-- <p v-show="showText">{{ plant.placement }}</p> -->
-          </div>
-
-          <!-- <p v-if="showText">{{ plant.description }}</p> -->
         </div>
         <div class="plantTemp">
           <i
@@ -168,8 +163,8 @@
     <p>{{ plant.description }}</p>
     <p class="heading">Beskärning</p>
     <p>{{ plant.pruning }}</p>
-    <p class="heading">Skadedjur</p>
-    <p class="heading">{{ plant.pests }}</p>
+    <!-- <p class="heading">Skadedjur</p>
+    <p class="heading">{{ plant.pests }}</p> -->
   </div>
 </template>
 
@@ -191,7 +186,7 @@
     flex-direction: column;
   }
   .secondPlantBox {
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -201,6 +196,7 @@
     margin-top: 20px;
     border-radius: 10px;
     padding: 20px;
+    margin-bottom: 20px;
   }
 
   #ccc {
@@ -232,13 +228,12 @@
   }
 
   .bi {
-    margin: 5px;
+    margin: 10px;
   }
   .plantPlace {
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* justify-content: space-around; */
   }
 
   .plantTemp {
@@ -260,7 +255,6 @@
   }
 
   .shortText {
-    /* margin-left: 50px; */
     display: flex;
     text-align: center;
   }
@@ -268,9 +262,21 @@
   .heading {
     font-weight: bold;
   }
+  @media screen and (min-width: 600px) {
+    .plantDesc {
+      display: flex;
+      flex-direction: row;
+      margin: 10px;
+    }
 
-  /* .iconsize {
-    width: 20%;
-    height: 20%;
-  } */ ;
+    .plantDescTwo {
+      display: flex;
+      flex-direction: row;
+      margin: 10px;
+    }
+
+    .plantBox {
+      /* width: 90%; */
+    }
+  }
 </style>
