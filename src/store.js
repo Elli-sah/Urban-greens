@@ -109,7 +109,12 @@ const mutations = {
     state.users[newPlant.user].favorites.push(newPlant.addplant)
   }
 }
-const actions = {}
+// const actions = {
+//   toggleMenu({ commit }) {
+//     console.log('Test från store action')
+//     commit('toggleMenu')
+//   }
+// }
 
 // createStore.Store({
 //   modules: {
@@ -126,4 +131,4 @@ const actions = {}
 //   ]
 // })
 
-export default createStore({ mutations, state, actions, strict: true })
+export default createStore({ mutations, state, strict: true })
