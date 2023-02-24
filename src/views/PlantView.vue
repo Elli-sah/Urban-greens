@@ -205,8 +205,8 @@
     justify-content: space-around;
     background-color: white;
     margin: auto;
-    /* margin-top: 20px; */
     border-radius: 10px;
+    margin-top: 10px;
     /* padding: 20px; */
     /* margin-bottom: 20px; */
   }
