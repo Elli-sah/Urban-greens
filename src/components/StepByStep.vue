@@ -49,10 +49,11 @@
     object-fit: cover;
   }
   #step-by-step {
+    margin: auto;
     max-width: 600px;
-    height: 600px;
+    height: 500px;
     background-color: white;
-    border-radius: 0 20px 0 20px;
+    border-radius: 20px;
     padding: 20px;
   }
 </style>
