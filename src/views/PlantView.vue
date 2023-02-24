@@ -178,16 +178,21 @@
 </template>
 
 <style scoped>
+  /* .bigPlantBox {
+    display: flex;
+    justify-content: center;
+  } */
   .plantBox {
     width: 90%;
     padding: 45px 20px 20px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     background-color: white;
     margin: auto;
     border-radius: 10px;
+    max-width: 500px;
   }
 
   .plantContainer {
@@ -200,13 +205,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     background-color: white;
     margin: auto;
     border-radius: 10px;
     margin-top: 10px;
     /* padding: 20px; */
     /* margin-bottom: 20px; */
+    max-width: 500px;
   }
 
   #ccc {
@@ -282,7 +288,7 @@
   .pruningDesc {
     margin-top: 10px;
   }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 1000px) {
     .plantDesc {
       display: flex;
       flex-direction: row;
@@ -296,8 +302,9 @@
     }
     .plantBox {
       display: flex;
+      justify-content: center;
       /* justify-content: flex-start; */
-      margin: 10px;
+      /* margin: 10px; */
       max-width: 500px;
     }
 
