@@ -191,7 +191,7 @@
     flex-direction: column;
   }
   .secondPlantBox {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -249,7 +249,9 @@
   }
 
   .shortText {
-    margin-left: 50px;
+    /* margin-left: 50px; */
+    display: flex;
+    text-align: center;
   }
 
   .heading {
