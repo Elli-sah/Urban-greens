@@ -1,9 +1,11 @@
 <script>
   import PlantCategory from '../components/PlantCategory.vue'
+  import MyShelfInfo from '../components/MyShelfInfo.vue'
 
   export default {
     components: {
-      PlantCategory
+      PlantCategory,
+      MyShelfInfo
     }
   }
   // import axios from 'axios'
@@ -48,6 +50,7 @@
     <RouterLink to="/login">
       <button id="komIgang" class="button">Kom igång</button>
     </RouterLink>
+
     <PlantCategory />
 
     <div id="textContainer">
@@ -62,10 +65,15 @@
         </p>
       </div>
     </div>
+    <MyShelfInfo />
   </div>
 </template>
 
 <style lang="scss" scoped>
+  #start-div {
+    height: 220vh;
+  }
+
   #primarylogo {
     margin-left: 20px;
     width: 80%;
