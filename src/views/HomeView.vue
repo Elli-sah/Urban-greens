@@ -32,7 +32,7 @@
   <div id="start-div">
     <!-- <PlantSearch /> -->
     <img
-      id="primarylogo"
+      id="primary-logo"
       src="../../assets/Logo-primary-svart.png"
       alt="Primary logo"
     />
@@ -45,15 +45,14 @@
       dem friska och glada. Lär dig allt du behöver veta om att odla växter med
       oss!
     </p>
-    <RouterLink to="/get_started">
-      <button id="komIgang" class="button">Kom igång</button>
+    <RouterLink to="/login">
+      <button id="kom-igang" class="button">Kom igång</button>
     </RouterLink>
 
     <PlantCategory />
-
-    <div id="textContainer">
-      <div id="startTextMiddle">
-        <p id="text2">
+    <div id="text-container">
+      <div id="start-text-middle">
+        <p id="text-2">
           <strong>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum
             quia, saepe doloremque corrupti suscipit magnam vel maiores a id
@@ -71,7 +70,7 @@
     height: 220vh;
   }
 
-  #primarylogo {
+  #primary-logo {
     margin-left: 20px;
     width: 80%;
     height: auto;
@@ -81,10 +80,10 @@
     display: flex;
     margin-left: 50px;
   }
-  #komIgang {
+  #kom-igang {
     margin: 30px;
   }
-  #startTextMiddle {
+  #start-text-middle {
     display: flex;
     width: 400px;
     border-radius: 10px;
@@ -92,11 +91,11 @@
     padding: 20px;
     text-align: center;
   }
-  #text2 {
+  #text-2 {
     font-size: large;
   }
 
-  #textContainer {
+  #text-container {
     display: flex;
   }
 </style>
