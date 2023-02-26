@@ -78,7 +78,10 @@
         class="list-group-item"
       >
         {{ plant.name }}
-        <!-- {{ plant.category }} -->
+
+        <p>
+          {{ plant.category }}
+        </p>
       </b-link>
     </div>
   </div>
