@@ -43,7 +43,7 @@
         </div> -->
 
         <div class="col-lg text-center">
-          <h6 class="text-uppercase mb-0">Kontakt</h6>
+          <h5 class="text-uppercase mb-0">Kontakt</h5>
 
           <ul class="list-unstyled">
             <li>UrbanGreens & co</li>
@@ -59,34 +59,34 @@
     <div class="container p-4 pb-0">
       <section class="">
         <form action="">
-          <!-- <div class="row d-flex justify-content-center">
-            <div class="col-auto">
+          <div class="flex-column">
+            <div class="col-auto d-flex justify-content-center">
               <p class="pt-2">
                 <strong>Prenumerera på vårat nyhetsbrev</strong>
               </p>
             </div>
 
-            <div class="col-md-5 col-12">
-              <div class="form-outline form-white mb-4">
+            <div class="col-auto d-flex justify-content-center">
+              <div class="form-outline form-white mb-4 col-sm-6">
                 <input
+                  id="form"
                   type="email"
-                  id="newsletter"
                   class="form-control"
                   placeholder="Email"
                 />
               </div>
             </div>
 
-            <div class="col-auto">
+            <div class="col-auto d-flex justify-content-center">
               <button type="submit" class="btn btn-outline-dark mb-4">
                 Prenumerera
               </button>
             </div>
-          </div> -->
+          </div>
           <div id="policy" class="text-center">
-            <ul class="list-unstyled">
-              <li><a href="#">Terms of Service</a></li>
-              <li><a href="#">Privacy Policy</a></li>
+            <ul class="list-unstyled d-flex flex-row justify-content-center">
+              <li class="m-3"><a href="#">Terms of Service</a></li>
+              <li class="m-3"><a href="#">Privacy Policy</a></li>
             </ul>
           </div>
         </form>
@@ -101,9 +101,14 @@
 
 <style scoped>
   #foot-loggo {
-    width: 100px;
+    width: 150px;
+    opacity: 30%;
   }
   li {
     font-size: small;
+  }
+  h5 {
+    font-weight: bolder;
+    text-decoration: underline;
   }
 </style>
