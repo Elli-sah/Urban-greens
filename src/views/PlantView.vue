@@ -194,7 +194,7 @@
     background-color: white;
     margin: auto;
     border-radius: 10px;
-    width: 500px;
+    width: 350px;
   }
 
   .plantBoxText {
@@ -218,7 +218,8 @@
     margin: auto;
     border-radius: 10px;
     margin-top: 10px;
-    width: 500px;
+    width: 350px;
+    padding: 80px;
   }
 
   #ccc {
@@ -294,7 +295,7 @@
   .pruningDesc {
     margin-top: 10px;
   }
-  @media (min-width: 1000px) {
+  @media (min-width: 800px) {
     /* .plantBoxText {
       display: flex;
       justify-content: row;
@@ -307,8 +308,8 @@
     }
     .carouselImg {
       object-fit: cover;
-      width: 350px;
-      height: 350px;
+      width: 600px;
+      height: 600px;
     }
 
     .plantDescTwo {
@@ -366,6 +367,11 @@
       flex-direction: row;
       align-items: center;
       margin: 10px;
+    }
+
+    #ccc {
+      width: 600px;
+      height: 600px;
     }
   }
 </style>

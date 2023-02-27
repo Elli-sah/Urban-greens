@@ -99,7 +99,7 @@
     height: 150px;
     overflow-x: scroll;
     position: absolute;
-    background-color: rgba(225, 186, 107, 0.1);
+    background-color: rgba(225, 186, 107, 0.9);
   }
   div {
     position: relative;
