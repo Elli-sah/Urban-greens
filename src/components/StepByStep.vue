@@ -2,7 +2,22 @@
   export default {
     data() {
       return {
-        slide: 0
+        slide: 1,
+        number: ''
+      }
+    },
+    computed: {
+      slideText() {
+        switch (this.slide + 1) {
+          case 1:
+            return 'Navigera dig runt på sidan med hjälp av menyn'
+          case 2:
+            return 'I menyn får du olika alternativ'
+          case 3:
+            return 'I växtguiden kan du se alla växter'
+          default:
+            return ''
+        }
       }
     }
   }
@@ -14,7 +29,7 @@
     <div id="carousel">
       <b-carousel
         v-model="slide"
-        interval="2000"
+        interval="4000"
         controls
         indicators
         ride="carousel"
@@ -32,6 +47,7 @@
           img-src="../../assets/step-by-step/sb7.png"
         />
       </b-carousel>
+      <p>{{ slideText }}</p>
     </div>
   </div>
 </template>
@@ -52,8 +68,11 @@
     margin: auto;
     max-width: 600px;
     height: 500px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 20px;
+    padding: 20px;
+  }
+  p {
     padding: 20px;
   }
 </style>
