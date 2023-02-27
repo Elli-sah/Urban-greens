@@ -132,4 +132,15 @@ footer {
   src: url(../../assets/Lato/Lato-Light.ttf);
 }
 
+@media screen and (min-width: 600px) {
+  body {
+    background-image: url(../../assets/desktop-allasidor.png);
+    height: 3000px;
+  }
+  #start-div {
+    background-image: url(../../assets/desktop-startsidan.png);
+    height: 3000px;
+  }
+}
+
 @import 'bootstrap/scss/bootstrap';

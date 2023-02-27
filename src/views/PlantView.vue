@@ -65,7 +65,7 @@
 </script>
 
 <template>
-  <div class="bigPlantBox">
+  <div v-if="plant !== null" class="bigPlantBox">
     <div class="plantBox">
       <div id="ccc">
         <b-carousel v-model="slide" indicators>
