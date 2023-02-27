@@ -65,22 +65,23 @@
 </script>
 
 <template>
-  <div v-if="plant !== null" class="bigPlantBox">
-    <div class="plantBox">
-      <div id="ccc">
-        <b-carousel v-model="slide" indicators>
-          <b-carousel-slide
-            class="carouselImg"
-            v-for="(image, index) in plant.image"
-            :key="index"
-            :img-src="image"
-          />
-        </b-carousel>
-      </div>
-
+  <!-- <div v-if="plant !== null" class="bigPlantBox"> -->
+  <div v-if="plant !== null" class="plantBox">
+    <div id="ccc">
+      <b-carousel v-model="slide" indicators>
+        <b-carousel-slide
+          class="carouselImg"
+          v-for="(image, index) in plant.image"
+          :key="index"
+          :img-src="image"
+        />
+      </b-carousel>
+    </div>
+    <div class="plantName">
       <h1>{{ plant.name }}</h1>
 
       <h3>{{ plant.latin }}</h3>
+
       <hr class="line" />
       <div class="plantContainer">
         <div class="plantDesc">
@@ -157,6 +158,7 @@
       />
     </div>
   </div>
+  <!-- </div> -->
   <div class="secondPlantBox">
     <div class="info">
       <h2>Mer information</h2>
@@ -203,6 +205,10 @@
     border-radius: 10px;
     width: 350px;
     margin-top: 10px;
+  }
+  .plantName {
+    flex-direction: column;
+    text-align: center;
   }
 
   .plantBoxText {
