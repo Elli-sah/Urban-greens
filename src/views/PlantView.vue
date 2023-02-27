@@ -194,7 +194,7 @@
     background-color: white;
     margin: auto;
     border-radius: 10px;
-    width: 500px;
+    width: 350px;
   }
 
   .plantBoxText {
@@ -218,7 +218,7 @@
     margin: auto;
     border-radius: 10px;
     margin-top: 10px;
-    width: 500px;
+    width: 350px;
   }
 
   #ccc {
@@ -307,8 +307,8 @@
     }
     .carouselImg {
       object-fit: cover;
-      width: 350px;
-      height: 350px;
+      width: 400px;
+      height: 400px;
     }
 
     .plantDescTwo {
@@ -366,6 +366,11 @@
       flex-direction: row;
       align-items: center;
       margin: 10px;
+    }
+
+    #ccc {
+      width: 400px;
+      height: 400px;
     }
   }
 </style>
