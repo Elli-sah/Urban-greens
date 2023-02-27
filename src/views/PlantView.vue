@@ -219,6 +219,7 @@
     border-radius: 10px;
     margin-top: 10px;
     width: 350px;
+    padding: 80px;
   }
 
   #ccc {
@@ -294,7 +295,7 @@
   .pruningDesc {
     margin-top: 10px;
   }
-  @media (min-width: 1000px) {
+  @media (min-width: 800px) {
     /* .plantBoxText {
       display: flex;
       justify-content: row;
@@ -307,8 +308,8 @@
     }
     .carouselImg {
       object-fit: cover;
-      width: 400px;
-      height: 400px;
+      width: 600px;
+      height: 600px;
     }
 
     .plantDescTwo {
@@ -369,8 +370,8 @@
     }
 
     #ccc {
-      width: 400px;
-      height: 400px;
+      width: 600px;
+      height: 600px;
     }
   }
 </style>
