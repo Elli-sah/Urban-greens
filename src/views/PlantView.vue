@@ -65,22 +65,23 @@
 </script>
 
 <template>
-  <div v-if="plant !== null" class="bigPlantBox">
-    <div class="plantBox">
-      <div id="ccc">
-        <b-carousel v-model="slide" indicators>
-          <b-carousel-slide
-            class="carouselImg"
-            v-for="(image, index) in plant.image"
-            :key="index"
-            :img-src="image"
-          />
-        </b-carousel>
-      </div>
-
+  <!-- <div v-if="plant !== null" class="bigPlantBox"> -->
+  <div v-if="plant !== null" class="plantBox">
+    <div id="ccc">
+      <b-carousel v-model="slide" indicators>
+        <b-carousel-slide
+          class="carouselImg"
+          v-for="(image, index) in plant.image"
+          :key="index"
+          :img-src="image"
+        />
+      </b-carousel>
+    </div>
+    <div class="plantName">
       <h1>{{ plant.name }}</h1>
 
       <h3>{{ plant.latin }}</h3>
+
       <hr class="line" />
       <div class="plantContainer">
         <div class="plantDesc">
@@ -157,6 +158,7 @@
       />
     </div>
   </div>
+  <!-- </div> -->
   <div class="secondPlantBox">
     <div class="info">
       <h2>Mer information</h2>
@@ -203,6 +205,10 @@
     border-radius: 10px;
     width: 350px;
     margin-top: 10px;
+  }
+  .plantName {
+    flex-direction: column;
+    text-align: center;
   }
 
   .plantBoxText {
@@ -256,7 +262,7 @@
 
   .line {
     border-style: 1px solid rgba(0, 0, 0, 0.15);
-    width: 300px;
+    width: 400px;
   }
 
   .bi {
@@ -304,7 +310,7 @@
     font-size: 15px;
   } */
 
-  @media (min-width: 900px) {
+  @media (min-width: 950px) {
     /* .plantBoxText {
       display: flex;
       justify-content: row;
@@ -322,7 +328,7 @@
       justify-content: center; */
     }
     .moreInfo {
-      width: 500px;
+      max-width: 500px;
       text-align: center;
     }
     .carouselImg {
@@ -408,7 +414,7 @@
       font-size: 16px;
     }
   }
-  @media only screen and (max-width: 1200px) and (min-width: 900px) {
+  @media only screen and (max-width: 1200px) and (min-width: 950px) {
     .carouselImg {
       object-fit: cover;
       width: 400px;
