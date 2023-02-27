@@ -65,19 +65,19 @@
 </script>
 
 <template>
-  <div class="bigPlantBox">
-    <div class="plantBox">
-      <div id="ccc">
-        <b-carousel v-model="slide" indicators>
-          <b-carousel-slide
-            class="carouselImg"
-            v-for="(image, index) in plant.image"
-            :key="index"
-            :img-src="image"
-          />
-        </b-carousel>
-      </div>
-
+  <!-- <div class="bigPlantBox"> -->
+  <div class="plantBox">
+    <div id="ccc">
+      <b-carousel v-model="slide" indicators>
+        <b-carousel-slide
+          class="carouselImg"
+          v-for="(image, index) in plant.image"
+          :key="index"
+          :img-src="image"
+        />
+      </b-carousel>
+    </div>
+    <div class="plantBoxText">
       <h1>{{ plant.name }}</h1>
 
       <h3>{{ plant.latin }}</h3>
@@ -156,25 +156,26 @@
         @close="closeModal"
       />
     </div>
-    <div class="secondPlantBox">
-      <h2>Mer information</h2>
-
-      <p>{{ plant.description }}</p>
-      <div class="pruningDesc">
-        <div class="pruning">
-          <p class="heading">Beskärning</p>
-          <i class="bi bi-scissors" />
-        </div>
-
-        <p>{{ plant.pruning }}</p>
-      </div>
-      <div class="bug">
-        <p class="heading">Skadedjur</p>
-        <i class="bi bi-bug" />
-      </div>
-      <p class="heading">{{ plant.pests }}</p>
-    </div>
   </div>
+  <div class="secondPlantBox">
+    <h2>Mer information</h2>
+
+    <p>{{ plant.description }}</p>
+    <div class="pruningDesc">
+      <div class="pruning">
+        <p class="heading">Beskärning</p>
+        <i class="bi bi-scissors" />
+      </div>
+
+      <p>{{ plant.pruning }}</p>
+    </div>
+    <div class="bug">
+      <p class="heading">Skadedjur</p>
+      <i class="bi bi-bug" />
+    </div>
+    <p class="heading">{{ plant.pests }}</p>
+  </div>
+  <!-- </div> -->
 </template>
 
 <style scoped>
@@ -188,11 +189,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     /* justify-content: space-around; */
     background-color: white;
     margin: auto;
     border-radius: 10px;
-    max-width: 500px;
+    width: 500px;
+  }
+
+  .plantBoxText {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
   }
 
   .plantContainer {
@@ -209,7 +218,7 @@
     margin: auto;
     border-radius: 10px;
     margin-top: 10px;
-    max-width: 500px;
+    width: 500px;
   }
 
   #ccc {
@@ -285,11 +294,21 @@
   .pruningDesc {
     margin-top: 10px;
   }
-  @media screen and (min-width: 1000px) {
+  @media (min-width: 1000px) {
+    /* .plantBoxText {
+      display: flex;
+      justify-content: row;
+      width: 100%;
+    } */
     .plantDesc {
       display: flex;
       flex-direction: row;
       margin: 10px;
+    }
+    .carouselImg {
+      object-fit: cover;
+      width: 350px;
+      height: 350px;
     }
 
     .plantDescTwo {
@@ -299,10 +318,14 @@
     }
     .plantBox {
       display: flex;
-      justify-content: center;
+      justify-content: space-around;
+      flex-direction: row;
+
       /* justify-content: flex-start; */
       /* margin: 10px; */
-      max-width: 500px;
+      /* max-width: 500px; */
+      /* width: 800px; */
+      width: 80%;
     }
 
     .bigPlantBox {
@@ -312,10 +335,10 @@
     }
     .secondPlantBox {
       height: 50%;
-      width: 50%;
+      width: 80%;
       display: flex;
       /* justify-content: flex-end; */
-      max-width: 500px;
+      /* max-width: 500px; */
     }
     .plantPlace {
       display: flex;
