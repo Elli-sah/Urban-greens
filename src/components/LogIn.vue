@@ -13,7 +13,8 @@
         logedInMessage: false,
         logedInName: '',
         showCreateForm: false,
-        showLoginForm: true
+        showLoginForm: true,
+        showError: false
       }
     },
     created() {
@@ -36,6 +37,7 @@
           console.log('hej')
           this.logedInMessage = true
           this.$store.commit('addLoggedInUser', this.userName)
+          this.$router.push('/')
         } else {
           console.log('hejdå')
           this.showMessage = true
@@ -46,11 +48,16 @@
         this.showLoginForm = false
       },
       AtCreateAccount() {
-        this.$store.commit('addUser', {
-          user: this.createUserName,
-          name: this.createName,
-          password: this.createPassword
-        })
+        if (this.createUserName in this.myState) {
+          this.showError = true
+        } else {
+          this.$store.commit('addUser', {
+            user: this.createUserName,
+            name: this.createName,
+            password: this.createPassword
+          })
+          this.$router.push('/')
+        }
       }
     }
   }
@@ -97,6 +104,9 @@
       ><input id="create-password" type="password" v-model="createPassword" />
       <button class="button" type="submit">Skapa konto</button>
     </form>
+    <div v-if="showError">
+      <p>Användarnamnet du har valt finns redan. Försök igen!</p>
+    </div>
   </div>
 </template>
 

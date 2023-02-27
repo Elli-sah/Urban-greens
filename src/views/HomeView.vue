@@ -1,35 +1,24 @@
 <script>
   import PlantCategory from '../components/PlantCategory.vue'
+  import { mapState } from 'vuex'
 
   export default {
     components: {
       PlantCategory
+    },
+    computed: {
+      ...mapState({
+        loggedInUser: (state) => state.loggedInUser
+      })
     }
   }
-  // import axios from 'axios'
-  // export default {
-  //   created() {
-  //     this.axiosGetPlants()
-  //   },
-
-  //   data() {
-  //     return {
-  //       result: ''
-  //     }
-  //   },
-
-  //   methods: {
-  //     axiosGetPlants() {
-  //       axios.get('/plants.json').then((response) => {
-  //         this.result = response.data
-  //       })
-  //     }
-  //   }
-  // }
 </script>
 
 <template>
   <div id="start-div">
+    <div id="welcome-popup" v-show="loggedInUser !== ''">
+      <p>Välkommen {{ loggedInUser.name }}!</p>
+    </div>
     <!-- <PlantSearch /> -->
     <img
       id="primary-logo"
@@ -68,6 +57,13 @@
 <style lang="scss" scoped>
   #start-div {
     height: 220vh;
+  }
+
+  #welcome-popup {
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    width: 200px;
   }
 
   #primary-logo {
