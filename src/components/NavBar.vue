@@ -36,7 +36,6 @@
     background-color: rgba(225, 186, 107, 0.1);
   }
   #navbar-container {
-    background-color: red;
     padding: 10px;
     width: 100%;
     background-color: rgba(225, 186, 107, 0.9);
@@ -49,9 +48,11 @@
   }
 
   #nav-collapse {
+    // background-color: red;
     padding: 20px;
     width: 100%;
     margin: none;
+    justify-content: flex-end;
   }
 
   #nav-collapse-container {
@@ -69,7 +70,11 @@
     height: 40px;
   }
 
-  @media screen and (max-width: 992px) {
+  @media (max-width: 992px) {
+    #links {
+      display: flex;
+      flex-direction: column;
+    }
     #nav-collapse {
       width: 100%;
     }
@@ -91,28 +96,11 @@
     }
   }
 
-  @media screen and (max-width: 800px) {
-    .navbar-items {
-      align-items: end;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      margin-right: 20px;
-    }
-
-    #links {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      align-items: end;
-    }
-  }
-  @media screen and (min-width: 600px) {
+  @media (min-width: 600px) {
     #secondarylogo {
       display: flex;
-
-      width: 80px;
-      height: 80px;
+      width: 60px;
+      height: 60px;
     }
   }
 </style>
