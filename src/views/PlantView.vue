@@ -65,19 +65,19 @@
 </script>
 
 <template>
-  <!-- <div class="bigPlantBox"> -->
-  <div class="plantBox">
-    <div id="ccc">
-      <b-carousel v-model="slide" indicators>
-        <b-carousel-slide
-          class="carouselImg"
-          v-for="(image, index) in plant.image"
-          :key="index"
-          :img-src="image"
-        />
-      </b-carousel>
-    </div>
-    <div class="plantBoxText">
+  <div v-if="plant !== null" class="bigPlantBox">
+    <div class="plantBox">
+      <div id="ccc">
+        <b-carousel v-model="slide" indicators>
+          <b-carousel-slide
+            class="carouselImg"
+            v-for="(image, index) in plant.image"
+            :key="index"
+            :img-src="image"
+          />
+        </b-carousel>
+      </div>
+
       <h1>{{ plant.name }}</h1>
 
       <h3>{{ plant.latin }}</h3>

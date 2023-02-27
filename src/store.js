@@ -1,57 +1,6 @@
 import { createStore } from 'vuex'
-// import VuexPersist from 'vuex-persist'
-
-// const vuexLocal = new VuexPersist({
-//   storage: window.localstorage
-// })
-
-// const mutations = {
-//   increment(state) {
-//     state.counter += 1
-//   }
-// }
-
-// const usersModules = {
-//   state: {
-//     users: {
-//       klarab: {
-//         name: 'Klara',
-//         password: 'klarab',
-//         favorites: []
-//       },
-//       sannaa: {
-//         name: 'Sanna',
-//         password: 'sannaa',
-//         favorites: []
-//       },
-//       ellinors: {
-//         name: 'Ellinor',
-//         password: 'ellinors',
-//         favorites: []
-//       },
-//       tovek: {
-//         name: 'Tove',
-//         password: 'tovek',
-//         favorites: []
-//       },
-//       isabelll: {
-//         name: 'Isabell',
-//         password: 'isabelll',
-//         favorites: []
-//       }
-//     },
-//     loggedInUser: ''
-//   },
-//   mutations: {
-//     addUser(state, newUser) {
-//       state.users[newUser.userName] = {
-//         name: newUser.name,
-//         password: newUser.password,
-//         favorites: []
-//       }
-//     }
-//   }
-// }
+// import vuexPersist from './vuexPersist'
+import vuexLocal from './vuexPersist'
 
 const state = {
   users: {
@@ -85,7 +34,15 @@ const state = {
   loggedInUser: '',
   searchText: ''
 }
+
+// const plugins = [vuexLocal]
+// const plugins = [vuexPersist.plugin]
+
 const mutations = {
+  RESTORE_MUTATION: vuexLocal.RESTORE_MUTATION,
+  // SET_USERS(state, users) {
+  //   state.users = { ...users }
+  // },
   logutUser(state) {
     state.loggedInUser = ''
   },
@@ -112,6 +69,8 @@ const mutations = {
     state.users[deletePlant.user].favorites.splice(deletePlant.index, 1)
   }
 }
+const plugins = [vuexLocal.plugin]
+
 // const actions = {
 //   toggleMenu({ commit }) {
 //     console.log('Test från store action')
@@ -134,4 +93,4 @@ const mutations = {
 //   ]
 // })
 
-export default createStore({ mutations, state, strict: true })
+export default createStore({ mutations, state, plugins, strict: true })

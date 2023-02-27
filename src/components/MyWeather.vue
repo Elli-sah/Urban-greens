@@ -42,7 +42,7 @@
 </script>
 
 <template>
-  <div v-if="temp !== null">
+  <div id="weather-container" v-if="temp !== null">
     <h3>Vädret hos dig</h3>
     <p>{{ temp }}℃</p>
     <img :src="`http://openweathermap.org/img/wn/${this.img}.png`" />
@@ -58,7 +58,18 @@
 </template>
 
 <style scoped>
-  div {
-    background-color: rgb(253, 253, 253);
+  #weather-container {
+    background-color: rgba(253, 253, 253, 0.238);
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: auto;
+  }
+  img {
+    width: 50px;
+    height: 50px;
   }
 </style>

@@ -3,7 +3,10 @@
 <template>
   <h3><strong>Kategorier</strong></h3>
   <div id="plantbox-container">
-    <RouterLink class="link-dark text-decoration-none" to="/plantlist">
+    <RouterLink
+      class="link-dark text-decoration-none"
+      to="/plantlist/Alla_växter"
+    >
       <div class="plantbox-category">
         <h4>Alla växter</h4>
 

@@ -20,6 +20,9 @@
         dem blomstra med hjälp av vår app. Kontakta oss om du behöver hjälp.
         Lycka till med dina växter!
       </p>
+      <RouterLink to="/login">
+        <button id="komIgang" class="button">Logga in</button>
+      </RouterLink>
     </div>
 
     <div id="bb">
@@ -60,9 +63,6 @@
     </div>
 
     <StepByStep />
-    <RouterLink to="/login">
-      <button id="komIgang" class="button">Logga in</button>
-    </RouterLink>
   </div>
 </template>
 
@@ -93,8 +93,9 @@
     background-color: #577751;
     border-radius: 20px;
     padding: 10px;
-    max-width: 500px;
-    margin-top: 50px;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 30px;
   }
   #my-shelf {
     width: 300px;
