@@ -178,7 +178,7 @@
           <p class="heading">Skadedjur</p>
           <i class="bi bi-bug" />
         </div>
-        <p class="heading">{{ plant.pests }}</p>
+        <p>{{ plant.pests }}</p>
       </div>
     </div>
   </div>
@@ -300,20 +300,11 @@
   .pruningDesc {
     margin-top: 10px;
   }
-  @media (min-width: 1200px) {
-    #ccc {
-      width: 400px;
-      height: 400px;
-    }
+  /* .heading {
+    font-size: 15px;
+  } */
 
-    .carouselImg {
-      object-fit: cover;
-      width: 400px;
-      height: 400px;
-    }
-  }
-
-  @media (min-width: 800px) {
+  @media (min-width: 900px) {
     /* .plantBoxText {
       display: flex;
       justify-content: row;
@@ -327,6 +318,8 @@
     .info {
       text-align: center;
       margin-bottom: 20px;
+      /* display: flex;
+      justify-content: center; */
     }
     .moreInfo {
       width: 500px;
@@ -356,12 +349,13 @@
     }
 
     .bugDesc {
-      width: 500px;
+      /* width: 500px; */
       text-align: center;
       margin: 10px;
+      max-width: 500px;
     }
     .pruningDesc {
-      width: 500px;
+      max-width: 500px;
       text-align: center;
       margin: 10px;
     }
@@ -410,5 +404,31 @@
       width: 600px;
       height: 600px;
     }
+    .heading {
+      font-size: 16px;
+    }
   }
+  @media only screen and (max-width: 1200px) and (min-width: 900px) {
+    .carouselImg {
+      object-fit: cover;
+      width: 400px;
+      height: 400px;
+    }
+    #ccc {
+      width: 400px;
+      height: 400px;
+    }
+  }
+  /* @media (min-width: 1200px) {
+    #ccc {
+      width: 400px;
+      height: 400px;
+    }
+
+    .carouselImg {
+      object-fit: cover;
+      width: 400px;
+      height: 400px;
+    }
+  } */
 </style>
