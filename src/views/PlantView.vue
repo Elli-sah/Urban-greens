@@ -158,22 +158,29 @@
     </div>
   </div>
   <div class="secondPlantBox">
-    <h2>Mer information</h2>
-
-    <p>{{ plant.description }}</p>
-    <div class="pruningDesc">
-      <div class="pruning">
-        <p class="heading">Beskärning</p>
-        <i class="bi bi-scissors" />
+    <div class="info">
+      <h2>Mer information</h2>
+      <div class="moreInfo">
+        <p>{{ plant.description }}</p>
       </div>
+    </div>
+    <div class="textBox">
+      <div class="pruningDesc">
+        <div class="pruning">
+          <p class="heading">Beskärning</p>
+          <i class="bi bi-scissors" />
+        </div>
 
-      <p>{{ plant.pruning }}</p>
+        <p>{{ plant.pruning }}</p>
+      </div>
+      <div class="bugDesc">
+        <div class="bug">
+          <p class="heading">Skadedjur</p>
+          <i class="bi bi-bug" />
+        </div>
+        <p class="heading">{{ plant.pests }}</p>
+      </div>
     </div>
-    <div class="bug">
-      <p class="heading">Skadedjur</p>
-      <i class="bi bi-bug" />
-    </div>
-    <p class="heading">{{ plant.pests }}</p>
   </div>
   <!-- </div> -->
 </template>
@@ -185,7 +192,7 @@
   } */
   .plantBox {
     width: 90%;
-    padding: 45px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -195,6 +202,7 @@
     margin: auto;
     border-radius: 10px;
     width: 350px;
+    margin-top: 10px;
   }
 
   .plantBoxText {
@@ -220,6 +228,7 @@
     margin-top: 10px;
     width: 350px;
     padding: 80px;
+    margin-bottom: 10px;
   }
 
   #ccc {
@@ -282,10 +291,6 @@
     text-align: center;
   }
 
-  .heading {
-    font-weight: bold;
-  }
-
   .pruning {
     text-align: center;
   }
@@ -295,6 +300,19 @@
   .pruningDesc {
     margin-top: 10px;
   }
+  @media (min-width: 1200px) {
+    #ccc {
+      width: 400px;
+      height: 400px;
+    }
+
+    .carouselImg {
+      object-fit: cover;
+      width: 400px;
+      height: 400px;
+    }
+  }
+
   @media (min-width: 800px) {
     /* .plantBoxText {
       display: flex;
@@ -306,10 +324,23 @@
       flex-direction: row;
       margin: 10px;
     }
+    .info {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .moreInfo {
+      width: 500px;
+      text-align: center;
+    }
     .carouselImg {
       object-fit: cover;
       width: 600px;
       height: 600px;
+    }
+
+    .textBox {
+      display: flex;
+      flex-direction: row;
     }
 
     .plantDescTwo {
@@ -321,12 +352,18 @@
       display: flex;
       justify-content: space-around;
       flex-direction: row;
-
-      /* justify-content: flex-start; */
-      /* margin: 10px; */
-      /* max-width: 500px; */
-      /* width: 800px; */
       width: 80%;
+    }
+
+    .bugDesc {
+      width: 500px;
+      text-align: center;
+      margin: 10px;
+    }
+    .pruningDesc {
+      width: 500px;
+      text-align: center;
+      margin: 10px;
     }
 
     .bigPlantBox {
