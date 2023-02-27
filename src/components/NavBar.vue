@@ -19,7 +19,10 @@
     computed: {
       ...mapState({
         loggedInUser: (state) => state.loggedInUser
-      })
+      }),
+      isLoggedIn() {
+        return !!this.loggedInUser
+      }
     },
 
     watch: {
@@ -72,13 +75,13 @@
   }
 
   @media (max-width: 992px) {
-    // #links {
-    //   display: flex;
-    //   flex-direction: column;
-    // }
-    // #nav-collapse {
-    //   width: 100%;
-    // }
+    #links {
+      display: flex;
+      flex-direction: column;
+    }
+    #nav-collapse {
+      width: 100%;
+    }
     #navbar {
       width: 100%;
       display: flex;
@@ -136,7 +139,10 @@
               <b-nav-item :to="`/profile/${loggedInUser.user}`"
                 >Min fönsterbräda</b-nav-item
               >
-              <b-nav-item @click="onLogoutClick">Logga ut</b-nav-item>
+              <b-nav-item v-if="isLoggedIn" @click="onLogoutClick"
+                >Logga ut</b-nav-item
+              >
+              <b-nav-item v-else to="/login">Logga in</b-nav-item>
             </b-nav>
           </b-container>
         </b-navbar-nav></b-collapse
