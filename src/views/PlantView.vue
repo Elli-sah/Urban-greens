@@ -322,7 +322,7 @@
       justify-content: center; */
     }
     .moreInfo {
-      width: 500px;
+      max-width: 500px;
       text-align: center;
     }
     .carouselImg {
