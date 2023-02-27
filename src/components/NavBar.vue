@@ -63,6 +63,7 @@
     display: flex;
     align-items: end;
     margin-left: 80px;
+    // flex-direction: column;
   }
 
   #secondarylogo {
@@ -71,13 +72,13 @@
   }
 
   @media (max-width: 992px) {
-    #links {
-      display: flex;
-      flex-direction: column;
-    }
-    #nav-collapse {
-      width: 100%;
-    }
+    // #links {
+    //   display: flex;
+    //   flex-direction: column;
+    // }
+    // #nav-collapse {
+    //   width: 100%;
+    // }
     #navbar {
       width: 100%;
       display: flex;
