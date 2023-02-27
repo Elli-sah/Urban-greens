@@ -262,7 +262,7 @@
 
   .line {
     border-style: 1px solid rgba(0, 0, 0, 0.15);
-    width: 300px;
+    width: 400px;
   }
 
   .bi {
@@ -310,7 +310,7 @@
     font-size: 15px;
   } */
 
-  @media (min-width: 900px) {
+  @media (min-width: 950px) {
     /* .plantBoxText {
       display: flex;
       justify-content: row;
@@ -414,7 +414,7 @@
       font-size: 16px;
     }
   }
-  @media only screen and (max-width: 1200px) and (min-width: 900px) {
+  @media only screen and (max-width: 1200px) and (min-width: 950px) {
     .carouselImg {
       object-fit: cover;
       width: 400px;
