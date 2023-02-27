@@ -74,22 +74,22 @@
       <i @click="submit" class="bi bi-search" />
     </div>
     <div class="scrolling-wrapper">
-      <b-button to="/plantlist/Alla_växter" class="categoryLinks button">
+      <Router-Link to="/plantlist/Alla_växter" class="categoryLinks button">
         Alla växter
-      </b-button>
+      </Router-Link>
 
-      <b-button to="/plantlist/Blommande" class="categoryLinks button">
+      <Router-Link to="/plantlist/Blommande" class="categoryLinks button">
         Blommande växter
-      </b-button>
-      <b-button to="/plantlist/Suckulent" class="categoryLinks button">
+      </Router-Link>
+      <Router-Link to="/plantlist/Suckulent" class="categoryLinks button">
         Suckulenter
-      </b-button>
-      <b-button to="/plantlist/Gröna växter" class="categoryLinks button">
+      </Router-Link>
+      <Router-Link to="/plantlist/Gröna växter" class="categoryLinks button">
         Gröna växter
-      </b-button>
-      <b-button to="/plantlist/Giftiga_växter" class="categoryLinks button">
+      </Router-Link>
+      <Router-Link to="/plantlist/Giftiga_växter" class="categoryLinks button">
         Giftiga växter
-      </b-button>
+      </Router-Link>
     </div>
     <!-- <h2>{{ category }}</h2> -->
     <div id="filteredPlants">
@@ -114,6 +114,7 @@
 
   .input-div i {
     position: absolute;
+    margin: auto;
   }
 
   .input-div {
@@ -130,7 +131,7 @@
 
   i {
     position: relative;
-    right: 45px;
+    right: 10%;
     z-index: 6;
     padding: 10px;
   }
@@ -145,5 +146,17 @@
     white-space: nowrap;
     /* display: flex; */
     flex-wrap: nowrap;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 1000px) {
+    i {
+      right: 17%;
+    }
+    .input-div {
+      width: 70%;
+    }
   }
 </style>
