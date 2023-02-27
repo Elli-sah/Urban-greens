@@ -156,10 +156,15 @@
         @close="closeModal"
       />
     </div>
-    <div class="secondPlantBox">
+  </div>
+  <div class="secondPlantBox">
+    <div class="info">
       <h2>Mer information</h2>
-
-      <p>{{ plant.description }}</p>
+      <div class="moreInfo">
+        <p>{{ plant.description }}</p>
+      </div>
+    </div>
+    <div class="textBox">
       <div class="pruningDesc">
         <div class="pruning">
           <p class="heading">Beskärning</p>
@@ -168,13 +173,16 @@
 
         <p>{{ plant.pruning }}</p>
       </div>
-      <div class="bug">
-        <p class="heading">Skadedjur</p>
-        <i class="bi bi-bug" />
+      <div class="bugDesc">
+        <div class="bug">
+          <p class="heading">Skadedjur</p>
+          <i class="bi bi-bug" />
+        </div>
+        <p>{{ plant.pests }}</p>
       </div>
-      <p class="heading">{{ plant.pests }}</p>
     </div>
   </div>
+  <!-- </div> -->
 </template>
 
 <style scoped>
@@ -184,15 +192,24 @@
   } */
   .plantBox {
     width: 90%;
-    padding: 45px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     /* justify-content: space-around; */
     background-color: white;
     margin: auto;
     border-radius: 10px;
-    max-width: 500px;
+    width: 350px;
+    margin-top: 10px;
+  }
+
+  .plantBoxText {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
   }
 
   .plantContainer {
@@ -209,7 +226,9 @@
     margin: auto;
     border-radius: 10px;
     margin-top: 10px;
-    max-width: 500px;
+    width: 350px;
+    padding: 80px;
+    margin-bottom: 10px;
   }
 
   #ccc {
@@ -272,10 +291,6 @@
     text-align: center;
   }
 
-  .heading {
-    font-weight: bold;
-  }
-
   .pruning {
     text-align: center;
   }
@@ -285,11 +300,40 @@
   .pruningDesc {
     margin-top: 10px;
   }
-  @media screen and (min-width: 1000px) {
+  /* .heading {
+    font-size: 15px;
+  } */
+
+  @media (min-width: 900px) {
+    /* .plantBoxText {
+      display: flex;
+      justify-content: row;
+      width: 100%;
+    } */
     .plantDesc {
       display: flex;
       flex-direction: row;
       margin: 10px;
+    }
+    .info {
+      text-align: center;
+      margin-bottom: 20px;
+      /* display: flex;
+      justify-content: center; */
+    }
+    .moreInfo {
+      width: 500px;
+      text-align: center;
+    }
+    .carouselImg {
+      object-fit: cover;
+      width: 600px;
+      height: 600px;
+    }
+
+    .textBox {
+      display: flex;
+      flex-direction: row;
     }
 
     .plantDescTwo {
@@ -299,10 +343,21 @@
     }
     .plantBox {
       display: flex;
-      justify-content: center;
-      /* justify-content: flex-start; */
-      /* margin: 10px; */
+      justify-content: space-around;
+      flex-direction: row;
+      width: 80%;
+    }
+
+    .bugDesc {
+      /* width: 500px; */
+      text-align: center;
+      margin: 10px;
       max-width: 500px;
+    }
+    .pruningDesc {
+      max-width: 500px;
+      text-align: center;
+      margin: 10px;
     }
 
     .bigPlantBox {
@@ -312,10 +367,10 @@
     }
     .secondPlantBox {
       height: 50%;
-      width: 50%;
+      width: 80%;
       display: flex;
       /* justify-content: flex-end; */
-      max-width: 500px;
+      /* max-width: 500px; */
     }
     .plantPlace {
       display: flex;
@@ -344,5 +399,36 @@
       align-items: center;
       margin: 10px;
     }
+
+    #ccc {
+      width: 600px;
+      height: 600px;
+    }
+    .heading {
+      font-size: 16px;
+    }
   }
+  @media only screen and (max-width: 1200px) and (min-width: 900px) {
+    .carouselImg {
+      object-fit: cover;
+      width: 400px;
+      height: 400px;
+    }
+    #ccc {
+      width: 400px;
+      height: 400px;
+    }
+  }
+  /* @media (min-width: 1200px) {
+    #ccc {
+      width: 400px;
+      height: 400px;
+    }
+
+    .carouselImg {
+      object-fit: cover;
+      width: 400px;
+      height: 400px;
+    }
+  } */
 </style>

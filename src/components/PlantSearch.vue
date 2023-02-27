@@ -67,7 +67,7 @@
     @input="onClickPlants"
     type="text"
     v-model="searchText"
-    placeholder="Sök..."
+    placeholder="Sök växter..."
   />
   <div>
     <div v-if="searchText !== ''" id="linkdiv">
@@ -100,6 +100,7 @@
     overflow-x: scroll;
     position: absolute;
     background-color: rgba(225, 186, 107, 0.1);
+    padding: 20px;
   }
   div {
     position: relative;
@@ -112,5 +113,14 @@
   }
   li {
     cursor: pointer;
+  }
+
+  @media (min-width: 990px) {
+    input {
+      width: 300px;
+    }
+    #linkdiv {
+      background-color: rgba(225, 186, 107, 0.9);
+    }
   }
 </style>

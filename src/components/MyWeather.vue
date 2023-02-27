@@ -8,7 +8,8 @@
     data() {
       return {
         temp: null,
-        weather: null
+        weather: null,
+        img: null
       }
     },
     mounted() {
@@ -24,7 +25,7 @@
       getWeatherData(latitude, longitude) {
         axios
           .get(
-            `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=522a9f3cd92ded5c0f211fd40fe17e5b`
+            `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&lang=sv,se&appid=522a9f3cd92ded5c0f211fd40fe17e5b`
           )
           .then((response) => {
             this.weather = response.data
@@ -32,6 +33,8 @@
             const fahrenheit = this.weather.main.temp
             const celsius = fahrenheit - 273.15
             this.temp = celsius.toFixed(1)
+            this.img = this.weather.weather[0].icon
+            console.log(this.weather)
           })
       }
     }
@@ -39,8 +42,34 @@
 </script>
 
 <template>
-  <div v-if="temp !== null">
+  <div id="weather-container" v-if="temp !== null">
     <h3>Vädret hos dig</h3>
     <p>{{ temp }}℃</p>
+    <img :src="`http://openweathermap.org/img/wn/${this.img}.png`" />
+    <p v-if="this.temp > 15 && this.img === '01d'">
+      Temperaturen hos dig är över 15℃ och sol...glöm inte bort att vattna dina
+      växter, och skydda dom från direkt solljus då!
+    </p>
+    <p v-if="this.temp < 5 && this.img">
+      Temperaturen hos dig är under 5℃... glöm inte bort och skydda dina växter
+      från kalla luftdrag!
+    </p>
   </div>
 </template>
+
+<style scoped>
+  #weather-container {
+    background-color: rgba(253, 253, 253, 0.238);
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: auto;
+  }
+  img {
+    width: 50px;
+    height: 50px;
+  }
+</style>
