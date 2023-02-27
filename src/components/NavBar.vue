@@ -43,19 +43,25 @@
   }
 
   #navbar {
-    // background-color: blue;
-
     width: 100px;
     box-sizing: border-box;
     margin: none;
   }
 
   #nav-collapse {
-    // background-color: white;
     padding: 20px;
     width: 100%;
     margin: none;
-    // box-sizing: border-box;
+  }
+
+  #nav-collapse-container {
+    width: 100%;
+  }
+
+  #links {
+    display: flex;
+    align-items: end;
+    margin-left: 80px;
   }
 
   #secondarylogo {
@@ -73,14 +79,12 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      // margin-right: 20px;
     }
     .navbar-items {
       width: 100%;
 
       display: flex;
       flex-direction: row;
-      // justify-content: flex-end;
       align-items: center;
 
       margin-right: 20px;
@@ -90,11 +94,9 @@
   @media screen and (max-width: 800px) {
     .navbar-items {
       align-items: end;
-
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      // align-items: center;
       margin-right: 20px;
     }
 
@@ -103,7 +105,6 @@
       flex-direction: column;
       justify-content: flex-end;
       align-items: end;
-      margin-right: 20px;
     }
   }
   @media screen and (min-width: 600px) {
@@ -127,32 +128,30 @@
           alt="Primary logo"
       /></RouterLink>
 
-      <b-navbar-toggle target="nav-collapse" is-nav />
+      <b-navbar-toggle target="nav-collapse" />
     </div>
-    <div>
-      <div>
-        <b-collapse id="nav-collapse" is-nav v-model="visible">
-          <b-navbar-nav>
-            <b-nav-form>
-              <div>
-                <PlantSearch />
-              </div>
-            </b-nav-form>
+    <div id="nav-collapse-container">
+      <b-collapse id="nav-collapse" is-nav v-model="visible">
+        <b-navbar-nav>
+          <b-nav-form>
+            <div>
+              <PlantSearch />
+            </div>
+          </b-nav-form>
 
-            <b-container class="navbar-items">
-              <b-nav id="links" align="right">
-                <b-nav-item to="/">Hem</b-nav-item>
-                <b-nav-item to="/plantlist/Alla_växter">Växtguide</b-nav-item>
+          <b-container>
+            <b-nav id="links" justify="end">
+              <b-nav-item to="/">Hem</b-nav-item>
+              <b-nav-item to="/plantlist/Alla_växter">Växtguide</b-nav-item>
 
-                <b-nav-item :to="`/profile/${loggedInUser.user}`"
-                  >Min fönsterbräda</b-nav-item
-                >
-                <b-nav-item @click="onLogoutClick">Logga ut</b-nav-item>
-              </b-nav>
-            </b-container>
-          </b-navbar-nav>
-        </b-collapse>
-      </div>
+              <b-nav-item :to="`/profile/${loggedInUser.user}`"
+                >Min fönsterbräda</b-nav-item
+              >
+              <b-nav-item @click="onLogoutClick">Logga ut</b-nav-item>
+            </b-nav>
+          </b-container>
+        </b-navbar-nav></b-collapse
+      >
     </div>
   </b-navbar>
 </template>
