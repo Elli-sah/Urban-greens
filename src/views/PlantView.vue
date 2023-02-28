@@ -2,7 +2,6 @@
   import axios from 'axios'
   import { mapState } from 'vuex'
   import ShowPlant from '../components/ShowPlant.vue'
-
   export default {
     components: { ShowPlant },
     props: {
@@ -46,7 +45,6 @@
         this.selectedPlant = plant
         this.plantHeading = plantHeading
         this.longDescription = description
-
         document.body.style.overflow = 'hidden'
       },
       closeModal() {
@@ -54,7 +52,6 @@
         document.body.style.overflow = 'auto'
       }
     },
-
     created() {
       this.axiosGetPlants()
     }
@@ -210,14 +207,12 @@
     flex-direction: column;
     text-align: center;
   }
-
   .plantBoxText {
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
   }
-
   .plantContainer {
     display: flex;
     flex-direction: column;
@@ -236,35 +231,29 @@
     padding: 80px;
     margin-bottom: 10px;
   }
-
   #ccc {
     width: 300px;
     height: 300px;
   }
-
   .carouselImg {
     object-fit: cover;
     width: 300px;
     height: 300px;
   }
-
   .plantDesc {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
   }
-
   .plantDescTwo {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
   }
-
   .line {
     border-style: 1px solid rgba(0, 0, 0, 0.15);
-    width: 400px;
+    width: 200px;
   }
-
   .bi {
     margin: 10px;
   }
@@ -273,30 +262,25 @@
     flex-direction: row;
     align-items: center;
   }
-
   .plantTemp {
     display: flex;
     flex-direction: row;
     align-items: center;
   }
-
   .plantWater {
     display: flex;
     flex-direction: row;
     align-items: center;
   }
-
   .plantFert {
     display: flex;
     flex-direction: row;
     align-items: center;
   }
-
   .shortText {
     display: flex;
     text-align: center;
   }
-
   .pruning {
     text-align: center;
   }
@@ -309,8 +293,7 @@
   /* .heading {
     font-size: 15px;
   } */
-
-  @media (min-width: 950px) {
+  @media (min-width: 1000px) {
     /* .plantBoxText {
       display: flex;
       justify-content: row;
@@ -320,6 +303,11 @@
       display: flex;
       flex-direction: row;
       margin: 10px;
+    }
+
+    .line {
+      border-style: 1px solid rgba(0, 0, 0, 0.15);
+      width: 400px;
     }
     .info {
       text-align: center;
@@ -336,12 +324,10 @@
       width: 600px;
       height: 600px;
     }
-
     .textBox {
       display: flex;
       flex-direction: row;
     }
-
     .plantDescTwo {
       display: flex;
       flex-direction: row;
@@ -353,7 +339,6 @@
       flex-direction: row;
       width: 80%;
     }
-
     .bugDesc {
       /* width: 500px; */
       text-align: center;
@@ -365,7 +350,6 @@
       text-align: center;
       margin: 10px;
     }
-
     .bigPlantBox {
       display: flex;
       flex-direction: row;
@@ -384,28 +368,24 @@
       align-items: center;
       margin: 10px;
     }
-
     .plantTemp {
       display: flex;
       flex-direction: row;
       align-items: center;
       margin: 10px;
     }
-
     .plantWater {
       display: flex;
       flex-direction: row;
       align-items: center;
       margin: 10px;
     }
-
     .plantFert {
       display: flex;
       flex-direction: row;
       align-items: center;
       margin: 10px;
     }
-
     #ccc {
       width: 600px;
       height: 600px;
@@ -414,7 +394,7 @@
       font-size: 16px;
     }
   }
-  @media only screen and (max-width: 1200px) and (min-width: 950px) {
+  @media only screen and (max-width: 1300px) and (min-width: 1000px) {
     .carouselImg {
       object-fit: cover;
       width: 400px;
@@ -424,13 +404,16 @@
       width: 400px;
       height: 400px;
     }
+    .line {
+      border-style: 1px solid rgba(0, 0, 0, 0.15);
+      width: 400px;
+    }
   }
   /* @media (min-width: 1200px) {
     #ccc {
       width: 400px;
       height: 400px;
     }
-
     .carouselImg {
       object-fit: cover;
       width: 400px;
