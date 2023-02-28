@@ -371,7 +371,7 @@
     },
     "watering": {
       "plantHeading": "Bevattning",
-      "short": "Regelbunden",
+      "short": "Regelbundet",
       "description": "Monstera trivs bäst i en fuktig jord. Vattna regelbundet så att jorden hålls fuktig men undvik att övervattna vilket kan leda till röta i rötterna. Du kan kontrollera om det är dags att vattna genom att känna på jorden och vattna när den börjar kännas torr."
     },
 
@@ -579,13 +579,13 @@
     },
     "watering": {
       "plantHeading": "Bevattning",
-      "short": "Regelbunden",
+      "short": "Regelbundet",
       "description": "Behöver regelbunden vattning för att trivas. Ge dem tillräckligt med vatten så att jorden är fuktig, men undvik att övervattna eftersom det kan leda till röta i rötterna. En tumregel är att vatten när jorden känns torr på toppen."
     },
 
     "fertilization": {
       "plantHeading": "Näring",
-      "short": "Regelbunden",
+      "short": "Regelbundet",
       "description": "Rosenkalla behöver regelbunden gödsling för att trivas. Du kan ge dem en liten mängd kvalitetsgödsel en gång i månaden under växtsäsongen."
     },
     "pruning": "Rosenkalla behöver inte beskäras, men ta bort döda eller sjuka blad för att hålla din rosenkalla frisk och fräsch.",

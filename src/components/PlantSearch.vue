@@ -52,44 +52,48 @@
           )
         }
       }
-    },
-
-    watch: {
-      searchText(newValue) {
-        console.log(newValue)
-      }
     }
+
+    // watch: {
+    //   searchText(newValue) {
+    //     console.log(newValue)
+    //   }
+    // }
   }
 </script>
 
 <template>
-  <input
-    @input="onClickPlants"
-    type="text"
-    v-model="searchText"
-    placeholder="Sök växter..."
-  />
-  <div>
-    <div v-if="searchText !== ''" id="linkdiv">
-      <b-link
-        v-for="plant in filterdPlants"
-        :key="plant.name"
-        :to="`/plants/${plant.name}`"
-        class="list-group-item"
-      >
-        {{ plant.name }}
+  <div id="search-div">
+    <input
+      id="searchfield"
+      @input="onClickPlants"
+      type="text"
+      v-model="searchText"
+      placeholder="Sök växter..."
+    />
 
-        <p>
-          {{ plant.category }}
-        </p>
-      </b-link>
+    <div>
+      <div v-if="searchText !== ''" id="linkdiv">
+        <b-link
+          v-for="plant in filterdPlants"
+          :key="plant.name"
+          :to="`/plants/${plant.name}`"
+          class="list-group-item"
+        >
+          {{ plant.name }}
+
+          <p>
+            {{ plant.category }}
+          </p>
+        </b-link>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
   input {
-    width: 100%;
+    /* width: 100%; */
     padding: 10px;
     border-radius: 30px;
     border: none;
@@ -116,8 +120,12 @@
   }
 
   @media (min-width: 990px) {
-    input {
-      width: 300px;
+    #search-div {
+      display: flex;
+      flex-direction: column;
+    }
+    #searchfield {
+      width: 350px;
     }
     #linkdiv {
       background-color: rgba(225, 186, 107, 0.9);

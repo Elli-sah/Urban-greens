@@ -74,21 +74,21 @@
       <i @click="submit" class="bi bi-search" />
     </div>
     <div class="scrolling-wrapper">
-      <Router-Link to="/plantlist/Alla_växter" class="categoryLinks button">
-        Alla växter
+      <Router-Link to="/plantlist/Alla_växter" class="categoryLinks">
+        <button class="button">Alla växter</button>
       </Router-Link>
 
-      <Router-Link to="/plantlist/Blommande" class="categoryLinks button">
-        Blommande växter
+      <Router-Link to="/plantlist/Blommande" class="categoryLinks">
+        <button class="button">Blommande växter</button>
       </Router-Link>
-      <Router-Link to="/plantlist/Suckulent" class="categoryLinks button">
-        Suckulenter
+      <Router-Link to="/plantlist/Suckulent" class="categoryLinks">
+        <button class="button">Suckulenter</button>
       </Router-Link>
-      <Router-Link to="/plantlist/Gröna växter" class="categoryLinks button">
-        Gröna växter
+      <Router-Link to="/plantlist/Gröna växter" class="categoryLinks">
+        <button class="button">Gröna växter</button>
       </Router-Link>
-      <Router-Link to="/plantlist/Giftiga_växter" class="categoryLinks button">
-        Giftiga växter
+      <Router-Link to="/plantlist/Giftiga_växter" class="categoryLinks">
+        <button class="button">Giftiga växter</button>
       </Router-Link>
     </div>
     <!-- <h2>{{ category }}</h2> -->
@@ -137,18 +137,16 @@
   }
 
   .categoryLinks {
-    display: inline-block;
-    /* flex: auto; */
+    // display: inline-block;
   }
 
   .scrolling-wrapper {
     overflow-y: hidden;
-    white-space: nowrap;
-    /* display: flex; */
-    flex-wrap: nowrap;
+    // white-space: nowrap;
+    // flex-wrap: nowrap;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   @media screen and (min-width: 1000px) {
@@ -157,6 +155,12 @@
     }
     .input-div {
       width: 70%;
+    }
+  }
+  @media screen and (min-width: 930px) {
+    .scrolling-wrapper {
+      display: flex;
+      justify-content: center;
     }
   }
 </style>

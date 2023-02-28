@@ -73,9 +73,15 @@
   <div v-show="showLoginForm">
     <form @submit.prevent="AtLogin" class="form">
       <label for="username">Användarnamn</label
-      ><input id="username" v-model="userName" />
+      ><input id="username" v-model="userName" required minlength="5" />
       <label for="password">Lösenord</label
-      ><input id="password" type="password" v-model="password" />
+      ><input
+        id="password"
+        type="password"
+        v-model="password"
+        required
+        minlength="5"
+      />
       <button class="button" type="submit">Logga in</button>
     </form>
     <div v-if="logedInMessage">
@@ -97,11 +103,23 @@
   <div id="createAccountDiv" v-show="showCreateForm">
     <h2>Skapa konto</h2>
     <form @submit.prevent="AtCreateAccount" class="form">
-      <label for="name">Namn</label><input id="name" v-model="createName" />
+      <label for="name">Namn</label
+      ><input id="name" v-model="createName" required />
       <label for="create-user">Användarnamn</label
-      ><input id="create-user" v-model="createUserName" />
+      ><input
+        id="create-user"
+        v-model="createUserName"
+        required
+        minlength="5"
+      />
       <label for="create-password">Lösenord</label
-      ><input id="create-password" type="password" v-model="createPassword" />
+      ><input
+        id="create-password"
+        type="password"
+        v-model="createPassword"
+        required
+        minlength="5"
+      />
       <button class="button" type="submit">Skapa konto</button>
     </form>
     <div v-if="showError">
@@ -116,6 +134,10 @@
     flex-direction: column;
   }
 
+  input {
+    width: 90%;
+  }
+
   #p-ingetkonto {
     margin-bottom: 0;
   }
@@ -123,5 +145,11 @@
   #button-secondary {
     color: black;
     font-size: 0.8rem;
+  }
+
+  @media (min-width: 700px) {
+    input {
+      width: 70%;
+    }
   }
 </style>
