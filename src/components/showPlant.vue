@@ -51,7 +51,7 @@
     width: 340px;
     padding: 20px;
     position: absolute;
-    top: 75%;
+    top: 29%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 999;
@@ -82,7 +82,7 @@
       width: 480px;
       padding: 40px;
       position: absolute;
-      top: 47%;
+      top: 12%;
       left: 72%;
       transform: translate(-50%, -50%);
       z-index: 999;
@@ -94,11 +94,11 @@
       .container {
         /* display: flex; */
         /* flex-direction: column; */
-        height: 430px;
+        height: 440px;
         width: 400px;
         padding: 40px;
         position: absolute;
-        top: 38%;
+        top: 9.5%;
         left: 70%;
         transform: translate(-50%, -50%);
         z-index: 999;
