@@ -12,7 +12,7 @@
           case 1:
             return 'Navigera dig runt på sidan med hjälp av menyn'
           case 2:
-            return 'I växtguiden kan du se alla växter. här kan du enkelt lägga till växter till din fönsterbräda genom att klicka på den lilla krukan. Se mer information om växten genom att klicka på den'
+            return 'I växtguiden kan du se alla växter. Här kan du enkelt lägga till växter på din fönsterbräda genom att klicka på den lilla krukan. Se mer information om växten genom att klicka på den'
           case 3:
             return 'Det finns information om varje på dess specefika växtsida'
           case 4:
@@ -31,7 +31,7 @@
     <div id="carousel">
       <b-carousel
         v-model="slide"
-        interval="4000"
+        interval="5000"
         controls
         indicators
         ride="carousel"
