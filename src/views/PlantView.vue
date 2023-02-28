@@ -82,6 +82,7 @@
       <hr class="line" />
       <div class="plantContainer">
         <div class="plantDesc">
+          <!-- <p>Placering:</p> -->
           <div class="plantPlace">
             <i
               @click="
@@ -97,6 +98,7 @@
 
             <p class="shortText">{{ plant.placement.short }}</p>
           </div>
+          <!-- <p>Temp:</p> -->
           <div class="plantTemp">
             <i
               @click="
@@ -114,34 +116,41 @@
           </div>
         </div>
         <div class="plantDescTwo">
-          <div class="plantWater">
-            <i
-              @click="
-                openModal(
-                  plant,
-                  plant.watering.plantHeading,
-                  plant.watering.description
-                )
-              "
-              class="bi bi-moisture iconsize"
-              style="font-size: 2em"
-            />
-            <p class="shortText">{{ plant.watering.short }}</p>
-          </div>
-          <div class="plantFert">
-            <i
-              @click="
-                openModal(
-                  plant,
-                  plant.fertilization.plantHeading,
-                  plant.fertilization.description
-                )
-              "
-              class="bi bi-flower1"
-              style="font-size: 2em"
-            />
+          <div class="water">
+            <!-- <p>Bevattning</p> -->
+            <div class="plantWater">
+              <i
+                @click="
+                  openModal(
+                    plant,
+                    plant.watering.plantHeading,
+                    plant.watering.description
+                  )
+                "
+                class="bi bi-moisture iconsize"
+                style="font-size: 2em"
+              />
 
-            <p class="shortText">{{ plant.fertilization.short }}</p>
+              <p class="shortText">{{ plant.watering.short }}</p>
+            </div>
+          </div>
+          <div class="Fert">
+            <!-- <p>Näring:</p> -->
+            <div class="plantFert">
+              <i
+                @click="
+                  openModal(
+                    plant,
+                    plant.fertilization.plantHeading,
+                    plant.fertilization.description
+                  )
+                "
+                class="bi bi-flower1"
+                style="font-size: 2em"
+              />
+
+              <p class="shortText">{{ plant.fertilization.short }}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -207,6 +216,14 @@
     flex-direction: column;
     text-align: center;
   }
+  .water {
+    display: flex;
+    flex-direction: column;
+  }
+  .Fert {
+    display: flex;
+    flex-direction: column;
+  }
   .plantBoxText {
     align-items: center;
     justify-content: center;
@@ -220,16 +237,18 @@
   .secondPlantBox {
     width: 90%;
     padding: 45px 20px 20px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    /* display: flex; */
+    /* flex-direction: column;
+    align-items: center; */
     background-color: white;
     margin: auto;
     border-radius: 10px;
     margin-top: 10px;
     width: 350px;
-    padding: 80px;
+    padding: 50px;
     margin-bottom: 10px;
+    justify-content: space-between;
+    text-align: center;
   }
   #ccc {
     width: 300px;
@@ -252,7 +271,9 @@
   }
   .line {
     border-style: 1px solid rgba(0, 0, 0, 0.15);
-    width: 200px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
   }
   .bi {
     margin: 10px;
@@ -261,21 +282,25 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 100px;
   }
   .plantTemp {
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 100px;
   }
   .plantWater {
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 100px;
   }
   .plantFert {
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 100px;
   }
   .shortText {
     display: flex;
@@ -290,6 +315,12 @@
   .pruningDesc {
     margin-top: 10px;
   }
+
+  /* .textBox {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  } */
   /* .heading {
     font-size: 15px;
   } */
@@ -312,8 +343,9 @@
     .info {
       text-align: center;
       margin-bottom: 20px;
-      /* display: flex;
-      justify-content: center; */
+      display: flex;
+      justify-content: left;
+      flex-direction: column;
     }
     .moreInfo {
       max-width: 500px;
@@ -326,7 +358,8 @@
     }
     .textBox {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
+      max-width: 400px;
     }
     .plantDescTwo {
       display: flex;
@@ -407,6 +440,9 @@
     .line {
       border-style: 1px solid rgba(0, 0, 0, 0.15);
       width: 400px;
+    }
+    .info {
+      max-width: 50%;
     }
   }
   /* @media (min-width: 1200px) {
