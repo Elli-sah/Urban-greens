@@ -12,6 +12,7 @@
         img: null
       }
     },
+
     mounted() {
       this.getLocation()
     },
@@ -42,34 +43,77 @@
 </script>
 
 <template>
-  <div id="weather-container" v-if="temp !== null">
-    <h3>Vädret hos dig</h3>
-    <p>{{ temp }}℃</p>
+  <div id="weather-container">
+    <p id="temp">{{ temp }}℃</p>
     <img :src="`http://openweathermap.org/img/wn/${this.img}.png`" />
-    <p v-if="this.temp > 15 && this.img === '01d'">
-      Temperaturen hos dig är över 15℃ och sol...glöm inte bort att vattna dina
-      växter, och skydda dom från direkt solljus då!
-    </p>
-    <p v-if="this.temp < 5 && this.img">
-      Temperaturen hos dig är under 5℃... glöm inte bort och skydda dina växter
-      från kalla luftdrag!
-    </p>
   </div>
+  <transition name="slide-in">
+    <div id="weather" v-if="temp !== null" ref="box">
+      <p v-if="this.temp > 15 && this.img === '01d'">
+        Temperaturen hos dig är över 15℃ och sol... tänk på att vattna dina
+        växter, och skydda dom från direkt solljus då!
+      </p>
+      <p v-if="this.temp < 8 && this.img">
+        Temperaturen hos dig är under 5℃... tänk på att skydda dina växter från
+        kalla luftdrag!
+      </p>
+    </div>
+  </transition>
 </template>
 
 <style scoped>
   #weather-container {
-    background-color: rgba(253, 253, 253, 0.238);
-    border-radius: 100px;
+    width: 50%;
+    position: absolute;
+    right: 70px;
+    top: 7px;
+    z-index: 10000;
+    padding: 5px 10px 5px 40px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    max-width: 600px;
-    margin: auto;
+    justify-content: end;
+  }
+  #weather {
+    right: 10px;
+    top: 100px;
+    position: absolute;
+    font-size: 1.1em;
+  }
+
+  #temp {
+    font-size: 1.1em;
+  }
+
+  p {
+    margin: 0 5px;
+    padding: 0;
   }
   img {
     width: 50px;
     height: 50px;
+  }
+
+  .slide-in-enter-active {
+    animation: slide-in 0.9s forwards;
+  }
+
+  @keyframes slide-in {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @media (min-width: 992px) {
+    #weather-container {
+      top: 100px;
+      right: 0;
+      width: 400px;
+    }
+    #weather {
+      top: 150px;
+    }
   }
 </style>

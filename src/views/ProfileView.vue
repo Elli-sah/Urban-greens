@@ -1,10 +1,12 @@
 <script>
   import MyShelf from '../components/MyShelf.vue'
+  import MyWeather from '../components/MyWeather.vue'
   import { mapState } from 'vuex'
 
   export default {
     components: {
-      MyShelf
+      MyShelf,
+      MyWeather
     },
     computed: {
       ...mapState({
@@ -16,9 +18,16 @@
 
 <template>
   <div class="view-divs">
-    <h1>{{ loggedInUser.name }}s fönsterbräda</h1>
-    <MyShelf />
+    <MyWeather />
+    <div id="my-shelf-view">
+      <h1>{{ loggedInUser.name }}s fönsterbräda</h1>
+      <MyShelf />
+    </div>
   </div>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+  #my-shelf-view {
+    margin-top: 50px;
+  }
+</style>
