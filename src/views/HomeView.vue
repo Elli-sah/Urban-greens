@@ -26,17 +26,18 @@
       alt="Primary logo"
     />
     <h2 id="slogan">Don’t kill your plants!</h2>
-
-    <p>
-      Upptäck en värld av grönska med Urban Greens. Hitta och lär dig om olika
-      växtarter och deras skötselråd med vår omfattande databas. Få påminnelser
-      om när det är dags att vattna eller ge näring till dina växter och håll
-      dem friska och glada. Lär dig allt du behöver veta om att odla växter med
-      oss!
-    </p>
-    <RouterLink to="/get_started">
-      <button id="kom-igang" class="button">Kom igång</button>
-    </RouterLink>
+    <div id="div-desktop">
+      <p>
+        Upptäck en värld av grönska med Urban Greens. Hitta och lär dig om olika
+        växtarter och deras skötselråd med vår omfattande databas. Få
+        påminnelser om när det är dags att vattna eller ge näring till dina
+        växter och håll dem friska och glada. Lär dig allt du behöver veta om
+        att odla växter med oss!
+      </p>
+      <RouterLink to="/get_started">
+        <button id="kom-igang" class="button">Kom igång</button>
+      </RouterLink>
+    </div>
 
     <PlantCategory />
     <div id="text-container">
@@ -93,5 +94,31 @@
 
   #text-container {
     display: flex;
+  }
+
+  @media (min-width: 600px) {
+    #primary-logo {
+      width: 50%;
+    }
+
+    p {
+      width: 50%;
+      font-size: 1.2rem;
+      padding-left: 30px;
+    }
+    #div-desktop {
+      display: flex;
+    }
+    #kom-igang {
+      border-radius: 50%;
+      height: 120px;
+      width: 120px;
+
+      font-size: 0.9rem;
+    }
+
+    #slogan {
+      margin-left: 85px;
+    }
   }
 </style>
