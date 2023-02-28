@@ -19,7 +19,7 @@
     <div id="welcome-popup" v-show="loggedInUser !== ''">
       <p>Välkommen {{ loggedInUser.name }}!</p>
     </div>
-    <!-- <PlantSearch /> -->
+
     <img
       id="primary-logo"
       src="../../assets/Logo-primary-svart.png"
@@ -100,15 +100,15 @@
   #text-container {
     display: flex;
   }
-  @media (min-width: 900px) {
-    #welcome-popup {
-      top: 80px;
-    }
-  }
 
-  @media (min-width: 600px) {
+  @media (min-width: 800px) {
     #primary-logo {
+      margin-top: 20px;
       width: 50%;
+    }
+
+    #welcome-popup {
+      visibility: hidden;
     }
 
     p {

@@ -22,22 +22,32 @@
       }),
       isLoggedIn() {
         return !!this.loggedInUser
+      },
+      isPlantList() {
+        return this.$route.path.startsWith('/plantlist')
       }
     },
 
     watch: {
-      '$route.params'() {
-        this.visible = false
+      '$route.params': {
+        handler() {
+          const isPlantList = this.$route.path === '/plantlist'
+          this.visible = !isPlantList
+          this.visible = false
+        },
+        immediate: true
       }
+      // '$route.params'() {
+      //   this.visible = !this.isPlantList
+      // },
+      // '$route.params'() {
+      //   this.visible = false
+      // }
     }
   }
 </script>
 
 <style lang="scss" scoped>
-  .container {
-    width: 100%;
-    background-color: rgba(225, 186, 107, 0.1);
-  }
   #navbar-container {
     padding: 10px;
     width: 100%;
@@ -50,8 +60,15 @@
     margin: none;
   }
 
+  #navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   #nav-collapse {
-    // background-color: red;
     padding: 20px;
     width: 100%;
     margin: none;
@@ -63,10 +80,10 @@
   }
 
   #links {
+    width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: end;
-    margin-left: 80px;
-    // flex-direction: column;
   }
 
   #secondarylogo {
@@ -75,11 +92,18 @@
   }
 
   @media (min-width: 992px) {
-    #navbar-dektop {
+    #navbar {
+      width: 10px;
+    }
+    #secondarylogo {
+      display: flex;
+      width: 60px;
+      height: 60px;
+    }
+    #navbar-desktop {
       width: 100%;
       display: flex;
       flex-direction: row-reverse;
-      // justify-content: space-between;
       align-items: stretch;
       align-content: space-between;
     }
@@ -90,41 +114,13 @@
     }
     #nav-collapse {
       display: flex;
+      width: 100%;
       flex-direction: row-reverse;
     }
-  }
 
-  @media (max-width: 992px) {
     #links {
       display: flex;
-      flex-direction: column;
-    }
-    #nav-collapse {
-      width: 100%;
-    }
-    #navbar {
-      width: 100%;
-      display: flex;
       flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-    // #links {
-    //   width: 100%;
-
-    //   display: flex;
-    //   flex-direction: row;
-    //   align-items: center;
-
-    //   margin-right: 20px;
-    // }
-  }
-
-  @media (min-width: 600px) {
-    #secondarylogo {
-      display: flex;
-      width: 60px;
-      height: 60px;
     }
   }
 </style>
@@ -144,9 +140,9 @@
     </div>
     <div id="nav-collapse-container">
       <b-collapse id="nav-collapse" is-nav v-model="visible">
-        <b-navbar-nav id="navbar-dektop">
+        <b-navbar-nav id="navbar-desktop">
           <b-nav-form>
-            <PlantSearch />
+            <PlantSearch v-if="!isPlantList" />
           </b-nav-form>
 
           <b-container>

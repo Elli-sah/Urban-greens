@@ -93,7 +93,7 @@
 
 <style scoped>
   input {
-    /* width: 100%; */
+    width: 100%;
     padding: 10px;
     border-radius: 30px;
     border: none;
@@ -119,7 +119,7 @@
     cursor: pointer;
   }
 
-  @media (min-width: 990px) {
+  @media (min-width: 992px) {
     #search-div {
       display: flex;
       flex-direction: column;
