@@ -96,7 +96,7 @@
     display: flex;
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: 800px) {
     #primary-logo {
       width: 50%;
     }
