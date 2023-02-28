@@ -74,6 +74,26 @@
     height: 40px;
   }
 
+  @media (min-width: 992px) {
+    #navbar-dektop {
+      width: 100%;
+      display: flex;
+      flex-direction: row-reverse;
+      // justify-content: space-between;
+      align-items: stretch;
+      align-content: space-between;
+    }
+    ul {
+      display: flex;
+      justify-content: space-around;
+      width: 60%;
+    }
+    #nav-collapse {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+
   @media (max-width: 992px) {
     #links {
       display: flex;
@@ -89,15 +109,15 @@
       justify-content: space-between;
       align-items: center;
     }
-    .navbar-items {
-      width: 100%;
+    // #links {
+    //   width: 100%;
 
-      display: flex;
-      flex-direction: row;
-      align-items: center;
+    //   display: flex;
+    //   flex-direction: row;
+    //   align-items: center;
 
-      margin-right: 20px;
-    }
+    //   margin-right: 20px;
+    // }
   }
 
   @media (min-width: 600px) {
@@ -124,11 +144,9 @@
     </div>
     <div id="nav-collapse-container">
       <b-collapse id="nav-collapse" is-nav v-model="visible">
-        <b-navbar-nav>
+        <b-navbar-nav id="navbar-dektop">
           <b-nav-form>
-            <div>
-              <PlantSearch />
-            </div>
+            <PlantSearch />
           </b-nav-form>
 
           <b-container>
@@ -147,8 +165,8 @@
               <b-nav-item v-else to="/login">Logga in / Skapa konto</b-nav-item>
             </b-nav>
           </b-container>
-        </b-navbar-nav></b-collapse
-      >
+        </b-navbar-nav>
+      </b-collapse>
     </div>
   </b-navbar>
 </template>
