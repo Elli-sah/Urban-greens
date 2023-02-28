@@ -22,13 +22,27 @@
       }),
       isLoggedIn() {
         return !!this.loggedInUser
+      },
+      isPlantList() {
+        return this.$route.path.startsWith('/plantlist')
       }
     },
 
     watch: {
-      '$route.params'() {
-        this.visible = false
+      '$route.params': {
+        handler() {
+          const isPlantList = this.$route.path === '/plantlist'
+          this.visible = !isPlantList
+          this.visible = false
+        },
+        immediate: true
       }
+      // '$route.params'() {
+      //   this.visible = !this.isPlantList
+      // },
+      // '$route.params'() {
+      //   this.visible = false
+      // }
     }
   }
 </script>
@@ -128,7 +142,7 @@
       <b-collapse id="nav-collapse" is-nav v-model="visible">
         <b-navbar-nav id="navbar-desktop">
           <b-nav-form>
-            <PlantSearch />
+            <PlantSearch v-if="!isPlantList" />
           </b-nav-form>
 
           <b-container>

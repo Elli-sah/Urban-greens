@@ -19,7 +19,7 @@
     <div id="welcome-popup" v-show="loggedInUser !== ''">
       <p>Välkommen {{ loggedInUser.name }}!</p>
     </div>
-    <!-- <PlantSearch /> -->
+
     <img
       id="primary-logo"
       src="../../assets/Logo-primary-svart.png"
