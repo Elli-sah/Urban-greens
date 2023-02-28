@@ -74,50 +74,55 @@
         />
       </b-carousel>
     </div>
-    <div class="plantName">
-      <h1>{{ plant.name }}</h1>
+    <div id="plantInfoContainer">
+      <div class="plantShortInfo" v-if="!selectedPlant">
+        <h1>{{ plant.name }}</h1>
 
-      <h3>{{ plant.latin }}</h3>
+        <h3>{{ plant.latin }}</h3>
 
-      <hr class="line" />
-      <div class="plantContainer">
-        <div class="plantDesc">
-          <!-- <p>Placering:</p> -->
-          <div class="plantPlace">
-            <i
-              @click="
-                openModal(
-                  plant,
-                  plant.placement.plantHeading,
-                  plant.placement.description
-                )
-              "
-              class="bi bi-brightness-high"
-              style="font-size: 2em"
-            />
+        <hr class="line" />
+        <div class="plantContainer">
+          <div class="plantDesc">
+            <!-- <p>Placering:</p> -->
+            <div class="plantPlace">
+              <i
+                @click="
+                  openModal(
+                    plant,
+                    plant.placement.plantHeading,
+                    plant.placement.description
+                  )
+                "
+                class="bi bi-brightness-high"
+                style="font-size: 2em"
+              />
 
-            <p class="shortText">{{ plant.placement.short }}</p>
+              <div>
+                <p class="shortText title">Placering</p>
+                <p class="shortText">{{ plant.placement.short }}</p>
+              </div>
+            </div>
+            <!-- <p>Temp:</p> -->
+            <div class="plantTemp">
+              <i
+                @click="
+                  openModal(
+                    plant,
+                    plant.temperature.plantHeading,
+                    plant.temperature.description
+                  )
+                "
+                class="bi bi-thermometer-low"
+                style="font-size: 2em"
+              />
+
+              <div>
+                <p class="shortText title">Temperatur</p>
+                <p class="shortText">{{ plant.temperature.short }}</p>
+              </div>
+            </div>
           </div>
-          <!-- <p>Temp:</p> -->
-          <div class="plantTemp">
-            <i
-              @click="
-                openModal(
-                  plant,
-                  plant.temperature.plantHeading,
-                  plant.temperature.description
-                )
-              "
-              class="bi bi-thermometer-low"
-              style="font-size: 2em"
-            />
-
-            <p class="shortText">{{ plant.temperature.short }}</p>
-          </div>
-        </div>
-        <div class="plantDescTwo">
-          <div class="water">
-            <!-- <p>Bevattning</p> -->
+          <div class="plantDescTwo">
             <div class="plantWater">
               <i
                 @click="
@@ -131,11 +136,11 @@
                 style="font-size: 2em"
               />
 
-              <p class="shortText">{{ plant.watering.short }}</p>
+              <div>
+                <p class="shortText title">Bevattning</p>
+                <p class="shortText">{{ plant.watering.short }}</p>
+              </div>
             </div>
-          </div>
-          <div class="Fert">
-            <!-- <p>Näring:</p> -->
             <div class="plantFert">
               <i
                 @click="
@@ -149,12 +154,25 @@
                 style="font-size: 2em"
               />
 
-              <p class="shortText">{{ plant.fertilization.short }}</p>
+              <div>
+                <p class="shortText title">Näring</p>
+                <p class="shortText">{{ plant.fertilization.short }}</p>
+              </div>
             </div>
           </div>
+
+          <button class="button" @click="atAddPlant">
+            Ställ på fönsterbrädan
+          </button>
+          <!-- <ShowPlant
+            v-if="selectedPlant"
+            :selected-plant="selectedPlant"
+            :plant-heading="plantHeading"
+            :long-description="longDescription"
+            @close="closeModal"
+          /> -->
         </div>
       </div>
-      <button class="button" @click="atAddPlant">Ställ på fönsterbrädan</button>
       <ShowPlant
         v-if="selectedPlant"
         :selected-plant="selectedPlant"
@@ -194,12 +212,8 @@
 </template>
 
 <style scoped>
-  /* .bigPlantBox {
-    display: flex;
-    justify-content: center;
-  } */
   .plantBox {
-    width: 90%;
+    width: 70%;
     padding: 20px 20px 20px 20px;
     display: flex;
     flex-direction: column;
@@ -209,71 +223,74 @@
     background-color: white;
     margin: auto;
     border-radius: 10px;
-    width: 350px;
-    margin-top: 10px;
+    margin-top: 10%;
+    /* max-width: 500px;
+    min-width: 400px; */
   }
-  .plantName {
+  .plantShortInfo {
     flex-direction: column;
     text-align: center;
-  }
-  .water {
+    min-width: 300px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
   }
-  .Fert {
-    display: flex;
-    flex-direction: column;
-  }
-  .plantBoxText {
+
+  /* .plantBoxText {
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
-  }
+  } */
   .plantContainer {
-    display: flex;
-    flex-direction: column;
+    text-align: center;
   }
   .secondPlantBox {
-    width: 90%;
+    width: 70%;
     padding: 45px 20px 20px 20px;
-    /* display: flex; */
-    /* flex-direction: column;
-    align-items: center; */
     background-color: white;
     margin: auto;
     border-radius: 10px;
     margin-top: 10px;
-    width: 350px;
+    /* width: 500px; */
     padding: 50px;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
     justify-content: space-between;
     text-align: center;
   }
+  /* #ccc {
+      width: 40vw;
+    }
+    .carouselImg {
+      object-fit: cover;
+      width: 600px;
+      height: 600px;
+    } */
   #ccc {
-    width: 300px;
-    height: 300px;
+    /* min-width: ; */
+    width: 40vw;
+    /* max-width: 300px;
+    max-height: 300px; */
   }
   .carouselImg {
     object-fit: cover;
-    width: 300px;
-    height: 300px;
+    /* min-width: 300px; */
+    width: 250px;
+    height: 250px;
   }
   .plantDesc {
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     flex-direction: column;
   }
   .plantDescTwo {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+
+    /* justify-content: space-around; */
   }
   .line {
     border-style: 1px solid rgba(0, 0, 0, 0.15);
-    width: 150px;
-    display: flex;
-    justify-content: center;
+    width: 300px;
   }
   .bi {
     margin: 10px;
@@ -282,29 +299,53 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 100px;
+    justify-content: center;
+    width: 100%;
   }
+
+  /* gör en gemensam klass för skötsel och media query för desctop 50% width */
   .plantTemp {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 100px;
+    justify-content: center;
+    width: 100%;
   }
   .plantWater {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 100px;
+    justify-content: center;
+    width: 100%;
   }
   .plantFert {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 100px;
+    justify-content: center;
+    width: 100%;
+  }
+  #plantInfoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
   }
   .shortText {
-    display: flex;
     text-align: center;
+    align-items: center;
+    width: 100px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  p.title {
+    font-weight: bold !important;
+    font-size: 16px;
   }
   .pruning {
     text-align: center;
@@ -324,6 +365,18 @@
   /* .heading {
     font-size: 15px;
   } */
+  @media (min-width: 600px) {
+    .carouselImg {
+      object-fit: cover;
+      min-width: 350px;
+      height: 350px;
+      /* height: 60vh; */
+    }
+    #ccc {
+      width: 40vw;
+      /* height: 20vh; */
+    }
+  }
   @media (min-width: 1000px) {
     /* .plantBoxText {
       display: flex;
@@ -351,15 +404,11 @@
       max-width: 500px;
       text-align: center;
     }
-    .carouselImg {
-      object-fit: cover;
-      width: 600px;
-      height: 600px;
-    }
+
     .textBox {
       display: flex;
       flex-direction: column;
-      max-width: 400px;
+      /* max-width: 400px; */
     }
     .plantDescTwo {
       display: flex;
@@ -411,35 +460,45 @@
       display: flex;
       flex-direction: row;
       align-items: center;
+      width: 50%;
       margin: 10px;
     }
     .plantFert {
       display: flex;
       flex-direction: row;
       align-items: center;
+      width: 50%;
       margin: 10px;
     }
     #ccc {
-      width: 600px;
-      height: 600px;
+      width: 40vw;
+    }
+    .carouselImg {
+      object-fit: cover;
+      width: 700px;
+      height: 700px;
     }
     .heading {
       font-size: 16px;
     }
+    /* .carousel-inner {
+      width: 50vw;
+    } */
   }
   @media only screen and (max-width: 1300px) and (min-width: 1000px) {
     .carouselImg {
       object-fit: cover;
-      width: 400px;
-      height: 400px;
+      width: 500px;
+      height: 500px;
+      /* height: 60vh; */
     }
     #ccc {
-      width: 400px;
-      height: 400px;
+      width: 40vw;
+      /* height: 20vh; */
     }
     .line {
       border-style: 1px solid rgba(0, 0, 0, 0.15);
-      width: 400px;
+      width: 300px;
     }
     .info {
       max-width: 50%;
