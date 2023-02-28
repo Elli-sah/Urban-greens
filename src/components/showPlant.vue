@@ -51,13 +51,28 @@
     width: 340px;
     padding: 20px;
     position: absolute;
-    top: 29%;
+    top: 31%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 999;
     background-color: #577717;
     color: white;
     /* align-items: center; */
+  }
+
+  @media (min-width: 600px) {
+    .container {
+      height: 500px;
+      width: 340px;
+      padding: 40px;
+      position: absolute;
+      top: 23%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 999;
+      background-color: #577717;
+      color: white;
+    }
   }
 
   @media (min-width: 1000px) {
