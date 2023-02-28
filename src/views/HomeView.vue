@@ -62,9 +62,14 @@
 
   #welcome-popup {
     position: absolute;
+    top: 70px;
     left: 50%;
-    margin-left: -100px;
+    margin-left: -90px;
     width: 200px;
+  }
+
+  #welcome-popup > p {
+    font-size: 1rem;
   }
 
   #primary-logo {
@@ -94,6 +99,11 @@
 
   #text-container {
     display: flex;
+  }
+  @media (min-width: 900px) {
+    #welcome-popup {
+      top: 80px;
+    }
   }
 
   @media (min-width: 800px) {

@@ -30,11 +30,20 @@
       <img :src="plant.image[0]" :alt="plant.name" />
       <div class="descriptionBox">
         <h2>{{ plant.name }}</h2>
-        <p>* {{ plant.placement.short }}</p>
-        <p>* {{ plant.watering.short }}</p>
-        <p>* {{ plant.temperature.short }}</p>
+        <div class="description-divs">
+          <i class="bi bi-brightness-high" style="font-size: 0.7em" />
+          <p class="description-p">{{ plant.placement.short }}</p>
+        </div>
+        <div class="description-divs">
+          <i class="bi bi-thermometer-low" style="font-size: 0.7em" />
+          <p class="description-p">{{ plant.temperature.short }}</p>
+        </div>
+        <div class="description-divs">
+          <i class="bi bi-moisture iconsize" style="font-size: 0.7em" />
+          <p class="description-p">{{ plant.watering.short }}</p>
+        </div>
       </div>
-      <i @click="removePlant(index)" class="bi bi-x-lg" />
+      <i @click="removePlant(index)" id="remove-icon" class="bi bi-x-lg" />
     </div>
   </div>
 </template>
@@ -50,24 +59,65 @@
     border-radius: 8px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     padding: 10px;
     margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px;
     background-color: white;
   }
+
   img {
-    width: 150px;
-    height: 150px;
+    aspect-ratio: 1 / 1;
+    width: 50%;
+    // height: 150px;
     object-fit: cover;
     border-radius: 5px;
   }
 
   .descriptionBox {
     margin-left: 10px;
+    width: 40%;
   }
 
-  i {
+  .description-divs {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    padding-top: 5px;
+  }
+
+  .description-p {
+    font-size: 0.7rem;
+    padding: 0;
+    padding-left: 10px;
+  }
+
+  #remove-icon {
     align-self: flex-start;
     cursor: pointer;
     margin-left: 15px;
+  }
+  @media (min-width: 500px) {
+    .descriptionBox {
+      margin-top: 30px;
+      margin-left: 30px;
+    }
+  }
+  @media (min-width: 900px) {
+    #plantShelfBox {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .shelf-plants {
+      margin-right: 20px;
+      width: 400px;
+    }
+
+    .descriptionBox {
+      margin-top: 20px;
+      margin-left: 20px;
+    }
   }
 </style>
