@@ -52,13 +52,13 @@
           )
         }
       }
-    },
-
-    watch: {
-      searchText(newValue) {
-        console.log(newValue)
-      }
     }
+
+    // watch: {
+    //   searchText(newValue) {
+    //     console.log(newValue)
+    //   }
+    // }
   }
 </script>
 
