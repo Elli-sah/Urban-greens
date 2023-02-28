@@ -138,7 +138,7 @@
 
   .categoryLinks {
     display: inline-block;
-    /* flex: auto; */
+    // flex: auto;
   }
 
   .scrolling-wrapper {
