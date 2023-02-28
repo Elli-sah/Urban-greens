@@ -56,6 +56,7 @@
             name: this.createName,
             password: this.createPassword
           })
+          this.$store.commit('addLoggedInUser', this.createUserName)
           this.$router.push('/')
         }
       }
