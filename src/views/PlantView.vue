@@ -267,15 +267,17 @@
     } */
   #ccc {
     /* min-width: ; */
-    width: 40vw;
+    width: 60vw;
     /* max-width: 300px;
     max-height: 300px; */
+    /* width: 300px;
+    height: 300px; */
   }
   .carouselImg {
     object-fit: cover;
     /* min-width: 300px; */
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    /* height: 150px; */
   }
   .plantDesc {
     display: flex;
@@ -373,7 +375,7 @@
       /* height: 60vh; */
     }
     #ccc {
-      width: 40vw;
+      width: 50vw;
       /* height: 20vh; */
     }
   }
