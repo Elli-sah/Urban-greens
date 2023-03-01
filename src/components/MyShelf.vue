@@ -21,6 +21,7 @@
 </script>
 
 <template>
+  <h2>Dina växter</h2>
   <div id="plantShelfBox" v-if="myPlants.length !== 0">
     <div
       class="shelf-plants"
@@ -51,7 +52,8 @@
 <style lang="scss" scoped>
   #plantShelfBox {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: auto;
     width: 95%;
   }
@@ -70,7 +72,6 @@
   img {
     aspect-ratio: 1 / 1;
     width: 50%;
-    // height: 150px;
     object-fit: cover;
     border-radius: 5px;
   }
@@ -105,11 +106,6 @@
     }
   }
   @media (min-width: 900px) {
-    #plantShelfBox {
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-
     .shelf-plants {
       margin-right: 20px;
       width: 400px;

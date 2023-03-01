@@ -30,16 +30,15 @@
     },
     methods: {
       addPlant() {
-        console.log(this.userFavorites.length)
-        console.log(this.loggedInUser)
-        console.log(
-          this.userFavorites.some((plant) => plant.name === this.plant.name)
-        )
         if (this.loggedInUser !== '') {
           if (
-            this.userFavorites.length === 0 ||
-            this.userFavorites.some((plant) => plant.name !== this.plant.name)
+            this.userFavorites.find((plant) => plant.name === this.plant.name)
           ) {
+            this.AlreadyAddedplant = true
+            setTimeout(() => {
+              this.AlreadyAddedplant = false
+            }, 3000)
+          } else {
             this.$store.commit('addPlant', {
               user: this.loggedInUser.user,
               addplant: this.plant
@@ -47,14 +46,6 @@
             this.Addedplant = true
             setTimeout(() => {
               this.Addedplant = false
-            }, 3000)
-          } else if (
-            this.userFavorites.length !== 0 &&
-            this.userFavorites.some((plant) => plant.name === this.plant.name)
-          ) {
-            this.AlreadyAddedplant = true
-            setTimeout(() => {
-              this.AlreadyAddedplant = false
             }, 3000)
           }
         } else {
