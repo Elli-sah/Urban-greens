@@ -244,7 +244,7 @@
   }
 
   #ccc {
-    width: 60vw;
+    width: 70vw;
   }
   .carouselImg {
     object-fit: cover;
@@ -331,12 +331,13 @@
   @media (min-width: 600px) {
     .carouselImg {
       object-fit: cover;
-      min-width: 350px;
+      /* min-width: 350px; */
+      width: 400px;
       height: 350px;
       /* height: 60vh; */
     }
     #ccc {
-      width: 50vw;
+      width: 70vw;
       /* height: 20vh; */
     }
   }
