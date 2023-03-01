@@ -8,17 +8,14 @@
         result: [],
         category: 'all',
         name: 'all',
-        searchText: '',
-        visible: false
+        searchText: ''
       }
     },
 
     methods: {
       handleClick() {
-        this.visible = false
+        this.searchText = ''
         this.$emit('link-clicked')
-
-        console.log('klickad från PlantSearch')
       },
       axiosGetPlants() {
         axios.get('/plants.json').then((response) => {
@@ -31,7 +28,6 @@
     },
 
     computed: {
-      // Kunna söka på växtnamn och kategorier. Ska kategorier synas?? Räcker med att växterna i den kategorin dyker upp??
       filterdPlants() {
         if (this.category === 'all') {
           return this.result.filter((plant) => {
@@ -78,7 +74,6 @@
       <div v-if="searchText !== ''" id="linkdiv">
         <span @click="handleClick">
           <b-link
-            v-model="visible"
             v-for="plant in filterdPlants"
             :key="plant.name"
             :to="`/plants/${plant.name}`"

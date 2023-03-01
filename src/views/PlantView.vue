@@ -31,7 +31,7 @@
           this.plant = response.data.filter(
             (plant) => plant.name === this.name
           )[0]
-          console.log(this.plant)
+          console.log('rad 34', this.plant)
         })
       },
       atAddPlant() {
@@ -39,7 +39,6 @@
           user: this.loggedInUser.user,
           addplant: this.plant
         })
-        console.log(this.plant)
       },
       openModal(plant, plantHeading, description) {
         this.selectedPlant = plant
@@ -55,6 +54,7 @@
     created() {
       this.axiosGetPlants()
     }
+
     // toggleText() {
     //   this.showText = !this.showText
     // }
@@ -62,142 +62,144 @@
 </script>
 
 <template>
-  <!-- <div v-if="plant !== null" class="bigPlantBox"> -->
-  <div v-if="plant !== null" class="plantBox">
-    <div id="ccc">
-      <b-carousel v-model="slide" indicators>
-        <b-carousel-slide
-          class="carouselImg"
-          v-for="(image, index) in plant.image"
-          :key="index"
-          :img-src="image"
+  <div v-if="plant" class="view-divs">
+    <!-- <div v-if="plant !== null" class="bigPlantBox"> -->
+    <div class="plantBox">
+      <div id="ccc">
+        <b-carousel v-model="slide" indicators>
+          <b-carousel-slide
+            class="carouselImg"
+            v-for="(image, index) in plant.image"
+            :key="index"
+            :img-src="image"
+          />
+        </b-carousel>
+      </div>
+      <div id="plantInfoContainer">
+        <div class="plantShortInfo" v-if="!selectedPlant">
+          <h1>{{ plant.name }}</h1>
+
+          <h3>{{ plant.latin }}</h3>
+
+          <hr class="line" />
+          <div class="plantContainer">
+            <div class="plantDesc">
+              <!-- <p>Placering:</p> -->
+              <div class="plantPlace">
+                <i
+                  @click="
+                    openModal(
+                      plant,
+                      plant.placement.plantHeading,
+                      plant.placement.description
+                    )
+                  "
+                  class="bi bi-brightness-high"
+                  style="font-size: 2em"
+                />
+
+                <div>
+                  <p class="shortText title">Placering</p>
+                  <p class="shortText">{{ plant.placement.short }}</p>
+                </div>
+              </div>
+              <!-- <p>Temp:</p> -->
+              <div class="plantTemp">
+                <i
+                  @click="
+                    openModal(
+                      plant,
+                      plant.temperature.plantHeading,
+                      plant.temperature.description
+                    )
+                  "
+                  class="bi bi-thermometer-low"
+                  style="font-size: 2em"
+                />
+
+                <div>
+                  <p class="shortText title">Temperatur</p>
+                  <p class="shortText">{{ plant.temperature.short }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="plantDescTwo">
+              <div class="plantWater">
+                <i
+                  @click="
+                    openModal(
+                      plant,
+                      plant.watering.plantHeading,
+                      plant.watering.description
+                    )
+                  "
+                  class="bi bi-moisture iconsize"
+                  style="font-size: 2em"
+                />
+
+                <div>
+                  <p class="shortText title">Bevattning</p>
+                  <p class="shortText">{{ plant.watering.short }}</p>
+                </div>
+              </div>
+              <div class="plantFert">
+                <i
+                  @click="
+                    openModal(
+                      plant,
+                      plant.fertilization.plantHeading,
+                      plant.fertilization.description
+                    )
+                  "
+                  class="bi bi-flower1"
+                  style="font-size: 2em"
+                />
+
+                <div>
+                  <p class="shortText title">Näring</p>
+                  <p class="shortText">{{ plant.fertilization.short }}</p>
+                </div>
+              </div>
+            </div>
+
+            <button class="button" @click="atAddPlant">
+              Ställ på fönsterbrädan
+            </button>
+          </div>
+        </div>
+        <ShowPlant
+          v-if="selectedPlant"
+          :selected-plant="selectedPlant"
+          :plant-heading="plantHeading"
+          :long-description="longDescription"
+          @close="closeModal"
         />
-      </b-carousel>
+      </div>
     </div>
-    <div id="plantInfoContainer">
-      <div class="plantShortInfo" v-if="!selectedPlant">
-        <h1>{{ plant.name }}</h1>
-
-        <h3>{{ plant.latin }}</h3>
-
-        <hr class="line" />
-        <div class="plantContainer">
-          <div class="plantDesc">
-            <!-- <p>Placering:</p> -->
-            <div class="plantPlace">
-              <i
-                @click="
-                  openModal(
-                    plant,
-                    plant.placement.plantHeading,
-                    plant.placement.description
-                  )
-                "
-                class="bi bi-brightness-high"
-                style="font-size: 2em"
-              />
-
-              <div>
-                <p class="shortText title">Placering</p>
-                <p class="shortText">{{ plant.placement.short }}</p>
-              </div>
-            </div>
-            <!-- <p>Temp:</p> -->
-            <div class="plantTemp">
-              <i
-                @click="
-                  openModal(
-                    plant,
-                    plant.temperature.plantHeading,
-                    plant.temperature.description
-                  )
-                "
-                class="bi bi-thermometer-low"
-                style="font-size: 2em"
-              />
-
-              <div>
-                <p class="shortText title">Temperatur</p>
-                <p class="shortText">{{ plant.temperature.short }}</p>
-              </div>
-            </div>
-          </div>
-          <div class="plantDescTwo">
-            <div class="plantWater">
-              <i
-                @click="
-                  openModal(
-                    plant,
-                    plant.watering.plantHeading,
-                    plant.watering.description
-                  )
-                "
-                class="bi bi-moisture iconsize"
-                style="font-size: 2em"
-              />
-
-              <div>
-                <p class="shortText title">Bevattning</p>
-                <p class="shortText">{{ plant.watering.short }}</p>
-              </div>
-            </div>
-            <div class="plantFert">
-              <i
-                @click="
-                  openModal(
-                    plant,
-                    plant.fertilization.plantHeading,
-                    plant.fertilization.description
-                  )
-                "
-                class="bi bi-flower1"
-                style="font-size: 2em"
-              />
-
-              <div>
-                <p class="shortText title">Näring</p>
-                <p class="shortText">{{ plant.fertilization.short }}</p>
-              </div>
-            </div>
+    <!-- </div> -->
+    <div class="secondPlantBox">
+      <div class="info">
+        <h2>Mer information</h2>
+        <div class="moreInfo">
+          <p>{{ plant.description }}</p>
+        </div>
+      </div>
+      <div class="textBox">
+        <div class="pruningDesc">
+          <div class="pruning">
+            <p class="heading">Beskärning</p>
+            <i class="bi bi-scissors" />
           </div>
 
-          <button class="button" @click="atAddPlant">
-            Ställ på fönsterbrädan
-          </button>
+          <p>{{ plant.pruning }}</p>
         </div>
-      </div>
-      <ShowPlant
-        v-if="selectedPlant"
-        :selected-plant="selectedPlant"
-        :plant-heading="plantHeading"
-        :long-description="longDescription"
-        @close="closeModal"
-      />
-    </div>
-  </div>
-  <!-- </div> -->
-  <div class="secondPlantBox">
-    <div class="info">
-      <h2>Mer information</h2>
-      <div class="moreInfo">
-        <p>{{ plant.description }}</p>
-      </div>
-    </div>
-    <div class="textBox">
-      <div class="pruningDesc">
-        <div class="pruning">
-          <p class="heading">Beskärning</p>
-          <i class="bi bi-scissors" />
+        <div class="bugDesc">
+          <div class="bug">
+            <p class="heading">Skadedjur</p>
+            <i class="bi bi-bug" />
+          </div>
+          <p>{{ plant.pests }}</p>
         </div>
-
-        <p>{{ plant.pruning }}</p>
-      </div>
-      <div class="bugDesc">
-        <div class="bug">
-          <p class="heading">Skadedjur</p>
-          <i class="bi bi-bug" />
-        </div>
-        <p>{{ plant.pests }}</p>
       </div>
     </div>
   </div>
@@ -206,7 +208,7 @@
 
 <style scoped>
   .plantBox {
-    width: 80%;
+    width: 100%;
     padding: 20px 20px 20px 20px;
     display: flex;
     flex-direction: column;
@@ -230,7 +232,7 @@
     text-align: center;
   }
   .secondPlantBox {
-    width: 80%;
+    width: 100%;
     padding: 45px 20px 20px 20px;
     background-color: white;
     margin: auto;
@@ -245,9 +247,13 @@
 
   #ccc {
     width: 70vw;
+    display: flex;
+    justify-content: center;
   }
   .carouselImg {
     object-fit: cover;
+    /* display: flex;
+    justify-content: center; */
     width: 300px;
   }
   .plantDesc {
@@ -338,10 +344,12 @@
     }
     #ccc {
       width: 70vw;
+      display: flex;
+      justify-content: center;
       /* height: 20vh; */
     }
   }
-  @media (min-width: 1000px) {
+  @media (min-width: 1200px) {
     .plantDesc {
       display: flex;
       flex-direction: row;
@@ -353,16 +361,15 @@
       /* width: 90%; */
     }
     .info {
-      text-align: center;
+      /* text-align: center; */
       margin-bottom: 20px;
       display: flex;
-      justify-content: left;
       flex-direction: column;
       width: 50%;
     }
     .moreInfo {
-      max-width: 500px;
-      text-align: center;
+      display: flex;
+      justify-content: center;
     }
 
     .textBox {
@@ -440,7 +447,7 @@
       font-size: 16px;
     }
   }
-  @media only screen and (max-width: 1300px) and (min-width: 1000px) {
+  @media only screen and (max-width: 1600px) and (min-width: 1200px) {
     .carouselImg {
       object-fit: cover;
       width: 500px;

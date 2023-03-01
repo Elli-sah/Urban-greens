@@ -68,7 +68,7 @@
 
 <template>
   <div class="view-divs">
-    <h1>Växtguide</h1>
+    <h1 id="list-view-heading">Växtguide</h1>
     <div class="input-div">
       <input type="text" v-model="searchText" />
       <i @click="submit" class="bi bi-search" />
@@ -87,9 +87,9 @@
       <Router-Link to="/plantlist/Gröna växter" class="categoryLinks">
         <button class="button">Gröna växter</button>
       </Router-Link>
-      <Router-Link to="/plantlist/Giftiga_växter" class="categoryLinks">
+      <!-- <Router-Link to="/plantlist/Giftiga_växter" class="categoryLinks">
         <button class="button">Giftiga växter</button>
-      </Router-Link>
+      </Router-Link> -->
     </div>
     <!-- <h2>{{ category }}</h2> -->
     <div id="filteredPlants">
@@ -112,14 +112,21 @@
     justify-content: center;
   }
 
+  // #list-view-heading {
+  //   text-align: center;
+  //   margin: 20px 0 60px 0;
+  // }
+
   .input-div i {
     position: absolute;
     margin: auto;
   }
 
   .input-div {
-    width: 90%;
+    max-width: 720px;
+    padding-left: 25px;
     margin: auto;
+    position: relative;
   }
 
   input {
@@ -130,30 +137,22 @@
   }
 
   i {
-    position: relative;
-    right: 10%;
+    right: 20px;
+    top: 10px;
     z-index: 6;
-    padding: 10px;
-  }
-
-  .categoryLinks {
-    // display: inline-block;
   }
 
   .scrolling-wrapper {
+    margin: 10px;
     overflow-y: hidden;
-    // white-space: nowrap;
-    // flex-wrap: nowrap;
     width: 100%;
     display: flex;
     justify-content: flex-start;
   }
 
-  @media screen and (min-width: 1000px) {
-  }
   @media screen and (min-width: 800px) {
-    i {
-      right: 12%;
+    .scrolling-wrapper {
+      justify-content: center;
     }
   }
 </style>
