@@ -123,8 +123,10 @@
   }
 
   .input-div {
-    width: 90%;
+    max-width: 720px;
+    padding-left: 25px;
     margin: auto;
+    position: relative;
   }
 
   input {
@@ -135,28 +137,20 @@
   }
 
   i {
-    position: relative;
-    right: 10%;
+    right: 20px;
+    top: 10px;
     z-index: 6;
-    padding: 10px;
   }
 
   .scrolling-wrapper {
     margin: 10px;
     overflow-y: hidden;
-    // white-space: nowrap;
-    // flex-wrap: nowrap;
     width: 100%;
     display: flex;
     justify-content: flex-start;
   }
 
-  @media screen and (min-width: 1000px) {
-  }
   @media screen and (min-width: 800px) {
-    i {
-      right: 12%;
-    }
     .scrolling-wrapper {
       justify-content: center;
     }
