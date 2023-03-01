@@ -40,7 +40,7 @@
     </div>
 
     <PlantCategory />
-    <div id="text-container">
+    <!-- <div id="text-container">
       <div id="start-text-middle">
         <p id="text-2">
           <strong>
@@ -51,7 +51,7 @@
           </strong>
         </p>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
