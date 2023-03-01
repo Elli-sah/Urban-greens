@@ -10,74 +10,85 @@
 
 <template>
   <div class="view-divs">
-    <div id="info">
-      <h1>Kom Igång</h1>
-      <p class="text">
+    <h1>Kom Igång</h1>
+    <div id="box">
+      <div id="info">
+        <StepByStep />
+        <!-- <p class="text">
         Få kontroll över ditt växtsamhälle! Ta hand om dina gröna vänner och se
         dem blomstra med hjälp av vår app. Kontakta oss om du behöver hjälp.
         Lycka till med dina växter!
-      </p>
-      <RouterLink to="/login">
-        <button id="komIgang" class="button">Logga in</button>
-      </RouterLink>
+      </p> -->
+        <RouterLink to="/login">
+          <button id="komIgang" class="button">Logga in</button>
+        </RouterLink>
+      </div>
+
+      <div id="container">
+        <div class="text-number-container">
+          <p class="text">
+            I vår <strong>växtguide</strong> hittar du en stor samling av vackra
+            växter som du kanske har hemma eller vill ha. I
+            <strong>växtguide</strong> kan du ställa de växter som du har hemma
+            på din virituella fönstebräda för att få kontroll på dina växter.
+          </p>
+          <p class="number">01</p>
+        </div>
+        <div class="text-number-container">
+          <p class="number">02</p>
+
+          <p class="text">
+            Genom att klicka på en växt kan du se viktig information om dess
+            behov och förutsättningar för att växa och frodas. Detta inkluderar
+            detaljer om bevattning, temperatur, ljusbehov och annan relevant
+            information. Att ta reda på sådana detaljer kan hjälpa dig att ta
+            bättre hand om dina växter och se till att de trivs på bästa möjliga
+            sätt.
+          </p>
+        </div>
+
+        <div class="text-number-container">
+          <p class="text">
+            Genom att lägga till dina växter i
+            <strong>Min fönsterbräda</strong> kan du enkelt samla alla dina
+            växter på ett ställe. På detta sätt kan du effektivt organisera dina
+            växter och säkerställa att du ger dem rätt vård och uppmärksamhet.
+            Detta gör det också lättare att övervaka deras tillstånd och se till
+            att de fortsätter att trivas.
+          </p>
+          <p class="number">03</p>
+        </div>
+        <!-- <img id="my-shelf" src="../../assets/shelf.png" alt="my shelf" /> -->
+      </div>
     </div>
-
-    <div id="container">
-      <div class="text-number-container">
-        <p class="text">
-          I vår <strong>växtguide</strong> hittar du en stor samling av vackra
-          växter som du kanske har hemma eller vill ha. I
-          <strong>växtguide</strong> kan du ställa de växter som du har hemma på
-          din virituella fönstebräda för att få kontroll på dina växter.
-        </p>
-        <p class="number">01</p>
-      </div>
-      <div class="text-number-container">
-        <p class="number">02</p>
-
-        <p class="text">
-          Genom att klicka på en växt kan du se viktig information om dess behov
-          och förutsättningar för att växa och frodas. Detta inkluderar detaljer
-          om bevattning, temperatur, ljusbehov och annan relevant information.
-          Att ta reda på sådana detaljer kan hjälpa dig att ta bättre hand om
-          dina växter och se till att de trivs på bästa möjliga sätt.
-        </p>
-      </div>
-
-      <div class="text-number-container">
-        <p class="text">
-          Genom att lägga till dina växter i
-          <strong>Min fönsterbräda</strong> kan du enkelt samla alla dina växter
-          på ett ställe. På detta sätt kan du effektivt organisera dina växter
-          och säkerställa att du ger dem rätt vård och uppmärksamhet. Detta gör
-          det också lättare att övervaka deras tillstånd och se till att de
-          fortsätter att trivas.
-        </p>
-        <p class="number">03</p>
-      </div>
-      <img id="my-shelf" src="../../assets/shelf.png" alt="my shelf" />
-    </div>
-
-    <StepByStep />
   </div>
 </template>
 
 <style scoped>
-  #container {
+  #box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 450px;
     margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    max-width: 600px;
+  }
+  #container {
+    width: 100%;
     padding: 10px;
-
     border-radius: 20px;
     /* background-color: rgb(255, 255, 255); */
     color: white;
     background-color: #577751;
     box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.1);
+    margin: 10px;
   }
-  .text {
-    font-size: 1.2em;
+
+  #info {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    margin: 10px;
   }
   .text-number-container {
     display: flex;
@@ -106,9 +117,19 @@
     object-fit: contain;
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: 800px) {
+    #box {
+      flex-direction: row;
+      align-items: start;
+      justify-content: center;
+      max-width: 1000px;
+    }
     #container {
-      padding: 50px;
+      height: 700px;
+      overflow: auto;
+    }
+    #info {
+      height: 700px;
     }
   }
 </style>

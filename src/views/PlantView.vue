@@ -1,5 +1,6 @@
 <script>
   import axios from 'axios'
+
   import { mapState } from 'vuex'
   import ShowPlant from '../components/ShowPlant.vue'
   export default {
@@ -53,12 +54,18 @@
     },
     created() {
       this.axiosGetPlants()
-    }
+    },
 
-    // toggleText() {
-    //   this.showText = !this.showText
-    // }
+    watch: {
+      '$route.params'() {
+        this.axiosGetPlants()
+      }
+    }
   }
+
+  // toggleText() {
+  //   this.showText = !this.showText
+  // }
 </script>
 
 <template>

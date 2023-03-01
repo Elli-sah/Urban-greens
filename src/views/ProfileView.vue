@@ -18,15 +18,38 @@
 
 <template>
   <div class="view-divs">
+    <h1>{{ loggedInUser.name }}s fönsterbräda</h1>
+    <div id="image-container">
+      <img
+        id="window-image"
+        src="../../assets/annie-spratt-S7viz8JWxwY-unsplash.jpg"
+        alt="Fönsterbräda"
+      />
+    </div>
     <MyWeather />
     <div id="my-shelf-view">
-      <h1>{{ loggedInUser.name }}s fönsterbräda</h1>
       <MyShelf />
     </div>
   </div>
 </template>
 
 <style lang="scss">
+  #image-container {
+    display: flex;
+    width: 95%;
+    margin: auto;
+    background-color: white;
+    border-radius: 5px;
+  }
+
+  #window-image {
+    margin: auto;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
   #my-shelf-view {
     margin-top: 50px;
   }

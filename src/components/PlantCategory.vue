@@ -105,6 +105,7 @@
   #plantbox-container {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     overflow-y: hidden;
     white-space: nowrap;
     flex-wrap: nowrap;
