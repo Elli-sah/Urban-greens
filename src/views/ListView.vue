@@ -68,7 +68,7 @@
 
 <template>
   <div class="view-divs">
-    <h1>Växtguide</h1>
+    <h1 id="list-view-heading">Växtguide</h1>
     <div class="input-div">
       <input type="text" v-model="searchText" />
       <i @click="submit" class="bi bi-search" />
@@ -112,6 +112,11 @@
     justify-content: center;
   }
 
+  // #list-view-heading {
+  //   text-align: center;
+  //   margin: 20px 0 60px 0;
+  // }
+
   .input-div i {
     position: absolute;
     margin: auto;
@@ -136,11 +141,8 @@
     padding: 10px;
   }
 
-  .categoryLinks {
-    // display: inline-block;
-  }
-
   .scrolling-wrapper {
+    margin: 10px;
     overflow-y: hidden;
     // white-space: nowrap;
     // flex-wrap: nowrap;
