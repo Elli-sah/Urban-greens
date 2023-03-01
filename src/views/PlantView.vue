@@ -245,6 +245,8 @@
 
   #ccc {
     width: 70vw;
+    display: flex;
+    justify-content: center;
   }
   .carouselImg {
     object-fit: cover;
