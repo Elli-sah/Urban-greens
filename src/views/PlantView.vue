@@ -248,6 +248,8 @@
   }
   .carouselImg {
     object-fit: cover;
+    /* display: flex;
+    justify-content: center; */
     width: 300px;
   }
   .plantDesc {
@@ -338,10 +340,12 @@
     }
     #ccc {
       width: 70vw;
+      display: flex;
+      justify-content: center;
       /* height: 20vh; */
     }
   }
-  @media (min-width: 1000px) {
+  @media (min-width: 1200px) {
     .plantDesc {
       display: flex;
       flex-direction: row;
@@ -353,16 +357,15 @@
       /* width: 90%; */
     }
     .info {
-      text-align: center;
+      /* text-align: center; */
       margin-bottom: 20px;
       display: flex;
-      justify-content: left;
       flex-direction: column;
       width: 50%;
     }
     .moreInfo {
-      max-width: 500px;
-      text-align: center;
+      display: flex;
+      justify-content: center;
     }
 
     .textBox {
@@ -440,7 +443,7 @@
       font-size: 16px;
     }
   }
-  @media only screen and (max-width: 1300px) and (min-width: 1000px) {
+  @media only screen and (max-width: 1600px) and (min-width: 1200px) {
     .carouselImg {
       object-fit: cover;
       width: 500px;
