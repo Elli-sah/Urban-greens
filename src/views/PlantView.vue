@@ -357,16 +357,15 @@
       /* width: 90%; */
     }
     .info {
-      text-align: center;
+      /* text-align: center; */
       margin-bottom: 20px;
       display: flex;
-      justify-content: left;
       flex-direction: column;
       width: 50%;
     }
     .moreInfo {
-      max-width: 500px;
-      text-align: center;
+      display: flex;
+      justify-content: center;
     }
 
     .textBox {
