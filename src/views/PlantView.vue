@@ -31,7 +31,7 @@
           this.plant = response.data.filter(
             (plant) => plant.name === this.name
           )[0]
-          console.log(this.plant)
+          console.log('rad 34', this.plant)
         })
       },
       atAddPlant() {
@@ -39,7 +39,6 @@
           user: this.loggedInUser.user,
           addplant: this.plant
         })
-        console.log(this.plant)
       },
       openModal(plant, plantHeading, description) {
         this.selectedPlant = plant

@@ -14,7 +14,6 @@
     methods: {
       handleLinkClicked() {
         this.visible = false
-        console.log('Klickad från navbar')
       },
       onLogoutClick() {
         this.$store.commit('logutUser')
