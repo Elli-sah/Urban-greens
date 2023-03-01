@@ -12,6 +12,13 @@
       }
     },
     methods: {
+      onClick() {
+        this.visible = false
+      },
+      handleLinkClicked() {
+        this.visible = false
+        console.log('Klickad från navbar')
+      },
       onLogoutClick() {
         this.$store.commit('logutUser')
       }
@@ -33,7 +40,7 @@
         handler() {
           const isPlantList = this.$route.path === '/plantlist'
           this.visible = !isPlantList
-          this.visible = false
+          // this.visible = false
         },
         immediate: true
       }
@@ -142,15 +149,21 @@
       <b-collapse id="nav-collapse" is-nav v-model="visible">
         <b-navbar-nav id="navbar-desktop">
           <b-nav-form>
-            <PlantSearch v-if="!isPlantList" />
+            <PlantSearch
+              v-if="!isPlantList"
+              @link-clicked="handleLinkClicked"
+            />
           </b-nav-form>
-
+          <!-- vrf funkar b-nav-item inte som routerlink??? -->
           <b-container>
             <b-nav id="links" justify="end">
-              <b-nav-item to="/">Hem</b-nav-item>
-              <b-nav-item to="/plantlist/Alla_växter">Växtguide</b-nav-item>
+              <b-nav-item @click="onClick" to="/">Hem</b-nav-item>
+              <b-nav-item @click="onClick" to="/plantlist/Alla_växter"
+                >Växtguide</b-nav-item
+              >
 
               <b-nav-item
+                @click="onClick"
                 v-if="isLoggedIn"
                 :to="`/profile/${loggedInUser.user}`"
                 >Min fönsterbräda</b-nav-item
