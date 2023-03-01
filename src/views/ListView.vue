@@ -155,5 +155,8 @@
     i {
       right: 12%;
     }
+    .scrolling-wrapper {
+      justify-content: center;
+    }
   }
 </style>
