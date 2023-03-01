@@ -113,7 +113,7 @@
 
     p {
       width: 50%;
-      font-size: 1.2rem;
+      // font-size: 1.2rem;
       padding-left: 30px;
     }
     #div-desktop {
