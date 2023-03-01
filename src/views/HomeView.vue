@@ -85,21 +85,21 @@
   #kom-igang {
     margin: 30px;
   }
-  #start-text-middle {
-    display: flex;
-    width: 400px;
-    border-radius: 10px;
-    margin-top: 100px;
-    padding: 20px;
-    text-align: center;
-  }
-  #text-2 {
-    font-size: large;
-  }
+  // #start-text-middle {
+  //   display: flex;
+  //   width: 400px;
+  //   border-radius: 10px;
+  //   margin-top: 100px;
+  //   padding: 20px;
+  //   text-align: center;
+  // }
+  // #text-2 {
+  //   font-size: large;
+  // }
 
-  #text-container {
-    display: flex;
-  }
+  // #text-container {
+  //   display: flex;
+  // }
 
   @media (min-width: 800px) {
     #primary-logo {

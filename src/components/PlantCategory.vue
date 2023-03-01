@@ -77,7 +77,7 @@
     display: flex;
     justify-content: center;
     margin: 30px;
-    margin-top: 200px;
+    margin-top: 100px;
   }
   h4 {
     margin-top: 15px;
@@ -105,7 +105,7 @@
   #plantbox-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     overflow-y: hidden;
     white-space: nowrap;
     flex-wrap: nowrap;

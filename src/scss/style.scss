@@ -40,7 +40,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  height: fit-content;
+  height: 2000px;
   position: relative;
 }
 
@@ -121,8 +121,10 @@ label {
 }
 
 footer {
+  position: absolute;
   background-color: $color-green;
   bottom: 0;
+  width: 100%;
 }
 @font-face {
   font-family: poiret;
