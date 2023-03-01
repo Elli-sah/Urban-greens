@@ -40,4 +40,10 @@
     text-align: center;
     padding: 10%;
   }
+
+  @media (max-width: 1000px) {
+    .newContainer {
+      margin-top: 10%;
+    }
+  }
 </style>

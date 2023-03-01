@@ -164,13 +164,6 @@
           <button class="button" @click="atAddPlant">
             Ställ på fönsterbrädan
           </button>
-          <!-- <ShowPlant
-            v-if="selectedPlant"
-            :selected-plant="selectedPlant"
-            :plant-heading="plantHeading"
-            :long-description="longDescription"
-            @close="closeModal"
-          /> -->
         </div>
       </div>
       <ShowPlant
@@ -213,7 +206,7 @@
 
 <style scoped>
   .plantBox {
-    width: 70%;
+    width: 80%;
     padding: 20px 20px 20px 20px;
     display: flex;
     flex-direction: column;
@@ -224,28 +217,20 @@
     margin: auto;
     border-radius: 10px;
     margin-top: 10%;
-    /* max-width: 500px;
-    min-width: 400px; */
   }
   .plantShortInfo {
     flex-direction: column;
     text-align: center;
-    min-width: 300px;
+
     display: flex;
     justify-content: center;
   }
 
-  /* .plantBoxText {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-  } */
   .plantContainer {
     text-align: center;
   }
   .secondPlantBox {
-    width: 70%;
+    width: 80%;
     padding: 45px 20px 20px 20px;
     background-color: white;
     margin: auto;
@@ -257,42 +242,26 @@
     justify-content: space-between;
     text-align: center;
   }
-  /* #ccc {
-      width: 40vw;
-    }
-    .carouselImg {
-      object-fit: cover;
-      width: 600px;
-      height: 600px;
-    } */
+
   #ccc {
-    /* min-width: ; */
     width: 60vw;
-    /* max-width: 300px;
-    max-height: 300px; */
-    /* width: 300px;
-    height: 300px; */
   }
   .carouselImg {
     object-fit: cover;
-    /* min-width: 300px; */
     width: 300px;
-    /* height: 150px; */
   }
   .plantDesc {
     display: flex;
-    /* justify-content: space-around; */
+
     flex-direction: column;
   }
   .plantDescTwo {
     display: flex;
     flex-direction: column;
-
-    /* justify-content: space-around; */
   }
   .line {
     border-style: 1px solid rgba(0, 0, 0, 0.15);
-    width: 300px;
+    width: 100%;
   }
   .bi {
     margin: 10px;
@@ -359,14 +328,6 @@
     margin-top: 10px;
   }
 
-  /* .textBox {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  } */
-  /* .heading {
-    font-size: 15px;
-  } */
   @media (min-width: 600px) {
     .carouselImg {
       object-fit: cover;
@@ -380,11 +341,6 @@
     }
   }
   @media (min-width: 1000px) {
-    /* .plantBoxText {
-      display: flex;
-      justify-content: row;
-      width: 100%;
-    } */
     .plantDesc {
       display: flex;
       flex-direction: row;
@@ -393,7 +349,7 @@
 
     .line {
       border-style: 1px solid rgba(0, 0, 0, 0.15);
-      width: 400px;
+      /* width: 90%; */
     }
     .info {
       text-align: center;
@@ -401,6 +357,7 @@
       display: flex;
       justify-content: left;
       flex-direction: column;
+      width: 50%;
     }
     .moreInfo {
       max-width: 500px;
@@ -410,7 +367,7 @@
     .textBox {
       display: flex;
       flex-direction: column;
-      /* max-width: 400px; */
+      width: 40%;
     }
     .plantDescTwo {
       display: flex;
@@ -443,8 +400,6 @@
       height: 50%;
       width: 80%;
       display: flex;
-      /* justify-content: flex-end; */
-      /* max-width: 500px; */
     }
     .plantPlace {
       display: flex;
@@ -483,38 +438,22 @@
     .heading {
       font-size: 16px;
     }
-    /* .carousel-inner {
-      width: 50vw;
-    } */
   }
   @media only screen and (max-width: 1300px) and (min-width: 1000px) {
     .carouselImg {
       object-fit: cover;
       width: 500px;
       height: 500px;
-      /* height: 60vh; */
     }
     #ccc {
       width: 40vw;
-      /* height: 20vh; */
     }
     .line {
       border-style: 1px solid rgba(0, 0, 0, 0.15);
-      width: 300px;
+      /* width: 90%; */
     }
     .info {
       max-width: 50%;
     }
   }
-  /* @media (min-width: 1200px) {
-    #ccc {
-      width: 400px;
-      height: 400px;
-    }
-    .carouselImg {
-      object-fit: cover;
-      width: 400px;
-      height: 400px;
-    }
-  } */
 </style>
