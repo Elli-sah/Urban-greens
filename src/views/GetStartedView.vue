@@ -1,9 +1,18 @@
 <script>
+  import { mapState } from 'vuex'
   import StepByStep from '../components/StepByStep.vue'
 
   export default {
     components: {
       StepByStep
+    },
+    computed: {
+      ...mapState({
+        loggedInUser: (state) => state.loggedInUser
+      }),
+      isLoggedIn() {
+        return !!this.loggedInUser
+      }
     }
   }
 </script>
@@ -19,7 +28,7 @@
         dem blomstra med hjälp av vår app. Kontakta oss om du behöver hjälp.
         Lycka till med dina växter!
       </p> -->
-        <RouterLink to="/login">
+        <RouterLink v-if="isLoggedIn" to="/login">
           <button id="komIgang" class="button">Logga in</button>
         </RouterLink>
       </div>
@@ -76,7 +85,7 @@
     width: 100%;
     padding: 10px;
     border-radius: 20px;
-    /* background-color: rgb(255, 255, 255); */
+
     color: white;
     background-color: #577751;
     box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.1);
@@ -86,7 +95,8 @@
   #info {
     width: 100%;
     padding: 10px;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.1);
     border-radius: 20px;
     margin: 10px;
   }
