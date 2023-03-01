@@ -12,9 +12,6 @@
       }
     },
     methods: {
-      onClick() {
-        this.visible = false
-      },
       handleLinkClicked() {
         this.visible = false
         console.log('Klickad från navbar')
@@ -38,18 +35,10 @@
     watch: {
       '$route.params': {
         handler() {
-          const isPlantList = this.$route.path === '/plantlist'
-          this.visible = !isPlantList
-          // this.visible = false
-        },
-        immediate: true
+          this.$route.path === '/plantlist'
+          this.visible = false
+        }
       }
-      // '$route.params'() {
-      //   this.visible = !this.isPlantList
-      // },
-      // '$route.params'() {
-      //   this.visible = false
-      // }
     }
   }
 </script>
@@ -157,13 +146,13 @@
           <!-- vrf funkar b-nav-item inte som routerlink??? -->
           <b-container>
             <b-nav id="links" justify="end">
-              <b-nav-item @click="onClick" to="/">Hem</b-nav-item>
-              <b-nav-item @click="onClick" to="/plantlist/Alla_växter"
+              <b-nav-item @click="handleLinkClicked" to="/">Hem</b-nav-item>
+              <b-nav-item @click="handleLinkClicked" to="/plantlist/Alla_växter"
                 >Växtguide</b-nav-item
               >
 
               <b-nav-item
-                @click="onClick"
+                @click="handleLinkClicked"
                 v-if="isLoggedIn"
                 :to="`/profile/${loggedInUser.user}`"
                 >Min fönsterbräda</b-nav-item

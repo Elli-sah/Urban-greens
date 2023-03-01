@@ -8,14 +8,12 @@
         result: [],
         category: 'all',
         name: 'all',
-        searchText: '',
-        visible: false
+        searchText: ''
       }
     },
 
     methods: {
       handleClick() {
-        this.visible = false
         this.searchText = ''
         this.$emit('link-clicked')
 
@@ -79,7 +77,6 @@
       <div v-if="searchText !== ''" id="linkdiv">
         <span @click="handleClick">
           <b-link
-            v-model="visible"
             v-for="plant in filterdPlants"
             :key="plant.name"
             :to="`/plants/${plant.name}`"
