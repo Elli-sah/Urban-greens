@@ -16,6 +16,7 @@
     methods: {
       handleClick() {
         this.visible = false
+        this.searchText = ''
         this.$emit('link-clicked')
 
         console.log('klickad från PlantSearch')
