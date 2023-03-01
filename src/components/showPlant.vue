@@ -34,7 +34,7 @@
 
 <style scoped>
   .newContainer {
-    background-color: #577717;
+    background-color: #4e7c4f;
     border-radius: 10px;
     color: white;
     text-align: center;

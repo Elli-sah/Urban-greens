@@ -55,7 +55,7 @@
           />
         </div></div
     ></RouterLink>
-    <RouterLink
+    <!-- <RouterLink
       class="link-dark text-decoration-none"
       to="/plantlist/Giftiga_växter"
       ><div class="plantbox-category">
@@ -68,7 +68,7 @@
             alt="Giftiga Växter"
           />
         </div></div
-    ></RouterLink>
+    ></RouterLink> -->
   </div>
 </template>
 
