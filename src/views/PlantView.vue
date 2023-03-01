@@ -245,9 +245,13 @@
 
   #ccc {
     width: 70vw;
+    display: flex;
+    justify-content: center;
   }
   .carouselImg {
     object-fit: cover;
+    /* display: flex;
+    justify-content: center; */
     width: 300px;
   }
   .plantDesc {
@@ -341,7 +345,7 @@
       /* height: 20vh; */
     }
   }
-  @media (min-width: 1000px) {
+  @media (min-width: 1200px) {
     .plantDesc {
       display: flex;
       flex-direction: row;
@@ -440,7 +444,7 @@
       font-size: 16px;
     }
   }
-  @media only screen and (max-width: 1300px) and (min-width: 1000px) {
+  @media only screen and (max-width: 1600px) and (min-width: 1200px) {
     .carouselImg {
       object-fit: cover;
       width: 500px;
