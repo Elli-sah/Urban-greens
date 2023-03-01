@@ -87,9 +87,9 @@
       <Router-Link to="/plantlist/Gröna växter" class="categoryLinks">
         <button class="button">Gröna växter</button>
       </Router-Link>
-      <Router-Link to="/plantlist/Giftiga_växter" class="categoryLinks">
+      <!-- <Router-Link to="/plantlist/Giftiga_växter" class="categoryLinks">
         <button class="button">Giftiga växter</button>
-      </Router-Link>
+      </Router-Link> -->
     </div>
     <!-- <h2>{{ category }}</h2> -->
     <div id="filteredPlants">
@@ -152,17 +152,10 @@
   }
 
   @media screen and (min-width: 1000px) {
-    i {
-      right: 17%;
-    }
-    .input-div {
-      width: 70%;
-    }
   }
-  @media screen and (min-width: 930px) {
-    .scrolling-wrapper {
-      display: flex;
-      justify-content: center;
+  @media screen and (min-width: 800px) {
+    i {
+      right: 12%;
     }
   }
 </style>

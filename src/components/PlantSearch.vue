@@ -2,6 +2,7 @@
   import axios from 'axios'
 
   export default {
+    emits: ['link-clicked'],
     data() {
       return {
         result: [],
@@ -12,6 +13,10 @@
     },
 
     methods: {
+      handleClick() {
+        this.searchText = ''
+        this.$emit('link-clicked')
+      },
       axiosGetPlants() {
         axios.get('/plants.json').then((response) => {
           this.result = response.data
@@ -23,7 +28,6 @@
     },
 
     computed: {
-      // Kunna söka på växtnamn och kategorier. Ska kategorier synas?? Räcker med att växterna i den kategorin dyker upp??
       filterdPlants() {
         if (this.category === 'all') {
           return this.result.filter((plant) => {
@@ -53,12 +57,6 @@
         }
       }
     }
-
-    // watch: {
-    //   searchText(newValue) {
-    //     console.log(newValue)
-    //   }
-    // }
   }
 </script>
 
@@ -74,18 +72,20 @@
 
     <div>
       <div v-if="searchText !== ''" id="linkdiv">
-        <b-link
-          v-for="plant in filterdPlants"
-          :key="plant.name"
-          :to="`/plants/${plant.name}`"
-          class="list-group-item"
-        >
-          {{ plant.name }}
+        <span @click="handleClick">
+          <b-link
+            v-for="plant in filterdPlants"
+            :key="plant.name"
+            :to="`/plants/${plant.name}`"
+            class="list-group-item"
+          >
+            {{ plant.name }}
 
-          <p>
-            {{ plant.category }}
-          </p>
-        </b-link>
+            <p>
+              {{ plant.category }}
+            </p>
+          </b-link>
+        </span>
       </div>
     </div>
   </div>

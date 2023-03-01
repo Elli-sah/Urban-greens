@@ -142,19 +142,29 @@ footer {
     background-image: url(../../assets/desktop-allasidor.png);
     height: 3000px;
   }
-  #start-div {
-    background-image: url(../../assets/desktop-startsidan.png);
-    padding: 60px;
 
-    height: 3000px;
-  }
   .view-divs {
-    padding: 60px;
     margin-top: 40px;
   }
 
   main {
-    margin-top: 30px;
+    margin-top: 50px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .view-divs {
+    padding: 60px;
+    margin-top: 40px;
+  }
+  #start-div {
+    background-image: url(../../assets/desktop-start-ny.png);
+    padding: 60px;
+    height: 3000px;
+  }
+
+  p {
+    font-size: 1rem;
   }
 }
 
