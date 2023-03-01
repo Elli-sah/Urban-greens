@@ -43,17 +43,17 @@
 </script>
 
 <template>
-  <div id="weather-container">
+  <div v-if="img !== null" id="weather-container">
     <p id="temp">{{ temp }}℃</p>
-    <img :src="`http://openweathermap.org/img/wn/${this.img}.png`" />
+    <img :src="`http://openweathermap.org/img/wn/${img}.png`" />
   </div>
   <transition name="slide-in">
     <div id="weather" v-if="temp !== null" ref="box">
-      <p v-if="this.temp > 15 && this.img === '01d'">
+      <p v-if="temp > 15 && img === '01d'">
         Temperaturen hos dig är över 15℃ och sol... tänk på att vattna dina
         växter, och skydda dom från direkt solljus då!
       </p>
-      <p v-if="this.temp < 8 && this.img">
+      <p v-if="temp < 5 && img">
         Temperaturen hos dig är under 5℃... tänk på att skydda dina växter från
         kalla luftdrag!
       </p>
