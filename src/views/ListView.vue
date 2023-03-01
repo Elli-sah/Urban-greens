@@ -87,9 +87,9 @@
       <Router-Link to="/plantlist/Gröna växter" class="categoryLinks">
         <button class="button">Gröna växter</button>
       </Router-Link>
-      <Router-Link to="/plantlist/Giftiga_växter" class="categoryLinks">
+      <!-- <Router-Link to="/plantlist/Giftiga_växter" class="categoryLinks">
         <button class="button">Giftiga växter</button>
-      </Router-Link>
+      </Router-Link> -->
     </div>
     <!-- <h2>{{ category }}</h2> -->
     <div id="filteredPlants">
