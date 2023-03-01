@@ -180,25 +180,28 @@
     <div class="secondPlantBox">
       <div class="info">
         <h2>Mer information</h2>
-        <div class="moreInfo">
-          <p>{{ plant.description }}</p>
-        </div>
-      </div>
-      <div class="textBox">
-        <div class="pruningDesc">
-          <div class="pruning">
-            <p class="heading">Beskärning</p>
-            <i class="bi bi-scissors" />
+        <div class="secondText">
+          <div class="moreInfo">
+            <p>{{ plant.description }}</p>
           </div>
 
-          <p>{{ plant.pruning }}</p>
-        </div>
-        <div class="bugDesc">
-          <div class="bug">
-            <p class="heading">Skadedjur</p>
-            <i class="bi bi-bug" />
+          <div class="textBox">
+            <div class="pruningDesc">
+              <div class="pruning">
+                <p class="heading">Beskärning</p>
+                <i class="bi bi-scissors" />
+              </div>
+
+              <p>{{ plant.pruning }}</p>
+            </div>
+            <div class="bugDesc">
+              <div class="bug">
+                <p class="heading">Skadedjur</p>
+                <i class="bi bi-bug" />
+              </div>
+              <p>{{ plant.pests }}</p>
+            </div>
           </div>
-          <p>{{ plant.pests }}</p>
         </div>
       </div>
     </div>
@@ -207,6 +210,11 @@
 </template>
 
 <style scoped>
+  .secondText {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+  }
   .plantBox {
     width: 100%;
     padding: 20px 20px 20px 20px;
@@ -349,6 +357,28 @@
       /* height: 20vh; */
     }
   }
+  @media (min-width: 900px) {
+    .plantBox {
+      display: flex;
+      justify-content: space-around;
+      flex-direction: row;
+      width: 80%;
+    }
+    #ccc {
+      width: 70vw;
+    }
+    .carouselImg {
+      object-fit: cover;
+      width: 400px;
+      height: 350px;
+    }
+    .secondPlantBox {
+      height: 50%;
+      width: 80%;
+      display: flex;
+    }
+  }
+
   @media (min-width: 1200px) {
     .plantDesc {
       display: flex;
@@ -360,22 +390,31 @@
       border-style: 1px solid rgba(0, 0, 0, 0.15);
       /* width: 90%; */
     }
+    .carouselImg {
+      object-fit: cover;
+      width: 700px;
+      height: 700px;
+    }
+    .heading {
+      font-size: 16px;
+    }
     .info {
       /* text-align: center; */
       margin-bottom: 20px;
       display: flex;
       flex-direction: column;
-      width: 50%;
+      /* width: 40%; */
     }
     .moreInfo {
       display: flex;
       justify-content: center;
+      width: 50%;
     }
 
     .textBox {
       display: flex;
       flex-direction: column;
-      width: 40%;
+      /* width: 40%; */
     }
     .plantDescTwo {
       display: flex;
@@ -460,8 +499,8 @@
       border-style: 1px solid rgba(0, 0, 0, 0.15);
       /* width: 90%; */
     }
-    .info {
+    /* .info {
       max-width: 50%;
-    }
+    } */
   }
 </style>
