@@ -16,8 +16,6 @@
       handleClick() {
         this.searchText = ''
         this.$emit('link-clicked')
-
-        console.log('klickad från PlantSearch')
       },
       axiosGetPlants() {
         axios.get('/plants.json').then((response) => {
@@ -30,7 +28,6 @@
     },
 
     computed: {
-      // Kunna söka på växtnamn och kategorier. Ska kategorier synas?? Räcker med att växterna i den kategorin dyker upp??
       filterdPlants() {
         if (this.category === 'all') {
           return this.result.filter((plant) => {
