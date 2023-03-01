@@ -57,7 +57,7 @@
 
 <style lang="scss" scoped>
   #start-div {
-    height: 220vh;
+    height: 150vh;
   }
 
   #welcome-popup {

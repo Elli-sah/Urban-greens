@@ -65,13 +65,15 @@
 </script>
 
 <template>
-  <h1>Logga in</h1>
-  <p>
-    Att logga in på Urban Greens ger dig tillgång till en mer personlig
-    upplevelse med skräddarsydda funktioner. Skapa din egen fönsterbräda med
-    dina växter för att få en översikt över hur dina växter ska tas omhand.
-  </p>
-  <div v-show="showLoginForm">
+  <div class="login-divs">
+    <h1>Logga in</h1>
+    <p>
+      Att logga in på Urban Greens ger dig tillgång till en mer personlig
+      upplevelse med skräddarsydda funktioner. Skapa din egen fönsterbräda med
+      dina växter för att få en översikt över hur dina växter ska tas omhand.
+    </p>
+  </div>
+  <div class="login-divs" v-show="showLoginForm">
     <form @submit.prevent="AtLogin" class="form">
       <label for="username">Användarnamn</label
       ><input id="username" v-model="userName" required minlength="5" />
@@ -83,7 +85,7 @@
         required
         minlength="5"
       />
-      <button class="button" type="submit">Logga in</button>
+      <button id="login-btn" class="button" type="submit">Logga in</button>
     </form>
     <div v-if="logedInMessage">
       <h2>Välkommen {{ logedInName }}!</h2>
@@ -101,7 +103,7 @@
       Skapa konto
     </button>
   </div>
-  <div id="createAccountDiv" v-show="showCreateForm">
+  <div class="login-divs" v-show="showCreateForm">
     <h2>Skapa konto</h2>
     <form @submit.prevent="AtCreateAccount" class="form">
       <label for="name">Namn</label
@@ -121,7 +123,7 @@
         required
         minlength="5"
       />
-      <button class="button" type="submit">Skapa konto</button>
+      <button id="create-btn" class="button" type="submit">Skapa konto</button>
     </form>
     <div v-if="showError">
       <p>Användarnamnet du har valt finns redan. Försök igen!</p>
@@ -129,14 +131,25 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
+  p {
+    padding: 0;
+  }
+
+  .login-divs {
+    width: 90%;
+    max-width: 560px;
+    margin: auto;
+    padding: 20px;
+  }
   .form {
     display: flex;
     flex-direction: column;
   }
 
-  input {
-    width: 90%;
+  #login-btn,
+  #create-btn {
+    margin-left: 0;
   }
 
   #p-ingetkonto {
@@ -146,11 +159,5 @@
   #button-secondary {
     color: black;
     font-size: 0.8rem;
-  }
-
-  @media (min-width: 700px) {
-    input {
-      width: 70%;
-    }
   }
 </style>

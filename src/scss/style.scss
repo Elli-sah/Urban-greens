@@ -40,6 +40,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100%;
+  height: fit-content;
   position: relative;
 }
 
@@ -58,6 +59,7 @@ h4,
 h5,
 h6 {
   font-family: poiret, sans-serif;
+  text-align: center;
 }
 a:link {
   text-decoration: none;
@@ -115,7 +117,7 @@ label {
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: top;
-  height: 1500px;
+  height: fit-content;
 }
 
 footer {
@@ -140,7 +142,6 @@ footer {
 @media screen and (min-width: 600px) {
   body {
     background-image: url(../../assets/desktop-allasidor.png);
-    height: 3000px;
   }
 
   .view-divs {
@@ -160,7 +161,6 @@ footer {
   #start-div {
     background-image: url(../../assets/desktop-start-ny.png);
     padding: 60px;
-    height: 3000px;
   }
 
   p {
