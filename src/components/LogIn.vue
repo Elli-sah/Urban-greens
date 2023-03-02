@@ -132,6 +132,11 @@
 </template>
 
 <style lang="scss" scoped>
+  input {
+    border-radius: 30px;
+    border-style: none;
+    padding: 7px;
+  }
   p {
     padding: 0;
   }
