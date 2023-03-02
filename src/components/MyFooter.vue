@@ -13,7 +13,7 @@
 
 <template>
   <footer class="text-center text-lg-start">
-    <div class="container p-3">
+    <div class="container p-3 img-container">
       <img
         id="foot-loggo"
         class="row d-flex justify-content-start"
@@ -83,11 +83,23 @@
               </button>
             </div>
           </div>
-          <div id="policy" class="text-center">
-            <ul class="list-unstyled d-flex flex-row justify-content-center">
-              <li class="m-3"><a href="#">Terms of Service</a></li>
-              <li class="m-3"><a href="#">Privacy Policy</a></li>
-            </ul>
+          <div id="a-container">
+            <div class="text-center">
+              <ul
+                id="policy"
+                class="list-unstyled d-flex flex-row justify-content-center"
+              >
+                <li class="m-3"><a href="#">Terms of Service</a></li>
+                <li class="m-3"><a href="#">Privacy Policy</a></li>
+              </ul>
+            </div>
+            <div id="shelf">
+              <img
+                id="shelf-img"
+                src="./../../assets/shelf.png"
+                alt="shelf-plant"
+              />
+            </div>
           </div>
         </form>
       </section>
@@ -103,6 +115,7 @@
   #foot-loggo {
     width: 150px;
     opacity: 30%;
+    margin-bottom: 12px;
   }
   li {
     font-size: small;
@@ -110,5 +123,40 @@
   h5 {
     font-weight: bolder;
     text-decoration: underline;
+  }
+
+  #shelf-img {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+  @media (min-width: 480px) {
+    #policy {
+      margin-left: 95px;
+      margin-bottom: 0;
+    }
+    #shelf-img {
+      visibility: visible;
+      margin: 0;
+      width: 100px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    .img-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: left;
+    }
+    #shelf {
+      display: flex;
+      justify-content: right;
+    }
+    #a-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 70px;
+    }
   }
 </style>

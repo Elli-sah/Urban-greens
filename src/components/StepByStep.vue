@@ -73,7 +73,7 @@
   #step-by-step {
     margin: auto;
     max-width: 600px;
-    height: 550px;
+    height: 600px;
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
     padding: 20px;

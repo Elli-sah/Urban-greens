@@ -36,7 +36,7 @@
 <style lang="scss">
   #image-container {
     display: flex;
-    width: 95%;
+    width: 100%;
     margin: auto;
     background-color: white;
     border-radius: 5px;
@@ -52,5 +52,11 @@
 
   #my-shelf-view {
     margin-top: 50px;
+  }
+
+  @media (min-width: 700px) {
+    #image-container {
+      display: none;
+    }
   }
 </style>

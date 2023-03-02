@@ -55,7 +55,7 @@
     flex-wrap: wrap;
     justify-content: center;
     margin: auto;
-    width: 95%;
+    width: 100%;
   }
   .shelf-plants {
     border-radius: 8px;

@@ -133,7 +133,7 @@
     height: 25px;
     object-fit: contain;
     align-self: end;
-    margin-right: 20px;
+    margin-right: 8px;
     cursor: pointer;
   }
 
