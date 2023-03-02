@@ -1,6 +1,5 @@
 <script>
   import axios from 'axios'
-
   import { mapState } from 'vuex'
   import ShowPlant from '../components/ShowPlant.vue'
   export default {
@@ -18,7 +17,10 @@
         showText: false,
         slide: 0,
         selectedPlant: null,
-        selectedIcon: null
+        selectedIcon: null,
+        Addedplant: false,
+        NotLoggedIn: false,
+        AlreadyAddedplant: false
       }
     },
     computed: {
@@ -35,12 +37,38 @@
           console.log('rad 34', this.plant)
         })
       },
+      // atAddPlant() {
+      //   this.$store.commit('addPlant', {
+      //     user: this.loggedInUser.user,
+      //     addplant: this.plant
+      //   })
       atAddPlant() {
-        this.$store.commit('addPlant', {
-          user: this.loggedInUser.user,
-          addplant: this.plant
-        })
+        if (this.loggedInUser !== '') {
+          if (
+            this.userFavorites.find((plant) => plant.name === this.plant.name)
+          ) {
+            this.AlreadyAddedplant = true
+            setTimeout(() => {
+              this.AlreadyAddedplant = false
+            }, 3000)
+          } else {
+            this.$store.commit('addPlant', {
+              user: this.loggedInUser.user,
+              addplant: this.plant
+            })
+            this.Addedplant = true
+            setTimeout(() => {
+              this.Addedplant = false
+            }, 3000)
+          }
+        } else {
+          this.NotLoggedIn = true
+        }
       },
+      onClick() {
+        this.NotLoggedIn = false
+      },
+
       openModal(plant, plantHeading, description) {
         this.selectedPlant = plant
         this.plantHeading = plantHeading
@@ -72,7 +100,7 @@
   <div v-if="plant" class="view-divs">
     <!-- <div v-if="plant !== null" class="bigPlantBox"> -->
     <div class="plantBox">
-      <div id="ccc">
+      <div id="ccc" v-if="!Addedplant">
         <b-carousel v-model="slide" indicators>
           <b-carousel-slide
             class="carouselImg"
@@ -172,6 +200,30 @@
             <button class="button" @click="atAddPlant">
               Ställ på fönsterbrädan
             </button>
+            <div class="popup-divs" v-show="Addedplant">
+              <p class="paragraph added-paragraph">
+                {{ plant.name }} är tillagd på din fönsterbräda!
+              </p>
+            </div>
+            <div class="popup-divs" v-show="AlreadyAddedplant">
+              <p class="paragraph added-paragraph">
+                Du har redan lagt till {{ plant.name }} på din fönsterbräda!
+              </p>
+            </div>
+            <div class="popup-divs" v-show="NotLoggedIn">
+              <i @click="onClick" class="bi bi-x-lg" />
+              <div id="login-div">
+                <p>Du behöver logga in först</p>
+                <b-button
+                  variant="link"
+                  to="/login"
+                  type="button"
+                  id="button-secondary"
+                  class="btn btn-link"
+                  >Logga in här!</b-button
+                >
+              </div>
+            </div>
           </div>
         </div>
         <ShowPlant
@@ -217,6 +269,21 @@
 </template>
 
 <style scoped>
+  .popup-divs {
+    background-color: #c8c8c8;
+    border-radius: 10px;
+    height: 10%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: center;
+  }
+
+  i {
+    align-self: flex-end;
+  }
   .secondText {
     flex-direction: row;
     display: flex;
@@ -345,9 +412,9 @@
   .bug {
     text-align: center;
   }
-  .pruningDesc {
+  /* .pruningDesc {
     margin-top: 10px;
-  }
+  } */
 
   @media (min-width: 600px) {
     .carouselImg {
@@ -364,10 +431,10 @@
       /* height: 20vh; */
     }
   }
-  @media (min-width: 900px) {
+  /* @media (min-width: 900px) {
     .plantBox {
       display: flex;
-      justify-content: space-around;
+
       flex-direction: row;
       width: 80%;
     }
@@ -384,7 +451,7 @@
       width: 80%;
       display: flex;
     }
-  }
+  } */
 
   @media (min-width: 1200px) {
     .plantDesc {
@@ -443,7 +510,7 @@
     .pruningDesc {
       max-width: 500px;
       text-align: center;
-      margin: 10px;
+      /* margin: 10px; */
     }
     .bigPlantBox {
       display: flex;
@@ -489,9 +556,9 @@
       width: 700px;
       height: 700px;
     }
-    .heading {
+    /* .heading {
       font-size: 16px;
-    }
+    } */
   }
   @media only screen and (max-width: 1600px) and (min-width: 1200px) {
     .carouselImg {
