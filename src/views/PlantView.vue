@@ -136,7 +136,7 @@
                       plant.placement.description
                     )
                   "
-                  class="bi bi-brightness-high"
+                  class="bi bi-brightness-high icons-hover"
                   style="font-size: 2em"
                 />
 
@@ -155,7 +155,7 @@
                       plant.temperature.description
                     )
                   "
-                  class="bi bi-thermometer-low"
+                  class="bi bi-thermometer-low icons-hover"
                   style="font-size: 2em"
                 />
 
@@ -175,7 +175,7 @@
                       plant.watering.description
                     )
                   "
-                  class="bi bi-moisture iconsize"
+                  class="bi bi-moisture iconsize icons-hover"
                   style="font-size: 2em"
                 />
 
@@ -193,7 +193,7 @@
                       plant.fertilization.description
                     )
                   "
-                  class="bi bi-flower1"
+                  class="bi bi-flower1 icons-hover"
                   style="font-size: 2em"
                 />
 
@@ -275,8 +275,12 @@
 </template>
 
 <style scoped>
-  .bi:hover {
-    transition: 0.3s ease-in-out;
+  .icons-hover {
+    font-size: 10rem;
+    transition: transform 0.2s ease-in-out;
+  }
+  .icons-hover:hover {
+    transform: scale(1.5);
   }
   #login-div {
     margin: 5px;
