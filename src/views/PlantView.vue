@@ -101,7 +101,13 @@
     <!-- <div v-if="plant !== null" class="bigPlantBox"> -->
     <div class="plantBox">
       <div id="ccc" v-if="!Addedplant">
-        <b-carousel v-model="slide" indicators>
+        <b-carousel
+          v-model="slide"
+          interval="3000"
+          controls
+          indicators
+          ride="carousel"
+        >
           <b-carousel-slide
             class="carouselImg"
             v-for="(image, index) in plant.image"
@@ -300,7 +306,7 @@
     background-color: white;
     margin: auto;
     border-radius: 10px;
-    margin-top: 10%;
+    margin-top: 50px;
   }
   .plantShortInfo {
     flex-direction: column;
@@ -328,7 +334,8 @@
   }
 
   #ccc {
-    width: 70vw;
+    width: 300px;
+    height: 300px;
     display: flex;
     justify-content: center;
   }
@@ -337,6 +344,7 @@
     /* display: flex;
     justify-content: center; */
     width: 300px;
+    height: 300px;
   }
   .plantDesc {
     display: flex;
@@ -420,12 +428,13 @@
     .carouselImg {
       object-fit: cover;
       /* min-width: 350px; */
-      width: 400px;
-      height: 350px;
+      width: 450px;
+      height: 450px;
       /* height: 60vh; */
     }
     #ccc {
-      width: 70vw;
+      width: 450px;
+      height: 450px;
       display: flex;
       justify-content: center;
       /* height: 20vh; */
@@ -463,11 +472,6 @@
     .line {
       border-style: 1px solid rgba(0, 0, 0, 0.15);
       /* width: 90%; */
-    }
-    .carouselImg {
-      object-fit: cover;
-      width: 700px;
-      height: 700px;
     }
     .heading {
       font-size: 16px;
@@ -548,27 +552,27 @@
       width: 50%;
       margin: 10px;
     }
-    #ccc {
-      width: 40vw;
+    /* #ccc {
+      width: 600px;
+      height: 600px;
     }
     .carouselImg {
-      object-fit: cover;
-      width: 700px;
-      height: 700px;
-    }
+      width: 600px;
+      height: 600px;
+    } */
     /* .heading {
       font-size: 16px;
     } */
   }
   @media only screen and (max-width: 1600px) and (min-width: 1200px) {
-    .carouselImg {
-      object-fit: cover;
+    /* .carouselImg {
       width: 500px;
       height: 500px;
     }
     #ccc {
-      width: 40vw;
-    }
+      width: 500px;
+      height: 500px;
+    } */
     .line {
       border-style: 1px solid rgba(0, 0, 0, 0.15);
       /* width: 90%; */
