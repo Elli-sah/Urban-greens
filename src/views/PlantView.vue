@@ -25,7 +25,14 @@
     },
     computed: {
       ...mapState({
-        loggedInUser: (state) => state.loggedInUser
+        loggedInUser: (state) => state.loggedInUser,
+        userFavorites: (state) => {
+          if (state.loggedInUser) {
+            return state.users[state.loggedInUser.user]?.favorites || []
+          } else {
+            return []
+          }
+        }
       })
     },
     methods: {
@@ -237,29 +244,28 @@
     </div>
     <!-- </div> -->
     <div class="secondPlantBox">
-      <div class="info">
-        <h2>Mer information</h2>
-        <div class="secondText">
-          <div class="moreInfo">
-            <p>{{ plant.description }}</p>
+      <div class="boxes">
+        <div class="moreInfo">
+          <h2 id="more-info-heading">Mer information</h2>
+          <p id="more-info-text">{{ plant.description }}</p>
+        </div>
+      </div>
+      <div class="boxes">
+        <div class="textBox">
+          <div class="pruningDesc">
+            <div class="pruning">
+              <p class="heading">Beskärning</p>
+              <i class="bi bi-scissors" />
+            </div>
+
+            <p>{{ plant.pruning }}</p>
           </div>
-
-          <div class="textBox">
-            <div class="pruningDesc">
-              <div class="pruning">
-                <p class="heading">Beskärning</p>
-                <i class="bi bi-scissors" />
-              </div>
-
-              <p>{{ plant.pruning }}</p>
+          <div class="bugDesc">
+            <div class="bug">
+              <p class="heading">Skadedjur</p>
+              <i class="bi bi-bug" />
             </div>
-            <div class="bugDesc">
-              <div class="bug">
-                <p class="heading">Skadedjur</p>
-                <i class="bi bi-bug" />
-              </div>
-              <p>{{ plant.pests }}</p>
-            </div>
+            <p>{{ plant.pests }}</p>
           </div>
         </div>
       </div>
@@ -269,25 +275,37 @@
 </template>
 
 <style scoped>
+  #login-div {
+    margin: 5px;
+  }
   .popup-divs {
     background-color: #c8c8c8;
     border-radius: 10px;
-    height: 10%;
 
+    position: absolute;
+    width: 20%;
+    /* top: auto; */
+    left: 60%;
+    height: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
-
     justify-content: center;
   }
 
   i {
     align-self: flex-end;
   }
+
+  /* .moreInfo {
+    display: flex;
+    flex-direction: column;
+  } */
   .secondText {
     flex-direction: row;
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
   }
   .plantBox {
     width: 100%;
@@ -459,7 +477,11 @@
       flex-direction: row;
       margin: 10px;
     }
-
+    .secondText {
+      flex-direction: row;
+      display: flex;
+      justify-content: space-around;
+    }
     .line {
       border-style: 1px solid rgba(0, 0, 0, 0.15);
       /* width: 90%; */
@@ -473,7 +495,7 @@
       font-size: 16px;
     }
     .info {
-      /* text-align: center; */
+      text-align: center;
       margin-bottom: 20px;
       display: flex;
       flex-direction: column;
@@ -482,13 +504,16 @@
     .moreInfo {
       display: flex;
       justify-content: center;
-      width: 50%;
+      max-width: 60%;
+      /* min-width: 30%;
+      max-width: 50%; */
+      flex-direction: column;
     }
 
     .textBox {
       display: flex;
       flex-direction: column;
-      /* width: 40%; */
+      /* max-width: 50%; */
     }
     .plantDescTwo {
       display: flex;
@@ -573,8 +598,43 @@
       border-style: 1px solid rgba(0, 0, 0, 0.15);
       /* width: 90%; */
     }
-    /* .info {
-      max-width: 50%;
-    } */
+    .info {
+      display: flex;
+      flex-direction: column;
+    }
+    #more-info-text {
+      width: 300px;
+    }
+    #more-info-heading {
+      width: 300px;
+    }
+    .pruning {
+      margin-top: 20px;
+    }
+    .boxes {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      /* margin-left: 100px; */
+    }
+    .moreInfo {
+      width: fit-content;
+      display: flex;
+      justify-content: space-around;
+      padding: 0;
+      width: 50%;
+    }
+    .textBox {
+      /* width: 400px; */
+    }
+    .pruningDesc {
+      width: 300px;
+    }
+    .bugDesc {
+      width: 300px;
+    }
+    .secondPlantBox {
+      display: flex;
+    }
   }
 </style>

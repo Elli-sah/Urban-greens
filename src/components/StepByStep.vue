@@ -58,7 +58,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
   #carousel {
     width: 250px;
     height: 300px;
