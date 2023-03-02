@@ -258,17 +258,17 @@
       </div>
       <!-- <div class="boxes"> -->
       <div class="textBox">
-        <div class="pruningDesc">
+        <div class="prunBugDesc">
           <div class="pruning">
-            <p class="heading">Beskärning</p>
+            <h5 class="heading">Beskärning</h5>
             <i class="bi bi-scissors" />
           </div>
 
           <p>{{ plant.pruning }}</p>
         </div>
-        <div class="bugDesc">
+        <div class="prunBugDesc">
           <div class="bug">
-            <p class="heading">Skadedjur</p>
+            <h5 class="heading">Skadedjur</h5>
             <i class="bi bi-bug" />
           </div>
           <p>{{ plant.pests }}</p>
@@ -511,9 +511,9 @@
       border-style: 1px solid rgba(0, 0, 0, 0.15);
       /* width: 90%; */
     }
-    .heading {
+    /* .heading {
       font-size: 16px;
-    }
+    } */
 
     .moreInfo {
       display: flex;
@@ -540,16 +540,9 @@
       flex-direction: row;
       width: 80%;
     }
-    .bugDesc {
-      /* width: 500px; */
+    .prunBugDesc {
       text-align: center;
-      margin: 10px;
       max-width: 500px;
-    }
-    .pruningDesc {
-      max-width: 500px;
-      text-align: center;
-      /* margin: 10px; */
     }
     .bigPlantBox {
       display: flex;
