@@ -244,37 +244,40 @@
     </div>
     <!-- </div> -->
     <div class="secondPlantBox">
-      <div class="boxes">
-        <div class="moreInfo">
-          <h2 id="more-info-heading">Mer information</h2>
-          <p id="more-info-text">{{ plant.description }}</p>
-        </div>
+      <!-- <div class="boxes"> -->
+      <div class="moreInfo">
+        <h2 id="more-info-heading">Mer information</h2>
+        <p id="more-info-text">{{ plant.description }}</p>
+        <!-- </div> -->
       </div>
-      <div class="boxes">
-        <div class="textBox">
-          <div class="pruningDesc">
-            <div class="pruning">
-              <p class="heading">Beskärning</p>
-              <i class="bi bi-scissors" />
-            </div>
+      <!-- <div class="boxes"> -->
+      <div class="textBox">
+        <div class="pruningDesc">
+          <div class="pruning">
+            <p class="heading">Beskärning</p>
+            <i class="bi bi-scissors" />
+          </div>
 
-            <p>{{ plant.pruning }}</p>
+          <p>{{ plant.pruning }}</p>
+        </div>
+        <div class="bugDesc">
+          <div class="bug">
+            <p class="heading">Skadedjur</p>
+            <i class="bi bi-bug" />
           </div>
-          <div class="bugDesc">
-            <div class="bug">
-              <p class="heading">Skadedjur</p>
-              <i class="bi bi-bug" />
-            </div>
-            <p>{{ plant.pests }}</p>
-          </div>
+          <p>{{ plant.pests }}</p>
         </div>
       </div>
+      <!-- </div> -->
     </div>
   </div>
   <!-- </div> -->
 </template>
 
 <style scoped>
+  .bi:hover {
+    transition: 0.3s ease-in-out;
+  }
   #login-div {
     margin: 5px;
   }
@@ -296,16 +299,13 @@
     align-self: flex-end;
   }
 
-  /* .moreInfo {
+  .moreInfo {
     display: flex;
     flex-direction: column;
-  } */
-  .secondText {
-    flex-direction: row;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
+
   .plantBox {
     width: 100%;
     padding: 20px 20px 20px 20px;
@@ -506,26 +506,20 @@
     .heading {
       font-size: 16px;
     }
-    .info {
-      text-align: center;
-      margin-bottom: 20px;
-      display: flex;
-      flex-direction: column;
-      /* width: 40%; */
-    }
+
     .moreInfo {
       display: flex;
       justify-content: center;
-      max-width: 70%;
-      /* min-width: 30%;
-      max-width: 50%; */
+      max-width: 50%;
+      align-items: center;
       flex-direction: column;
     }
 
     .textBox {
       display: flex;
       flex-direction: column;
-      /* max-width: 50%; */
+      width: 100%;
+      max-width: 40%;
     }
     .plantDescTwo {
       display: flex;
@@ -610,10 +604,7 @@
       border-style: 1px solid rgba(0, 0, 0, 0.15);
       /* width: 90%; */
     }
-    .info {
-      display: flex;
-      flex-direction: column;
-    }
+
     #more-info-text {
       width: 300px;
     }
@@ -623,20 +614,14 @@
     .pruning {
       margin-top: 20px;
     }
-    .boxes {
-      width: 50%;
-      display: flex;
-      justify-content: center;
-      /* margin-left: 100px; */
-    }
-    .moreInfo {
-      width: fit-content;
-      display: flex;
-      /* justify-content: space-around; */
+
+    /* .moreInfo {
       padding: 0;
       width: 50%;
-    }
+    } */
     .textBox {
+      /* display: flex;
+      justify-content: center; */
       /* width: 400px; */
     }
     .pruningDesc {
