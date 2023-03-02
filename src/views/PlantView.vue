@@ -107,8 +107,14 @@
   <div v-if="plant" class="view-divs">
     <!-- <div v-if="plant !== null" class="bigPlantBox"> -->
     <div class="plantBox">
-      <div id="ccc" v-if="!Addedplant">
-        <b-carousel v-model="slide" indicators>
+      <div id="ccc">
+        <b-carousel
+          v-model="slide"
+          interval="3000"
+          controls
+          indicators
+          ride="carousel"
+        >
           <b-carousel-slide
             class="carouselImg"
             v-for="(image, index) in plant.image"
@@ -136,7 +142,7 @@
                       plant.placement.description
                     )
                   "
-                  class="bi bi-brightness-high"
+                  class="bi bi-brightness-high icons-hover"
                   style="font-size: 2em"
                 />
 
@@ -155,7 +161,7 @@
                       plant.temperature.description
                     )
                   "
-                  class="bi bi-thermometer-low"
+                  class="bi bi-thermometer-low icons-hover"
                   style="font-size: 2em"
                 />
 
@@ -175,7 +181,7 @@
                       plant.watering.description
                     )
                   "
-                  class="bi bi-moisture iconsize"
+                  class="bi bi-moisture iconsize icons-hover"
                   style="font-size: 2em"
                 />
 
@@ -193,7 +199,7 @@
                       plant.fertilization.description
                     )
                   "
-                  class="bi bi-flower1"
+                  class="bi bi-flower1 icons-hover"
                   style="font-size: 2em"
                 />
 
@@ -244,69 +250,72 @@
     </div>
     <!-- </div> -->
     <div class="secondPlantBox">
-      <div class="boxes">
-        <div class="moreInfo">
-          <h2 id="more-info-heading">Mer information</h2>
-          <p id="more-info-text">{{ plant.description }}</p>
-        </div>
+      <!-- <div class="boxes"> -->
+      <div class="moreInfo">
+        <h2 id="more-info-heading">Mer information</h2>
+        <p id="more-info-text">{{ plant.description }}</p>
+        <!-- </div> -->
       </div>
-      <div class="boxes">
-        <div class="textBox">
-          <div class="pruningDesc">
-            <div class="pruning">
-              <p class="heading">Beskärning</p>
-              <i class="bi bi-scissors" />
-            </div>
+      <!-- <div class="boxes"> -->
+      <div class="textBox">
+        <div class="pruningDesc">
+          <div class="pruning">
+            <p class="heading">Beskärning</p>
+            <i class="bi bi-scissors" />
+          </div>
 
-            <p>{{ plant.pruning }}</p>
+          <p>{{ plant.pruning }}</p>
+        </div>
+        <div class="bugDesc">
+          <div class="bug">
+            <p class="heading">Skadedjur</p>
+            <i class="bi bi-bug" />
           </div>
-          <div class="bugDesc">
-            <div class="bug">
-              <p class="heading">Skadedjur</p>
-              <i class="bi bi-bug" />
-            </div>
-            <p>{{ plant.pests }}</p>
-          </div>
+          <p>{{ plant.pests }}</p>
         </div>
       </div>
+      <!-- </div> -->
     </div>
   </div>
   <!-- </div> -->
 </template>
 
 <style scoped>
+  .icons-hover {
+    font-size: 10rem;
+    transition: transform 0.2s ease-in-out;
+  }
+  .icons-hover:hover {
+    transform: scale(1.5);
+  }
   #login-div {
     margin: 5px;
   }
   .popup-divs {
     background-color: #c8c8c8;
     border-radius: 10px;
-
     position: absolute;
-    width: 20%;
-    /* top: auto; */
-    left: 60%;
-    height: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 200px;
+    top: 60%;
+    /* right: 10%; */
+    /* right: 100px; */
   }
 
   i {
     align-self: flex-end;
   }
 
-  /* .moreInfo {
+  .moreInfo {
     display: flex;
     flex-direction: column;
-  } */
-  .secondText {
-    flex-direction: row;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
+
   .plantBox {
     width: 100%;
     padding: 20px 20px 20px 20px;
@@ -318,7 +327,7 @@
     background-color: white;
     margin: auto;
     border-radius: 10px;
-    margin-top: 10%;
+    margin-top: 50px;
   }
   .plantShortInfo {
     flex-direction: column;
@@ -330,6 +339,7 @@
 
   .plantContainer {
     text-align: center;
+    position: relative;
   }
   .secondPlantBox {
     width: 100%;
@@ -346,7 +356,8 @@
   }
 
   #ccc {
-    width: 70vw;
+    width: 300px;
+    height: 300px;
     display: flex;
     justify-content: center;
   }
@@ -355,6 +366,7 @@
     /* display: flex;
     justify-content: center; */
     width: 300px;
+    height: 300px;
   }
   .plantDesc {
     display: flex;
@@ -438,12 +450,13 @@
     .carouselImg {
       object-fit: cover;
       /* min-width: 350px; */
-      width: 400px;
-      height: 350px;
+      width: 450px;
+      height: 450px;
       /* height: 60vh; */
     }
     #ccc {
-      width: 70vw;
+      width: 450px;
+      height: 450px;
       display: flex;
       justify-content: center;
       /* height: 20vh; */
@@ -472,6 +485,18 @@
   } */
 
   @media (min-width: 1200px) {
+    .popup-divs {
+      background-color: #c8c8c8;
+      border-radius: 10px;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 200px;
+      right: 25%;
+      top: 70%;
+    }
     .plantDesc {
       display: flex;
       flex-direction: row;
@@ -486,34 +511,23 @@
       border-style: 1px solid rgba(0, 0, 0, 0.15);
       /* width: 90%; */
     }
-    .carouselImg {
-      object-fit: cover;
-      width: 700px;
-      height: 700px;
-    }
     .heading {
       font-size: 16px;
     }
-    .info {
-      text-align: center;
-      margin-bottom: 20px;
-      display: flex;
-      flex-direction: column;
-      /* width: 40%; */
-    }
+
     .moreInfo {
       display: flex;
       justify-content: center;
-      max-width: 60%;
-      /* min-width: 30%;
-      max-width: 50%; */
+      width: 50%;
+      align-items: center;
       flex-direction: column;
     }
 
     .textBox {
       display: flex;
       flex-direction: column;
-      /* max-width: 50%; */
+      width: 100%;
+      max-width: 40%;
     }
     .plantDescTwo {
       display: flex;
@@ -573,35 +587,32 @@
       width: 50%;
       margin: 10px;
     }
-    #ccc {
-      width: 40vw;
+    /* #ccc {
+      width: 600px;
+      height: 600px;
     }
     .carouselImg {
-      object-fit: cover;
-      width: 700px;
-      height: 700px;
-    }
+      width: 600px;
+      height: 600px;
+    } */
     /* .heading {
       font-size: 16px;
     } */
   }
   @media only screen and (max-width: 1600px) and (min-width: 1200px) {
-    .carouselImg {
-      object-fit: cover;
+    /* .carouselImg {
       width: 500px;
       height: 500px;
     }
     #ccc {
-      width: 40vw;
-    }
+      width: 500px;
+      height: 500px;
+    } */
     .line {
       border-style: 1px solid rgba(0, 0, 0, 0.15);
       /* width: 90%; */
     }
-    .info {
-      display: flex;
-      flex-direction: column;
-    }
+
     #more-info-text {
       width: 300px;
     }
@@ -611,22 +622,16 @@
     .pruning {
       margin-top: 20px;
     }
-    .boxes {
-      width: 50%;
-      display: flex;
-      justify-content: center;
-      /* margin-left: 100px; */
-    }
-    .moreInfo {
-      width: fit-content;
-      display: flex;
-      justify-content: space-around;
+
+    /* .moreInfo {
       padding: 0;
       width: 50%;
-    }
-    .textBox {
-      /* width: 400px; */
-    }
+    } */
+    /* .textBox {
+      display: flex;
+      justify-content: center;
+      width: 400px;
+    } */
     .pruningDesc {
       width: 300px;
     }
@@ -635,6 +640,17 @@
     }
     .secondPlantBox {
       display: flex;
+    }
+    .popup-divs {
+      background-color: #c8c8c8;
+      border-radius: 10px;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      top: 70%;
+      right: 100px;
     }
   }
 </style>
