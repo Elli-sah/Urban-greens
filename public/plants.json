@@ -102,7 +102,11 @@
     "pests": "Begonior kan drabbas av bladlöss, spinnkvalster och mjöldagg, så det är viktigt att hålla växten ren och att ta itu med skadedjur eller sjukdomar snabbt.",
     "other": "",
     "category": "Blommande",
-    "image": ["/images/begonia.png"]
+    "image": [
+      "/images/begonia.jpg",
+      "/images/begonia2.jpg",
+      "/images/begonia3.jpg"
+    ]
   },
   {
     "id": 4,
@@ -385,7 +389,7 @@
     "other": "",
     "category": "Gröna växter",
     "image": [
-      "/images/monstera.png",
+      "/images/monstera.jpg",
       "/images/monstera2.jpg",
       "/images/monstera3.jpg"
     ]
@@ -492,7 +496,11 @@
     "pests": "Pelargoner kan drabbas av skadedjur som spinnkvalster och bladlöss. Om du upptäcker skadedjur eller sjukdomar på din pelargon, kan du använda ett insektsmedel eller svampmedel som är speciellt utformat för växten.",
     "other": "",
     "category": "Blommande",
-    "image": ["/images/pelargon.png"]
+    "image": [
+      "/images/pelargon.jpg",
+      "/images/pelargon2.jpg",
+      "/images/pelargon3.jpg"
+    ]
   },
   {
     "id": 5,
