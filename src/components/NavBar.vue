@@ -117,15 +117,15 @@
       display: flex;
       flex-direction: row;
     }
-    li {
-      cursor: pointer !important;
-      color: black;
-    }
-    li:hover {
-      pointer-events: none;
-      color: black;
-      text-decoration: none !important;
-    }
+    // li {
+    //   cursor: pointer !important;
+    //   color: black;
+    // }
+    // li:hover {
+    //   pointer-events: none;
+    //   color: black;
+    //   text-decoration: none !important;
+    // }
   }
 </style>
 
