@@ -102,6 +102,9 @@
   // }
 
   @media (min-width: 800px) {
+    #start-div {
+      padding-top: 15px;
+    }
     #primary-logo {
       margin-top: 20px;
       width: 50%;
