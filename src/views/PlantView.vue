@@ -107,7 +107,7 @@
   <div v-if="plant" class="view-divs">
     <!-- <div v-if="plant !== null" class="bigPlantBox"> -->
     <div class="plantBox">
-      <div id="ccc" v-if="!Addedplant">
+      <div id="ccc">
         <b-carousel
           v-model="slide"
           interval="3000"
