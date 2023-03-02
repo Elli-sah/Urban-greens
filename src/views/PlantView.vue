@@ -281,16 +281,15 @@
   .popup-divs {
     background-color: #c8c8c8;
     border-radius: 10px;
-
     position: absolute;
-    width: 20%;
-    /* top: auto; */
-    left: 60%;
-    height: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 200px;
+    top: 60%;
+    /* right: 10%; */
+    /* right: 100px; */
   }
 
   i {
@@ -330,6 +329,7 @@
 
   .plantContainer {
     text-align: center;
+    position: relative;
   }
   .secondPlantBox {
     width: 100%;
@@ -472,6 +472,18 @@
   } */
 
   @media (min-width: 1200px) {
+    .popup-divs {
+      background-color: #c8c8c8;
+      border-radius: 10px;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 200px;
+      right: 25%;
+      top: 70%;
+    }
     .plantDesc {
       display: flex;
       flex-direction: row;
@@ -504,7 +516,7 @@
     .moreInfo {
       display: flex;
       justify-content: center;
-      max-width: 60%;
+      max-width: 70%;
       /* min-width: 30%;
       max-width: 50%; */
       flex-direction: column;
@@ -620,7 +632,7 @@
     .moreInfo {
       width: fit-content;
       display: flex;
-      justify-content: space-around;
+      /* justify-content: space-around; */
       padding: 0;
       width: 50%;
     }
@@ -635,6 +647,17 @@
     }
     .secondPlantBox {
       display: flex;
+    }
+    .popup-divs {
+      background-color: #c8c8c8;
+      border-radius: 10px;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      top: 70%;
+      right: 100px;
     }
   }
 </style>
