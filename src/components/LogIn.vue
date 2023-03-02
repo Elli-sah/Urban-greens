@@ -59,6 +59,10 @@
           this.$store.commit('addLoggedInUser', this.createUserName)
           this.$router.push('/')
         }
+      },
+      backClick() {
+        this.showCreateForm = false
+        this.showLoginForm = true
       }
     }
   }
@@ -124,6 +128,11 @@
         minlength="5"
       />
       <button id="create-btn" class="button" type="submit">Skapa konto</button>
+      <i
+        @click="backClick"
+        id="back-arrow-icon"
+        class="bi bi-arrow-left-circle"
+      />
     </form>
     <div v-if="showError">
       <p>Användarnamnet du har valt finns redan. Försök igen!</p>
@@ -136,6 +145,7 @@
     border-radius: 30px;
     border-style: none;
     padding: 7px;
+    margin-bottom: 5px;
   }
   p {
     padding: 0;
@@ -155,6 +165,11 @@
   #login-btn,
   #create-btn {
     margin-left: 0;
+  }
+
+  i {
+    margin-left: 5px;
+    font-size: 1.2rem;
   }
 
   #p-ingetkonto {

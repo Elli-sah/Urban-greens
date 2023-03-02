@@ -418,7 +418,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 50%;
   }
   .shortText {
     text-align: center;
@@ -536,7 +536,7 @@
     }
     .plantBox {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       flex-direction: row;
       width: 80%;
     }
