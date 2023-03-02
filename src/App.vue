@@ -16,5 +16,3 @@
   </main>
   <MyFooter />
 </template>
-
-<style lang="scss"></style>

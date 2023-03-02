@@ -2,60 +2,65 @@
 
 <template>
   <h3><strong>Kategorier</strong></h3>
-  <div id="plantbox-container">
-    <RouterLink
-      class="link-dark text-decoration-none"
-      to="/plantlist/Alla_växter"
-    >
-      <div class="plantbox-category">
-        <h4>Alla växter</h4>
+  <div id="box">
+    <div id="plantbox-container">
+      <RouterLink
+        class="link-dark text-decoration-none"
+        to="/plantlist/Alla_växter"
+      >
+        <div class="plantbox-category">
+          <h4>Alla växter</h4>
 
-        <div>
-          <img
-            class="category-pic"
-            src="../../assets/Växter/feey-z-7QuRoqCE4-unsplash.jpg"
-            alt="Alla växter"
-          />
-        </div></div
-    ></RouterLink>
-    <RouterLink class="link-dark text-decoration-none" to="/plantlist/Blommande"
-      ><div class="plantbox-category">
-        <div>
-          <h4>Blommande växter</h4>
-          <img
-            class="category-pic"
-            src="../../assets/Växter/pexels-julia-filirovska-7141249.jpg"
-            alt="Blommande växter"
-          />
-        </div></div
-    ></RouterLink>
-    <RouterLink class="link-dark text-decoration-none" to="plantlist/Suckulent"
-      ><div class="plantbox-category">
-        <div>
-          <h4>Suckulenter</h4>
+          <div>
+            <img
+              class="category-pic"
+              src="../../assets/Växter/feey-z-7QuRoqCE4-unsplash.jpg"
+              alt="Alla växter"
+            />
+          </div></div
+      ></RouterLink>
+      <RouterLink
+        class="link-dark text-decoration-none"
+        to="/plantlist/Blommande"
+        ><div class="plantbox-category">
+          <div>
+            <h4>Blommande växter</h4>
+            <img
+              class="category-pic"
+              src="../../assets/Växter/pexels-julia-filirovska-7141249.jpg"
+              alt="Blommande växter"
+            />
+          </div></div
+      ></RouterLink>
+      <RouterLink
+        class="link-dark text-decoration-none"
+        to="plantlist/Suckulent"
+        ><div class="plantbox-category">
+          <div>
+            <h4>Suckulenter</h4>
 
-          <img
-            class="category-pic"
-            src="../../assets/Växter/feey-nU9U66FMutc-unsplash.jpg"
-            alt="Suckulenter"
-          />
-        </div></div
-    ></RouterLink>
-    <RouterLink
-      class="link-dark text-decoration-none"
-      to="/plantlist/Gröna växter"
-      ><div class="plantbox-category">
-        <div>
-          <h4>Gröna Växter</h4>
+            <img
+              class="category-pic"
+              src="../../assets/Växter/feey-nU9U66FMutc-unsplash.jpg"
+              alt="Suckulenter"
+            />
+          </div></div
+      ></RouterLink>
+      <RouterLink
+        class="link-dark text-decoration-none"
+        to="/plantlist/Gröna växter"
+        ><div class="plantbox-category">
+          <div>
+            <h4>Gröna Växter</h4>
 
-          <img
-            class="category-pic"
-            src="../../assets/Växter/feey-R0_-WVpFQRI-unsplash.jpg"
-            alt="Gröna Växter"
-          />
-        </div></div
-    ></RouterLink>
-    <!-- <RouterLink
+            <img
+              class="category-pic"
+              src="../../assets/Växter/feey-R0_-WVpFQRI-unsplash.jpg"
+              alt="Gröna Växter"
+            />
+          </div></div
+      ></RouterLink>
+      <!-- <RouterLink
       class="link-dark text-decoration-none"
       to="/plantlist/Giftiga_växter"
       ><div class="plantbox-category">
@@ -69,6 +74,7 @@
           />
         </div></div
     ></RouterLink> -->
+    </div>
   </div>
 </template>
 
@@ -105,9 +111,13 @@
   #plantbox-container {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: start;
     overflow-y: hidden;
     white-space: nowrap;
     flex-wrap: nowrap;
+  }
+  #box {
+    display: flex;
+    justify-content: center;
   }
 </style>
