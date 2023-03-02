@@ -518,7 +518,7 @@
     .moreInfo {
       display: flex;
       justify-content: center;
-      max-width: 50%;
+      width: 50%;
       align-items: center;
       flex-direction: column;
     }
@@ -627,11 +627,11 @@
       padding: 0;
       width: 50%;
     } */
-    .textBox {
-      /* display: flex;
-      justify-content: center; */
-      /* width: 400px; */
-    }
+    /* .textBox {
+      display: flex;
+      justify-content: center;
+      width: 400px;
+    } */
     .pruningDesc {
       width: 300px;
     }
