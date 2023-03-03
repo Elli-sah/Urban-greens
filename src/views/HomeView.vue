@@ -29,10 +29,10 @@
     <div id="div-desktop">
       <p>
         Upptäck en värld av grönska med Urban Greens. Hitta och lär dig om olika
-        växtarter och deras skötselråd med vår omfattande databas. Få
-        påminnelser om när det är dags att vattna eller ge näring till dina
-        växter och håll dem friska och glada. Lär dig allt du behöver veta om
-        att odla växter med oss!
+        växtarter och deras skötsel med vår omfattande databas. Få påminnelser
+        om när det är dags att vattna eller ge näring till dina växter och håll
+        dem friska och glada. Lär dig allt du behöver veta om att odla växter
+        med oss!
       </p>
       <RouterLink to="/get_started">
         <button id="kom-igang" class="button">Kom igång</button>
