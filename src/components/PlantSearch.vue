@@ -8,7 +8,8 @@
         result: [],
         category: 'all',
         name: 'all',
-        searchText: ''
+        searchText: '',
+        notFound: false
       }
     },
 
@@ -24,6 +25,10 @@
       },
       onClickPlants() {
         this.axiosGetPlants()
+
+        this.notFound = !this.result.some((plant) =>
+          plant.name.toLowerCase().includes(this.searchText.toLowerCase())
+        )
       }
     },
 
@@ -73,18 +78,24 @@
     <div>
       <div v-if="searchText !== ''" id="linkdiv">
         <span @click="handleClick">
-          <b-link
-            v-for="plant in filterdPlants"
-            :key="plant.name"
-            :to="`/plants/${plant.name}`"
-            class="list-group-item"
-          >
-            {{ plant.name }}
+          <span class="error-message" v-if="notFound">
+            <p>"{{ searchText }}" hittades inte.</p>
+            <p>Men i Växtguiden kan du lägga till dina egna plantor!</p>
+          </span>
+          <span v-else>
+            <b-link
+              v-for="plant in filterdPlants"
+              :key="plant.name"
+              :to="`/plants/${plant.name}`"
+              class="list-group-item"
+            >
+              {{ plant.name }}
 
-            <p>
-              {{ plant.category }}
-            </p>
-          </b-link>
+              <p>
+                {{ plant.category }}
+              </p>
+            </b-link>
+          </span>
         </span>
       </div>
     </div>
@@ -92,6 +103,15 @@
 </template>
 
 <style scoped>
+  .error-message {
+    /* word-spacing: 0px; */
+    font-size: 5px;
+  }
+
+  p {
+    /* font-size: 12px; */
+    margin: 0;
+  }
   input {
     width: 100%;
     padding: 10px;
