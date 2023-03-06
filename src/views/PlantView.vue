@@ -2,8 +2,10 @@
   import axios from 'axios'
   import { mapState } from 'vuex'
   import ShowPlant from '../components/ShowPlant.vue'
+  import MyBestTips from '../components/MyBestTips.vue'
+
   export default {
-    components: { ShowPlant },
+    components: { ShowPlant, MyBestTips },
     props: {
       name: { type: String, required: true }
     },
@@ -20,7 +22,8 @@
         selectedIcon: null,
         Addedplant: false,
         NotLoggedIn: false,
-        AlreadyAddedplant: false
+        AlreadyAddedplant: false,
+        plantTip: ''
       }
     },
     computed: {
@@ -168,7 +171,9 @@
 
                 <div>
                   <p class="shortText title">Temperatur</p>
-                  <p class="shortText">{{ plant.temperature.short }}</p>
+                  <p class="shortText">
+                    {{ plant.temperature.short }}
+                  </p>
                 </div>
               </div>
             </div>
@@ -257,6 +262,7 @@
         <p id="more-info-text">{{ plant.description }}</p>
         <!-- </div> -->
       </div>
+
       <!-- <div class="boxes"> -->
       <div class="textBox">
         <div class="prunBugDesc">
@@ -278,6 +284,7 @@
       <!-- </div> -->
     </div>
   </div>
+  <MyBestTips :message="plantTip" />
   <!-- </div> -->
 </template>
 
