@@ -47,6 +47,7 @@
     padding: 10px;
     width: 100%;
     background-color: rgba(225, 186, 107, 0.9);
+    // box-shadow: 0 0 9px 0 black;
   }
 
   #navbar {
