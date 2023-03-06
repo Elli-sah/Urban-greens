@@ -7,7 +7,7 @@
 
     "placement": {
       "plantHeading": "Ljusbehov",
-      "short": "Sol till lätt skugga",
+      "short": "Halvskugga",
       "description": "Aloe vera trivs på en ljus plats med direkt solljus, men den kan också tåla att stå i lätt skugga. Placera den inte i direkt solljus under sommarmånaderna när solen är som starkast då det kan skada bladen."
     },
     "temperature": {
@@ -53,7 +53,7 @@
     },
     "watering": {
       "plantHeading": "Bevattning",
-      "short": "Lite",
+      "short": "Sparsamt",
       "description": "Ampelliljan behöver regelbunden bevattning, men se upp så att den inte övervattnas. Det kan vara en bra idé att vattna i ett fat och låta växten suga upp vattnet under en stund, istället för att vattna direkt i krukan. Se till att inte vattna för sällan då detta kan torka ut växten."
     },
 
@@ -89,7 +89,7 @@
     },
     "watering": {
       "plantHeading": "Bevattning",
-      "short": "Medel",
+      "short": "Måttligt",
       "description": "Begonior behöver regelbunden vattning för att trivas. Ge dem tillräckligt med vatten så att jorden är fuktig, men undvik att övervattna eftersom det kan leda till röta i rötterna. En tumregel är att vatten när jorden känns torr på toppen."
     },
 
@@ -102,11 +102,7 @@
     "pests": "Begonior kan drabbas av bladlöss, spinnkvalster och mjöldagg, så det är viktigt att hålla växten ren och att ta itu med skadedjur eller sjukdomar snabbt.",
     "other": "",
     "category": "Blommande",
-    "image": [
-      "/images/begonia.jpg",
-      "/images/begonia2.jpg",
-      "/images/begonia3.jpg"
-    ]
+    "image": ["/images/begonia.png"]
   },
   {
     "id": 4,
@@ -115,7 +111,7 @@
     "description": "Elefantöra, även känd som Alocasia eller Elefantörsblad, är en växtart som tillhör familjen Araceae. Elefantöra trivs i en hög luftfuktighet, så se till att spraya växten regelbundet med vatten eller placera en luftfuktare i närheten av växten. Under vintermånaderna, när uppvärmningen kan torka ut luften i hemmet, kan det vara nödvändigt att öka luftfuktigheten runt växten med hjälp av en luftfuktare.",
     "placement": {
       "plantHeading": "Ljusbehov",
-      "short": "Sol-Halvskugga",
+      "short": "Halvskugga",
       "description": "Elefantöra trivs bäst i ett ljust och indirekt ljus, men undvik direkt solljus som kan bränna bladen. Placera växten i närheten av ett fönster som får ljust men inte direkt solljus. Under vintermånaderna kan det behövas extra belysning eftersom dagsljuset är begränsat."
     },
     "temperature": {
@@ -125,7 +121,7 @@
     },
     "watering": {
       "plantHeading": "Bevattning",
-      "short": "Medel",
+      "short": "Måttligt",
       "description": "Elefantöra trivs bäst i en fuktig jord. Vattna regelbundet så att jorden hålls fuktig men undvik att övervattna vilket kan leda till röta i rötterna. Du kan kontrollera om det är dags att vattna genom att känna på jorden och vattna när den börjar kännas torr. Under vintermånaderna kan det vara nödvändigt att minska bevattningen eftersom växten inte växer lika aktivt."
     },
     "fertilization": {
@@ -160,7 +156,7 @@
     },
     "watering": {
       "plantHeading": "Bevattning",
-      "short": "Medel",
+      "short": "Måttligt",
       "description": "Fiolfikusen trivs bäst om jorden hålls fuktig, men undvik övervattning. Vattna rikligt när jorden har torkat ut något, men se till att inte låta växten stå i vatten."
     },
     "fertilization": {
@@ -185,8 +181,8 @@
     "description": "Zamiakalla, även kallad Garderobsblomma, är en populär krukväxt som är känd för sin förmåga att överleva i olika miljöer och för sin enkla skötsel. Det är en tålig växt som kan överleva under långa perioder utan vatten och trivs i både högt och lågt ljus. Zamiakalla är också känd för att hjälpa till att rena luften genom att ta bort skadliga föroreningar. Garderobsblomman trivs i normal till låg luftfuktighet, vilket gör den lämplig för den torra inomhusluften i Sverige. Du behöver inte spraya bladen med vatten.",
     "placement": {
       "plantHeading": "Ljusbehov",
-      "short": "Halvskugga- Skugga",
-      "description": "Garderobsblomman trivs i både högt och lågt ljus, men undvik direkt solljus eftersom det kan bränna bladen. Placera växten på en ljus plats, men undvik att placera den i direkt solljus."
+      "short": "Halvskugga",
+      "description": "Garderobsblomman trivs i både högt och lågt ljus, men undvik direkt solljus eftersom det kan bränna bladen. Placera växten på en ljus plats, men undvik att placera den i direkt solljus. Garderobsblomman klarar även av att placeras skuggigt."
     },
     "temperature": {
       "plantHeading": "Temperatur",
@@ -195,7 +191,7 @@
     },
     "watering": {
       "plantHeading": "Bevattning",
-      "short": "Lite",
+      "short": "Sparsamt",
       "description": "Garderobsblomma behöver inte mycket vatten och kan klara sig under långa perioder utan att vattnas. Vänta tills jorden har torkat ut innan du vattnar igen, och se till att inte övervattna eftersom det kan leda till röta."
     },
 
@@ -231,7 +227,7 @@
     },
     "watering": {
       "plantHeading": "Bevattning",
-      "short": "Mycket",
+      "short": "Rikligt",
       "description": "Hortensian behöver regelbunden bevattning, särskilt under varma och torra perioder. Undvik att övervattna, men se till att jorden hålls fuktig. Det kan vara bra att vattna direkt på rotsystemet istället för att vattna bladen, eftersom blöta blad kan öka risken för sjukdomar."
     },
 
@@ -257,7 +253,7 @@
     "description": "Jordviva är en populär växt i Sverige och är relativt lättskött.",
     "placement": {
       "plantHeading": "Ljusbehov",
-      "short": "Sol-Halvskugga",
+      "short": "Halvskugga",
       "description": "Jordviva trivs bäst på en ljus plats men undvik direkt solljus. Placera din Primula i ett fönster som vetter mot norr eller öster. Undvik platser med drag eller temperaturförändringar."
     },
     "temperature": {
@@ -267,7 +263,7 @@
     },
     "watering": {
       "plantHeading": "Bevattning",
-      "short": "Medel",
+      "short": "Måttligt",
       "description": "Jordviva behöver regelbunden vattning för att trivas. Ge dem tillräckligt med vatten så att jorden är fuktig, men undvik att övervattna eftersom det kan leda till röta i rötterna. En tumregel är att vatten när jorden känns torr på toppen."
     },
     "humidity": "",
@@ -293,7 +289,7 @@
     "description": "Kalanchoe, även kallad Våreld, är en tacksam och lättskött växt som är relativt enkel att ta hand om. Trivs vid hög luftfuktighet och vill ha vatten regelbundet, undvik att jorden torkar ut helt. Näringsvattna en gång per vecka. ",
     "placement": {
       "plantHeading": "Ljusbehov",
-      "short": "Sol-Halvskugga",
+      "short": "Halvskugga",
       "description": "Kalanchoe trivs bäst på en ljus plats men undvik direkt solljus. Placera din Kalanchoe i ett fönster som vetter mot norr eller öster. Undvik platser med drag eller temperaturförändringar."
     },
     "temperature": {
@@ -303,7 +299,7 @@
     },
     "watering": {
       "plantHeading": "Bevattning",
-      "short": "Lite",
+      "short": "Sparsamt",
       "description": "Kalanchoe behöver regelbunden vattning för att trivas. Ge dem tillräckligt med vatten så att jorden är fuktig, men undvik att övervattna eftersom det kan leda till röta i rötterna. En tumregel är att vattna när jorden känns torr på toppen."
     },
 
@@ -317,7 +313,7 @@
     "other": "",
     "category": "Blommande",
     "image": [
-      "/images/kalanchoe.jpg",
+      "/images/kalanchoe.png",
       "/images/kalanchoe2.jpg",
       "/images/kalanchoe3.jpg"
     ]
@@ -329,7 +325,7 @@
     "description": "Att ta hand om en krukros i Sverige kan vara utmanande eftersom klimatet och ljusförhållandena kan variera mycket beroende på säsong. Krukrosor trivs bäst i en relativt hög luftfuktighet, eftersom de är tropiska växter som är vana vid en fuktig miljö. Idealiskt sett bör luftfuktigheten vara mellan 40-60% för att krukrosor ska trivas. Om luftfuktigheten är för låg kan det leda till att bladen torkar ut och att plantan blir mer mottaglig för skadedjur och sjukdomar.",
     "placement": {
       "plantHeading": "Ljusbehov",
-      "short": "Sol",
+      "short": "Soligt",
       "description": "Krukrosor trivs bäst på en solig plats där de får minst sex timmars direkt solljus om dagen. Undvik att placera dem på platser med drag eller där det är för blåsigt."
     },
     "temperature": {
@@ -339,7 +335,7 @@
     },
     "watering": {
       "plantHeading": "Bevattning",
-      "short": "Mycket",
+      "short": "Rikligt",
       "description": "Krukrosor behöver regelbunden vattning för att trivas. Ge dem tillräckligt med vatten så att jorden är fuktig, men undvik att övervattna eftersom det kan leda till röta i rötterna. En tumregel är att vatten när jorden känns torr på toppen."
     },
 
@@ -365,7 +361,7 @@
     "description": "Monstera är en relativt lättodlad växt som är lämplig för odling inomhus i Sverige. Monstera trivs i en hög luftfuktighet, så se till att spraya växten regelbundet med vatten eller placera en luftfuktare i närheten av växten. En annan möjlighet är att ställa Monstera på en bricka med vatten.",
     "placement": {
       "plantHeading": "Ljusbehov",
-      "short": "Ljus",
+      "short": "Soligt",
       "description": "Monstera trivs bäst i ett ljust och indirekt ljus, men undvik direkt solljus som kan bränna bladen. Placera växten i närheten av ett fönster som får ljust men inte direkt solljus. Om du placerar växten längre ifrån ett fönster, kan det behövas en extra ljuskälla som ger tillräckligt med ljus."
     },
     "temperature": {
@@ -375,7 +371,7 @@
     },
     "watering": {
       "plantHeading": "Bevattning",
-      "short": "Regelbundet",
+      "short": "Måttligt",
       "description": "Monstera trivs bäst i en fuktig jord. Vattna regelbundet så att jorden hålls fuktig men undvik att övervattna vilket kan leda till röta i rötterna. Du kan kontrollera om det är dags att vattna genom att känna på jorden och vattna när den börjar kännas torr."
     },
 
@@ -389,7 +385,7 @@
     "other": "",
     "category": "Gröna växter",
     "image": [
-      "/images/monstera.jpg",
+      "/images/monstera.png",
       "/images/monstera2.jpg",
       "/images/monstera3.jpg"
     ]
@@ -425,7 +421,7 @@
     "other": "",
     "category": "Gröna växter",
     "image": [
-      "/images/murgrona.jpg",
+      "/images/murgrona.png",
       "/images/murgrona2.jpg",
       "/images/murgrona3.jpg"
     ]
@@ -437,7 +433,7 @@
     "description": "Orkidéer är en vanlig krukväxt i Sverige som kan vara lite knepig att ta hand om. Orkidéer trivs i hög luftfuktighet. Du kan öka luftfuktigheten genom att placera en bricka med vatten bredvid växten eller genom att använda en luftfuktare.",
     "placement": {
       "plantHeading": "Ljusbehov",
-      "short": "Ljus",
+      "short": "Soligt",
       "description": "Orkidéer trivs på en ljus plats, men de ska inte utsättas för direkt solljus. En öst- eller västvänd fönsterbräda fungerar ofta bra. Undvik att placera din orkidé nära dragiga fönster eller luftkonditioneringsanläggningar."
     },
     "temperature": {
@@ -473,7 +469,7 @@
     "description": "Pelargoner är en populär krukväxt i Sverige som trivs i både inomhus- och utomhusmiljöer. Pelargoner trivs bäst vid en luftfuktighet på mellan 40 och 60 procent. För torr luft kan torka ut bladen och göra växten mer mottaglig för skadedjur, medan hög luftfuktighet kan öka risken för svampinfektioner. Det är därför viktigt att balansera luftfuktigheten för att hålla pelargonerna friska. Om rummet är för torrt, kan man öka luftfuktigheten genom att använda en luftfuktare, spraya vatten runt växterna eller placera en bricka med vatten bredvid växterna. Å andra sidan, om luften är för fuktig, kan man öka ventilationen för att hjälpa till att torka ut överflödig fukt.",
     "placement": {
       "plantHeading": "Ljusbehov",
-      "short": "Sol",
+      "short": "Soligt",
       "description": "Pelargonen trivs på en solig plats och bör placeras i närheten av ett fönster som får mycket solsken. Pelargoner kan också odlas utomhus under sommarmånaderna, men bör skyddas från starka vindar."
     },
     "temperature": {
@@ -483,7 +479,7 @@
     },
     "watering": {
       "plantHeading": "Bevattning",
-      "short": "Regelbundet",
+      "short": "Måttligt",
       "description": "Pelargoner bör vattnas regelbundet, men undvik övervattning som kan leda till rötterna förmultnar. Låt jorden torka ut något mellan vattningarna och vattna hellre för lite än för mycket."
     },
 
@@ -496,11 +492,7 @@
     "pests": "Pelargoner kan drabbas av skadedjur som spinnkvalster och bladlöss. Om du upptäcker skadedjur eller sjukdomar på din pelargon, kan du använda ett insektsmedel eller svampmedel som är speciellt utformat för växten.",
     "other": "",
     "category": "Blommande",
-    "image": [
-      "/images/pelargon.jpg",
-      "/images/pelargon2.jpg",
-      "/images/pelargon3.jpg"
-    ]
+    "image": ["/images/pelargon.png"]
   },
   {
     "id": 5,
@@ -509,7 +501,7 @@
     "description": "Porslinsblomma är en vanlig krukväxt i Sverige som trivs bäst inomhus. Porslinsblomma trivs i en högre luftfuktighet och kan må bra av att sprayas med vatten då och då, men kan också klara sig bra i normal inomhusluft.",
     "placement": {
       "plantHeading": "Ljusbehov",
-      "short": "Ljus",
+      "short": "Soligt",
       "description": "Porslinsblomma trivs bäst på en ljus plats utan direkt solljus. Placera den gärna i närheten av ett fönster som inte utsätts för direkt solljus eller använd belysning av växtlampor om du inte har tillräckligt med naturligt ljus i rummet."
     },
     "temperature": {
@@ -545,7 +537,7 @@
     "description": "Rosenkärm är en tålig och anpassningsbar växt som trivs bra i många olika miljöer.  Rosenkärm en relativt enkel växt att ta hand om och kan vara en vacker och användbar tillägg till trädgården eller landskapet i Sverige. Rosenskärm trivs bäst i en relativt torr miljö med låg luftfuktighet. För hög luftfuktighet kan orsaka problem med svamp och sjukdomar. En luftfuktighet på runt 40-50% kan vara lämpligt för rosenskärm. Det är dock viktigt att notera att rosenskärm är en relativt tålig växt och kan klara sig även i omgivningar med högre luftfuktighet, så länge det inte är alltför fuktigt.",
     "placement": {
       "plantHeading": "Ljusbehov",
-      "short": "Sol",
+      "short": "Soligt",
       "description": "Rosenskärm trivs bäst på soliga platser med väldränerad jord. Se till att du väljer en plats som får minst sex timmar solsken per dag."
     },
     "temperature": {
@@ -577,7 +569,7 @@
     "description": "Rosenkallor är vackra och populära växter som trivs i Sverige. Rosenkalla trivs i hög luftfuktighet, så att placera en skål med vatten nära växten kan hjälpa till att höja luftfuktigheten. Undvik dock att vattna direkt på bladen, eftersom det kan orsaka svampangrepp.",
     "placement": {
       "plantHeading": "Ljusbehov",
-      "short": "Ljus",
+      "short": "Halvskugga",
       "description": "Trivs bäst på en ljus plats, men undvik direkt solljus. Placera din rosenkalla i ett fönster som vetter mot norr eller öster. Undvik platser med drag eller temperaturförändringar."
     },
     "temperature": {
@@ -587,7 +579,7 @@
     },
     "watering": {
       "plantHeading": "Bevattning",
-      "short": "Regelbundet",
+      "short": "Rikligt",
       "description": "Behöver regelbunden vattning för att trivas. Ge dem tillräckligt med vatten så att jorden är fuktig, men undvik att övervattna eftersom det kan leda till röta i rötterna. En tumregel är att vatten när jorden känns torr på toppen."
     },
 
@@ -614,7 +606,7 @@
     "description": " En populär inomhusväxt som är relativt lättskött och trivs i ljus till halvskugga. Gulpalmen trivs i hög luftfuktighet. Placera en vattenskål bredvid plantan eller använd en luftfuktare för att öka fuktigheten. ",
     "placement": {
       "plantHeading": "Ljusbehov",
-      "short": "Ljus",
+      "short": "Halvskugga",
       "description": "Gulpalmen trivs bäst i ljusa, men inte direkt solbelysta platser. Placera den gärna nära ett fönster som inte exponeras för stark sol under sommaren. På vintern kan den behöva extra belysning om det är för mörkt inomhus."
     },
     "temperature": {
@@ -625,7 +617,7 @@
 
     "watering": {
       "plantHeading": "Bevattning",
-      "short": "Regelbundet",
+      "short": "Måttligt",
       "description": "Vattna din gulpalm 1-2 ggr/vecka och se till att jorden alltid är fuktig men inte blöt. Under sommaren kan det behövas att vattna den oftare, medan på vintern kan du minska på vattningen. Se till att inte vattna för mycket, då det kan leda till rötterna ruttnar."
     },
 

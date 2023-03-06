@@ -1,12 +1,14 @@
 <script>
   import MyShelf from '../components/MyShelf.vue'
   import MyWeather from '../components/MyWeather.vue'
+  import AddOwnPlant from '../components/AddOwnPlant.vue'
   import { mapState } from 'vuex'
 
   export default {
     components: {
       MyShelf,
-      MyWeather
+      MyWeather,
+      AddOwnPlant
     },
     computed: {
       ...mapState({
@@ -29,6 +31,7 @@
     <MyWeather />
     <div id="my-shelf-view">
       <MyShelf />
+      <AddOwnPlant />
     </div>
   </div>
 </template>

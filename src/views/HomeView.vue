@@ -8,8 +8,21 @@
     },
     computed: {
       ...mapState({
-        loggedInUser: (state) => state.loggedInUser
+        loggedInUser: (state) => state.loggedInUser,
+        userFavorites: (state) => {
+          if (state.loggedInUser) {
+            return state.users[state.loggedInUser.user]?.favorites || []
+          } else {
+            return []
+          }
+        }
       })
+    },
+    methods: {
+      emptyFavorites() {
+        this.$store.commit('emptyList')
+        console.log(this.userFavorites.length)
+      }
     }
   }
 </script>
@@ -52,6 +65,7 @@
         </p>
       </div>
     </div> -->
+    <button @click="emptyFavorites" />
   </div>
 </template>
 
