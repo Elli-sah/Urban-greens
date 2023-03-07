@@ -23,7 +23,10 @@
         Addedplant: false,
         NotLoggedIn: false,
         AlreadyAddedplant: false,
-        plantTip: ''
+        plantTip: '',
+        isEasy: false,
+        isMid: false,
+        isHard: false
       }
     },
     computed: {
@@ -45,6 +48,14 @@
             (plant) => plant.name === this.name
           )[0]
           console.log('rad 34', this.plant)
+          // Funktion för att kontrollera svårighetsgrad
+          if (this.plant.difficulty === 'Lätt') {
+            this.isEasy = true
+          } else if (this.plant.difficulty === 'Medel') {
+            this.isMid = true
+          } else {
+            this.isHard = true
+          }
         })
       },
       // atAddPlant() {
@@ -132,6 +143,18 @@
           <h1>{{ plant.name }}</h1>
 
           <h3>{{ plant.latin }}</h3>
+          <p id="easy-p" v-show="isEasy">
+            Svårighetsgrad: {{ plant.difficulty }}
+            <span class="spans" style="background-color: green" />
+          </p>
+          <p id="mid-p" v-show="isMid">
+            Svårighetsgrad: {{ plant.difficulty }}
+            <span class="spans" style="background-color: orange" />
+          </p>
+          <p id="hard-p" v-show="isHard">
+            Svårighetsgrad: {{ plant.difficulty }}
+            <span class="spans" style="background-color: red" />
+          </p>
 
           <hr class="line" />
           <div class="plantContainer">
@@ -377,6 +400,14 @@
     justify-content: center; */
     width: 300px;
     height: 300px;
+  }
+
+  .spans {
+    margin-left: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
   }
   .plantDesc {
     display: flex;
