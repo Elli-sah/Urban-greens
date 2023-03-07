@@ -3,6 +3,26 @@
   import 'bootstrap/dist/css/bootstrap.min.css'
   import moment from 'moment'
   export default {
+    data() {
+      return {
+        email: '',
+        showPopup: false
+      }
+    },
+
+    methods: {
+      Submit() {
+        this.showPopup = true
+
+        setTimeout(() => {
+          this.hidePopup()
+        }, 4000)
+      },
+
+      hidePopup() {
+        this.showPopup = false
+      }
+    },
     computed: {
       currentYear() {
         return moment().format('YYYY')
@@ -58,7 +78,7 @@
 
     <div class="container p-4 pb-0">
       <section class="">
-        <form action="">
+        <form @submit.prevent="Submit" action="">
           <div class="flex-column">
             <div class="col-auto d-flex justify-content-center">
               <p class="pt-2">
@@ -69,11 +89,16 @@
             <div class="col-auto d-flex justify-content-center">
               <div class="form-outline form-white mb-4 col-sm-6">
                 <input
-                  id="form"
+                  id="email"
                   type="email"
                   class="form-control"
                   placeholder="Email"
+                  required
+                  v-model="email"
                 />
+              </div>
+              <div v-if="showPopup" class="popup">
+                <h6>Du prenumererar nu på vårat nyhetsbrev!</h6>
               </div>
             </div>
 
@@ -148,7 +173,29 @@
     height: 0;
     width: 0;
   }
+
+  .popup {
+    position: fixed;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f0e8e2;
+    padding: 20px;
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    color: black;
+  }
+
   @media (min-width: 688px) {
+    .popup {
+      width: auto;
+      top: 50%;
+      left: 50%;
+    }
+
     #policy {
       margin-bottom: 0;
     }
