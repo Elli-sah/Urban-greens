@@ -7,27 +7,32 @@ const state = {
     klarab: {
       name: 'Klara',
       password: 'klarab',
-      favorites: []
+      favorites: [],
+      calendar: []
     },
     sannaa: {
       name: 'Sanna',
       password: 'sannaa',
-      favorites: []
+      favorites: [],
+      calendar: []
     },
     ellinors: {
       name: 'Ellinor',
       password: 'ellinors',
-      favorites: []
+      favorites: [],
+      calendar: []
     },
     tovek: {
       name: 'Tove',
       password: 'tovek',
-      favorites: []
+      favorites: [],
+      calendar: []
     },
     isabelll: {
       name: 'Isabell',
       password: 'isabelll',
-      favorites: []
+      favorites: [],
+      calendar: []
     }
   },
 
@@ -59,7 +64,8 @@ const mutations = {
     state.users[newUser.user] = {
       name: newUser.name,
       password: newUser.password,
-      favorites: []
+      favorites: [],
+      calendar: []
     }
   },
   addPlant(state, newPlant) {
@@ -67,6 +73,9 @@ const mutations = {
   },
   removePlant(state, deletePlant) {
     state.users[deletePlant.user].favorites.splice(deletePlant.index, 1)
+  },
+  addEventToUserCalendar(state, event) {
+    state.users[state.loggedInUser.user].calendar.push(event)
   }
 }
 const plugins = [vuexLocal.plugin]
