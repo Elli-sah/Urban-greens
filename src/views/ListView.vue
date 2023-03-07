@@ -1,11 +1,13 @@
 <script>
   import axios from 'axios'
   import PlantCard from '../components/PlantCard.vue'
+  import PageLoader from '../components/PageLoader.vue'
   import { mapState } from 'vuex'
 
   export default {
     components: {
-      PlantCard
+      PlantCard,
+      PageLoader
     },
     created() {
       this.axiosGetPlants()
@@ -42,8 +44,15 @@
       return {
         result: [],
         searchText: '',
-        notFound: false
+        notFound: false,
+        loading: true
       }
+    },
+
+    mounted() {
+      setTimeout(() => {
+        this.loading = false
+      }, 2000)
     },
 
     methods: {
@@ -106,12 +115,17 @@
       </Router-Link> -->
     </div>
     <!-- <h2>{{ category }}</h2> -->
-    <div id="filteredPlants">
-      <PlantCard
-        v-for="plant in filterdPlants"
-        :key="plant.name"
-        :plant="plant"
-      />
+    <div>
+      <div v-if="loading" class="overlay">
+        <PageLoader />
+      </div>
+      <div v-else id="filteredPlants">
+        <PlantCard
+          v-for="plant in filterdPlants"
+          :key="plant.name"
+          :plant="plant"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -162,6 +176,13 @@
     width: 100%;
     display: flex;
     justify-content: flex-start;
+  }
+  .overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
   }
 
   @media screen and (min-width: 800px) {
