@@ -49,7 +49,7 @@
             <li>UrbanGreens & co</li>
             <li>0731234567</li>
             <li>Urbangreens@gmail.com</li>
-            <li>BlablablaVägen 23</li>
+            <li>Yadayadavägen 23</li>
             <li>22243 Lund</li>
           </ul>
         </div>
@@ -78,7 +78,7 @@
             </div>
 
             <div class="col-auto d-flex justify-content-center">
-              <button type="submit" class="btn btn-outline-dark mb-4">
+              <button type="submit" class="btn btn-outline-light mb-4">
                 Prenumerera
               </button>
             </div>
@@ -89,8 +89,12 @@
               id="policy"
               class="list-unstyled d-flex flex-row justify-content-center"
             >
-              <li class="m-3"><a href="#">Terms of Service</a></li>
-              <li class="m-3"><a href="#">Privacy Policy</a></li>
+              <li class="m-3">
+                <a class="termsAndPolicy" href="#">Terms of Service</a>
+              </li>
+              <li class="m-3">
+                <a class="termsAndPolicy" href="#">Privacy Policy</a>
+              </li>
             </ul>
           </div>
           <div id="shelf">
@@ -104,7 +108,10 @@
         </form>
       </section>
     </div>
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+    <div
+      class="text-center p-3 copyright"
+      style="background-color: rgba(0, 0, 0, 0.2)"
+    >
       © {{ currentYear }} Copyright:
       <a class="text-dark" href="#">UrbanGreens &co</a>
     </div>
@@ -119,10 +126,21 @@
   }
   li {
     font-size: small;
+    /* color: white; */
   }
+  .termsAndPolicy {
+    color: white;
+  }
+  .copyright {
+    color: black;
+  }
+  /* p {
+    color: white;
+  } */
   h5 {
     font-weight: bolder;
     text-decoration: underline;
+    /* color: white; */
   }
 
   #shelf-img {

@@ -30,7 +30,7 @@ const state = {
       favorites: []
     }
   },
-
+  plantTip: [],
   loggedInUser: '',
   searchText: ''
 }
@@ -43,6 +43,10 @@ const mutations = {
   // SET_USERS(state, users) {
   //   state.users = { ...users }
   // },
+
+  setPlantTip(state, tip) {
+    state.plantTip.push(tip)
+  },
   logutUser(state) {
     state.loggedInUser = ''
   },
@@ -70,13 +74,6 @@ const mutations = {
   }
 }
 const plugins = [vuexLocal.plugin]
-
-// const actions = {
-//   toggleMenu({ commit }) {
-//     console.log('Test från store action')
-//     commit('toggleMenu')
-//   }
-// }
 
 // createStore.Store({
 //   modules: {

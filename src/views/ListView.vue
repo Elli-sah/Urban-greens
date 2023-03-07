@@ -46,8 +46,8 @@
     data() {
       return {
         result: [],
-        // category: 'Alla växter',
         searchText: '',
+        notFound: false,
         loading: true
       }
     },
@@ -70,6 +70,10 @@
       searchText(newValue) {
         console.log(newValue)
         this.name = newValue
+
+        this.notFound = !this.result.some((plant) =>
+          plant.name.toLowerCase().includes(this.searchText.toLowerCase())
+        )
       }
     }
   }
@@ -81,7 +85,16 @@
     <div class="input-div">
       <input type="text" v-model="searchText" />
       <i @click="submit" class="bi bi-search" />
+
+      <span class="error-message" v-if="notFound">
+        <p>"{{ searchText }}" hittades inte.</p>
+        <p>
+          Saknar du en planta? Här i Växtguiden kan du lägga till vilken du
+          vill!
+        </p>
+      </span>
     </div>
+
     <div class="scrolling-wrapper">
       <Router-Link to="/plantlist/Alla_växter" class="categoryLinks">
         <button class="button">Alla växter</button>
