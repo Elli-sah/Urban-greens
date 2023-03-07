@@ -31,6 +31,7 @@ const state = {
     }
   },
   plantTip: [],
+
   loggedInUser: '',
   searchText: ''
 }
@@ -44,8 +45,10 @@ const mutations = {
   //   state.users = { ...users }
   // },
 
-  setPlantTip(state, tip) {
-    state.plantTip.push(tip)
+  setPlantTip(state, tipObject) {
+    console.log(tipObject.id)
+
+    state.plantTip.push(tipObject)
   },
   removePlantTip(state, index) {
     state.plantTip.splice(index, 1)

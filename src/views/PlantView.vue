@@ -110,7 +110,7 @@
         document.body.style.overflow = 'auto'
       }
     },
-    created() {
+    mounted() {
       this.axiosGetPlants()
     },
 
@@ -324,7 +324,9 @@
       <!-- </div> -->
     </div>
   </div>
-  <MyBestTips :message="plantTip" />
+  <div v-if="plant">
+    <MyBestTips :plant-name="plant.name" :plant="plant" :id="plant.id" />
+  </div>
   <!-- </div> -->
 </template>
 
