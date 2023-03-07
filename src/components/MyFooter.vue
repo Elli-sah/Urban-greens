@@ -49,7 +49,7 @@
             <li>UrbanGreens & co</li>
             <li>0731234567</li>
             <li>Urbangreens@gmail.com</li>
-            <li>BlablablaVägen 23</li>
+            <li>Yadayadavägen 23</li>
             <li>22243 Lund</li>
           </ul>
         </div>

@@ -21,6 +21,16 @@
     animation: spin 1s linear infinite;
   }
 
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e1ba6b;
+    z-index: 9999;
+  }
+
   @keyframes spin {
     0% {
       transform: rotate(0deg);

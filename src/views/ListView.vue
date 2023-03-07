@@ -1,6 +1,7 @@
 <script>
   import axios from 'axios'
   import PlantCard from '../components/PlantCard.vue'
+  import { mapState } from 'vuex'
 
   export default {
     components: {
@@ -11,14 +12,10 @@
       console.log(this.category)
     },
 
-    // props: {
-    //   category: {
-    //     type: String,
-    //     default: 'Alla_väter'
-    //   }
-    // },
-
     computed: {
+      ...mapState({
+        loggedInUser: (state) => state.loggedInUser
+      }),
       filterdPlants() {
         const category = this.$route.params.category
         if (category === 'Alla_växter') {
@@ -62,6 +59,7 @@
         console.log(newValue)
         this.name = newValue
 
+        //Errormessage if the searchText does not match the result
         this.notFound = !this.result.some((plant) =>
           plant.name.toLowerCase().includes(this.searchText.toLowerCase())
         )
@@ -77,11 +75,14 @@
       <input type="text" v-model="searchText" />
       <i @click="submit" class="bi bi-search" />
 
-      <span class="error-message" v-if="notFound">
+      <span v-if="notFound">
         <p>"{{ searchText }}" hittades inte.</p>
         <p>
-          Saknar du en planta? Här i Växtguiden kan du lägga till vilken du
-          vill!
+          Men på
+          <RouterLink class="links" :to="`/profile/${loggedInUser.user}`"
+            >fönsterbrädan</RouterLink
+          >
+          kan du lägga till dina egna växter!
         </p>
       </span>
     </div>
@@ -125,10 +126,10 @@
     justify-content: center;
   }
 
-  // #list-view-heading {
-  //   text-align: center;
-  //   margin: 20px 0 60px 0;
-  // }
+  a:hover {
+    color: inherit;
+    font-weight: 600;
+  }
 
   .input-div i {
     position: absolute;
