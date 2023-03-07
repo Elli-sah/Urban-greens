@@ -12,6 +12,9 @@
       }
     },
     methods: {
+      onClick() {
+        this.NotLoggedIn = false
+      },
       handleLinkClicked() {
         this.visible = false
       },
@@ -21,7 +24,15 @@
     },
     computed: {
       ...mapState({
-        loggedInUser: (state) => state.loggedInUser
+        loggedInUser: (state) => state.loggedInUser,
+        //Visar antal växter som lagts till på Min Fönsterbräda
+        userFavorites: (state) => {
+          if (state.loggedInUser) {
+            return state.users[state.loggedInUser.user]?.favorites || []
+          } else {
+            return []
+          }
+        }
       }),
       isLoggedIn() {
         return !!this.loggedInUser
@@ -37,7 +48,9 @@
           this.$route.path === '/plantlist'
           this.visible = false
         }
-      }
+      },
+
+      addPlant() {}
     }
   }
 </script>
@@ -118,15 +131,6 @@
       display: flex;
       flex-direction: row;
     }
-    // li {
-    //   cursor: pointer !important;
-    //   color: black;
-    // }
-    // li:hover {
-    //   pointer-events: none;
-    //   color: black;
-    //   text-decoration: none !important;
-    // }
   }
 </style>
 
@@ -164,8 +168,9 @@
                 @click="handleLinkClicked"
                 v-if="isLoggedIn"
                 :to="`/profile/${loggedInUser.user}`"
-                >Min fönsterbräda</b-nav-item
+                >Min fönsterbräda ({{ userFavorites.length }})</b-nav-item
               >
+
               <b-nav-item v-if="isLoggedIn" @click="onLogoutClick"
                 >Logga ut</b-nav-item
               >

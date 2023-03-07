@@ -75,13 +75,6 @@ const mutations = {
 }
 const plugins = [vuexLocal.plugin]
 
-// const actions = {
-//   toggleMenu({ commit }) {
-//     console.log('Test från store action')
-//     commit('toggleMenu')
-//   }
-// }
-
 // createStore.Store({
 //   modules: {
 //     userObjects: usersModules
