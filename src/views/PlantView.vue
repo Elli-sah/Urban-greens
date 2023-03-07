@@ -59,7 +59,7 @@
           } else {
             this.isHard = true
           }
-
+          // Funktion för att visa om plantan är giftig
           if (this.plant.poison.short === true) {
             this.poisonist = true
           } else {
@@ -152,9 +152,14 @@
           <h1>{{ plant.name }}</h1>
 
           <h3>{{ plant.latin }}</h3>
-          <div @mouseover="hover = true" @mouseleave="hover = false">
+          <div
+            id="poison-parent"
+            @mouseover="hover = true"
+            @mouseleave="hover = false"
+          >
             <p v-show="poisonist">Denna växt är giftig</p>
-            <p v-if="hover" v-show="poisonist">
+
+            <p class="description" v-if="hover" v-show="poisonist">
               {{ plant.poison.description }}
             </p>
           </div>
@@ -331,6 +336,18 @@
 </template>
 
 <style scoped>
+  #poison-parent {
+    position: relative;
+  }
+  .description {
+    position: absolute;
+
+    padding: 10px;
+    font-size: 0.8rem;
+    background-color: #f0e8e2;
+    z-index: 1;
+    /* box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.1); */
+  }
   .icons-hover {
     font-size: 10rem;
     transition: transform 0.2s ease-in-out;

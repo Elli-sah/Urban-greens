@@ -14,6 +14,7 @@
     methods: {
       onClick() {
         this.NotLoggedIn = false
+        // this.loggedInUser = false
       },
       handleLinkClicked() {
         this.visible = false
@@ -48,9 +49,7 @@
           this.$route.path === '/plantlist'
           this.visible = false
         }
-      },
-
-      addPlant() {}
+      }
     }
   }
 </script>
@@ -71,7 +70,7 @@
 
   #navbar {
     width: 100%;
-    display: flex;
+    // display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -135,6 +134,14 @@
     a:hover {
       color: inherit;
     }
+
+    .navbar-brand-img {
+      display: none;
+    }
+
+    .navbar-toggler[aria-expanded='false'] ~ .navbar-brand-img {
+      display: block;
+    }
   }
 </style>
 
@@ -147,6 +154,15 @@
           id="secondarylogo"
           src="../../assets/logo-secondary.png"
           alt="Primary logo"
+      /></RouterLink>
+
+      <RouterLink :to="`/profile/${loggedInUser.user}`"
+        ><img
+          class="navbar-brand-img d-lg-none"
+          :class="{ animate: userFavorites.length > 0 }"
+          id="windowsilllogo"
+          src="../../assets/plantnav.png"
+          alt="Window sill logo"
       /></RouterLink>
 
       <b-navbar-toggle target="nav-collapse" />
