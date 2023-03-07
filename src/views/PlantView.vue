@@ -48,6 +48,7 @@
             (plant) => plant.name === this.name
           )[0]
           console.log('rad 34', this.plant)
+          // Funktion för att kontrollera svårighetsgrad
           if (this.plant.difficulty === 'Lätt') {
             this.isEasy = true
           } else if (this.plant.difficulty === 'Medel') {
