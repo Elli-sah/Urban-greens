@@ -1,12 +1,14 @@
 <script>
   import MyShelf from '../components/MyShelf.vue'
   import MyWeather from '../components/MyWeather.vue'
+  import CalendarComponent from '../components/CalendarComponent.vue'
   import { mapState } from 'vuex'
 
   export default {
     components: {
       MyShelf,
-      MyWeather
+      MyWeather,
+      CalendarComponent
     },
     computed: {
       ...mapState({
@@ -18,6 +20,7 @@
 
 <template>
   <div class="view-divs">
+    <CalendarComponent />
     <h1>{{ loggedInUser.name }}s fönsterbräda</h1>
     <div id="image-container">
       <img
