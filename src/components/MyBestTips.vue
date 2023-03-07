@@ -41,12 +41,15 @@
 
   <div class="container">
     <div class="tipBox">
-      <h1>Ge dina bästa tips för att ta hand om {{ plant.name }}</h1>
+      <h2>Ge dina bästa tips för att ta hand om {{ plant.name }}</h2>
 
       <form>
-        <input v-model="tip" />
+        <textarea
+          id="text"
+          v-model="tip"
+          style="text-align: left; vertical-align: top"
+        />
         <input
-          if
           class="button"
           @click="onSubmit"
           :disabled="tip.length === 0"
@@ -55,7 +58,7 @@
         />
       </form>
       <div id="scroll">
-        <h2 v-if="tip !== null">Tips:</h2>
+        <h3 id="tip" v-if="tip !== null">Tips:</h3>
         <p
           v-for="plantTip in specifikPlant.filter(
             (showSomeTip) => showSomeTip.id === id
@@ -76,13 +79,32 @@
 </template>
 
 <style scoped>
+  input[type='text'] {
+    vertical-align: top;
+  }
+  .button {
+    position: absolute;
+    top: 58.5%;
+    right: 35%;
+    /* right: 100px; */
+  }
+  #tip {
+    text-align: left;
+  }
+  #text {
+    width: 400px;
+    height: 100px;
+    box-shadow: 0px 2px 4px rgba(38, 38, 38, 0.1);
+    border: 2px solid grey;
+    vertical-align: top;
+  }
   #remove-icon {
     align-self: flex-start;
     cursor: pointer;
     margin-left: 15px;
   }
   input {
-    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.1);
+    margin: 20px;
   }
   #scroll {
     height: 200px;
@@ -94,13 +116,14 @@
   .container {
     display: flex;
     justify-content: center;
+    width: 50%;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 30px;
   }
   .tipBox {
-    background-color: white;
-    width: 50%;
-    text-align: center;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    text-align: left;
+
     padding: 20px 20px 20px 20px;
   }
 </style>
