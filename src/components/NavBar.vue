@@ -156,14 +156,15 @@
           alt="Primary logo"
       /></RouterLink>
 
-      <RouterLink :to="`/profile/${loggedInUser.user}`"
+      <RouterLink
+        :to="`/profile/${loggedInUser.user}`"
+        class="navbar-brand-img d-lg-none"
         ><img
-          class="navbar-brand-img d-lg-none"
-          :class="{ animate: userFavorites.length > 0 }"
           id="windowsilllogo"
           src="../../assets/plantnav.png"
           alt="Window sill logo"
-      /></RouterLink>
+        />{{ userFavorites.length }}</RouterLink
+      >
 
       <b-navbar-toggle target="nav-collapse" />
     </div>
