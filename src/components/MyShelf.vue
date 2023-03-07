@@ -30,7 +30,7 @@
     >
       <img :src="plant.image[0]" :alt="plant.name" />
       <div class="descriptionBox">
-        <h2>{{ plant.name }}</h2>
+        <h3>{{ plant.name }}</h3>
         <div class="description-divs">
           <i class="bi bi-brightness-high" style="font-size: 0.7em" />
           <p class="description-p">{{ plant.placement.short }}</p>
