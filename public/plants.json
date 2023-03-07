@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Aloe vera",
     "latin": "Aloe barbadensis",
-    "description": "Aloe vera är en växt som ursprungligen kommer från torra områden i Afrika, men som också kan trivas inomhus i Sverige om den sköts på rätt sätt. Trivs i torra förhållanden och behöver inte hög luftfuktighet.",
+    "description": "Aloe vera är en växt som ursprungligen kommer från torra områden i Afrika, men som också kan trivas inomhus i Sverige om den sköts på rätt sätt. Trivs i torra förhållanden och behöver inte hög luftfuktighet. Växten är även känd för sina läkande egenskaper och är effektiv vid inflammatoriska hudsjukdomar, sår, brännskador, solbränna, köldskador, akne, psoriasis, eksem och insetsbett. Enligt WHO är den färska gelen från äkta aloe bättre än bearbetade produkter som krämer och liknande. S¨skär gärna upp ett blad och använd dig av den synliga gelen! ",
 
     "placement": {
       "plantHeading": "Ljusbehov",
@@ -29,8 +29,9 @@
     "pruning": "Ta bort eventuella torra eller döda blad regelbundet och beskär inte mer än nödvändigt. Använd en ren och skarp sekatör för att undvika att skada växten.",
     "pests": "Aloe Vera är en relativt tålig växt, men kan drabbas av skadedjur som spinnkvalster eller mjöllöss. Inspektera växten regelbundet och använd ett lämpligt insektsmedel för att bekämpa skadedjur.",
     "poison": {
-      "short": true,
-      "desciption": "Aloe kan ha irriterande egenskaper, men att smaka en lite mängd betraktas som ofarligt. Notera att Aloe "
+      "people": true,
+      "animals": true,
+      "desciption": "Aloe kan ha irriterande egenskaper, men att smaka en lite mängd betraktas som ofarligt. För djur kan aloe veran i större mängd ge kräkningar, diarré och/eller skakningar i kroppen."
     },
     "difficulty": "Lätt",
     "category": "Suckulent",
@@ -68,6 +69,11 @@
     },
     "pruning": "Ampelliljan behöver inte beskäras i samma utsträckning som andra växter, men det kan vara bra att ta bort vissna blommor och skadade blad när de upptäcks.",
     "pests": "Ampelliljan kan drabbas av skadedjur och sjukdomar, särskilt om den står för fuktigt eller om den utsätts för stress. Se upp för tecken på bladlöss, spinnkvalster eller trips. Om du upptäcker något av detta kan du använda ett insektsmedel som är lämpligt för ampelliljor.",
+    "poison": {
+      "people": false,
+      "animals": false,
+      "desciption": ""
+    },
     "difficulty": "Lätt",
     "category": "Gröna växter",
     "image": [
@@ -104,6 +110,11 @@
     },
     "pruning": "Begonior behöver inte beskäras, men ta bort döda eller sjuka blad för att hålla din Begonia frisk och fräsch.",
     "pests": "Begonior kan drabbas av bladlöss, spinnkvalster och mjöldagg, så det är viktigt att hålla växten ren och att ta itu med skadedjur eller sjukdomar snabbt.",
+    "poison": {
+      "short": false,
+      "animals": false,
+      "desciption": ""
+    },
     "difficulty": "Lätt",
     "category": "Blommande",
     "image": ["/images/begonia.png"]
@@ -111,8 +122,8 @@
   {
     "id": 4,
     "name": "Elefantöra",
-    "latin": "Alocasia",
-    "description": "Elefantöra, även känd som Alocasia eller Elefantörsblad, är en växtart som tillhör familjen Araceae. Elefantöra trivs i en hög luftfuktighet, så se till att spraya växten regelbundet med vatten eller placera en luftfuktare i närheten av växten. Under vintermånaderna, när uppvärmningen kan torka ut luften i hemmet, kan det vara nödvändigt att öka luftfuktigheten runt växten med hjälp av en luftfuktare.",
+    "latin": "Pilea peperomioides",
+    "description": "Elefantöra, även känd som Pilea peperomioides eller Elefantörsblad, är en växtart som tillhör familjen Pilea. Elefantöra trivs i en hög luftfuktighet, så se till att spraya växten regelbundet med vatten eller placera en luftfuktare i närheten av växten. Under vintermånaderna, när uppvärmningen kan torka ut luften i hemmet, kan det vara nödvändigt att öka luftfuktigheten runt växten med hjälp av en luftfuktare.",
     "placement": {
       "plantHeading": "Ljusbehov",
       "short": "Halvskugga",
@@ -135,6 +146,11 @@
     },
     "pruning": "Elefantöra kan växa mycket stora, så beskärning kan vara nödvändigt för att hålla växten i en acceptabel storlek. Beskär försiktigt bort döda eller sjuka blad och klipp av skott som växer för långt ut från växtens stam.",
     "pests": "Elefantöra kan drabbas av skadedjur som spinnkvalster, trips och bladlöss. Spinnkvalster orsakar en väv som täcker undersidan av bladen, trips suger växtsaft och kan orsaka missfärgade och skadade blad, och bladlöss suger också på bladen och kan orsaka gulnade blad. För att förebygga skadedjur är det viktigt att undvika övervattning och se till att växten har god luftcirkulation. Om växten drabbas av skadedjur kan man behandla den med ett lämpligt insektsmedel.",
+    "poison": {
+      "people": false,
+      "animals": false,
+      "desciption": ""
+    },
     "difficulty": "Lätt",
     "category": "Gröna växter",
     "image": [
@@ -170,6 +186,11 @@
     },
     "pruning": "Fiolfikusen kan behöva beskäras för att hålla den i en bra form och för att ta bort skadade eller sjuka grenar. Beskärning kan också hjälpa till att hålla storleken på växten i schack.",
     "pests": "Fiolfikusen kan drabbas av skadedjur, till exempel spinnkvalster och sköldlöss. Om du märker tecken på skadedjur eller sjukdomar kan du behandla dem med ett lämpligt bekämpningsmedel.",
+    "poison": {
+      "people": false,
+      "animals": false,
+      "desciption": ""
+    },
     "difficulty": "Svår",
     "category": "Gröna växter",
     "image": [
@@ -206,6 +227,11 @@
     },
     "pruning": "Om garderobsblomman börjar växa för hög kan du klippa bort några av de längsta skotten. Klipp av dem strax ovanför ett bladpar så att det kan växa ut nya skott.",
     "pests": "Garderobsblomman är tålig och drabbas sällan av skadedjur eller sjukdomar. Om du ändå upptäcker något problem kan du använda ett insektsmedel eller svampmedel som är lämpligt för krukväxter.",
+    "poison": {
+      "people": true,
+      "animals": true,
+      "desciption": "Växten innehåller starkt irriterande växtsaft. Brännande känsla i mun och svalg, svullnad, blåsor, salivavsöndring, sväljsvårigheter samt magbesvär (t.ex. ont i magen, illamående, kräkningar och diarré). Växtsaften kan också ge kraftig ögonirritation och hudretning. Hos djur kan den ge kräkningar (även blodiga), mörk avföring, gulnade ögonvitor, ökad törst, blodig diarré, blåmärken, leverskador, och i värsta fall dödsfall.  "
+    },
     "difficulty": "Lätt",
     "category": "Gröna växter",
     "image": [
@@ -242,6 +268,11 @@
     },
     "pruning": "Hortensian behöver inte beskäras på samma sätt som andra växter, men om du vill forma den eller ta bort döda blommor kan du klippa av grenar strax ovanför en knopp eller ett par blad.",
     "pests": "Kan drabbas av skadedjur och sjukdomar, särskilt om den står för fuktigt eller om den utsätts för stress. Se upp för tecken på mjöldagg, bladlöss, spinnkvalster eller trips. Om du upptäcker något av detta kan du använda ett insektsmedel som är lämpligt för hortensior.",
+    "poison": {
+      "people": true,
+      "animals": true,
+      "desciption": "Växten, speciellt blad och blomknoppar, innehåller bl.a. ämnen som har irriterande egenskaper. Inga allvarliga förgiftningar kända hos människa. Symtom: Magbesvär (t.ex. ont i magen, illamående, kräkningar och diarré). Liknande symtom hos djur."
+    },
     "difficulty": "Svår",
     "category": "Blommande",
     "image": [
@@ -278,6 +309,11 @@
     },
     "pruning": "Behöver inte beskäras, men ta bort döda eller sjuka blad för att hålla din Primula frisk och fräsch.",
     "pests": "Primula kan drabbas av bladlöss och spinnkvalster, men det är relativt ovanligt. Om du upptäcker skadedjur eller sjukdomar, ta itu med dem genom att använda lämpliga bekämpningsmedel eller att ta bort sjuka blad.",
+    "poison": {
+      "people": false,
+      "animals": true,
+      "desciption": "Kan ge mildare kräkningar hos katter."
+    },
     "difficulty": "Medel",
     "category": "Blommande",
     "image": [
@@ -314,6 +350,11 @@
     },
     "pruning": "Kalanchoe behöver inte beskäras, men ta bort döda eller sjuka blad för att hålla din Kalanchoe frisk och fräsch.",
     "pests": "Kalanchoe kan drabbas av bladlöss och spinnkvalster, men det är relativt ovanligt. Om du upptäcker skadedjur eller sjukdomar, ta itu med dem genom att använda lämpliga bekämpningsmedel eller att ta bort sjuka blad.",
+    "poison": {
+      "people": false,
+      "animals": true,
+      "desciption": "Kan vara giftig för djur."
+    },
     "difficulty": "Lätt",
     "category": "Blommande",
     "image": [
@@ -350,6 +391,11 @@
     },
     "pruning": "Krukrosor behöver beskäras regelbundet för att främja tillväxt och blomning. Ta bort eventuella döda eller sjuka grenar, och beskär även tillbaka de friska grenarna med cirka en tredjedel av deras längd varje vår.",
     "pests": "Krukrosor kan drabbas av olika skadedjur och sjukdomar, såsom bladlöss, spindelkvalster och svartfläcksjuka. Håll ett öga på dina rosor och ta itu med problemen så fort du upptäcker dem, genom att använda lämpliga bekämpningsmedel eller att ta bort sjuka blad och grenar.",
+    "poison": {
+      "people": false,
+      "animals": false,
+      "desciption": ""
+    },
     "difficulty": "Medel",
     "category": "Blommande",
     "image": [
@@ -386,6 +432,11 @@
     },
     "pruning": "Monstera kan växa mycket stora, så beskärning kan vara nödvändigt för att hålla växten i en acceptabel storlek. Beskär försiktigt bort döda eller sjuka blad och klipp av skott som växer för långt ut från växtens stam.",
     "pests": "Monstera kan drabbas av skadedjur som spinnkvalster, mjöldagg och trips. Spinnkvalster bildar ett spindelnät på undersidan av bladen, mjöldagg orsakar ett vitt, mjöligt lager på bladens yta och trips är små insekter som suger saft från växten och kan orsaka missfärgade och skadade blad. För att förebygga skadedjur är det viktigt att undvika övervattning och se till att växten har god luftcirkulation. Om växten drabbas av skadedjur kan man behandla den med ett lämpligt insektsmedel.",
+    "poison": {
+      "people": true,
+      "animals": true,
+      "desciption": "Kan ge sveda i mun och svalg samt magbesvär (t.ex. ont i magen, illamående, kräkningar och diarré). För djur kan symtom som irritation och brännkänslor runt munnen, överdriven salivering, kräkning, svårigheter att svälja förekomma. "
+    },
     "difficulty": "Lätt",
     "category": "Gröna växter",
     "image": [
@@ -422,6 +473,11 @@
     },
     "pruning": "Murgröna behöver beskäras för att hålla den i form och för att förebygga att den sprider sig för mycket. Du kan beskära din murgröna när som helst på året, men det är bäst att göra det på våren eller sommaren. Ta bort döda eller sjuka blad och klipp tillbaka övervuxna skott.",
     "pests": "Murgröna kan drabbas av spinnkvalster och bladlöss, så det är viktigt att hålla växten ren och att ta itu med skadedjur eller sjukdomar snabbt.",
+    "poison": {
+      "people": true,
+      "animals": true,
+      "desciption": "Växten, speciellt bladen, innehåller ämnen som bl.a. har irriterande egenskaper. Förgiftningar är ovanliga. För djur kan symtom som kräkning, buksmärtor, överdriven salivering, diarré förekomma."
+    },
     "difficulty": "Lätt",
     "category": "Gröna växter",
     "image": [
@@ -458,6 +514,11 @@
     },
     "pruning": "Klipp av blomstängeln strax under den sista blomman när den har vissnat. Om din orkidé har flera stammar kan du också ta bort de gamla och vissna stammarna när de inte längre producerar nya blommor.",
     "pests": "Orkidéer kan drabbas av skadedjur som spinnkvalster och trips, samt sjukdomar som svampsjukdomar och virus. Om du upptäcker skadedjur eller sjukdomar på din orkidé, kan du använda ett insektsmedel eller svampmedel som är speciellt utformat för orkidéer.",
+    "poison": {
+      "people": false,
+      "animals": false,
+      "desciption": ""
+    },
     "difficulty": "Medel",
     "category": "Blommande",
     "image": [
@@ -494,6 +555,11 @@
     },
     "pruning": "Pelargoner behöver beskäras för att hålla formen och för att stimulera tillväxten. Klipp bort överflödiga skott och döda blommor.",
     "pests": "Pelargoner kan drabbas av skadedjur som spinnkvalster och bladlöss. Om du upptäcker skadedjur eller sjukdomar på din pelargon, kan du använda ett insektsmedel eller svampmedel som är speciellt utformat för växten.",
+    "poison": {
+      "people": false,
+      "animals": true,
+      "desciption": "Djur kan få kräkningar, anorexia, depression, hudinflammationer. "
+    },
     "difficulty": "Lätt",
     "category": "Blommande",
     "image": ["/images/pelargon.png"]
@@ -526,6 +592,11 @@
     },
     "pruning": "Porslinsblomma behöver inte beskäras i samma utsträckning som andra växter. Beskär endast om växten blir för stor eller grenar sig för mycket.",
     "pests": "Porslinsblomma är vanligtvis inte en växt som drabbas av skadedjur, men ibland kan den påverkas av några vanliga skadedjur som förekommer på andra växter.Det är viktigt att inspektera din Porslinsblomma regelbundet för att upptäcka skadedjur och vidta åtgärder så snart som möjligt för att förhindra spridning och skador på växten.",
+    "poison": {
+      "people": false,
+      "animals": true,
+      "desciption": "Burfåglar som papegojor och undulater har blivit sjuka och i vissa fall dött efter att ha ätit porslinsblomma. Chinchillor och hundar har också blivit sjuka av växten."
+    },
     "difficulty": "Lätt",
     "category": "Gröna växter",
     "image": [
@@ -536,9 +607,9 @@
   },
   {
     "id": 3,
-    "name": "Rosenkärm",
+    "name": "Rosenskärm",
     "latin": "Medinilla",
-    "description": "Rosenkärm är en tålig och anpassningsbar växt som trivs bra i många olika miljöer.  Rosenkärm en relativt enkel växt att ta hand om och kan vara en vacker och användbar tillägg till trädgården eller landskapet i Sverige. Rosenskärm trivs bäst i en relativt torr miljö med låg luftfuktighet. För hög luftfuktighet kan orsaka problem med svamp och sjukdomar. En luftfuktighet på runt 40-50% kan vara lämpligt för rosenskärm. Det är dock viktigt att notera att rosenskärm är en relativt tålig växt och kan klara sig även i omgivningar med högre luftfuktighet, så länge det inte är alltför fuktigt.",
+    "description": "Rosenskärm är en tålig och anpassningsbar växt som trivs bra i många olika miljöer.  Rosenskärm en relativt enkel växt att ta hand om och kan vara en vacker och användbar tillägg till trädgården eller landskapet i Sverige. Rosenskärm trivs bäst i en relativt torr miljö med låg luftfuktighet. För hög luftfuktighet kan orsaka problem med svamp och sjukdomar. En luftfuktighet på runt 40-50% kan vara lämpligt för rosenskärm. Det är dock viktigt att notera att rosenskärm är en relativt tålig växt och kan klara sig även i omgivningar med högre luftfuktighet, så länge det inte är alltför fuktigt.",
     "placement": {
       "plantHeading": "Ljusbehov",
       "short": "Soligt",
@@ -558,10 +629,15 @@
     "fertilization": {
       "plantHeading": "Näring",
       "short": "Sparsamt",
-      "description": "Gödsla sparsamt. Rosenkärm trivs i mager jord och behöver inte mycket gödsel. Om du vill använda gödsel kan du använda en balanserad allroundgödsel med låg kvävehalt.",
-      "pruning": " Skär ner på hösten: På hösten kan du klippa ner rosenkärmens stjälkar och löv till marknivå. Detta hjälper till att förbereda plantan för vintern och stimulerar ny tillväxt nästa vår. Om du vill undvika att rosenkärm sprider sig för mycket, se till att klippa av blomstjälkarna innan de hinner bilda frön."
+      "description": "Gödsla sparsamt. Rosenskärm trivs i mager jord och behöver inte mycket gödsel. Om du vill använda gödsel kan du använda en balanserad allroundgödsel med låg kvävehalt.",
+      "pruning": " Skär ner på hösten: På hösten kan du klippa ner rosenkärmens stjälkar och löv till marknivå. Detta hjälper till att förbereda plantan för vintern och stimulerar ny tillväxt nästa vår. Om du vill undvika att rosenskärm sprider sig för mycket, se till att klippa av blomstjälkarna innan de hinner bilda frön."
     },
-    "pests": "",
+    "pests": "Skadedjur som kan drabba Rosenskärm är spinnkvalster, bladlöss, vita flygare och skalbaggar. För att förebygga detta kan du torka av bladen regelbunden, eller använda bekämpningsmedel. ",
+    "poison": {
+      "people": false,
+      "animals": true,
+      "desciption": "Djur kan drabbas av magbesvär, kräkningar och diarré vid förtäring."
+    },
     "difficulty": "Svår",
     "category": "Blommande",
     "image": ["/images/rosenskarm.png"]
@@ -594,6 +670,11 @@
     },
     "pruning": "Rosenkalla behöver inte beskäras, men ta bort döda eller sjuka blad för att hålla din rosenkalla frisk och fräsch.",
     "pests": "Rosenkalla kan drabbas av bladlöss, spinnkvalster och mjöldagg, så det är viktigt att hålla växten ren och att ta itu med skadedjur eller sjukdomar snabbt.",
+    "poison": {
+      "people": true,
+      "animals": true,
+      "desciption": "Växten innehåller ämnen som är irriterande. Det kan ge besvär som sveda i min och svlag samt magont, illamående, kräkningar och diarré.Växtsaften är även irriterande för djur."
+    },
     "difficulty": "Lätt",
     "category": "Blommande",
     "image": [
@@ -632,6 +713,11 @@
     },
     "pruning": "Gulpalmen behöver inte beskäras ofta, men om den blir för hög kan du beskära toppen av plantan för att få den att växa mer buskigt.",
     "pests": "Gulpalmen kan drabbas av skadedjur som spinnkvalster och bladlöss. Se till att ta bort skadedjur manuellt och använd gärna en mild insektsbekämpning om det behövs.",
+    "poison": {
+      "people": false,
+      "animals": false,
+      "desciption": ""
+    },
     "difficulty": "Lätt",
     "category": "Gröna växter",
     "image": [
