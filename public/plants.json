@@ -28,7 +28,10 @@
     },
     "pruning": "Ta bort eventuella torra eller döda blad regelbundet och beskär inte mer än nödvändigt. Använd en ren och skarp sekatör för att undvika att skada växten.",
     "pests": "Aloe Vera är en relativt tålig växt, men kan drabbas av skadedjur som spinnkvalster eller mjöllöss. Inspektera växten regelbundet och använd ett lämpligt insektsmedel för att bekämpa skadedjur.",
-    "other": "",
+    "poison": {
+      "short": true,
+      "desciption": "Aloe kan ha irriterande egenskaper, men att smaka en lite mängd betraktas som ofarligt. Notera att Aloe "
+    },
     "category": "Suckulent",
     "image": [
       "/images/aloe_vera1.jpg",
