@@ -26,7 +26,10 @@
         plantTip: '',
         isEasy: false,
         isMid: false,
-        isHard: false
+        isHard: false,
+        posionist: false,
+        noPoison: false,
+        hover: false
       }
     },
     computed: {
@@ -55,6 +58,12 @@
             this.isMid = true
           } else {
             this.isHard = true
+          }
+
+          if (this.plant.poison.short === true) {
+            this.poisonist = true
+          } else {
+            this.noPoison = true
           }
         })
       },
@@ -143,6 +152,14 @@
           <h1>{{ plant.name }}</h1>
 
           <h3>{{ plant.latin }}</h3>
+          <div @mouseover="hover = true" @mouseleave="hover = false">
+            <p v-show="poisonist">Denna växt är giftig</p>
+            <p v-if="hover" v-show="poisonist">
+              {{ plant.poison.description }}
+            </p>
+          </div>
+          <p v-show="noPoison">Denna växt är inte giftig</p>
+
           <p id="easy-p" v-show="isEasy">
             Svårighetsgrad: {{ plant.difficulty }}
             <span class="spans" style="background-color: green" />
