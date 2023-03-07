@@ -131,6 +131,10 @@
       display: flex;
       flex-direction: row;
     }
+
+    a:hover {
+      color: inherit;
+    }
   }
 </style>
 
