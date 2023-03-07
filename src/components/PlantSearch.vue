@@ -1,6 +1,8 @@
 <script>
   import axios from 'axios'
 
+  import { mapState } from 'vuex'
+
   export default {
     emits: ['link-clicked'],
     data() {
@@ -26,6 +28,7 @@
       onClickPlants() {
         this.axiosGetPlants()
 
+        //Errormessage if the searchText does not match the result
         this.notFound = !this.result.some((plant) =>
           plant.name.toLowerCase().includes(this.searchText.toLowerCase())
         )
@@ -33,6 +36,10 @@
     },
 
     computed: {
+      ...mapState({
+        loggedInUser: (state) => state.loggedInUser
+      }),
+
       filterdPlants() {
         if (this.category === 'all') {
           return this.result.filter((plant) => {
@@ -80,10 +87,18 @@
         <span @click="handleClick">
           <span class="error-message" v-if="notFound">
             <p>"{{ searchText }}" hittades inte.</p>
-            <p>Men i Växtguiden kan du lägga till dina egna plantor!</p>
+            <p>
+              Men på
+
+              <RouterLink :to="`/profile/${loggedInUser.user}`"
+                >fönsterbrädan</RouterLink
+              >
+
+              kan du lägga till dina egna växter!
+            </p>
           </span>
           <span v-else>
-            <b-link
+            <RouterLink
               v-for="plant in filterdPlants"
               :key="plant.name"
               :to="`/plants/${plant.name}`"
@@ -94,7 +109,7 @@
               <p>
                 {{ plant.category }}
               </p>
-            </b-link>
+            </RouterLink>
           </span>
         </span>
       </div>
@@ -103,13 +118,11 @@
 </template>
 
 <style scoped>
-  .error-message {
-    /* word-spacing: 0px; */
-    font-size: 5px;
+  a:hover {
+    color: inherit;
+    font-weight: 600;
   }
-
   p {
-    /* font-size: 12px; */
     margin: 0;
   }
   input {
@@ -137,6 +150,10 @@
   }
   li {
     cursor: pointer;
+  }
+
+  .links {
+    list-style: none;
   }
 
   @media (min-width: 992px) {
