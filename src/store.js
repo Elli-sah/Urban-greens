@@ -47,6 +47,9 @@ const mutations = {
   setPlantTip(state, tip) {
     state.plantTip.push(tip)
   },
+  removePlantTip(state, index) {
+    state.plantTip.splice(index, 1)
+  },
   logutUser(state) {
     state.loggedInUser = ''
   },
