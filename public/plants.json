@@ -28,7 +28,7 @@
     },
     "pruning": "Ta bort eventuella torra eller döda blad regelbundet och beskär inte mer än nödvändigt. Använd en ren och skarp sekatör för att undvika att skada växten.",
     "pests": "Aloe Vera är en relativt tålig växt, men kan drabbas av skadedjur som spinnkvalster eller mjöllöss. Inspektera växten regelbundet och använd ett lämpligt insektsmedel för att bekämpa skadedjur.",
-    "other": "",
+    "difficulty": "Lätt",
     "category": "Suckulent",
     "image": [
       "/images/aloe_vera1.jpg",
@@ -64,7 +64,7 @@
     },
     "pruning": "Ampelliljan behöver inte beskäras i samma utsträckning som andra växter, men det kan vara bra att ta bort vissna blommor och skadade blad när de upptäcks.",
     "pests": "Ampelliljan kan drabbas av skadedjur och sjukdomar, särskilt om den står för fuktigt eller om den utsätts för stress. Se upp för tecken på bladlöss, spinnkvalster eller trips. Om du upptäcker något av detta kan du använda ett insektsmedel som är lämpligt för ampelliljor.",
-    "other": "",
+    "difficulty": "Lätt",
     "category": "Gröna växter",
     "image": [
       "/images/ampellilja1.jpg",
@@ -100,7 +100,7 @@
     },
     "pruning": "Begonior behöver inte beskäras, men ta bort döda eller sjuka blad för att hålla din Begonia frisk och fräsch.",
     "pests": "Begonior kan drabbas av bladlöss, spinnkvalster och mjöldagg, så det är viktigt att hålla växten ren och att ta itu med skadedjur eller sjukdomar snabbt.",
-    "other": "",
+    "difficulty": "Lätt",
     "category": "Blommande",
     "image": ["/images/begonia.png"]
   },
@@ -131,7 +131,7 @@
     },
     "pruning": "Elefantöra kan växa mycket stora, så beskärning kan vara nödvändigt för att hålla växten i en acceptabel storlek. Beskär försiktigt bort döda eller sjuka blad och klipp av skott som växer för långt ut från växtens stam.",
     "pests": "Elefantöra kan drabbas av skadedjur som spinnkvalster, trips och bladlöss. Spinnkvalster orsakar en väv som täcker undersidan av bladen, trips suger växtsaft och kan orsaka missfärgade och skadade blad, och bladlöss suger också på bladen och kan orsaka gulnade blad. För att förebygga skadedjur är det viktigt att undvika övervattning och se till att växten har god luftcirkulation. Om växten drabbas av skadedjur kan man behandla den med ett lämpligt insektsmedel.",
-    "other": "",
+    "difficulty": "Lätt",
     "category": "Gröna växter",
     "image": [
       "/images/elefantora1.jpg",
@@ -166,7 +166,7 @@
     },
     "pruning": "Fiolfikusen kan behöva beskäras för att hålla den i en bra form och för att ta bort skadade eller sjuka grenar. Beskärning kan också hjälpa till att hålla storleken på växten i schack.",
     "pests": "Fiolfikusen kan drabbas av skadedjur, till exempel spinnkvalster och sköldlöss. Om du märker tecken på skadedjur eller sjukdomar kan du behandla dem med ett lämpligt bekämpningsmedel.",
-    "other": "",
+    "difficulty": "Svår",
     "category": "Gröna växter",
     "image": [
       "/images/fiolfikus3.jpg",
@@ -198,11 +198,11 @@
     "fertilization": {
       "plantHeading": "Näring",
       "short": "Medel",
-      "description": "Den behöver inte mycket gödsel, men du kan ge den lite gödsel några gånger om året under vår och sommar för att hjälpa till med tillväxten."
+      "description": "Den behöver inte mycket gödsel, men du kan ge den lite gödsel några gånger om året under vår och sommar för att hjälpa till med tillväxten. Den behöver inte omplanteras så ofta, men om du ser att rötterna börjar tränga ut genom dräneringshålen i krukan eller om växten blir för stor för sin nuvarande kruka, är det dags att omplantera den i en något större kruka."
     },
     "pruning": "Om garderobsblomman börjar växa för hög kan du klippa bort några av de längsta skotten. Klipp av dem strax ovanför ett bladpar så att det kan växa ut nya skott.",
     "pests": "Garderobsblomman är tålig och drabbas sällan av skadedjur eller sjukdomar. Om du ändå upptäcker något problem kan du använda ett insektsmedel eller svampmedel som är lämpligt för krukväxter.",
-    "other": "Den behöver inte omplanteras så ofta, men om du ser att rötterna börjar tränga ut genom dräneringshålen i krukan eller om växten blir för stor för sin nuvarande kruka, är det dags att omplantera den i en något större kruka.",
+    "difficulty": "Lätt",
     "category": "Gröna växter",
     "image": [
       "/images/zamiakalla1.jpg",
@@ -238,7 +238,7 @@
     },
     "pruning": "Hortensian behöver inte beskäras på samma sätt som andra växter, men om du vill forma den eller ta bort döda blommor kan du klippa av grenar strax ovanför en knopp eller ett par blad.",
     "pests": "Kan drabbas av skadedjur och sjukdomar, särskilt om den står för fuktigt eller om den utsätts för stress. Se upp för tecken på mjöldagg, bladlöss, spinnkvalster eller trips. Om du upptäcker något av detta kan du använda ett insektsmedel som är lämpligt för hortensior.",
-    "other": "",
+    "difficulty": "Svår",
     "category": "Blommande",
     "image": [
       "/images/hortensia.png",
@@ -274,7 +274,7 @@
     },
     "pruning": "Behöver inte beskäras, men ta bort döda eller sjuka blad för att hålla din Primula frisk och fräsch.",
     "pests": "Primula kan drabbas av bladlöss och spinnkvalster, men det är relativt ovanligt. Om du upptäcker skadedjur eller sjukdomar, ta itu med dem genom att använda lämpliga bekämpningsmedel eller att ta bort sjuka blad.",
-    "other": "",
+    "difficulty": "Medel",
     "category": "Blommande",
     "image": [
       "/images/primula.jpg",
@@ -310,7 +310,7 @@
     },
     "pruning": "Kalanchoe behöver inte beskäras, men ta bort döda eller sjuka blad för att hålla din Kalanchoe frisk och fräsch.",
     "pests": "Kalanchoe kan drabbas av bladlöss och spinnkvalster, men det är relativt ovanligt. Om du upptäcker skadedjur eller sjukdomar, ta itu med dem genom att använda lämpliga bekämpningsmedel eller att ta bort sjuka blad.",
-    "other": "",
+    "difficulty": "Lätt",
     "category": "Blommande",
     "image": [
       "/images/kalanchoe.png",
@@ -346,7 +346,7 @@
     },
     "pruning": "Krukrosor behöver beskäras regelbundet för att främja tillväxt och blomning. Ta bort eventuella döda eller sjuka grenar, och beskär även tillbaka de friska grenarna med cirka en tredjedel av deras längd varje vår.",
     "pests": "Krukrosor kan drabbas av olika skadedjur och sjukdomar, såsom bladlöss, spindelkvalster och svartfläcksjuka. Håll ett öga på dina rosor och ta itu med problemen så fort du upptäcker dem, genom att använda lämpliga bekämpningsmedel eller att ta bort sjuka blad och grenar.",
-    "other": "",
+    "difficulty": "Medel",
     "category": "Blommande",
     "image": [
       "/images/krukros.jpg",
@@ -382,7 +382,7 @@
     },
     "pruning": "Monstera kan växa mycket stora, så beskärning kan vara nödvändigt för att hålla växten i en acceptabel storlek. Beskär försiktigt bort döda eller sjuka blad och klipp av skott som växer för långt ut från växtens stam.",
     "pests": "Monstera kan drabbas av skadedjur som spinnkvalster, mjöldagg och trips. Spinnkvalster bildar ett spindelnät på undersidan av bladen, mjöldagg orsakar ett vitt, mjöligt lager på bladens yta och trips är små insekter som suger saft från växten och kan orsaka missfärgade och skadade blad. För att förebygga skadedjur är det viktigt att undvika övervattning och se till att växten har god luftcirkulation. Om växten drabbas av skadedjur kan man behandla den med ett lämpligt insektsmedel.",
-    "other": "",
+    "difficulty": "Lätt",
     "category": "Gröna växter",
     "image": [
       "/images/monstera.png",
@@ -418,7 +418,7 @@
     },
     "pruning": "Murgröna behöver beskäras för att hålla den i form och för att förebygga att den sprider sig för mycket. Du kan beskära din murgröna när som helst på året, men det är bäst att göra det på våren eller sommaren. Ta bort döda eller sjuka blad och klipp tillbaka övervuxna skott.",
     "pests": "Murgröna kan drabbas av spinnkvalster och bladlöss, så det är viktigt att hålla växten ren och att ta itu med skadedjur eller sjukdomar snabbt.",
-    "other": "",
+    "difficulty": "Lätt",
     "category": "Gröna växter",
     "image": [
       "/images/murgrona.png",
@@ -454,7 +454,7 @@
     },
     "pruning": "Klipp av blomstängeln strax under den sista blomman när den har vissnat. Om din orkidé har flera stammar kan du också ta bort de gamla och vissna stammarna när de inte längre producerar nya blommor.",
     "pests": "Orkidéer kan drabbas av skadedjur som spinnkvalster och trips, samt sjukdomar som svampsjukdomar och virus. Om du upptäcker skadedjur eller sjukdomar på din orkidé, kan du använda ett insektsmedel eller svampmedel som är speciellt utformat för orkidéer.",
-    "other": "",
+    "difficulty": "Medel",
     "category": "Blommande",
     "image": [
       "/images/orkide.jpg",
@@ -490,7 +490,7 @@
     },
     "pruning": "Pelargoner behöver beskäras för att hålla formen och för att stimulera tillväxten. Klipp bort överflödiga skott och döda blommor.",
     "pests": "Pelargoner kan drabbas av skadedjur som spinnkvalster och bladlöss. Om du upptäcker skadedjur eller sjukdomar på din pelargon, kan du använda ett insektsmedel eller svampmedel som är speciellt utformat för växten.",
-    "other": "",
+    "difficulty": "Lätt",
     "category": "Blommande",
     "image": ["/images/pelargon.png"]
   },
@@ -522,7 +522,7 @@
     },
     "pruning": "Porslinsblomma behöver inte beskäras i samma utsträckning som andra växter. Beskär endast om växten blir för stor eller grenar sig för mycket.",
     "pests": "Porslinsblomma är vanligtvis inte en växt som drabbas av skadedjur, men ibland kan den påverkas av några vanliga skadedjur som förekommer på andra växter.Det är viktigt att inspektera din Porslinsblomma regelbundet för att upptäcka skadedjur och vidta åtgärder så snart som möjligt för att förhindra spridning och skador på växten.",
-    "other": "",
+    "difficulty": "Lätt",
     "category": "Gröna växter",
     "image": [
       "/images/porslinsblomma.jpg",
@@ -558,7 +558,7 @@
       "pruning": " Skär ner på hösten: På hösten kan du klippa ner rosenkärmens stjälkar och löv till marknivå. Detta hjälper till att förbereda plantan för vintern och stimulerar ny tillväxt nästa vår. Om du vill undvika att rosenkärm sprider sig för mycket, se till att klippa av blomstjälkarna innan de hinner bilda frön."
     },
     "pests": "",
-    "other": "",
+    "difficulty": "Svår",
     "category": "Blommande",
     "image": ["/images/rosenskarm.png"]
   },
@@ -590,7 +590,7 @@
     },
     "pruning": "Rosenkalla behöver inte beskäras, men ta bort döda eller sjuka blad för att hålla din rosenkalla frisk och fräsch.",
     "pests": "Rosenkalla kan drabbas av bladlöss, spinnkvalster och mjöldagg, så det är viktigt att hålla växten ren och att ta itu med skadedjur eller sjukdomar snabbt.",
-    "other": "",
+    "difficulty": "Lätt",
     "category": "Blommande",
     "image": [
       "/images/rosenkalla1.jpg",
@@ -628,7 +628,7 @@
     },
     "pruning": "Gulpalmen behöver inte beskäras ofta, men om den blir för hög kan du beskära toppen av plantan för att få den att växa mer buskigt.",
     "pests": "Gulpalmen kan drabbas av skadedjur som spinnkvalster och bladlöss. Se till att ta bort skadedjur manuellt och använd gärna en mild insektsbekämpning om det behövs.",
-    "other": "",
+    "difficulty": "Lätt",
     "category": "Gröna växter",
     "image": [
       "/images/guldpalm.png",
