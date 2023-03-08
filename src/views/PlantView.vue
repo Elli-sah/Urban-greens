@@ -338,10 +338,10 @@
 <style scoped>
   #poison-parent {
     position: relative;
+    cursor: pointer;
   }
   .description {
     position: absolute;
-
     padding: 10px;
     font-size: 0.8rem;
     background-color: #f0e8e2;

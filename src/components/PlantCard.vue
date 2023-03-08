@@ -1,7 +1,11 @@
 <script>
   import { mapState } from 'vuex'
+  import InlogModal from './InlogModal.vue'
 
   export default {
+    components: {
+      InlogModal
+    },
     props: {
       plant: {
         type: Object,
@@ -10,6 +14,7 @@
     },
     data() {
       return {
+        showModal: false,
         Addedplant: false,
         NotLoggedIn: false,
         AlreadyAddedplant: false,
@@ -88,7 +93,10 @@
     <div class="popup-divs" v-show="NotLoggedIn">
       <i @click="onClick" class="bi bi-x-lg" />
       <div id="login-div">
-        <p>Du behöver logga in först</p>
+        <div id="inlogModal-div">
+          <InlogModal />
+        </div>
+        <!-- <p>Du behöver logga in först</p>
         <b-button
           variant="link"
           to="/login"
@@ -96,7 +104,7 @@
           id="button-secondary"
           class="btn btn-link"
           >Logga in här!</b-button
-        >
+        > -->
       </div>
     </div>
   </div>
@@ -170,6 +178,12 @@
 
   #login-div {
     padding: 40px;
+    position: relative;
+  }
+
+  #inlogModal-div {
+    position: relative;
+    object-fit: contain;
   }
 
   .added-paragraph {

@@ -99,6 +99,11 @@
     height: 40px;
   }
 
+  #windowsilllogo {
+    width: 40px;
+    height: 40px;
+  }
+
   @media (min-width: 992px) {
     #navbar {
       width: 10px;
@@ -161,7 +166,7 @@
         class="navbar-brand-img d-lg-none"
         ><img
           id="windowsilllogo"
-          src="../../assets/plantnav.png"
+          src="../../assets/plantplant.png"
           alt="Window sill logo"
         />{{ userFavorites.length }}</RouterLink
       >
