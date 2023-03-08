@@ -79,20 +79,16 @@
 </template>
 
 <style scoped>
-  input[type='text'] {
-    vertical-align: top;
+  form {
+    text-align: center;
+    margin-top: 20px;
   }
-  .button {
-    position: absolute;
-    top: 58.5%;
-    right: 35%;
-    /* right: 100px; */
-  }
+
   #tip {
     text-align: left;
   }
   #text {
-    width: 400px;
+    width: 80%;
     height: 100px;
     box-shadow: 0px 2px 4px rgba(38, 38, 38, 0.1);
     border: 2px solid grey;
@@ -116,7 +112,7 @@
   .container {
     display: flex;
     justify-content: center;
-    width: 50%;
+    width: 80%;
     background-color: white;
     border-radius: 10px;
     margin-bottom: 30px;
