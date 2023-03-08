@@ -15,7 +15,7 @@
       // ...mapState({ myState: (state) => state.plantTip })
       ...mapState({
         plantTips: (state) => state.plantTip,
-        specifikPlant: (state) => state.plantTip
+        specifikPlant: (state) => state.plantTips
       })
     },
 
@@ -29,9 +29,18 @@
         event.preventDefault()
         this.tip = ''
       },
-      removePlantTip() {
-        this.$store.commit('removePlantTip', this.tip)
+      // removePlantTip() {
+      //   this.$store.commit('removePlantTip', this.tip)
+      // },
+      removePlantTip(id, index) {
+        this.$store.commit('removePlantTip', {
+          id,
+          index
+        })
       }
+    },
+    created() {
+      console.log(this.specifikPlant)
     }
   }
 </script>
@@ -58,21 +67,21 @@
         />
       </form>
       <div id="scroll">
-        <h3 id="tip" v-if="tip !== null">Tips:</h3>
-        <p
-          v-for="plantTip in specifikPlant.filter(
-            (showSomeTip) => showSomeTip.id === id
-          )"
-          :key="plantTip"
-        >
-          {{ plantTip.tip }}
+        <div v-if="specifikPlant[id]">
+          <h3 id="tip">Tips:</h3>
+          <p
+            v-for="(plantTip, index) in specifikPlant[id].tips"
+            :key="plantTip"
+          >
+            {{ plantTip }}
 
-          <i
-            @click="removePlantTip(index, tip)"
-            id="remove-icon"
-            class="bi bi-x-lg"
-          />
-        </p>
+            <i
+              @click="removePlantTip(id, index)"
+              id="remove-icon"
+              class="bi bi-x-lg"
+            />
+          </p>
+        </div>
       </div>
     </div>
   </div>
