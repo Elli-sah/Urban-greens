@@ -1,38 +1,15 @@
 <script>
   import PlantCategory from '../components/PlantCategory.vue'
-  import { mapState } from 'vuex'
 
   export default {
     components: {
       PlantCategory
-    },
-    computed: {
-      ...mapState({
-        loggedInUser: (state) => state.loggedInUser,
-        userFavorites: (state) => {
-          if (state.loggedInUser) {
-            return state.users[state.loggedInUser.user]?.favorites || []
-          } else {
-            return []
-          }
-        }
-      })
-    },
-    methods: {
-      emptyFavorites() {
-        this.$store.commit('emptyList')
-        console.log(this.userFavorites.length)
-      }
     }
   }
 </script>
 
 <template>
   <div id="start-div">
-    <div id="welcome-popup" v-show="loggedInUser !== ''">
-      <p>Välkommen {{ loggedInUser.name }}!</p>
-    </div>
-
     <img
       id="primary-logo"
       src="../../assets/Logo-primary-svart.png"
@@ -65,25 +42,12 @@
         </p>
       </div>
     </div> -->
-    <button @click="emptyFavorites" />
   </div>
 </template>
 
 <style lang="scss" scoped>
   #start-div {
     height: 150vh;
-  }
-
-  #welcome-popup {
-    position: absolute;
-    top: 70px;
-    left: 50%;
-    margin-left: -90px;
-    width: 200px;
-  }
-
-  #welcome-popup > p {
-    font-size: 1rem;
   }
 
   #primary-logo {
@@ -122,10 +86,6 @@
     #primary-logo {
       margin-top: 20px;
       width: 50%;
-    }
-
-    #welcome-popup {
-      visibility: hidden;
     }
 
     p {

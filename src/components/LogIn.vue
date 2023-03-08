@@ -1,8 +1,11 @@
 <script>
   import { mapState } from 'vuex'
+  import AWN from 'awesome-notifications'
+
   export default {
     data() {
       return {
+        notifier: new AWN(),
         userName: '',
         password: '',
         createName: '',
@@ -10,21 +13,34 @@
         createPassword: '',
         users: null,
         showMessage: false,
-        logedInMessage: false,
-        logedInName: '',
         showCreateForm: false,
         showLoginForm: true,
-        showError: false
+        showError: false,
+        showWrongUser: false,
+        showUserWarning: false,
+        showPasswordWarning: false
       }
-    },
-    created() {
-      this.showMessage = false
-      this.logedInMessage = false
     },
     computed: {
       ...mapState({
         myState: (state) => state.users
       })
+    },
+    watch: {
+      createUserName(value) {
+        if (value.length < 5) {
+          this.showUserWarning = true
+        } else {
+          this.showUserWarning = false
+        }
+      },
+      createPassword(value) {
+        if (value.length < 5) {
+          this.showPasswordWarning = true
+        } else {
+          this.showPasswordWarning = false
+        }
+      }
     },
     methods: {
       AtLogin() {
@@ -33,13 +49,18 @@
           this.users[this.userName] !== undefined &&
           this.users[this.userName].password === this.password
         ) {
-          this.logedInName = this.users[this.userName].name
           console.log('hej')
-          this.logedInMessage = true
           this.$store.commit('addLoggedInUser', this.userName)
+          this.notifier.success(`Välkommen ${this.users[this.userName].name}!`)
           this.$router.push('/')
+        } else if (
+          this.users[this.userName] !== undefined &&
+          this.users[this.userName].password !== this.password
+        ) {
+          this.showWrongUser = true
         } else {
           console.log('hejdå')
+          this.showWrongUser = false
           this.showMessage = true
         }
       },
@@ -57,6 +78,9 @@
             password: this.createPassword
           })
           this.$store.commit('addLoggedInUser', this.createUserName)
+          this.notifier.success(
+            `Välkommen ${this.users[this.createUserName].name}!`
+          )
           this.$router.push('/')
         }
       },
@@ -83,8 +107,8 @@
       />
       <button id="login-btn" class="button" type="submit">Logga in</button>
     </form>
-    <div v-if="logedInMessage">
-      <h2>Välkommen {{ logedInName }}!</h2>
+    <div v-if="showWrongUser">
+      <p>Fel användarnamn eller lösenord, försök igen!</p>
     </div>
     <div v-if="showMessage">
       <p>Du verkar inte ha något konto!</p>
@@ -111,6 +135,9 @@
         required
         minlength="5"
       />
+      <p v-if="showUserWarning" id="user-name-warning">
+        Användarnamnet måste vara minst 5 tecken!
+      </p>
       <label for="create-password">Lösenord</label
       ><input
         id="create-password"
@@ -119,6 +146,9 @@
         required
         minlength="5"
       />
+      <p v-if="showPasswordWarning" id="password-warning">
+        Lösenordet måste vara minst 5 tecken!
+      </p>
       <button id="create-btn" class="button" type="submit">Skapa konto</button>
       <i
         @click="backClick"
@@ -150,8 +180,25 @@
     padding: 20px;
   }
   .form {
+    position: relative;
     display: flex;
     flex-direction: column;
+  }
+
+  #user-name-warning {
+    color: red;
+    font-size: 0.8rem;
+    position: absolute;
+    top: 100px;
+    left: 240px;
+  }
+
+  #password-warning {
+    color: red;
+    font-size: 0.8rem;
+    position: absolute;
+    top: 167px;
+    left: 270px;
   }
 
   #login-btn,
@@ -171,5 +218,31 @@
   #button-secondary {
     color: black;
     font-size: 0.8rem;
+  }
+  @media (max-width: 650px) {
+    #user-name-warning {
+      font-size: 0.7rem;
+      left: 210px;
+    }
+
+    #password-warning {
+      font-size: 0.7rem;
+      left: 240px;
+    }
+  }
+  @media (max-width: 550px) {
+    #user-name-warning {
+      font-size: 0.7rem;
+      top: 90px;
+      left: 220px;
+      width: 85px;
+    }
+
+    #password-warning {
+      font-size: 0.7rem;
+      top: 157px;
+      left: 220px;
+      width: 85px;
+    }
   }
 </style>

@@ -30,7 +30,8 @@ const state = {
       favorites: []
     }
   },
-  plantTip: [],
+
+  plantTips: {},
 
   loggedInUser: '',
   searchText: ''
@@ -45,13 +46,22 @@ const mutations = {
   //   state.users = { ...users }
   // },
 
-  setPlantTip(state, tipObject) {
-    console.log(tipObject.id)
+  setPlantTip(state, tipAndId) {
+    let plantId = state.plantTips[tipAndId.id]
 
-    state.plantTip.push(tipObject)
+    if (plantId) {
+      plantId.tips.push(tipAndId.tip)
+    } else {
+      let temporaryTip = { tips: [] }
+      temporaryTip.tips.push(tipAndId.tip)
+      state.plantTips[tipAndId.id] = temporaryTip
+    }
   },
-  removePlantTip(state, index) {
-    state.plantTip.splice(index, 1)
+  // removePlantTip(state, index) {
+  //   state.plantTip.splice(index, 1)
+  // },
+  removePlantTip(state, deletePlantTip) {
+    state.plantTips[deletePlantTip.id].tips.splice(deletePlantTip.index, 1)
   },
   logutUser(state) {
     state.loggedInUser = ''
@@ -77,9 +87,6 @@ const mutations = {
   },
   removePlant(state, deletePlant) {
     state.users[deletePlant.user].favorites.splice(deletePlant.index, 1)
-  },
-  emptyList(state) {
-    state.users[state.loggedInUser.user].favorites = []
   }
 }
 const plugins = [vuexLocal.plugin]
