@@ -24,6 +24,12 @@
       removePlantTip() {
         this.$store.commit('removePlantTip', this.tip)
       }
+      // removePlantTip(index) {
+      //   console.log(index)
+      //   this.$store.commit('removePlantTip', {
+      //     index: index
+      //   })
+      // }
     }
   }
 </script>
@@ -45,7 +51,7 @@
       </form>
       <div id="scroll">
         <h2 v-if="plantTip !== null">Tips:</h2>
-        <p v-for="tip in plantTips" :key="tip">
+        <p v-for="(tip, index) in plantTips" :key="tip">
           {{ tip }}
 
           <button class="button" @click="removePlantTip(index, tip)">

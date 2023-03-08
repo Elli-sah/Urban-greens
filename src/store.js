@@ -50,6 +50,9 @@ const mutations = {
   removePlantTip(state, index) {
     state.plantTip.splice(index, 1)
   },
+  // removePlantTip(state, deletePlant) {
+  //   state.plantTip[deletePlant.tip].tip.splice(deletePlant.index, 1)
+  // },
   logutUser(state) {
     state.loggedInUser = ''
   },
