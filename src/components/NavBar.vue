@@ -162,6 +162,7 @@
       /></RouterLink>
 
       <RouterLink
+        v-if="isLoggedIn"
         :to="`/profile/${loggedInUser.user}`"
         class="navbar-brand-img d-lg-none"
         ><img

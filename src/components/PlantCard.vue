@@ -59,6 +59,9 @@
       },
       onClick() {
         this.NotLoggedIn = false
+      },
+      closeModal() {
+        this.NotLoggedIn = false
       }
     }
   }
@@ -91,20 +94,10 @@
       </p>
     </div>
     <div class="popup-divs" v-show="NotLoggedIn">
-      <i @click="onClick" class="bi bi-x-lg" />
       <div id="login-div">
         <div id="inlogModal-div">
-          <InlogModal />
+          <InlogModal @close="closeModal" />
         </div>
-        <!-- <p>Du behöver logga in först</p>
-        <b-button
-          variant="link"
-          to="/login"
-          type="button"
-          id="button-secondary"
-          class="btn btn-link"
-          >Logga in här!</b-button
-        > -->
       </div>
     </div>
   </div>
@@ -174,15 +167,17 @@
     border-radius: 10px;
     position: absolute;
     bottom: 4px;
+    z-index: 1;
   }
 
   #login-div {
     padding: 40px;
-    position: relative;
+    position: absolute;
+    // object-fit: cover;
   }
 
   #inlogModal-div {
-    position: relative;
+    // position: absolute;
     object-fit: contain;
   }
 
