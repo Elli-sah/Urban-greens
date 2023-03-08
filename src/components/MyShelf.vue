@@ -1,7 +1,13 @@
 <script>
   import { mapState } from 'vuex'
+  import AWN from 'awesome-notifications'
 
   export default {
+    data() {
+      return {
+        notifier: new AWN()
+      }
+    },
     computed: {
       ...mapState({
         myPlants: (state) => state.users[state.loggedInUser.user].favorites,
@@ -9,12 +15,25 @@
       })
     },
     methods: {
-      removePlant(index) {
+      removePlant(plant, index) {
+        let onOK = () =>
+          this.$store.commit('removePlant', {
+            user: this.loggedInUser.user,
+            index: index
+          })
+        let onCancel
+        this.notifier.confirm(
+          `Är du säker på att du vill ta bort ${plant.name}?`,
+          onOK,
+          onCancel,
+          {
+            labels: {
+              confirm: 'Varning!'
+            }
+          }
+        )
         console.log(index)
-        this.$store.commit('removePlant', {
-          user: this.loggedInUser.user,
-          index: index
-        })
+        console.log(plant)
       }
     }
   }
@@ -44,7 +63,11 @@
           <p class="description-p">{{ plant.watering.short }}</p>
         </div>
       </div>
-      <i @click="removePlant(index)" id="remove-icon" class="bi bi-x-lg" />
+      <i
+        @click="removePlant(plant, index)"
+        id="remove-icon"
+        class="bi bi-x-lg"
+      />
     </div>
   </div>
 </template>
