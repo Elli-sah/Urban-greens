@@ -16,11 +16,15 @@
     },
     methods: {
       removePlant(plant, index) {
-        let onOK = () =>
+        let onOK = () => {
+          this.notifier.success(
+            `${plant.name} är borttagen från fönsterbrädan.`
+          )
           this.$store.commit('removePlant', {
             user: this.loggedInUser.user,
             index: index
           })
+        }
         let onCancel
         this.notifier.confirm(
           `Är du säker på att du vill ta bort ${plant.name}?`,
@@ -122,6 +126,7 @@
     cursor: pointer;
     margin-left: 15px;
   }
+
   @media (min-width: 500px) {
     .descriptionBox {
       margin-top: 30px;

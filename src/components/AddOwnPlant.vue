@@ -123,13 +123,15 @@
   #add-own-div {
     background-color: #e1ba6b;
     border-radius: 30px;
-    width: fit-content;
+    width: 90%;
+    max-width: 700px;
     margin: auto;
     margin-top: 30px;
+    padding: 20px;
   }
 
   p {
-    max-width: 600px;
+    width: 80%;
     margin: auto;
   }
   #plant-form {
@@ -174,5 +176,21 @@
 
   .radio-divs {
     padding: 10px;
+  }
+
+  @media (max-width: 750px) {
+    #plant-form {
+      width: 100%;
+    }
+    #input-name {
+      width: 90%;
+    }
+    label {
+      width: 200px;
+    }
+
+    #form-div {
+      flex-direction: column;
+    }
   }
 </style>
