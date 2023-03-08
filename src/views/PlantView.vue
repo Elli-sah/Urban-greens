@@ -26,7 +26,10 @@
         plantTip: '',
         isEasy: false,
         isMid: false,
-        isHard: false
+        isHard: false,
+        posionist: false,
+        noPoison: false,
+        hover: false
       }
     },
     computed: {
@@ -55,6 +58,12 @@
             this.isMid = true
           } else {
             this.isHard = true
+          }
+          // Funktion för att visa om plantan är giftig
+          if (this.plant.poison.short === true) {
+            this.poisonist = true
+          } else {
+            this.noPoison = true
           }
         })
       },
@@ -101,7 +110,7 @@
         document.body.style.overflow = 'auto'
       }
     },
-    created() {
+    mounted() {
       this.axiosGetPlants()
     },
 
@@ -143,6 +152,19 @@
           <h1>{{ plant.name }}</h1>
 
           <h3>{{ plant.latin }}</h3>
+          <div
+            id="poison-parent"
+            @mouseover="hover = true"
+            @mouseleave="hover = false"
+          >
+            <p v-show="poisonist">Denna växt är giftig</p>
+
+            <p class="description" v-if="hover" v-show="poisonist">
+              {{ plant.poison.description }}
+            </p>
+          </div>
+          <p v-show="noPoison">Denna växt är inte giftig</p>
+
           <p id="easy-p" v-show="isEasy">
             Svårighetsgrad: {{ plant.difficulty }}
             <span class="spans" style="background-color: green" />
@@ -307,11 +329,25 @@
       <!-- </div> -->
     </div>
   </div>
-  <MyBestTips :message="plantTip" />
+  <div v-if="plant">
+    <MyBestTips :plant-name="plant.name" :plant="plant" :id="plant.id" />
+  </div>
   <!-- </div> -->
 </template>
 
 <style scoped>
+  #poison-parent {
+    position: relative;
+  }
+  .description {
+    position: absolute;
+
+    padding: 10px;
+    font-size: 0.8rem;
+    background-color: #f0e8e2;
+    z-index: 1;
+    /* box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.1); */
+  }
   .icons-hover {
     font-size: 10rem;
     transition: transform 0.2s ease-in-out;

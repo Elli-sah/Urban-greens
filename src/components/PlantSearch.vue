@@ -28,7 +28,7 @@
       onClickPlants() {
         this.axiosGetPlants()
 
-        //Errormessage if the searchText does not match the result
+        //Errormeddelande om searchText inte matchar resultatet
         this.notFound = !this.result.some((plant) =>
           plant.name.toLowerCase().includes(this.searchText.toLowerCase())
         )
