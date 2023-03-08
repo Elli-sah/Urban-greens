@@ -77,9 +77,6 @@ const mutations = {
   },
   removePlant(state, deletePlant) {
     state.users[deletePlant.user].favorites.splice(deletePlant.index, 1)
-  },
-  emptyList(state) {
-    state.users[state.loggedInUser.user].favorites = []
   }
 }
 const plugins = [vuexLocal.plugin]
