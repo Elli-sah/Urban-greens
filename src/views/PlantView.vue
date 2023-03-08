@@ -3,9 +3,15 @@
   import { mapState } from 'vuex'
   import ShowPlant from '../components/ShowPlant.vue'
   import MyBestTips from '../components/MyBestTips.vue'
+  import InlogModal from '../components/InlogModal.vue'
 
   export default {
-    components: { ShowPlant, MyBestTips },
+    components: {
+      ShowPlant,
+      MyBestTips,
+
+      InlogModal
+    },
     props: {
       name: { type: String, required: true }
     },
@@ -106,6 +112,7 @@
         document.body.style.overflow = 'hidden'
       },
       closeModal() {
+        this.NotLoggedIn = false
         this.selectedPlant = null
         document.body.style.overflow = 'auto'
       }
@@ -275,17 +282,10 @@
               </p>
             </div>
             <div class="popup-divs" v-show="NotLoggedIn">
-              <i @click="onClick" class="bi bi-x-lg" />
               <div id="login-div">
-                <p>Du behöver logga in först</p>
-                <b-button
-                  variant="link"
-                  to="/login"
-                  type="button"
-                  id="button-secondary"
-                  class="btn btn-link"
-                  >Logga in här!</b-button
-                >
+                <div id="inlogModal-div">
+                  <InlogModal @close="closeModal" />
+                </div>
               </div>
             </div>
           </div>
@@ -359,7 +359,7 @@
     margin: 5px;
   }
   .popup-divs {
-    background-color: #c8c8c8;
+    /* background-color: #c8c8c8; */
     border-radius: 10px;
     position: absolute;
     display: flex;
