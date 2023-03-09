@@ -10,8 +10,14 @@
     },
     computed: {
       ...mapState({
-        myEvents: (state) => state.users[state.loggedInUser.user].calendar,
-        loggedInUser: (state) => state.loggedInUser
+        loggedInUser: (state) => state.loggedInUser,
+        myEvents: (state) => {
+          if (state.loggedInUser) {
+            return state.users[state.loggedInUser.user]?.calendar || []
+          } else {
+            return []
+          }
+        }
       })
     },
     created() {
