@@ -25,7 +25,10 @@
 <template>
   <div class="view-divs">
     <h1>{{ loggedInUser.name }}s fönsterbräda</h1>
-    <LastWatered />
+    <div id="wather-weather">
+      <LastWatered />
+      <MyWeather />
+    </div>
     <div id="image-container">
       <img
         id="window-image"
@@ -33,7 +36,7 @@
         alt="Fönsterbräda"
       />
     </div>
-    <MyWeather />
+
     <div id="my-shelf-view">
       <MyShelf />
       <AddOwnPlant />
@@ -43,6 +46,14 @@
 </template>
 
 <style lang="scss">
+  #wather-weather {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 700px;
+    height: 220px;
+    margin: auto;
+  }
   #image-container {
     display: flex;
     width: 100%;

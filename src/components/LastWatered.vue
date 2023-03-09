@@ -25,7 +25,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 300px;
+    width: 300px;
     background-color: white;
     border-radius: 20px;
     height: 100px;

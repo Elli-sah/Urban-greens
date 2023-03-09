@@ -74,10 +74,14 @@
     justify-content: end;
   }
   #weather {
-    right: 10px;
-    top: 100px;
-    position: absolute;
-    font-size: 1.1em;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    background-color: white;
+    border-radius: 20px;
+    height: 100px;
   }
 
   #temp {
