@@ -243,8 +243,9 @@
     width: 100%;
     padding: 30px 40px 30px 40px;
     border-radius: 10px;
-    background-color: rgba(73, 137, 89, 0.721);
     margin-bottom: 20px;
+    background-color: #577751;
+    color: white;
   }
   p {
     margin-bottom: 30px;
