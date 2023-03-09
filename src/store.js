@@ -76,6 +76,9 @@ const mutations = {
   },
   addEventToUserCalendar(state, event) {
     state.users[state.loggedInUser.user].calendar.push(event)
+  },
+  removeEvent(state, event) {
+    state.users[event.user].calendar.splice(event.index, 1)
   }
 }
 const plugins = [vuexLocal.plugin]

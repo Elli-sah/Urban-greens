@@ -15,18 +15,31 @@
       })
     },
     created() {
-      for (let x = 0; x < this.myEvents.length; x++) {
-        this.calendarOptions.events.push(this.myEvents[x])
+      this.calendarOptions.events = this.myEvents
+      // for (let x = 0; x < this.myEvents.length; x++) {
+      //   this.calendarOptions.events.push(this.myEvents[x])
+      //   console.log('myEvent', this.myEvent)
+      // }
+    },
+    watch: {
+      myEvents(newVal) {
+        Object.assign(this.calendarOptions, {
+          events: newVal
+        })
       }
     },
     data() {
       return {
+        selectedEvent: null,
         titleInput: '',
         descriptionInput: '',
         selectedDate: null,
         showModal: false,
         showEvent: false,
         eventDescription: '',
+        eventDate: '',
+        eventTitle: '',
+        eventIndex: '',
         calendarOptions: {
           plugins: [dayGridPlugin, interactionPlugin],
           initialView: 'dayGridMonth',
@@ -44,15 +57,20 @@
           eventColor: '#ffffff',
           eventTextColor: 'black',
           eventClick: (info) => {
-            // alert(
-            //   `Händelse: ${info.event.title}\n` +
-            //     `Beskrivning: ${info.event.extendedProps.description}`
-            // )
-
+            this.eventDate = info.event.startStr
             this.eventDescription = info.event.extendedProps.description
+            this.eventTitle = info.event.title
             this.showEvent = true
-            console.log(this.showEvent)
-            console.log(this.eventDescription)
+            this.selectedEvent = this.myEvents.find(
+              (item) => item.title === info.event.title
+            )
+            this.eventIndex = this.myEvents.indexOf(this.selectedEvent)
+            console.log('eventIndex', this.eventIndex)
+            console.log('info.event', info.event.title)
+            console.log('selectedEvent', this.selectedEvent)
+            console.log('myEvents', this.myEvents)
+            // this.selectedEvent = info.event
+            // console.log('event', this.selectedEvent)
           },
           dateClick: (info) => {
             this.selectedDate = info.dateStr
@@ -74,19 +92,30 @@
           start: this.selectedDate,
           description: this.descriptionInput
         }
+        console.log('date', this.selectedDate)
         this.$store.commit('addEventToUserCalendar', event)
-        this.calendarOptions.events.push(event)
+        // this.calendarOptions.events.push(event)
 
         this.showModal = false
         this.descriptionInput = ''
         this.titleInput = ''
+      },
+
+      removeEvent(eventIndex) {
+        console.log('index', eventIndex)
+
+        this.$store.commit('removeEvent', {
+          user: this.loggedInUser.user,
+          index: eventIndex
+        })
+        this.showEvent = false
       }
     }
   }
 </script>
 <template>
-  <div id="modalbobo" v-show="showModal">
-    <div id="date-close-container">
+  <div id="set-event" v-show="showModal">
+    <div class="date-close-container">
       <p>{{ selectedDate }}</p>
       <i @click="closeModal" id="remove-icon" class="bi bi-x-lg" />
     </div>
@@ -95,16 +124,13 @@
     <button @click="addEvent">submit</button>
   </div>
   <div id="showEventContainer" v-show="showEvent">
-    <div id="close-container">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
-        molestias dicta omnis voluptatum voluptate neque illo ex corrupti nobis
-        ipsam, blanditiis eius dolores voluptatem itaque amet adipisci quidem
-        labore fugiat.
-      </p>
-      <p>{{ eventDescription }}</p>
+    <div class="date-close-container">
+      <p>{{ eventDate }}</p>
       <i @click="closeEvent" class="bi bi-x-lg" />
     </div>
+    <h3>{{ eventTitle }}</h3>
+    <p>{{ eventDescription }}</p>
+    <button @click="removeEvent(eventIndex)">Ta bort</button>
   </div>
   <FullCalendar :options="calendarOptions" />
 </template>
@@ -125,13 +151,14 @@
     left: 10;
     z-index: 10;
   }
-  #date-close-container {
+
+  .date-close-container {
     display: flex;
     justify-content: space-between;
     width: 100%;
     padding: 5px 10px;
   }
-  #modalbobo {
+  #set-event {
     width: 300px;
     height: 200px;
     background-color: #f6f5f1;
