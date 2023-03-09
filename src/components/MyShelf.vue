@@ -51,9 +51,6 @@
 </script>
 
 <template>
-  <div id="test-div" v-if="dateDiff !== ''">
-    Du vattnade för {{ dateDiff }} sedan
-  </div>
   <h2>Dina växter</h2>
   <div id="plantShelfBox" v-if="myPlants.length !== 0">
     <div

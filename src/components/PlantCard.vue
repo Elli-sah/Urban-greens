@@ -1,10 +1,12 @@
 <script>
   import { mapState } from 'vuex'
-  import InlogModal from './InlogModal.vue'
+  // import InlogModal from './InlogModal.vue'
+  import LogIn from './LogIn.vue'
 
   export default {
     components: {
-      InlogModal
+      // InlogModal
+      LogIn
     },
     props: {
       plant: {
@@ -18,7 +20,8 @@
         Addedplant: false,
         NotLoggedIn: false,
         AlreadyAddedplant: false,
-        showDescription: false
+        showDescription: false,
+        modal: false
       }
     },
     computed: {
@@ -54,7 +57,8 @@
             }, 3000)
           }
         } else {
-          this.NotLoggedIn = true
+          // this.NotLoggedIn = true
+          this.modal = true
         }
       },
       onClick() {
@@ -93,10 +97,15 @@
         Du har redan lagt till {{ plant.name }} på din fönsterbräda!
       </p>
     </div>
-    <div class="popup-divs" v-show="NotLoggedIn">
+    <div>
       <div id="login-div">
         <div id="inlogModal-div">
-          <InlogModal @close="closeModal" />
+          <b-modal hide-footer v-model="modal">
+            <h1>Du måste logga in först!</h1>
+
+            <LogIn />
+          </b-modal>
+          <!-- <InlogModal @close="closeModal" /> -->
         </div>
       </div>
     </div>

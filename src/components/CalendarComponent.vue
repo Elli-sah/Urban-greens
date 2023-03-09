@@ -61,18 +61,22 @@
           plugins: [dayGridPlugin, interactionPlugin],
           initialView: 'dayGridMonth',
           buttonText: {
-            month: 'month'
+            today: 'Idag'
           },
 
           events: [
-            {
-              title: 'My event',
-              start: '2023-03-10',
-              description: 'More information about my event.'
-            }
+            // {
+            //   title: 'My event',
+            //   start: '2023-03-10',
+            //   description: 'More information about my event.'
+            // },
           ],
-          eventColor: '#ffffff',
+
+          eventColor: '#e1ba6b',
           eventTextColor: 'black',
+          firstDay: 1,
+          locale: 'sv',
+
           eventClick: (info) => {
             this.eventDate = info.event.startStr
             this.eventDescription = info.event.extendedProps.description
@@ -152,60 +156,91 @@
   }
 </script>
 <template>
-  <div id="set-event" v-show="showModal">
-    <div class="date-close-container">
-      <p>{{ selectedDate }}</p>
-      <i @click="closeModal" id="remove-icon" class="bi bi-x-lg" />
+  <div id="calendar-container">
+    <form @submit.prevent="addEvent">
+      <div class="showEventContainer" v-show="showModal">
+        <div class="date-close-container">
+          <p>{{ selectedDate }}</p>
+          <i @click="closeModal" id="remove-icon" class="bi bi-x-lg" />
+        </div>
+        <input
+          type="radio"
+          name="options"
+          id="water-check"
+          value="Vattnat"
+          v-model="titleInput"
+          @click="selectWater"
+        /><label for="water-check">Vattnat idag</label>
+        <input
+          type="radio"
+          name="options"
+          id="event-check"
+          v-model="showDiv"
+          @click="selectOther"
+          value="true"
+        /><label for="event-check">Egen händelse</label>
+        <div v-if="showDiv === 'true'">
+          <input
+            type="text"
+            v-model="titleInput"
+            placeholder="Namn på händelse"
+            required
+          />
+          <input
+            type="text"
+            v-model="descriptionInput"
+            placeholder="Beskrivning"
+          />
+        </div>
+        <button type="submit" class="button">submit</button>
+      </div>
+    </form>
+
+    <div class="showEventContainer" v-show="showEvent">
+      <div class="date-close-container">
+        <p>{{ eventDate }}</p>
+        <i @click="closeEvent" class="bi bi-x-lg" />
+      </div>
+      <h3>{{ eventTitle }}</h3>
+      <p>{{ eventDescription }}</p>
+      <button class="button" type="submit" @click="removeEvent(eventIndex)">
+        Ta bort
+      </button>
+      <!-- <div class="modal-blur" @click="closeEvent" /> -->
     </div>
-    <input
-      type="radio"
-      name="options"
-      id="water-check"
-      value="Vattnat"
-      v-model="titleInput"
-      @click="selectWater"
-    /><label for="water-check">Vattnat idag</label>
-    <input
-      type="radio"
-      name="options"
-      id="event-check"
-      v-model="showDiv"
-      @click="selectOther"
-      value="true"
-    /><label for="event-check">Egen händelse</label>
-    <div v-if="showDiv === 'true'">
-      <input type="text" v-model="titleInput" placeholder="Namn på händelse" />
-      <input type="text" v-model="descriptionInput" placeholder="Beskrivning" />
-    </div>
-    <button @click="addEvent">submit</button>
+
+    <FullCalendar :options="calendarOptions" />
   </div>
-  <div id="showEventContainer" v-show="showEvent">
-    <div class="date-close-container">
-      <p>{{ eventDate }}</p>
-      <i @click="closeEvent" class="bi bi-x-lg" />
-    </div>
-    <h3>{{ eventTitle }}</h3>
-    <p>{{ eventDescription }}</p>
-    <button @click="removeEvent(eventIndex)">Ta bort</button>
-  </div>
-  <FullCalendar :options="calendarOptions" />
 </template>
 
 <style>
-  #showEventContainer {
+  /* input {
+    text-transform: capitalize;
+  } */
+
+  #calendar-container {
+    margin: 50px 0;
+    background-color: #ffff;
+    border-radius: 20px;
+    padding: 20px;
+  }
+  .showEventContainer {
+    overflow: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-color: white;
+    padding: 20px;
     width: 300px;
-    height: 200px;
-    background-color: #f6f5f1;
+    height: 300px;
     display: flex;
-    align-items: center;
-    flex-direction: column;
     justify-content: space-around;
-    position: absolute;
-    top: 215px;
-    overflow-x: hidden;
-    overflow-y: auto;
-    left: 10;
-    z-index: 10;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   }
 
   .date-close-container {
@@ -214,6 +249,7 @@
     width: 100%;
     padding: 5px 10px;
   }
+  /*
   #set-event {
     width: 300px;
     height: 200px;
@@ -228,7 +264,7 @@
     overflow-y: auto;
     left: 10;
     z-index: 10;
-  }
+  } */
 
   :root {
     --fc-border-color: #373030;
@@ -239,6 +275,8 @@
     color: black;
   }
   .fc-day-header {
-    color: rgb(0, 0, 0);
+    background-color: red;
+    color: white;
+    font-weight: bold;
   }
 </style>

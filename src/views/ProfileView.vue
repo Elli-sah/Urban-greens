@@ -25,7 +25,6 @@
 <template>
   <div class="view-divs">
     <LastWatered />
-    <CalendarComponent />
     <h1>{{ loggedInUser.name }}s fönsterbräda</h1>
     <div id="image-container">
       <img
@@ -39,6 +38,7 @@
       <MyShelf />
       <AddOwnPlant />
     </div>
+    <CalendarComponent />
   </div>
 </template>
 

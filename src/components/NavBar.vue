@@ -198,6 +198,10 @@
                 >Min fönsterbräda ({{ userFavorites.length }})</b-nav-item
               >
 
+              <b-nav-item @click="handleLinkClicked" to="/general_advice"
+                >Tips & råd</b-nav-item
+              >
+
               <b-nav-item v-if="isLoggedIn" @click="onLogoutClick"
                 >Logga ut</b-nav-item
               >
