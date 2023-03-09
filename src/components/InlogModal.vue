@@ -5,17 +5,7 @@
     components: {
       LogIn
     },
-    // props: {
-    // selectedPlant: { required: true, type: Object },
-    // plantHeading: { required: true, type: String },
-    // longDescription: { required: true, type: String }
-    // plantplacement: { required: true, type: String }
-    // },
-    data() {
-      return {
-        // NotLoggedIn: false
-      }
-    },
+
     emits: ['close'],
 
     methods: {},
@@ -36,6 +26,10 @@
 <style scoped>
   h1 {
     font-size: 25px;
+  }
+
+  b-modal {
+    background-color: rgba(225, 186, 107, 0.9);
   }
   .modalContainer {
     z-index: 2;
