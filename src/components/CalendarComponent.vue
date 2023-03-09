@@ -142,11 +142,10 @@
       findWaterDate() {
         for (let i = this.myEvents.length - 1; i >= 0; i--) {
           if (this.myEvents[i].title === 'Vattnat') {
-            console.log('Object found:', this.myEvents[i].start)
-            console.log(moment.locale())
             this.date = moment(this.myEvents[i].start)
-            this.diff = moment.duration(moment().diff(this.date))
-            console.log('diff:', this.diff.humanize())
+            this.diff = moment.duration(
+              moment().subtract(1, 'days').diff(this.date)
+            )
             this.$store.commit('updateDateDiff', this.diff.humanize())
             break
           }
