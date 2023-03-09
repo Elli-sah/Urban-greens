@@ -3,14 +3,15 @@
   import { mapState } from 'vuex'
   import ShowPlant from '../components/ShowPlant.vue'
   import MyBestTips from '../components/MyBestTips.vue'
-  import InlogModal from '../components/InlogModal.vue'
+  import LogIn from '../components/LogIn.vue'
+  // import InlogModal from '../components/InlogModal.vue'
 
   export default {
     components: {
       ShowPlant,
       MyBestTips,
-
-      InlogModal
+      LogIn
+      // InlogModal
     },
     props: {
       name: { type: String, required: true }
@@ -33,9 +34,10 @@
         isEasy: false,
         isMid: false,
         isHard: false,
-        posionist: false,
+        poisonist: false,
         noPoison: false,
-        hover: false
+        hover: false,
+        modal: false
       }
     },
     computed: {
@@ -98,7 +100,8 @@
             }, 3000)
           }
         } else {
-          this.NotLoggedIn = true
+          // this.NotLoggedIn = true
+          this.modal = true
         }
       },
       onClick() {
@@ -281,12 +284,15 @@
                 Du har redan lagt till {{ plant.name }} på din fönsterbräda!
               </p>
             </div>
-            <div class="popup-divs" v-show="NotLoggedIn">
-              <div id="login-div">
-                <div id="inlogModal-div">
-                  <InlogModal @close="closeModal" />
-                </div>
+            <!-- <div class="popup-divs" v-show="NotLoggedIn"> -->
+            <div id="login-div">
+              <div id="inlogModal-div">
+                <b-modal hide-footer v-model="modal">
+                  <h1>Du måste logga in först!</h1>
+                  <LogIn />
+                </b-modal>
               </div>
+              <!-- </div> -->
             </div>
           </div>
         </div>
