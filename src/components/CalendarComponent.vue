@@ -3,6 +3,7 @@
   import dayGridPlugin from '@fullcalendar/daygrid'
   import interactionPlugin from '@fullcalendar/interaction'
   import { mapState } from 'vuex'
+  import AWN from 'awesome-notifications'
   import moment from 'moment-with-locales-es6'
   import 'moment/locale/sv'
   moment.locale('sv')
@@ -33,6 +34,22 @@
       //   this.calendarOptions.events.push(this.myEvents[x])
       //   console.log('myEvent', this.myEvent)
       // }
+
+      const today = moment().format('YYYY-MM-DD')
+      const eventsOnDate = this.myEvents.filter((item) => item.start === today)
+      if (eventsOnDate.length > 0) {
+        for (let i = 0; i < eventsOnDate.length; i++) {
+          if (eventsOnDate[i].title !== 'Vattnat') {
+            console.log('hej', eventsOnDate[i].title)
+            this.notifier.success(eventsOnDate[i].title, {
+              labels: {
+                success: 'Idag ',
+                bgColor: 'green'
+              }
+            })
+          }
+        }
+      }
     },
     watch: {
       myEvents(newVal) {
@@ -43,6 +60,7 @@
     },
     data() {
       return {
+        notifier: new AWN(),
         diff: '',
         date: '',
         selectedEvent: null,
@@ -192,7 +210,7 @@
             placeholder="Beskrivning"
           />
         </div>
-        <button type="submit" class="button">submit</button>
+        <button type="submit" class="button">Lägg till</button>
       </div>
     </form>
 
