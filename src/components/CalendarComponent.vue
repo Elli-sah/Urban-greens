@@ -50,7 +50,7 @@
           plugins: [dayGridPlugin, interactionPlugin],
           initialView: 'dayGridMonth',
           buttonText: {
-            month: 'month'
+            today: 'Idag'
           },
 
           events: [
@@ -60,8 +60,12 @@
             //   description: 'More information about my event.'
             // },
           ],
-          eventColor: '#ffffff',
+
+          eventColor: '#e1ba6b',
           eventTextColor: 'black',
+          firstDay: 1,
+          locale: 'sv',
+
           eventClick: (info) => {
             this.eventDate = info.event.startStr
             this.eventDescription = info.event.extendedProps.description
@@ -163,8 +167,12 @@
   /* input {
     text-transform: capitalize;
   } */
+
   #calendar-container {
     margin: 50px 0;
+    background-color: #ffff;
+    border-radius: 20px;
+    padding: 20px;
   }
   .showEventContainer {
     overflow: hidden;
@@ -217,6 +225,8 @@
     color: black;
   }
   .fc-day-header {
-    color: rgb(0, 0, 0);
+    background-color: red;
+    color: white;
+    font-weight: bold;
   }
 </style>
