@@ -86,7 +86,8 @@
 
   p {
     margin: 0 5px;
-    padding: 0;
+    padding: 10;
+    max-width: 60%;
   }
   img {
     width: 50px;
