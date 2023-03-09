@@ -24,8 +24,8 @@
 
 <template>
   <div class="view-divs">
-    <LastWatered />
     <h1>{{ loggedInUser.name }}s fönsterbräda</h1>
+    <LastWatered />
     <div id="image-container">
       <img
         id="window-image"
