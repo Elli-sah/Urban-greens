@@ -2,6 +2,7 @@
   import MyShelf from '../components/MyShelf.vue'
   import MyWeather from '../components/MyWeather.vue'
   import AddOwnPlant from '../components/AddOwnPlant.vue'
+  import LastWatered from '../components/LastWatered.vue'
   import CalendarComponent from '../components/CalendarComponent.vue'
   import { mapState } from 'vuex'
 
@@ -10,7 +11,8 @@
       MyShelf,
       MyWeather,
       AddOwnPlant,
-      CalendarComponent
+      CalendarComponent,
+      LastWatered
     },
     computed: {
       ...mapState({
@@ -22,6 +24,7 @@
 
 <template>
   <div class="view-divs">
+    <LastWatered />
     <CalendarComponent />
     <h1>{{ loggedInUser.name }}s fönsterbräda</h1>
     <div id="image-container">

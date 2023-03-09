@@ -10,8 +10,15 @@
     },
     computed: {
       ...mapState({
-        myPlants: (state) => state.users[state.loggedInUser.user].favorites,
-        loggedInUser: (state) => state.loggedInUser
+        loggedInUser: (state) => state.loggedInUser,
+        myPlants: (state) => {
+          if (state.loggedInUser) {
+            return state.users[state.loggedInUser.user]?.favorites || []
+          } else {
+            return []
+          }
+        },
+        dateDiff: (state) => state.dateDiff
       })
     },
     methods: {
@@ -44,6 +51,9 @@
 </script>
 
 <template>
+  <div id="test-div" v-if="dateDiff !== ''">
+    Du vattnade för {{ dateDiff }} sedan
+  </div>
   <h2>Dina växter</h2>
   <div id="plantShelfBox" v-if="myPlants.length !== 0">
     <div

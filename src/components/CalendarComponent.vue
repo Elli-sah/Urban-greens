@@ -3,6 +3,9 @@
   import dayGridPlugin from '@fullcalendar/daygrid'
   import interactionPlugin from '@fullcalendar/interaction'
   import { mapState } from 'vuex'
+  import moment from 'moment-with-locales-es6'
+  import 'moment/locale/sv'
+  moment.locale('sv')
 
   export default {
     components: {
@@ -19,9 +22,13 @@
           }
         }
       })
+      // showInputDiv() {
+      //   return this.showDiv === true
+      // }
     },
     created() {
       this.calendarOptions.events = this.myEvents
+      this.findWaterDate()
       // for (let x = 0; x < this.myEvents.length; x++) {
       //   this.calendarOptions.events.push(this.myEvents[x])
       //   console.log('myEvent', this.myEvent)
@@ -36,6 +43,8 @@
     },
     data() {
       return {
+        diff: '',
+        date: '',
         selectedEvent: null,
         titleInput: '',
         descriptionInput: '',
@@ -46,6 +55,8 @@
         eventDate: '',
         eventTitle: '',
         eventIndex: '',
+        showDiv: 'false',
+        plantsWatered: false,
         calendarOptions: {
           plugins: [dayGridPlugin, interactionPlugin],
           initialView: 'dayGridMonth',
@@ -98,6 +109,7 @@
           start: this.selectedDate,
           description: this.descriptionInput
         }
+        console.log('value:', this.titleInput)
         console.log('date', this.selectedDate)
         this.$store.commit('addEventToUserCalendar', event)
         // this.calendarOptions.events.push(event)
@@ -115,6 +127,26 @@
           index: eventIndex
         })
         this.showEvent = false
+      },
+      selectWater() {
+        this.showDiv = 'false'
+        console.log(this.showDiv)
+      },
+      selectOther() {
+        this.titleInput = ''
+      },
+      findWaterDate() {
+        for (let i = this.myEvents.length - 1; i >= 0; i--) {
+          if (this.myEvents[i].title === 'Vattnat') {
+            console.log('Object found:', this.myEvents[i].start)
+            console.log(moment.locale())
+            this.date = moment(this.myEvents[i].start)
+            this.diff = moment.duration(moment().diff(this.date))
+            console.log('diff:', this.diff.humanize())
+            this.$store.commit('updateDateDiff', this.diff.humanize())
+            break
+          }
+        }
       }
     }
   }
@@ -125,8 +157,26 @@
       <p>{{ selectedDate }}</p>
       <i @click="closeModal" id="remove-icon" class="bi bi-x-lg" />
     </div>
-    <input type="text" v-model="titleInput" placeholder="Namn på händelse" />
-    <input type="text" v-model="descriptionInput" placeholder="Beskrivning" />
+    <input
+      type="radio"
+      name="options"
+      id="water-check"
+      value="Vattnat"
+      v-model="titleInput"
+      @click="selectWater"
+    /><label for="water-check">Vattnat idag</label>
+    <input
+      type="radio"
+      name="options"
+      id="event-check"
+      v-model="showDiv"
+      @click="selectOther"
+      value="true"
+    /><label for="event-check">Egen händelse</label>
+    <div v-if="showDiv === 'true'">
+      <input type="text" v-model="titleInput" placeholder="Namn på händelse" />
+      <input type="text" v-model="descriptionInput" placeholder="Beskrivning" />
+    </div>
     <button @click="addEvent">submit</button>
   </div>
   <div id="showEventContainer" v-show="showEvent">
