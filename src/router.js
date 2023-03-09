@@ -6,6 +6,7 @@ import HomeView from './views/HomeView.vue'
 import ProfileView from './views/ProfileView.vue'
 import LoginView from './views/LoginView.vue'
 import GetStartedView from './views/GetStartedView.vue'
+import GeneralAdviceView from './views/GeneralAdviceView.vue'
 
 export default createRouter({
   history: createWebHashHistory(),
@@ -34,6 +35,10 @@ export default createRouter({
     {
       component: GetStartedView,
       path: '/get_started'
+    },
+    {
+      component: GeneralAdviceView,
+      path: '/general_advice'
     }
   ]
 })

@@ -108,7 +108,6 @@
               </button>
             </div>
           </div>
-          <!-- <div id="a-container"> -->
           <div class="text-center">
             <ul
               id="policy"
@@ -129,7 +128,6 @@
               alt="shelf-plant"
             />
           </div>
-          <!-- </div> -->
         </form>
       </section>
     </div>
@@ -159,13 +157,10 @@
   .copyright {
     color: black;
   }
-  /* p {
-    color: white;
-  } */
+
   h5 {
     font-weight: bolder;
     text-decoration: underline;
-    /* color: white; */
   }
 
   #shelf-img {
@@ -193,7 +188,6 @@
     .popup {
       width: auto;
       top: 50%;
-      left: 50%;
     }
 
     #policy {
