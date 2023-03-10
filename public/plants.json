@@ -42,7 +42,7 @@
   },
   {
     "id": 1,
-    "name": "Echeveria agavoides",
+    "name": "Echeveria",
     "latin": "Echeveria agavoides",
     "description": "Echeveria agavoides används ofta som prydnadsväxt i trädgårdar, krukväxter eller i landskapsarkitektur. På grund av dess dekorativa utseende används den också ofta i buketter och arrangemang. Echeveria agavoides är en av de mer populära sorterna av Echeveria på grund av dess unika form, som liknar en rosett med triangulära blad. Dess vanliga namn 'Lipstick Echeveria' kommer från de röda blommorna som påminner om läppstift. ",
 
@@ -438,6 +438,46 @@
   },
   {
     "id": 10,
+    "name": "Kaktus",
+    "latin": "Cactaceae",
+    "description": "Kaktusar är en grupp av suckulenta växter som har anpassat sig till torra och varma miljöer genom att lagra vatten i sina tjocka och köttiga stammar och blad. De finns i många olika former och storlekar, från små kuddformade kaktusar till höga pelarkaktusar. En del kaktusarter kan leva i hundratals år, och vissa av dem kan producera blommor i olika färger och former. Kaktusar används också ofta som symboler för tuffhet, uthållighet och överlevnad.",
+    "placement": {
+      "plantHeading": "Ljusbehov",
+      "short": "Soligt",
+      "description": "Kaktusar behöver mycket sol och trivs i direkt solljus. De kan dock tåla lite skugga, särskilt under de varmaste timmarna på dagen."
+    },
+    "temperature": {
+      "plantHeading": "Temperatur",
+      "short": "18-27°C",
+      "description": "Kaktusar trivs bäst i varma och torra miljöer och kan tåla temperaturer upp till 35-40 grader Celsius. Vissa arter kan dock tåla temperaturer under fryspunkten."
+    },
+    "watering": {
+      "plantHeading": "Bevattning",
+      "short": "Lite",
+      "description": "Kaktusar behöver inte mycket vatten, och det är viktigt att undvika att övervattna dem eftersom det kan leda till röta. De flesta arterna trivs bäst med att vattnas med jämna mellanrum, men sedan torkas ut mellan bevattningarna."
+    },
+
+    "fertilization": {
+      "plantHeading": "Näring",
+      "short": "Lite",
+      "description": "  Kaktusar behöver inte mycket näring, men det kan hjälpa till att hålla dem friska och välmående. Använd en kaktusgödsel en gång i månaden under våren och sommaren."
+    },
+    "pruning": "Kaktusar behöver sällan beskäras, men om det blir nödvändigt kan du ta bort överflödiga grenar eller krukor och forma kaktusen som du vill.",
+    "pests": "Kaktusar kan drabbas av skadedjur som mjöllöss och spinnkvalster. Kontrollera regelbundet bladen och stammarna för tecken på skadedjur och behandla dem vid behov.",
+    "poison": {
+      "short": true,
+      "description": "Vissa kaktusarter kan vara giftiga för människor och djur om de äts. Det är därför viktigt att undvika att äta kaktusar och att placera dem utom räckhåll för husdjur och små barn."
+    },
+    "difficulty": "Lätt",
+    "category": ["Suckulent", "Gröna växter"],
+    "image": [
+      "/images/kaktus.jpg",
+      "/images/kaktus1.jpg",
+      "/images/kaktus2.jpg"
+    ]
+  },
+  {
+    "id": 10,
     "name": "Kaktus Opuntia",
     "latin": "Opuntia",
     "description": "Opuntia är en kaktussläkt med över 200 arter som är spridda i Nord- och Sydamerika. De är kända för sina platta blad. Opuntia-kaktusen har en rad användningsområden, inklusive matlagning, medicin, kosmetika och dekorativa ändamål. Fruktarna kallas ibland 'fikon' och används i maträtter som sylt, soppa, sallader och tacos. De är också kända för sin höga näringsprofil, med höga halter av vitaminer, mineraler och antioxidanter. I medicinen används kaktusen för att behandla högt blodtryck, diabetes och inflammatoriska tillstånd. Opuntia-kaktusen har utvecklat ett unikt försvarssystem mot rovdjur genom sina taggar och platta blad, som gör det svårt för djur att äta dem. Några av de mest kända arterna inom släktet är prickly pear, som är den mest odlade opuntia-kaktusen i världen.",
@@ -674,6 +714,46 @@
       "/images/orkide.jpg",
       "/images/orkide2.jpg",
       "/images/orkide3.jpg"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Paradisträd",
+    "latin": "Crassula ovata",
+    "description": "Paradisträdet är en suckulent växt som är känd för sin tjocka, köttiga stam och blad som kan lagra vatten. Den kan växa upp till en höjd av 1,5 meter och bilda små vita blommor under sommaren. Paradisträdet används ofta som en inomhusväxt på grund av dess låga ljuskrav och enkel vård. Vissa tror att det ger tur och välgång till hemmet och det används också ofta som en bonsai-planta. Paradisträdet är också känt som 'penningträdet' eller 'pengarträdet' på grund av myten om att det ger tur och rikedom till sitt hem. I dess naturliga livsmiljö kan paradisträdet bli över 6 meter högt och har i dess hemland Sydafrika kallats 'jadeplantan'.",
+    "placement": {
+      "plantHeading": "Ljusbehov",
+      "short": "Halvskugga",
+      "description": "Paradisträdet trivs bäst i indirekt solljus, men tål även lite skugga."
+    },
+    "temperature": {
+      "plantHeading": "Temperatur",
+      "short": "18-24°C",
+      "description": "Paradisträdet trivs i rumstemperatur och kan tåla temperaturer ner till 10-12 grader Celsius, men det är bäst att undvika extrema temperaturförändringar. "
+    },
+    "watering": {
+      "plantHeading": "Bevattning",
+      "short": "Lite",
+      "description": "Paradisträdet behöver inte mycket vatten och kan faktiskt ta skada av för mycket. Det är viktigt att jorden torkar ut mellan bevattningar och att överskottsvatten töms från krukan. Paradisträdet kan klara tillfälliga temperaturförändringar om det inte är för långvarigt eller för extremt."
+    },
+
+    "fertilization": {
+      "plantHeading": "Näring",
+      "short": "Sällan",
+      "description": " Paradisträdet behöver inte mycket näring, men det kan hjälpa till att hålla den frisk och frodig. Använd en lågkvävegödsel en gång i månaden under våren och sommaren."
+    },
+    "pruning": "Paradisträdet behöver sällan beskäras, men om det börjar bli för stort eller formen behöver justeras kan du beskära det på våren eller sommaren.",
+    "pests": "Paradisträdet kan drabbas av skadedjur som spindelmider och sköldlöss. Kontrollera regelbundet bladen för tecken på skadedjur och behandla dem vid behov.",
+    "poison": {
+      "short": true,
+      "description": "Paradisträdet är giftigt för både människor och djur om det äts. Det innehåller ämnen som kan orsaka illamående, kräkningar och diarré om det förtärs i stora mängder. Därför bör paradisträdet placeras utom räckhåll för husdjur och små barn som kan vara benägna att stoppa saker i munnen. Om någon eller något skulle äta av växten och visa symptom på förgiftning, bör du söka medicinsk eller veterinär hjälp så snart som möjligt."
+    },
+    "difficulty": "Lätt",
+    "category": ["Suckulent"],
+    "image": [
+      "/images/paradis.jpg",
+      "/images/paradis1.jpg",
+      "/images/paradis2.jpg"
     ]
   },
   {
