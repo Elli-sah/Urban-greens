@@ -51,13 +51,7 @@
         }
       }
     },
-    watch: {
-      myEvents(newVal) {
-        Object.assign(this.calendarOptions, {
-          events: newVal
-        })
-      }
-    },
+
     data() {
       return {
         notifier: new AWN(),
@@ -173,6 +167,23 @@
   }
 </script>
 <template>
+  <div id="plant-calendar">
+    <h2>Växtkalender</h2>
+    <div id="plant-calendar-box">
+      <p id="text-1">
+        Här kan du enkelt lägga till kommande händelser som att beskära dina
+        växter, ge dem näring eller när det är dags att plantera om.
+      </p>
+      <p id="text-2">
+        Du får notifikationer om händelser som sker idag och du kan även lägga
+        till när du har vattnat dina växter.
+      </p>
+      <p id="text-3">
+        Med vår växtkalender kommer du ha full koll på dina gröna vänner och
+        kunna ge dem precis vad de behöver vid rätt tillfälle.
+      </p>
+    </div>
+  </div>
   <div id="calendar-container">
     <form @submit.prevent="addEvent">
       <div class="showEventContainer" v-show="showModal">
@@ -234,11 +245,43 @@
   /* input {
     text-transform: capitalize;
   } */
+  #plant-calendar {
+    margin-top: 50px;
+    background-color: rgb(255, 255, 255, 0.9);
+    border-radius: 20px 20px 0 0;
+    padding: 20px;
+    border-bottom: solid 1px #e8cac3;
+  }
 
+  #plant-calendar-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #text-1,
+  #text-2,
+  #text-3 {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 300px;
+  }
+  #text-1 {
+    background-color: #f0e8e2;
+  }
+  #text-2 {
+    background-color: #e1ba6b;
+  }
+  #text-3 {
+    background-color: #e8cac3;
+  }
   #calendar-container {
-    margin: 50px 0;
-    background-color: #ffff;
-    border-radius: 20px;
+    margin-bottom: 50px;
+    background-color: rgb(255, 255, 255, 0.9);
+    border-radius: 0 0 20px 20px;
     padding: 20px;
   }
   .showEventContainer {
@@ -295,5 +338,29 @@
     background-color: red;
     color: white;
     font-weight: bold;
+  }
+  @media (min-width: 650px) {
+    #plant-calendar-box {
+      flex-direction: row;
+      align-items: normal;
+      max-width: 800px;
+    }
+    #text-1,
+    #text-2,
+    #text-3 {
+      width: 33%;
+    }
+  }
+  @media (min-width: 900px) {
+    #calendar-container {
+      width: 800px;
+      margin: auto;
+    }
+    #plant-calendar {
+      margin: 50px auto 0 auto;
+      margin-top: 100px;
+
+      width: 800px;
+    }
   }
 </style>
