@@ -11,12 +11,14 @@
 </script>
 
 <template>
-  <div id="watered-div" v-if="dateDiff !== ''">
-    <i class="bi bi-droplet-fill" />
-    <p>
-      Du vattnade för <strong> {{ dateDiff }} </strong> sedan
-    </p>
-  </div>
+  <transition class="slide-in-enter-active" name="slide-in">
+    <div id="watered-div" v-if="dateDiff !== ''">
+      <i class="bi bi-droplet-fill" />
+      <p>
+        Du vattnade för <strong> {{ dateDiff }} </strong> sedan
+      </p>
+    </div>
+  </transition>
 </template>
 
 <style scoped>
@@ -38,5 +40,18 @@
 
   p {
     margin: 0;
+  }
+
+  .slide-in-enter-active {
+    animation: slide-in 0.9s forwards;
+  }
+
+  @keyframes slide-in {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
   }
 </style>
