@@ -45,14 +45,14 @@
         result: [],
         searchText: '',
         notFound: false,
-        loading: true
+        isLoading: true
       }
     },
 
     mounted() {
       setTimeout(() => {
-        this.loading = false
-      }, 1000)
+        this.isLoading = false
+      })
     },
 
     methods: {
@@ -98,26 +98,26 @@
     </div>
 
     <div class="scrolling-wrapper">
-      <Router-Link to="/plantlist/Alla_växter" class="categoryLinks">
+      <RouterLink to="/plantlist/Alla_växter" class="categoryLinks">
         <button class="button">Alla växter</button>
-      </Router-Link>
+      </RouterLink>
 
-      <Router-Link to="/plantlist/Blommande" class="categoryLinks">
+      <RouterLink to="/plantlist/Blommande" class="categoryLinks">
         <button class="button">Blommande växter</button>
-      </Router-Link>
-      <Router-Link to="/plantlist/Suckulent" class="categoryLinks">
+      </RouterLink>
+      <RouterLink to="/plantlist/Suckulent" class="categoryLinks">
         <button class="button">Suckulenter</button>
-      </Router-Link>
-      <Router-Link to="/plantlist/Gröna växter" class="categoryLinks">
+      </RouterLink>
+      <RouterLink to="/plantlist/Gröna växter" class="categoryLinks">
         <button class="button">Gröna växter</button>
-      </Router-Link>
+      </RouterLink>
       <!-- <Router-Link to="/plantlist/Giftiga_växter" class="categoryLinks">
         <button class="button">Giftiga växter</button>
       </Router-Link> -->
     </div>
     <!-- <h2>{{ category }}</h2> -->
     <div>
-      <div v-if="loading" class="overlay">
+      <div v-if="isLoading" class="overlay">
         <PageLoader />
       </div>
       <div v-else id="filteredPlants">

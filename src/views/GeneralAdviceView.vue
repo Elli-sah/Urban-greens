@@ -219,12 +219,8 @@
     margin-top: 70px;
     background-color: rgba(255, 255, 255, 0.888);
   }
-  #header {
-    display: flex;
-    justify-content: center;
-  }
+
   h1 {
-    width: max-content;
     /* border-bottom-style: dotted; */
     font-size: 300%;
   }
@@ -264,19 +260,11 @@
     font-family: 'Lato', sans serif;
   }
 
-  @media (max-width: 800px) {
-    #header {
-      margin-top: 50px;
-    }
-  }
   @media (max-width: 500px) {
     #header {
-      margin-top: 70px;
+      font-size: small;
     }
-  }
-  @media (max-width: 500px) {
-    #steps-color {
-      width: 100%;
+    #steps {
       padding: 10px;
     }
     #text-box {
