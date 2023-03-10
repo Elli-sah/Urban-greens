@@ -1,3 +1,7 @@
+<script>
+  export default {}
+</script>
+
 <template>
   <div class="loader">
     <div class="spinner" />
@@ -11,6 +15,7 @@
     align-items: center;
     height: 100%;
     width: 100%;
+    z-index: 9999;
   }
 
   .spinner {
@@ -19,16 +24,6 @@
     border-top: 4px solid #465f41;
     border-radius: 50%;
     animation: spin 1s linear infinite;
-  }
-
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #e1ba6b;
-    z-index: 9999;
   }
 
   @keyframes spin {
