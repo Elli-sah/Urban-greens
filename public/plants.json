@@ -114,7 +114,11 @@
     },
     "difficulty": "Lätt",
     "category": "Blommande",
-    "image": ["/images/begonia.png"]
+    "image": [
+      "/images/begonia.jpg",
+      "/images/begonia2.jpg",
+      "/images/begonia3.jpg"
+    ]
   },
 
   {
@@ -510,7 +514,7 @@
     "difficulty": "Lätt",
     "category": "Gröna växter",
     "image": [
-      "/images/monstera.png",
+      "/images/monstera.jpg",
       "/images/monstera2.jpg",
       "/images/monstera3.jpg"
     ]
@@ -550,7 +554,7 @@
     "difficulty": "Lätt",
     "category": "Gröna växter",
     "image": [
-      "/images/murgrona.png",
+      "/images/murgrona.jpg",
       "/images/murgrona2.jpg",
       "/images/murgrona3.jpg"
     ]
@@ -629,7 +633,11 @@
     },
     "difficulty": "Lätt",
     "category": "Blommande",
-    "image": ["/images/pelargon.png"]
+    "image": [
+      "/images/pelargon.jpg",
+      "/images/pelargon2.jpg",
+      "/images/pelargon3.jpg"
+    ]
   },
   {
     "id": 15,

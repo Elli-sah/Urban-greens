@@ -11,6 +11,7 @@
     "bootstrap-icons": "^1.10.3",
     "bootstrap-vue-next": "^0.7.3",
     "jquery": "^3.6.3",
+    "moment-with-locales-es6": "^1.0.1",
     "popper.js": "^1.16.1",
     "sass": "^1.58.3",
     "vue": "^3.2.45",

@@ -95,6 +95,7 @@
     }
     #div-desktop {
       display: flex;
+      align-items: center;
     }
     #kom-igang {
       border-radius: 50%;

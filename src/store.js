@@ -39,6 +39,7 @@ const state = {
   plantTips: {},
 
   loggedInUser: '',
+  dateDiff: '',
   searchText: ''
 }
 
@@ -70,6 +71,7 @@ const mutations = {
   },
   logutUser(state) {
     state.loggedInUser = ''
+    state.dateDiff = ''
   },
   setSearchText(state, searchText) {
     state.searchText = searchText
@@ -99,6 +101,9 @@ const mutations = {
   },
   removeEvent(state, event) {
     state.users[event.user].calendar.splice(event.index, 1)
+  },
+  updateDateDiff(state, date) {
+    state.dateDiff = date
   }
 }
 const plugins = [vuexLocal.plugin]

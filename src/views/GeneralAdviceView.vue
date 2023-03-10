@@ -70,7 +70,7 @@
 
           <div class="advice">
             <div>
-              <h3>Placering</h3>
+              <h4>Placering</h4>
               <p>
                 En viktig faktor för att dina krukväxter ska trivas är att de
                 placeras på rätt plats. De flesta krukväxter trivs i en väl
@@ -86,7 +86,7 @@
           </div>
           <div class="advice">
             <div>
-              <h3>Bevattning</h3>
+              <h4>Bevattning</h4>
               <p>
                 Att vattna dina växter regelbundet är viktigt, men övervattna
                 inte och se till att jorden inte torkar ut helt mellan
@@ -98,7 +98,7 @@
               </p>
             </div>
             <div>
-              <h3>Gödsling</h3>
+              <h4>Gödsling</h4>
               <p>
                 Krukväxter behöver näring för att växa och trivas. Gödsla därför
                 med en lämplig gödsel, följ anvisningarna på förpackningen och
@@ -106,7 +106,7 @@
               </p>
             </div>
             <div>
-              <h3>Luftfuktighet</h3>
+              <h4>Luftfuktighet</h4>
               <p>
                 Vissa krukväxter trivs bättre i högre luftfuktighet än vad som
                 finns i våra hem. Du kan öka luftfuktigheten genom att spraya
@@ -115,7 +115,7 @@
               </p>
             </div>
             <div>
-              <h3>Omplantering</h3>
+              <h4>Omplantering</h4>
               <p>
                 Krukväxter behöver ibland planteras om, när de växer ur sin
                 nuvarande kruka. Välj en större kruka och byt ut jorden
@@ -124,7 +124,7 @@
               </p>
             </div>
             <div>
-              <h3>Skadedjur</h3>
+              <h4>Skadedjur</h4>
               <p>
                 Håll koll på skadedjur som bladlöss och spinnkvalster som kan
                 angripa dina krukväxter. Det finns många olika bekämpningsmedel
@@ -133,7 +133,7 @@
               </p>
             </div>
             <div>
-              <h3>Klippning</h3>
+              <h4>Klippning</h4>
               <p>
                 Klipp bort döda blad och blommor regelbundet för att hålla din
                 krukväxt i bra skick. Det kan också vara nödvändigt att beskära
@@ -142,7 +142,7 @@
               </p>
             </div>
             <div>
-              <h3>Rengöring</h3>
+              <h4>Rengöring</h4>
               <p>
                 Det finns olika sätt att rengöra växter på beroende på vilken
                 typ av växt det är och vad som behöver rengöras. Här är några
@@ -210,7 +210,7 @@
   }
 
   #text-box {
-    padding: 10% 15% 10% 15%;
+    padding: 5% 15% 5% 15%;
   }
   #big-box {
     border-radius: 10px;
@@ -234,7 +234,7 @@
     text-align: left;
     font-weight: bolder;
   }
-  h3 {
+  h4 {
     display: flex;
     text-align: left;
     font-weight: 600;
@@ -243,8 +243,9 @@
     width: 100%;
     padding: 30px 40px 30px 40px;
     border-radius: 10px;
-    background-color: rgba(73, 137, 89, 0.721);
     margin-bottom: 20px;
+    background-color: #577751;
+    color: white;
   }
   p {
     margin-bottom: 30px;

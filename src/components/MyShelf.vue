@@ -10,8 +10,15 @@
     },
     computed: {
       ...mapState({
-        myPlants: (state) => state.users[state.loggedInUser.user].favorites,
-        loggedInUser: (state) => state.loggedInUser
+        loggedInUser: (state) => state.loggedInUser,
+        myPlants: (state) => {
+          if (state.loggedInUser) {
+            return state.users[state.loggedInUser.user]?.favorites || []
+          } else {
+            return []
+          }
+        },
+        dateDiff: (state) => state.dateDiff
       })
     },
     methods: {
