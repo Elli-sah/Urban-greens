@@ -14,7 +14,7 @@
           case 2:
             return 'I växtguiden kan du se alla växter. Här kan du enkelt lägga till växter på din fönsterbräda genom att klicka på den lilla krukan. Se mer information om växten genom att klicka på den'
           case 3:
-            return 'Det finns information om varje på dess specefika växtsida. Klickar du på ikonerna så kan du få ut en mer detaljerad beskrivning om specefik rubrik'
+            return 'Det finns information om varje växt på dess specefika växtsida. Klickar du på ikonerna så kan du få ut en mer detaljerad beskrivning om specefik rubrik'
           case 4:
             return 'På din fönsterbräda kan du hitta samlad information om dina växter. här får du även notiser och påminelser som ska hjälpa dig att ta hand om dina växter på bästa sätt'
           case 5:
