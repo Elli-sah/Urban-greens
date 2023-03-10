@@ -24,7 +24,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
   main {
     margin-top: 6%;
   }
