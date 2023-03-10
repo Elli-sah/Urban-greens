@@ -128,6 +128,7 @@
     margin: auto;
     margin-top: 30px;
     padding: 20px;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.1);
   }
 
   p {

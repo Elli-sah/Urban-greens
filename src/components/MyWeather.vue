@@ -47,27 +47,27 @@
     <p id="temp">{{ temp }}℃</p>
     <img :src="`http://openweathermap.org/img/wn/${img}.png`" />
   </div>
-  <transition name="slide-in">
-    <div id="weather" v-if="temp !== null" ref="box">
-      <p v-if="temp > 15 && img === '01d'">
-        Temperaturen hos dig är över 15℃ och sol... tänk på att vattna dina
-        växter, och skydda dom från direkt solljus då!
-      </p>
-      <p v-if="temp < 5 && img">
-        Temperaturen hos dig är under 5℃... tänk på att skydda dina växter från
-        kalla luftdrag!
-      </p>
-    </div>
-  </transition>
+  <!-- <transition name="slide-in"> -->
+  <div id="weather" v-if="temp !== null" ref="box">
+    <p v-if="temp > 15 && img === '01d'">
+      Temperaturen hos dig är över 15℃ och sol... tänk på att vattna dina
+      växter, och skydda dom från direkt solljus då!
+    </p>
+    <p v-if="temp < 5 && img">
+      Temperaturen hos dig är under 5℃... tänk på att skydda dina växter från
+      kalla luftdrag!
+    </p>
+  </div>
+  <!-- </transition> -->
 </template>
 
 <style scoped>
   #weather-container {
     width: 50%;
     position: absolute;
-    right: 70px;
-    top: 7px;
-    z-index: 10000;
+    right: 0px;
+    top: 65px;
+    z-index: 0;
     padding: 5px 10px 5px 40px;
     display: flex;
     align-items: center;
@@ -84,21 +84,17 @@
     height: 100px;
   }
 
-  #temp {
-    font-size: 1.1em;
-  }
-
   p {
     margin: 0 5px;
     padding: 10;
     max-width: 60%;
   }
   img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
   }
 
-  .slide-in-enter-active {
+  /* .slide-in-enter-active {
     animation: slide-in 0.9s forwards;
   }
 
@@ -109,16 +105,21 @@
     to {
       transform: translateX(0);
     }
-  }
+  } */
 
   @media (min-width: 992px) {
     #weather-container {
       top: 100px;
       right: 0;
       width: 400px;
+      z-index: 0;
     }
     #weather {
       top: 150px;
+    }
+    img {
+      width: 50px;
+      height: 50px;
     }
   }
 </style>

@@ -28,7 +28,7 @@
         dem blomstra med hjälp av vår app. Kontakta oss om du behöver hjälp.
         Lycka till med dina växter!
       </p> -->
-        <RouterLink v-if="isLoggedIn" to="/login">
+        <RouterLink v-if="!isLoggedIn" to="/login">
           <button id="komIgang" class="button">Logga in</button>
         </RouterLink>
       </div>
