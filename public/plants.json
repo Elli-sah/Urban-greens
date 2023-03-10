@@ -41,6 +41,43 @@
     ]
   },
   {
+    "id": 1,
+    "name": "Echeveria agavoides",
+    "latin": "Echeveria agavoides",
+    "description": "Echeveria agavoides används ofta som prydnadsväxt i trädgårdar, krukväxter eller i landskapsarkitektur. På grund av dess dekorativa utseende används den också ofta i buketter och arrangemang. Echeveria agavoides är en av de mer populära sorterna av Echeveria på grund av dess unika form, som liknar en rosett med triangulära blad. Dess vanliga namn 'Lipstick Echeveria' kommer från de röda blommorna som påminner om läppstift. ",
+
+    "placement": {
+      "plantHeading": "Ljusbehov",
+      "short": "Ljus",
+      "description": "Echeveria agavoides trivs bäst i full sol men kan också växa i delvis skugga. Om den odlas inomhus bör den placeras i ett fönster med mycket ljus."
+    },
+    "temperature": {
+      "plantHeading": "Temperatur",
+      "short": "18-24°C",
+      "description": "Echeveria agavoides trivs i varma klimat och tål inte frost. Den kan odlas utomhus i zonerna 9-11 eller som inomhusväxt i kallare områden."
+    },
+    "watering": {
+      "plantHeading": "Bevattning",
+      "short": "Sparsamt",
+      "description": " Echeveria agavoides behöver inte mycket vatten och bör låta jorden torka ut mellan bevattningar. Övervattning kan leda till rötterna ruttnar."
+    },
+
+    "fertilization": {
+      "plantHeading": "Näring",
+      "short": "Sparsamt",
+      "description": " Echeveria agavoides behöver inte mycket gödsel, men en allmän gödsel kan appliceras varannan månad under våren och sommaren."
+    },
+    "pruning": "Echeveria agavoides behöver inte beskäras ofta men om de nedre bladen dör kan de tas bort för att främja tillväxt.",
+    "pests": "Echeveria agavoides kan drabbas av spindelkvalster, mjöldagg och bladlöss. Att hålla plantan ren och frisk kan hjälpa till att förebygga skadedjur.",
+    "poison": {
+      "short": false,
+      "description": ""
+    },
+    "difficulty": "Lätt",
+    "category": ["Suckulent", "Gröna växter"],
+    "image": ["/images/lip.jpg", "/images/lip1.jpg", "/images/lip2.jpg"]
+  },
+  {
     "id": 2,
     "name": "Ampellilja",
     "latin": "Chlorophytum",
@@ -397,6 +434,46 @@
       "/images/primula.jpg",
       "/images/primula2.jpg",
       "/images/primula3.jpg"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Kaktus Opuntia",
+    "latin": "Opuntia",
+    "description": "Opuntia är en kaktussläkt med över 200 arter som är spridda i Nord- och Sydamerika. De är kända för sina platta blad. Opuntia-kaktusen har en rad användningsområden, inklusive matlagning, medicin, kosmetika och dekorativa ändamål. Fruktarna kallas ibland 'fikon' och används i maträtter som sylt, soppa, sallader och tacos. De är också kända för sin höga näringsprofil, med höga halter av vitaminer, mineraler och antioxidanter. I medicinen används kaktusen för att behandla högt blodtryck, diabetes och inflammatoriska tillstånd. Opuntia-kaktusen har utvecklat ett unikt försvarssystem mot rovdjur genom sina taggar och platta blad, som gör det svårt för djur att äta dem. Några av de mest kända arterna inom släktet är prickly pear, som är den mest odlade opuntia-kaktusen i världen.",
+    "placement": {
+      "plantHeading": "Ljusbehov",
+      "short": "Soligt",
+      "description": "Opuntia-kaktusen behöver mycket solljus för att trivas och utvecklas ordentligt. Placera den i ett fönster som får minst 6 timmar av direkt solljus om dagen."
+    },
+    "temperature": {
+      "plantHeading": "Temperatur",
+      "short": "18-27°C",
+      "description": "Opuntia-kaktusen trivs i varma temperaturer och tål inte frost. De bästa temperaturerna för kaktusen är mellan 18 och 27 grader Celsius."
+    },
+    "watering": {
+      "plantHeading": "Bevattning",
+      "short": "Lite",
+      "description": "Opuntia-kaktusen behöver inte mycket vatten och kan klara sig länge utan vatten. Bevattning ska vara sparsam och inte ske alltför ofta. De föredrar också en torr jord och övervattning kan leda till rotförruttnelse."
+    },
+
+    "fertilization": {
+      "plantHeading": "Näring",
+      "short": "Lite",
+      "description": " Opuntia-kaktusen behöver inte mycket näring och kan överleva i fattig jord. Det kan vara bra att tillföra en kaktusgödsel en gång om året under våren eller sommaren."
+    },
+    "pruning": "Opuntia-kaktusen behöver inte beskäras mycket. Om det behövs kan du ta bort döda eller sjuka delar av växten med en ren, vass sekatör.",
+    "pests": "Opuntia-kaktusen kan drabbas av spinnkvalster och sköldlöss. Sköldlöss kan bekämpas med en mild tvållösning eller insektsmedel.",
+    "poison": {
+      "short": false,
+      "description": ""
+    },
+    "difficulty": "Lätt",
+    "category": ["Suckulent", "Gröna växter"],
+    "image": [
+      "/images/kaktuso.jpg",
+      "/images/kaktuso1.jpg",
+      "/images/kaktuso2.jpg"
     ]
   },
   {
