@@ -25,9 +25,9 @@
 </template>
 
 <style scoped>
-  main {
-    margin-top: 6%;
-  }
+  /* main {
+    margin-top: 10%;
+  } */
 
   #login-divs {
     width: 90%;

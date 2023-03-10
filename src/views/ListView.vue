@@ -33,7 +33,7 @@
         } else {
           return this.result.filter(
             (plant) =>
-              plant.category === category &&
+              plant.category.includes(category) &&
               plant.name.toLowerCase().includes(this.searchText.toLowerCase())
           )
         }

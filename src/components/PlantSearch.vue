@@ -162,7 +162,7 @@
       flex-direction: column;
     }
     #searchfield {
-      width: 350px;
+      width: 200px;
     }
     #linkdiv {
       background-color: rgba(225, 186, 107, 0.9);

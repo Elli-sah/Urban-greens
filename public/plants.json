@@ -33,7 +33,7 @@
       "description": "Aloe kan ha irriterande egenskaper, men att smaka en lite mängd betraktas som ofarligt. För djur kan aloe veran i större mängd ge kräkningar, diarré och/eller skakningar i kroppen."
     },
     "difficulty": "Lätt",
-    "category": "Suckulent",
+    "category": ["Suckulent", "Gröna växter"],
     "image": [
       "/images/aloe_vera1.jpg",
       "/images/aloe_vera2.jpg",
@@ -432,7 +432,7 @@
       "description": "Kan vara giftig för djur."
     },
     "difficulty": "Lätt",
-    "category": "Blommande",
+    "category": ["Blommande", "Suckulent"],
     "image": [
       "/images/kalanchoe.png",
       "/images/kalanchoe2.jpg",
@@ -838,6 +838,456 @@
       "/images/guldpalm.png",
       "/images/guldpalm2.jpg",
       "/images/guldpalm3.jpg"
+    ]
+  },
+
+  {
+    "id": 0,
+    "name": "Basilika",
+    "latin": "Genovese",
+    "description": "Basilika är en populär ört som används i matlagning och som prydnadsväxt. Basilika är en relativt enkel växt att odla, särskilt om du ger den tillräckligt med ljus och värme. Den är vanligtvis inte särskilt känslig för sjukdomar eller skadedjur. ",
+    "placement": {
+      "plantHeading": "Ljusbehov",
+      "short": "Ljust",
+      "description": "Basilika trivs bäst på en plats med mycket ljus, helst direkt solljus. Om du odlar inomhus, se till att placera basilikan på en söder- eller östfönster. Om det inte är möjligt, kan du använda växtbelysning för att ge den tillräckligt med ljus."
+    },
+    "temperature": {
+      "plantHeading": "Temperatur",
+      "short": "18-27°C",
+      "description": "Basilika är en värmekrävande växt och trivs bäst i temperaturer mellan 18-27 grader Celsius. Se till att undvika temperaturer under 10 grader och stora temperaturförändringar."
+    },
+
+    "watering": {
+      "plantHeading": "Bevattning",
+      "short": "Måttligt",
+      "description": "Basilika behöver jämn fuktighet, så se till att vattna regelbundet. Undvik dock att övervattna, eftersom det kan leda till rötterna förruttnar. Det är viktigt att jorden inte torkar ut helt."
+    },
+
+    "fertilization": {
+      "plantHeading": "Näring",
+      "short": "Regelbundet",
+      "description": "Basilika behöver regelbunden gödsling för att trivas och producera nya blad. Använd en allsidig flytande gödselmedel en gång i veckan eller följ anvisningarna på gödselpaketet."
+    },
+    "pruning": "Beskärning är viktig för att förhindra att basilikan blir för ranglig och för att främja tillväxt av nya blad. Klipp av toppen på plantan när den har nått en höjd på cirka 15-20 cm och ta bort blommor när de dyker upp.",
+    "pests": "Basilika kan drabbas av skadedjur som bladlöss, spinnkvalster och trips. Använd en mild insektsmedel om problem uppstår.",
+
+    "difficulty": "Lätt",
+    "category": "Örter",
+    "image": ["/images/basil.jpg", "/images/basil1.jpg", "/images/basil2.jpg"]
+  },
+
+  {
+    "id": 0,
+    "name": "Timjan",
+    "latin": "Thymus",
+    "description": "Timjan är en kryddväxt med en stark och aromatisk doft. Den används ofta i matlagning och som medicinalväxt. Timjan är relativt enkel att odla och trivs i soliga, varma förhållanden. Den behöver regelbunden bevattning och gödsling för att växa ordentligt och kan beskäras för att hålla den tät och buskig. ",
+    "placement": {
+      "plantHeading": "Ljusbehov",
+      "short": "Ljust",
+      "description": "Timjan trivs bäst i fullt solljus, men kan också odlas i halvskugga. Om du odlar inomhus, se till att placera den nära ett söder- eller östfönster eller använd växtbelysning för att ge den tillräckligt med ljus."
+    },
+    "temperature": {
+      "plantHeading": "Temperatur",
+      "short": "15-25°C",
+      "description": "Timjan trivs i varma förhållanden och föredrar temperaturer mellan 15-25 grader Celsius. Se till att undvika temperaturer under 10 grader Celsius och stora temperaturförändringar."
+    },
+
+    "watering": {
+      "plantHeading": "Bevattning",
+      "short": "Måttligt",
+      "description": "Timjan behöver regelbunden bevattning, men se till att jorden inte blir alltför fuktig. Det är bäst att vattna när jorden känns torr på toppen."
+    },
+
+    "fertilization": {
+      "plantHeading": "Näring",
+      "short": "Regelbundet",
+      "description": "Timjan behöver regelbunden gödsling för att trivas och producera nya blad. Använd en allsidig flytande gödselmedel en gång i månaden eller följ anvisningarna på gödselpaketet."
+    },
+    "pruning": "Beskärning är viktig för att hålla timjan tät och buskig. Klipp av toppen på plantan när den har nått en höjd på cirka 15-20 cm och ta bort döda blad och stjälkar.",
+    "pests": "Timjan kan drabbas av skadedjur som spinnkvalster och trips. Använd en mild insektsmedel om problem uppstår.",
+
+    "difficulty": "Lätt",
+    "category": "Örter",
+    "image": ["/images/thyme.jpg", "/images/thyme1.jpg", "/images/thyme2.jpg"]
+  },
+
+  {
+    "id": 0,
+    "name": "Mynta",
+    "latin": "Mentha",
+    "description": "Mynta är en ört med en stark och uppfriskande doft. Den används ofta i matlagning och som medicinalväxt. Mynta är relativt enkel att odla och trivs i halvskugga eller fullt solljus. Den behöver regelbunden bevattning och gödsling för att växa ordentligt och kan beskäras för att hålla den tät och buskig. Mynta är en relativt enkel växt att odla, särskilt om du ger den tillräckligt med ljus och värme. Den är vanligtvis inte särskilt känslig för sjukdomar eller skadedjur och är därför en relativt lätt växt att sköta.",
+    "placement": {
+      "plantHeading": "Ljusbehov",
+      "short": "Ljust",
+      "description": "Mynta trivs i halvskugga eller fullt solljus. Om du odlar inomhus, se till att placera den nära ett fönster som får tillräckligt med ljus."
+    },
+    "temperature": {
+      "plantHeading": "Temperatur",
+      "short": "15-25°C",
+      "description": "Mynta trivs i temperaturer mellan 15-25 grader Celsius. Se till att undvika temperaturer under 10 grader Celsius och stora temperaturförändringar."
+    },
+
+    "watering": {
+      "plantHeading": "Bevattning",
+      "short": "Måttligt",
+      "description": "Mynta behöver regelbunden bevattning, men se till att jorden inte blir alltför fuktig. Det är bäst att vattna när jorden känns torr på toppen."
+    },
+
+    "fertilization": {
+      "plantHeading": "Näring",
+      "short": "Regelbundet",
+      "description": "Mynta behöver regelbunden gödsling för att trivas och producera nya blad. Använd en allsidig flytande gödselmedel en gång i månaden eller följ anvisningarna på gödselpaketet."
+    },
+    "pruning": "Beskärning är viktig för att hålla myntan tät och buskig. Klipp av toppen på plantan när den har nått en höjd på cirka 10-15 cm och ta bort döda blad och stjälkar.",
+    "pests": "Mynta kan drabbas av skadedjur som spinnkvalster, bladlöss och trips. Använd en mild insektsmedel om problem uppstår.",
+
+    "difficulty": "Lätt",
+    "category": "Örter",
+    "image": [
+      "/images/mentha.jpg",
+      "/images/mentha1.jpg",
+      "/images/mentha2.jpg"
+    ]
+  },
+
+  {
+    "id": 0,
+    "name": "Rosmarin",
+    "latin": "Rosmarinus officinalis",
+    "description": "Rosmarin är en medelhavsört med en distinkt aromatisk doft och smak som används i matlagning, doftande produkter och medicinalväxter. Rosmarin är en flerårig buske med nålformade blad och blåviolett blommor. Den är relativt enkel att odla och trivs i fullt solljus. Den behöver regelbunden bevattning och gödsling för att växa ordentligt och kan beskäras för att hålla den tät och buskig.",
+    "placement": {
+      "plantHeading": "Ljusbehov",
+      "short": "Ljust",
+      "description": "Rosmarin trivs i fullt solljus och behöver minst sex timmars direkt solljus varje dag."
+    },
+    "temperature": {
+      "plantHeading": "Temperatur",
+      "short": "15-30°C",
+      "description": "Rosmarin trivs i varma temperaturer mellan 15-30 grader Celsius och tål inte frost."
+    },
+
+    "watering": {
+      "plantHeading": "Bevattning",
+      "short": "Måttligt",
+      "description": "Rosmarin behöver regelbunden bevattning, men se till att jorden inte blir alltför fuktig. Det är bäst att vattna när jorden känns torr på toppen."
+    },
+
+    "fertilization": {
+      "plantHeading": "Näring",
+      "short": "Regelbundet",
+      "description": "Rosmarin behöver regelbunden gödsling för att trivas och producera nya blad. Använd en allsidig flytande gödselmedel en gång i månaden eller följ anvisningarna på gödselpaketet."
+    },
+    "pruning": "Beskärning är viktig för att hålla rosmarinen tät och buskig. Klipp av toppen på plantan när den har nått en höjd på cirka 10-15 cm och ta bort döda blad och stjälkar.",
+    "pests": "Rosmarin kan drabbas av skadedjur som bladlöss och spinnkvalster. Använd en mild insektsmedel om problem uppstår.",
+
+    "difficulty": "Lätt",
+    "category": "Örter",
+    "image": [
+      "/images/rosmarin.jpg",
+      "/images/rosmarin1.jpg",
+      "/images/rosmarin2.jpg"
+    ]
+  },
+  {
+    "id": 0,
+    "name": "Persilja",
+    "latin": "Petroselinum crispum",
+    "description": "Persilja är en vanlig kryddväxt som används i matlagning och som medicinalväxt. Det är en tvåårig växt som är vanligtvis odlas som en ettårig växt. Persilja har en distinkt smak och doft och finns i två sorter: bladpersilja och rotpersilja. Bladpersilja är den vanligaste typen av persilja som används i matlagning, medan rotpersilja används mer sällan.  Persilja kan vara känslig för sjukdomar och skadedjur, men med rätt vård är det vanligtvis inte svårt att odla.",
+    "placement": {
+      "plantHeading": "Ljusbehov",
+      "short": "Halvskugga",
+      "description": "Persilja trivs i delvis skugga eller dappat solljus. För mycket direkt solljus kan orsaka att bladen bleknar och blir gula."
+    },
+    "temperature": {
+      "plantHeading": "Temperatur",
+      "short": "10-20°C",
+      "description": "Persilja trivs bäst vid svala temperaturer mellan 10-20 grader Celsius. Den tål dock temperaturer upp till 25 grader Celsius."
+    },
+
+    "watering": {
+      "plantHeading": "Bevattning",
+      "short": "Måttligt",
+      "description": "Persilja behöver jämn bevattning för att hålla jorden fuktig, men inte för mycket vatten. Se till att jorden inte torkar ut mellan vattningarna."
+    },
+
+    "fertilization": {
+      "plantHeading": "Näring",
+      "short": "Regelbundet",
+      "description": "Persilja behöver en allsidig gödsling en gång i månaden under tillväxtperioden. Använd en balanserad gödselmedel eller organisk gödsel."
+    },
+    "pruning": "Persilja behöver inte beskäras så mycket, men ta bort döda blad och stjälkar för att främja ny tillväxt.",
+    "pests": "Persilja kan drabbas av skadedjur som bladlöss, spinnkvalster och bladmögel. Använd en mild insektsmedel eller svampmedel vid behov.",
+
+    "difficulty": "Lätt",
+    "category": "Örter",
+    "image": [
+      "/images/persilja.jpg",
+      "/images/persilja1.jpg",
+      "/images/persilja2.jpg"
+    ]
+  },
+
+  {
+    "id": 0,
+    "name": "Dill",
+    "latin": "Anethum graveolens",
+    "description": "Dill är en ört som används för smaksättning och som en medicinalväxt. Dillväxten är en ettårig växt som kan nå en höjd på upp till 1 meter. Dill har bladen som används som smaksättning och fröna som används för att göra kryddor och te. Dill är en relativt enkel växt att odla. Den kräver inte mycket uppmärksamhet eller speciell vård. Dock är det viktigt att se till att plantan får tillräckligt med solljus och inte torkar ut mellan vattningarna.",
+    "placement": {
+      "plantHeading": "Ljusbehov",
+      "short": "Ljust",
+      "description": "Dill trivs bäst i fullt solljus, men den kan också växa i delvis skugga. För att undvika att plantan blir ranglig och spinkig, se till att den har tillräckligt med solljus."
+    },
+    "temperature": {
+      "plantHeading": "Temperatur",
+      "short": "15-25°C",
+      "description": "Dill trivs bäst vid milda temperaturer mellan 15-25 grader Celsius. För höga temperaturer kan orsaka att plantan går i blom och ger mindre skörd."
+    },
+
+    "watering": {
+      "plantHeading": "Bevattning",
+      "short": "Måttligt",
+      "description": "Dill behöver regelbunden bevattning för att hålla jorden fuktig, men inte för mycket vatten. Se till att jorden inte torkar ut mellan vattningarna."
+    },
+
+    "fertilization": {
+      "plantHeading": "Näring",
+      "short": "Regelbundet",
+      "description": "Dill behöver en balanserad gödsling en gång i månaden under tillväxtperioden. Använd en balanserad gödselmedel eller organisk gödsel."
+    },
+    "pruning": "Dill behöver inte beskäras så mycket, men ta bort eventuella döda blad och stjälkar för att främja ny tillväxt.",
+    "pests": "Dill kan drabbas av skadedjur som bladlöss och spinnkvalster. Använd en mild insektsmedel vid behov.",
+
+    "difficulty": "Lätt",
+    "category": "Örter",
+    "image": ["/images/dill.jpg", "/images/dill1.jpg", "/images/dill2.jpg"]
+  },
+
+  {
+    "id": 0,
+    "name": "Citronmeliss",
+    "latin": "Melissa officinalis",
+    "description": "Citronmeliss är en flerårig ört som tillhör myntfamiljen. Den är känd för sin citrusdoftande bladverk och används ofta för att smaksätta mat och drycker samt för sina medicinska egenskaper. Det är viktigt att se till att den får tillräckligt med ljus, vatten och näring. Om du odlar den inomhus, se till att den får tillräckligt med luftcirkulation och undvik att övervattna.",
+    "placement": {
+      "plantHeading": "Ljusbehov",
+      "short": "Ljust",
+      "description": "Citronmeliss trivs bäst i full sol eller delvis skugga. För mycket skugga kan göra att plantan blir ranglig och mindre frodig."
+    },
+    "temperature": {
+      "plantHeading": "Temperatur",
+      "short": "20-25°C",
+      "description": "Citronmeliss är en härdig växt som klarar kalla temperaturer men trivs bäst i varmare klimat. Den kan övervintra utomhus i zon 4-9 och kan odlas som en inomhusväxt i kallare områden. Citronmeliss trivs bäst vid temperaturer mellan 20-25 °C på dagen och 15-18 °C på natten. Under varma sommardagar kan den klara högre temperaturer upp till 30-32 °C, men undvik att placera den i direkt solljus under de varmaste delarna av dagen. På vintern kan den övervintra vid lägre temperaturer på cirka 5-10 °C."
+    },
+
+    "watering": {
+      "plantHeading": "Bevattning",
+      "short": "Måttligt",
+      "description": "Citronmeliss behöver regelbunden vattning, särskilt under torra perioder. Jorden ska hållas fuktig men inte blöt. Det är viktigt att inte övervattna eftersom detta kan leda till rotproblem."
+    },
+
+    "fertilization": {
+      "plantHeading": "Näring",
+      "short": "Regelbundet",
+      "description": "Citronmeliss behöver regelbunden gödsling med en balanserad gödsel. Det rekommenderas att gödsla plantan varannan vecka under växtsäsongen."
+    },
+    "pruning": "Citronmeliss kan beskäras för att hålla den kompakt och frodig. Beskärningen kan också hjälpa till att förhindra att plantan blir ranglig. Det är bäst att beskära plantan under tidig sommar när den är i full tillväxt.",
+    "pests": "Citronmeliss kan drabbas av spindelkvalster och bladlöss. Om du märker några tecken på skadedjur är det bäst att ta itu med dem så snart som möjligt.",
+
+    "difficulty": "Lätt",
+    "category": "Örter",
+    "image": [
+      "/images/citronmeliss.jpg",
+      "/images/citronmeliss1.jpg",
+      "/images/citronmeliss2.jpg"
+    ]
+  },
+
+  {
+    "id": 0,
+    "name": "Oregano",
+    "latin": "Origanum vulgare",
+    "description": " Oregano är en flerårig ört som tillhör myntfamiljen. Den är känd för sin kryddiga och aromatiska smak och används ofta i matlagning, särskilt inom medelhavs- och mexikansk matlagning. Oregano är också en populär medicinalväxt. Det är viktigt att se till att den får tillräckligt med ljus, vatten och näring. Oregano är också en torktålig växt som kan klara korta perioder av torka.",
+    "placement": {
+      "plantHeading": "Ljusbehov",
+      "short": "Ljust",
+      "description": "Oregano trivs bäst i fullt solljus, men kan också växa i delvis skugga. Om plantan inte får tillräckligt med ljus kan den bli ranglig och mindre frodig."
+    },
+    "temperature": {
+      "plantHeading": "Temperatur",
+      "short": "10-30°C",
+      "description": "Oregano trivs bäst vid varma temperaturer på mellan 20-30 °C på dagen och 10-20 °C på natten. Det är viktigt att skydda plantan från frost och hålla den varm under vintern."
+    },
+
+    "watering": {
+      "plantHeading": "Bevattning",
+      "short": "Måttligt",
+      "description": "Oregano behöver regelbunden vattning, men jorden ska inte vara för blöt. Låt jorden torka ut något mellan vattningarna. Vattna hellre för lite än för mycket, eftersom för mycket vatten kan leda till rötterna ruttnar."
+    },
+
+    "fertilization": {
+      "plantHeading": "Näring",
+      "short": "Regelbundet",
+      "description": "Oregano behöver regelbunden gödsling med en balanserad gödsel. Gödsla plantan en gång i månaden under växtsäsongen."
+    },
+    "pruning": "Oregano kan beskäras för att hålla den kompakt och frodig. Beskärningen kan också hjälpa till att förhindra att plantan blir ranglig. Det är bäst att beskära plantan tidigt på sommaren när den är i full tillväxt.",
+    "pests": "Oregano kan drabbas av spindelkvalster och bladlöss. Om du märker några tecken på skadedjur är det bäst att ta itu med dem så snart som möjligt.",
+
+    "difficulty": "Lätt",
+    "category": "Örter",
+    "image": [
+      "/images/oregano.jpg",
+      "/images/oregano1.jpg",
+      "/images/oregano2.jpg"
+    ]
+  },
+
+  {
+    "id": 0,
+    "name": "Salvia",
+    "latin": "Salvia officinalis",
+    "description": " Salvia  är en flerårig ört som tillhör myntfamiljen. Den är känd för sin karakteristiska smak och används ofta i matlagning, särskilt inom medelhavs- och italiensk matlagning. Salvia är också en populär medicinalväxt som har använts i århundraden för att behandla olika sjukdomar. Salvia har använts sedan antiken för sina medicinska egenskaper och ansågs ha helande krafter. Den anses ha många hälsofördelar och används bland annat för att förbättra minnet, lindra ångest och hjälpa till att sänka blodsockernivåerna. Salvia används också ofta i aromaterapi och hudvårdsprodukter. I matlagning används salvia ofta för att smaksätta kött, fisk och grönsaker. Den kan också användas för att göra te och smaksätta olika typer av matoljor.",
+    "placement": {
+      "plantHeading": "Ljusbehov",
+      "short": "Ljust",
+      "description": "Salvia trivs bäst i fullt solljus, men kan också växa i delvis skugga. Om plantan inte får tillräckligt med ljus kan den bli ranglig och mindre frodig."
+    },
+    "temperature": {
+      "plantHeading": "Temperatur",
+      "short": "18-24°C",
+      "description": "Salvia trivs bäst vid varma temperaturer på mellan 18-24 °C på dagen och 10-15 °C på natten. Det är viktigt att skydda plantan från frost och hålla den varm under vintern."
+    },
+
+    "watering": {
+      "plantHeading": "Bevattning",
+      "short": "Måttligt",
+      "description": "Salvia behöver regelbunden vattning, men jorden ska inte vara för blöt. Låt jorden torka ut något mellan vattningarna. Vattna hellre för lite än för mycket, eftersom för mycket vatten kan leda till rötterna ruttnar. Salvia är en torktålig växt som kan klara korta perioder av torka."
+    },
+
+    "fertilization": {
+      "plantHeading": "Näring",
+      "short": "Regelbundet",
+      "description": "Salvia behöver regelbunden gödsling med en balanserad gödsel. Gödsla plantan en gång i månaden under växtsäsongen."
+    },
+    "pruning": "Salvia kan beskäras för att hålla den kompakt och frodig. Beskärningen kan också hjälpa till att förhindra att plantan blir ranglig. Det är bäst att beskära plantan tidigt på sommaren när den är i full tillväxt.",
+    "pests": "Salvia kan drabbas av bladlöss och spindelkvalster. Om du märker några tecken på skadedjur är det bäst att ta itu med dem så snart som möjligt.",
+
+    "difficulty": "Lätt",
+    "category": "Örter",
+    "image": ["/images/sage.jpg", "/images/sage1.jpg", "/images/sage2.jpg"]
+  },
+
+  {
+    "id": 0,
+    "name": "Dragon",
+    "latin": "Artemisia dracunculus",
+    "description": " Dragon är en flerårig ört som vanligtvis används i matlagning. Det finns två vanliga sorter av dragon: rysk dragon och fransk dragon. Fransk dragon är den mest använda sorten och har en mildare smak än rysk dragon. Dragon används vanligtvis för att smaksätta kött, fisk och sallader. Den kan också användas för att smaksätta vinägrett och andra dressingar. Dragon har en lätt anissmak och kan också användas för att smaksätta desserter. Förutom dess användning i matlagning, har dragon också medicinska egenskaper och har använts för att lindra magbesvär och öka aptiten. Dragon kan producera små gulaktiga blommor på sommaren. Blommorna är dock inte särskilt dekorativa och många trädgårdsmästare väljer att avlägsna dem för att främja tillväxten av de aromatiska bladen istället.",
+    "placement": {
+      "plantHeading": "Ljusbehov",
+      "short": "Ljust",
+      "description": "Dragon trivs bäst i fullt solljus eller delvis skugga. Om plantan inte får tillräckligt med ljus kan den bli ranglig och mindre frodig."
+    },
+    "temperature": {
+      "plantHeading": "Temperatur",
+      "short": "18-24°C",
+      "description": "Dragon trivs bäst i varma temperaturer på mellan 18-24 °C på dagen och 10-15 °C på natten. Det är viktigt att skydda plantan från frost och hålla den varm under vintern."
+    },
+
+    "watering": {
+      "plantHeading": "Bevattning",
+      "short": "Måttligt",
+      "description": "Dragon behöver regelbunden vattning, men jorden ska inte vara för blöt. Låt jorden torka ut något mellan vattningarna. Vattna hellre för lite än för mycket, eftersom för mycket vatten kan leda till rötterna ruttnar.Dragon är en torktålig växt som kan klara korta perioder av torka."
+    },
+
+    "fertilization": {
+      "plantHeading": "Näring",
+      "short": "Regelbundet",
+      "description": "Dragon behöver regelbunden gödsling med en balanserad gödsel. Gödsla plantan en gång i månaden under växtsäsongen."
+    },
+    "pruning": "Dragon kan beskäras för att hålla den kompakt och frodig. Beskärningen kan också hjälpa till att förhindra att plantan blir ranglig. Det är bäst att beskära plantan tidigt på sommaren när den är i full tillväxt.",
+    "pests": "Dragon kan drabbas av bladlöss och spindelkvalster. Om du märker några tecken på skadedjur är det bäst att ta itu med dem så snart som möjligt.",
+
+    "difficulty": "Lätt",
+    "category": "Örter",
+    "image": [
+      "/images/dragon.jpg",
+      "/images/dragon1.jpg",
+      "/images/dragon2.jpg"
+    ]
+  },
+
+  {
+    "id": 0,
+    "name": "Korinader",
+    "latin": "Coriandrum sativum",
+    "description": " Koriander är en årlig ört som används i matlagning för sin distinkta smak och doft. Alla delar av korianderplantan är användbara - bladen, stjälkarna och fröna. Koriander används i en mängd olika maträtter, särskilt i asiatisk och mexikansk matlagning. Det används ofta som smaksättning i salsor, curryrätter, soppor, grytor och marinader. Koriander kan också användas för att göra te och kryddblandningar. Förutom dess användning i matlagning har koriander också medicinska egenskaper och har använts för att lindra magbesvär och förbättra matsmältningen.",
+    "placement": {
+      "plantHeading": "Ljusbehov",
+      "short": "Ljust",
+      "description": "Koriander trivs bäst i fullt solljus eller delvis skugga. Om plantan inte får tillräckligt med ljus kan den bli ranglig och mindre frodig. Koriander är en torktålig växt som kan klara korta perioder av torka."
+    },
+    "temperature": {
+      "plantHeading": "Temperatur",
+      "short": "18-24°C",
+      "description": "Koriander trivs bäst i varma temperaturer på mellan 18-24°C på dagen och 10-15°C på natten. Det är viktigt att skydda plantan från frost och hålla den varm under vintern."
+    },
+
+    "watering": {
+      "plantHeading": "Bevattning",
+      "short": "Måttligt",
+      "description": "Koriander behöver regelbunden vattning, men jorden ska inte vara för blöt. Låt jorden torka ut något mellan vattningarna. Vattna hellre för lite än för mycket, eftersom för mycket vatten kan leda till rötterna ruttnar."
+    },
+
+    "fertilization": {
+      "plantHeading": "Näring",
+      "short": "Regelbundet",
+      "description": "Koriander behöver regelbunden gödsling med en balanserad gödsel. Gödsla plantan en gång i månaden under växtsäsongen."
+    },
+    "pruning": "Koriander kan beskäras för att hålla den kompakt och frodig. Beskärningen kan också hjälpa till att förhindra att plantan blir ranglig. Klipp av bladen när de är mogna och använd dem i matlagning.",
+    "pests": "Koriander kan drabbas av bladlöss, spinnkvalster och mjöldagg. Om du märker några tecken på skadedjur är det bäst att ta itu med dem så snart som möjligt.",
+
+    "difficulty": "Lätt",
+    "category": "Örter",
+    "image": [
+      "/images/koriander.jpg",
+      "/images/koriander1.jpg",
+      "/images/koriander2.jpg"
+    ]
+  },
+  {
+    "id": 0,
+    "name": "Gräslök",
+    "latin": "Allium schoenoprasum",
+    "description": " Gräslök  är en flerårig lökväxt som är en del av familjen Alliaceae. Gräslök används vanligtvis som krydda i matlagning och kan tillsättas till sallader, såser, soppor och många andra rätter. Den kan också användas som en dekorativ kantväxt i trädgården. Den anses vara en av de äldsta kryddorna som används av människan, och har använts i matlagning i över 5 000 år. Gräslök är rik på antioxidanter och kan ha positiva hälsoeffekter.",
+    "placement": {
+      "plantHeading": "Ljusbehov",
+      "short": "Ljust",
+      "description": "Gräslök trivs bäst i full sol, men kan också växa i partiell skugga. Om den odlas inomhus, se till att den placeras på en plats med tillräckligt med ljus, eller använd en växtlampa om det behövs."
+    },
+    "temperature": {
+      "plantHeading": "Temperatur",
+      "short": "18-24°C",
+      "description": "Gräslök kan växa i olika temperaturer, men trivs bäst i temperaturer mellan 18-24 grader Celsius. Om det är för varmt eller för kallt kan tillväxten och kvaliteten på plantan påverkas."
+    },
+
+    "watering": {
+      "plantHeading": "Bevattning",
+      "short": "Måttligt",
+      "description": " Gräslök behöver regelbunden bevattning, men jorden bör inte vara för våt. Låt jorden torka ut något mellan bevattningarna för att undvika rotproblem. Gräslök behöver vanligtvis vattnas en gång i veckan, men detta kan variera beroende på faktorer som ljus, temperatur och storlek på krukan."
+    },
+
+    "fertilization": {
+      "plantHeading": "Näring",
+      "short": "Regelbundet",
+      "description": "Gräslök behöver regelbunden gödsling för att hålla sig frisk. Använd en balanserad gödsel en gång i månaden under växtsäsongen. Gräslök är inte särskilt krävande när det gäller näring, men en regelbunden tillförsel av gödsel kan hjälpa till att öka tillväxten och förbättra smaken på bladen."
+    },
+    "pruning": " Gräslök kan beskäras när som helst under växtsäsongen. Klipp bort torra blad och blommor för att främja ny tillväxt och förhindra sjukdomar. Att regelbundet klippa av bladen kan också hjälpa till att förhindra att plantan blir för ranglig.",
+    "pests": "Gräslök är generellt motståndskraftig mot skadedjur och sjukdomar, men kan drabbas av bladlöss och trips. Om dessa skadedjur upptäcks kan de behandlas med en mild tvållösning eller insektsmedel.",
+
+    "difficulty": "Lätt",
+    "category": "Örter",
+    "image": [
+      "/images/gräslök.jpg",
+      "/images/gräslök1.jpg",
+      "/images/gräslök2.jpg"
     ]
   }
 ]

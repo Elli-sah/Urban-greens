@@ -75,6 +75,9 @@
   }
 
   @media (min-width: 700px) {
+    #my-shelf-view {
+      margin-top: 10px;
+    }
     #image-container {
       display: none;
     }
