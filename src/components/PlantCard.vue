@@ -115,8 +115,8 @@
 <style lang="scss" scoped>
   .plantBox {
     position: relative;
-    width: 250px;
-    height: 300px;
+    width: 270px;
+    height: 320px;
     display: flex;
     flex-direction: column;
     background-color: white;

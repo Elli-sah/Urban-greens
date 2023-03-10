@@ -33,7 +33,7 @@
         } else {
           return this.result.filter(
             (plant) =>
-              plant.category === category &&
+              plant.category.includes(category) &&
               plant.name.toLowerCase().includes(this.searchText.toLowerCase())
           )
         }
@@ -110,6 +110,9 @@
       </Router-Link>
       <Router-Link to="/plantlist/Gröna växter" class="categoryLinks">
         <button class="button">Gröna växter</button>
+      </Router-Link>
+      <Router-Link to="/plantlist/Örter" class="categoryLinks">
+        <button class="button">Örter</button>
       </Router-Link>
       <!-- <Router-Link to="/plantlist/Giftiga_växter" class="categoryLinks">
         <button class="button">Giftiga växter</button>

@@ -141,6 +141,9 @@
     }
   }
   @media (min-width: 900px) {
+    #my-shelf-view {
+      margin-top: 0;
+    }
     .shelf-plants {
       margin-right: 20px;
       width: 400px;
