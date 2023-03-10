@@ -116,6 +116,47 @@
     "category": "Blommande",
     "image": ["/images/begonia.png"]
   },
+
+  {
+    "id": 0,
+    "name": "Doftranka",
+    "latin": "Stephanotis floribunda",
+    "description": "",
+    "placement": {
+      "plantHeading": "Ljusbehov",
+      "short": "Ljust",
+      "description": "Doftranka trivs bäst i ljust men indirekt solljus. För mycket direkt solljus kan skada bladen."
+    },
+    "temperature": {
+      "plantHeading": "Temperatur",
+      "short": "18-24°C",
+      "description": "Doftranka trivs bäst i temperaturer mellan 18-24 ° C och tål inte kalla drag eller temperaturer under 10 ° C."
+    },
+    "watering": {
+      "plantHeading": "Bevattning",
+      "short": "Måttligt",
+      "description": "Växten bör vattnas regelbundet, men se till att inte övervattna eftersom det kan leda till rötterna ruttnar. Låt jorden torka ut något mellan bevattningarna."
+    },
+
+    "fertilization": {
+      "plantHeading": "Näring",
+      "short": "Lite",
+      "description": "Doftranka behöver inte mycket näring för att växa, men det är bra att ge växten en allmän gödsel varannan månad under vår- och sommarsäsongen."
+    },
+    "pruning": "Beskärning av doftranka kan hjälpa till att forma växten och främja blomning. Beskär efter blomning genom att klippa av grenar som har blommat till halva sin längd.",
+    "pests": "Vanliga skadedjur som kan angripa doftranka inkluderar spindelmider, mjöldagg och bladlöss. Det är viktigt att reagera snabbt om du märker några tecken på skadedjur och behandla växten med ett lämpligt bekämpningsmedel.",
+    "poison": {
+      "short": false,
+      "description": ""
+    },
+    "difficulty": "Lätt",
+    "category": "Blommande",
+    "image": [
+      "/images/fredskalla.jpg",
+      "/images/fredskalla1.jpg",
+      "/images/fredskalla2.jpg"
+    ]
+  },
   {
     "id": 4,
     "name": "Elefantöra",
@@ -195,8 +236,48 @@
     ]
   },
   {
+    "id": 0,
+    "name": "Fredskalla",
+    "latin": "Spathiphyllum",
+    "description": "Fredskalla (Spathiphyllum) är en prydnadsväxt som har gröna blad och vita blommor som sitter på en stängel ovanför bladen. Blommorna består av en vit blomställning som omges av en vit eller grönaktig flikig hölsterblad. Växten är vanligt förekommande som inomhusväxt eftersom den är lätt att sköta och tål relativt skuggiga förhållanden. Den är också känd för sin förmåga att rena luften och avlägsna skadliga kemikalier.",
+    "placement": {
+      "plantHeading": "Ljusbehov",
+      "short": "Halvskugga",
+      "description": "Trivs bäst i halvskuggiga till skuggiga lägen. Ett ljust läge ger ökad blomning, men direkt solljus kan skada bladen. "
+    },
+    "temperature": {
+      "plantHeading": "Temperatur",
+      "short": "18-24°C",
+      "description": "Fredskallan tål inte kalla drag eller temperaturer under 15 ° C "
+    },
+    "watering": {
+      "plantHeading": "Bevattning",
+      "short": "Måttligt",
+      "description": "Växten bör vattnas regelbundet, men se till att inte övervattna eftersom det kan leda till rötterna ruttnar. Låt jorden torka ut något mellan bevattningarna, men se till att inte låta den bli helt torr."
+    },
+
+    "fertilization": {
+      "plantHeading": "Näring",
+      "short": "Lite",
+      "description": "Fredskalla behöver inte mycket näring för att växa, men det är bra att ge växten en allmän gödsel varannan månad under vår- och sommarsäsongen"
+    },
+    "pruning": "Beskärning av fredskalla är inte nödvändigt, men om du vill ta bort döda eller gula blad kan du göra det med en ren sax eller kniv.",
+    "pests": "Vanliga skadedjur som kan angripa fredskalla inkluderar spindelmider, mjöldagg och bladlöss. Det är viktigt att reagera snabbt om du märker några tecken på skadedjur och behandla växten med ett lämpligt bekämpningsmedel.",
+    "poison": {
+      "short": true,
+      "description": "Fredskalla är lätt giftig för människor och djur om den äts. Det kan orsaka irriterande symtom som illamående, kräkningar och diarré. Se till att hålla växten utom räckhåll för barn och husdjur och tvätta händerna efter att ha hanterat den."
+    },
+    "difficulty": "Lätt",
+    "category": "Blommande",
+    "image": [
+      "/images/fredskalla.jpg",
+      "/images/fredskalla1.jpg",
+      "/images/fredskalla2.jpg"
+    ]
+  },
+  {
     "id": 6,
-    "name": "Zamiakalla",
+    "name": "Garderobsblomma",
     "latin": "Zamioculcas zamiifolia",
     "description": "Zamiakalla, även kallad Garderobsblomma, är en populär krukväxt som är känd för sin förmåga att överleva i olika miljöer och för sin enkla skötsel. Det är en tålig växt som kan överleva under långa perioder utan vatten och trivs i både högt och lågt ljus. Zamiakalla är också känd för att hjälpa till att rena luften genom att ta bort skadliga föroreningar. Garderobsblomman trivs i normal till låg luftfuktighet, vilket gör den lämplig för den torra inomhusluften i Sverige. Du behöver inte spraya bladen med vatten.",
     "placement": {
@@ -235,7 +316,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": 7,
     "name": "Hortensia",
     "latin": "Hydrangea macrophylla",
     "description": "Hortensia är en vacker blommande växt som kan trivas bra i Sverige, men den kräver lite extra omsorg för att blomma rikligt och för att bibehålla sin hälsa. Hortensior trivs bäst i en luftfuktighet på cirka 50-60%. Hortensior är ursprungligen skogsbuskar och trivs därför i en fuktig miljö. Om luftfuktigheten är för låg kan hortensians blad och blommor torka ut och visa tecken på stress.",
@@ -275,7 +356,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": 8,
     "name": "Jordviva",
     "latin": "Primula",
     "description": "Jordviva är en populär växt i Sverige och är relativt lättskött.",
@@ -315,7 +396,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": 9,
     "name": "Kalanchoe",
     "latin": "Kalanchoe Blossfeldiana",
     "description": "Kalanchoe, även kallad Våreld, är en tacksam och lättskött växt som är relativt enkel att ta hand om. Trivs vid hög luftfuktighet och vill ha vatten regelbundet, undvik att jorden torkar ut helt. Näringsvattna en gång per vecka. ",
@@ -355,7 +436,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": 10,
     "name": "Krukros",
     "latin": "Rosa",
     "description": "Att ta hand om en krukros i Sverige kan vara utmanande eftersom klimatet och ljusförhållandena kan variera mycket beroende på säsong. Krukrosor trivs bäst i en relativt hög luftfuktighet, eftersom de är tropiska växter som är vana vid en fuktig miljö. Idealiskt sett bör luftfuktigheten vara mellan 40-60% för att krukrosor ska trivas. Om luftfuktigheten är för låg kan det leda till att bladen torkar ut och att plantan blir mer mottaglig för skadedjur och sjukdomar.",
@@ -395,7 +476,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": 11,
     "name": "Monstera",
     "latin": "Monstera deliciosa",
     "description": "Monstera är en relativt lättodlad växt som är lämplig för odling inomhus i Sverige. Monstera trivs i en hög luftfuktighet, så se till att spraya växten regelbundet med vatten eller placera en luftfuktare i närheten av växten. En annan möjlighet är att ställa Monstera på en bricka med vatten.",
@@ -435,7 +516,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": 12,
     "name": "Murgröna",
     "latin": "Hedera helix",
     "description": "Murgröna är en tålig och lättodlad växt som trivs i Sverige.Murgröna trivs i hög luftfuktighet, så att placera en skål med vatten nära växten kan hjälpa till att höja luftfuktigheten. Du kan också duscha bladen med vatten med jämna mellanrum för att öka fuktigheten.",
@@ -475,7 +556,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": 13,
     "name": "Orkidé",
     "latin": "Orchidaceae",
     "description": "Orkidéer är en vanlig krukväxt i Sverige som kan vara lite knepig att ta hand om. Orkidéer trivs i hög luftfuktighet. Du kan öka luftfuktigheten genom att placera en bricka med vatten bredvid växten eller genom att använda en luftfuktare.",
@@ -515,7 +596,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": 14,
     "name": "Pelargon",
     "latin": "Pelargonium",
     "description": "Pelargoner är en populär krukväxt i Sverige som trivs i både inomhus- och utomhusmiljöer. Pelargoner trivs bäst vid en luftfuktighet på mellan 40 och 60 procent. För torr luft kan torka ut bladen och göra växten mer mottaglig för skadedjur, medan hög luftfuktighet kan öka risken för svampinfektioner. Det är därför viktigt att balansera luftfuktigheten för att hålla pelargonerna friska. Om rummet är för torrt, kan man öka luftfuktigheten genom att använda en luftfuktare, spraya vatten runt växterna eller placera en bricka med vatten bredvid växterna. Å andra sidan, om luften är för fuktig, kan man öka ventilationen för att hjälpa till att torka ut överflödig fukt.",
@@ -551,7 +632,7 @@
     "image": ["/images/pelargon.png"]
   },
   {
-    "id": 5,
+    "id": 15,
     "name": "Porslinsblomma",
     "latin": "Hoya carnosa",
     "description": "Porslinsblomma är en vanlig krukväxt i Sverige som trivs bäst inomhus. Porslinsblomma trivs i en högre luftfuktighet och kan må bra av att sprayas med vatten då och då, men kan också klara sig bra i normal inomhusluft.",
@@ -592,7 +673,7 @@
     ]
   },
   {
-    "id": 3,
+    "id": 16,
     "name": "Rosenskärm",
     "latin": "Medinilla",
     "description": "Rosenskärm är en tålig och anpassningsbar växt som trivs bra i många olika miljöer.  Rosenskärm en relativt enkel växt att ta hand om och kan vara en vacker och användbar tillägg till trädgården eller landskapet i Sverige. Rosenskärm trivs bäst i en relativt torr miljö med låg luftfuktighet. För hög luftfuktighet kan orsaka problem med svamp och sjukdomar. En luftfuktighet på runt 40-50% kan vara lämpligt för rosenskärm. Det är dock viktigt att notera att rosenskärm är en relativt tålig växt och kan klara sig även i omgivningar med högre luftfuktighet, så länge det inte är alltför fuktigt.",
@@ -629,7 +710,7 @@
     "image": ["/images/rosenskarm.png"]
   },
   {
-    "id": 5,
+    "id": 17,
     "name": "Rosenkalla",
     "latin": "nthurium Andreanum",
     "description": "Rosenkallor är vackra och populära växter som trivs i Sverige. Rosenkalla trivs i hög luftfuktighet, så att placera en skål med vatten nära växten kan hjälpa till att höja luftfuktigheten. Undvik dock att vattna direkt på bladen, eftersom det kan orsaka svampangrepp.",
@@ -670,7 +751,48 @@
   },
 
   {
-    "id": 5,
+    "id": 18,
+    "name": "Svärmors tunga",
+    "latin": "Sansevieria trifasciata",
+    "description": "Svärmors tunga är en grönbladig växt med strimmor i grönt, vitt eller silver och har en spetsig form som påminner om en tunga. Bladen är hårda och tjocka, och växten har en långsam växttakt. Svärmors tunga är vanligt förekommande som inomhusväxt eftersom den är lättskött och tålig, samt att den anses ha förmågan att rena luften och avlägsna skadliga kemikalier.",
+    "placement": {
+      "plantHeading": "Ljusbehov",
+      "short": "Ljust",
+      "description": "Svärmors tunga trivs i både starkt solsken och skugga. Det tål inte direkt solljus under långa perioder."
+    },
+    "temperature": {
+      "plantHeading": "Temperatur",
+      "short": "15-30°C",
+      "description": "Svärdoms tunga är en tålig växt som tål en bred temperaturskala."
+    },
+    "watering": {
+      "plantHeading": "Bevattning",
+      "short": "Lite",
+      "description": "Växten behöver inte mycket vatten och klarar sig bra utan vatten under en längre period. Övervattning kan leda till röta."
+    },
+
+    "fertilization": {
+      "plantHeading": "Näring",
+      "short": "Sällan",
+      "description": "Svärmors tunga behöver inte mycket näring för att växa, men det är bra att ge växten en allmän gödsel en gång i månaden under vår- och sommarsäsongen."
+    },
+    "pruning": "Svärmors tunga behöver inte beskäras särskilt ofta. Om bladen blir för långa och utstickande kan de dock klippas ner till en lämplig längd.",
+    "pests": "Svärmors tunga är en tålig växt som sällan drabbas av skadedjur. Om det dyker upp skadedjur kan du behandla dem med ett lämpligt bekämpningsmedel.",
+    "poison": {
+      "short": true,
+      "description": "Svärmors tunga är giftig för både människor och djur om den äts i stora mängder."
+    },
+    "difficulty": "Lätt",
+    "category": "Gröna",
+    "image": [
+      "/images/svärmorstunga.jpg",
+      "/images/svärmorstunga1.jpg",
+      "/images/svärmorstunga2.jpg"
+    ]
+  },
+
+  {
+    "id": 18,
     "name": "Guldpalm",
     "latin": "Dypsis lutescens",
     "description": " En populär inomhusväxt som är relativt lättskött och trivs i ljus till halvskugga. Gulpalmen trivs i hög luftfuktighet. Placera en vattenskål bredvid plantan eller använd en luftfuktare för att öka fuktigheten. ",
