@@ -14,7 +14,7 @@
   <transition class="slide-in-enter-active" name="slide-in">
     <div id="watered-div" v-if="dateDiff !== ''">
       <i class="bi bi-droplet-fill" />
-      <p v-if="dateDiff.includes('timmar')">Du vattnade för idag</p>
+      <p v-if="dateDiff.includes('timmar')">Du vattnade idag</p>
       <p v-else>
         Du vattnade för <strong> {{ dateDiff }} </strong> sedan
       </p>

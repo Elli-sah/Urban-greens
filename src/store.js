@@ -8,31 +8,36 @@ const state = {
       name: 'Klara',
       password: 'klarab',
       favorites: [],
-      calendar: []
+      calendar: [],
+      isAdmin: true
     },
     sannaa: {
       name: 'Sanna',
       password: 'sannaa',
       favorites: [],
-      calendar: []
+      calendar: [],
+      isAdmin: true
     },
     ellinors: {
       name: 'Ellinor',
       password: 'ellinors',
       favorites: [],
-      calendar: []
+      calendar: [],
+      isAdmin: true
     },
     tovek: {
       name: 'Tove',
       password: 'tovek',
       favorites: [],
-      calendar: []
+      calendar: [],
+      isAdmin: true
     },
     isabelll: {
       name: 'Isabell',
       password: 'isabelll',
       favorites: [],
-      calendar: []
+      calendar: [],
+      isAdmin: true
     }
   },
 
@@ -56,10 +61,10 @@ const mutations = {
     let plantId = state.plantTips[tipAndId.id]
 
     if (plantId) {
-      plantId.tips.push(tipAndId.tip)
+      plantId.tips.unshift({ tip: tipAndId.tip, name: tipAndId.user })
     } else {
       let temporaryTip = { tips: [] }
-      temporaryTip.tips.push(tipAndId.tip)
+      temporaryTip.tips.unshift({ tip: tipAndId.tip, name: tipAndId.user })
       state.plantTips[tipAndId.id] = temporaryTip
     }
   },
@@ -90,7 +95,8 @@ const mutations = {
       name: newUser.name,
       password: newUser.password,
       favorites: [],
-      calendar: []
+      calendar: [],
+      isAdmin: false
     }
   },
   addPlant(state, newPlant) {

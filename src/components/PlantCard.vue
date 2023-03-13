@@ -149,10 +149,10 @@
 
   .description {
     position: absolute;
-    top: 75%;
+    top: 70%;
     left: 80%;
     padding: 10px;
-    font-size: 0.5rem;
+    font-size: 0.6rem;
     background-color: white;
     box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.1);
   }
@@ -175,7 +175,7 @@
     background-color: rgba(255, 255, 255, 0.776);
     border-radius: 10px;
     position: absolute;
-    bottom: 4px;
+    top: 5px;
     z-index: 1;
   }
 

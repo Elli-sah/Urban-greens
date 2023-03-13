@@ -16,7 +16,7 @@ $body-font-family: 'Lato', sans serif;
 
 $awn-success-color: #63905b !default;
 $awn-info-color: #a8581b !default;
-$awn-container-padding: 100px !default;
+$awn-container-padding: 50px !default;
 
 // $theme-colors: (
 //   'primary': #166285,
@@ -52,8 +52,6 @@ body {
 main {
   margin-top: 100px;
 }
-
-
 
 h1 {
   font-size: 0.3rem;
@@ -92,7 +90,7 @@ label {
   margin-left: 10px;
   cursor: pointer;
 }
-input[type="radio"]{
+input[type='radio'] {
   cursor: pointer;
 }
 

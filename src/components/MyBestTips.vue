@@ -14,8 +14,10 @@
     computed: {
       // ...mapState({ myState: (state) => state.plantTip })
       ...mapState({
+        loggedInUser: (state) => state.loggedInUser,
         plantTips: (state) => state.plantTip,
-        specifikPlant: (state) => state.plantTips
+        specifikPlant: (state) => state.plantTips,
+        isAdmin: (state) => state.users[state.loggedInUser.user]?.isAdmin
       })
     },
 
@@ -24,7 +26,8 @@
       onSubmit(event) {
         this.$store.commit('setPlantTip', {
           id: this.id,
-          tip: this.tip
+          tip: this.tip,
+          user: this.loggedInUser.name
         })
         event.preventDefault()
         this.tip = ''
@@ -68,19 +71,26 @@
       </form>
       <div id="scroll">
         <div v-if="specifikPlant[id]">
-          <h3 id="tip">Tips:</h3>
-          <p
+          <h3 id="tip">Alla växttips</h3>
+          <div
+            class="tips-div"
             v-for="(plantTip, index) in specifikPlant[id].tips"
             :key="plantTip"
           >
-            {{ plantTip }}
+            <div>
+              <h4 class="tips-heading">{{ plantTip.name }} säger:</h4>
+              <p>
+                {{ plantTip.tip }}
+              </p>
+            </div>
 
             <i
+              v-if="isAdmin"
               @click="removePlantTip(id, index)"
               id="remove-icon"
               class="bi bi-x-lg"
             />
-          </p>
+          </div>
         </div>
       </div>
     </div>
@@ -96,6 +106,19 @@
   #tip {
     text-align: left;
   }
+  .tips-div {
+    background-color: #e8cac3c1;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .tips-heading {
+    text-align: left;
+  }
+
   #text {
     width: 80%;
     height: 100px;
@@ -104,15 +127,15 @@
     vertical-align: top;
   }
   #remove-icon {
-    align-self: flex-start;
     cursor: pointer;
-    margin-left: 15px;
   }
+
   input {
     margin: 20px;
   }
+
   #scroll {
-    height: 200px;
+    height: 350px;
     overflow-y: scroll;
     position: absolut;
     display: block;

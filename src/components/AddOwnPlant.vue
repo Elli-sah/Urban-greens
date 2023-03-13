@@ -71,7 +71,11 @@
             >Soligt <input type="radio" v-model="plantPlacement" value="Soligt"
           /></label>
           <label
-            >Vet inte<input type="radio" v-model="plantTemp" value="Vet ej" />
+            >Vet inte<input
+              type="radio"
+              v-model="plantPlacement"
+              value="Vet ej"
+            />
           </label>
         </div>
         <div class="radio-divs">
@@ -110,7 +114,11 @@
             />
           </label>
           <label
-            >Vet inte<input type="radio" v-model="plantTemp" value="Vet ej" />
+            >Vet inte<input
+              type="radio"
+              v-model="plantWatering"
+              value="Vet ej"
+            />
           </label>
         </div>
       </div>
