@@ -57,9 +57,11 @@
       })
     },
 
-    // axios.get('/plants.json').then((response) => {
+    // axiosGetPlants() {
+    //     axios.get('/plants.json').then((response) => {
     //       this.result = response.data
     //     })
+    //   }
 
     methods: {
       axiosGetPlants() {
@@ -82,7 +84,6 @@
       searchText(newValue) {
         console.log(newValue)
         this.name = newValue
-        this.category = newValue
 
         //Errormeddelande om searchText inte matchar resultatet
         this.notFound = !this.result.some((plant) =>

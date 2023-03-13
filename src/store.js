@@ -32,7 +32,7 @@ const state = {
       calendar: [],
       isAdmin: true
     },
-    isabelll: {
+    isabell: {
       name: 'Isabell',
       password: 'isabelll',
       favorites: [],
