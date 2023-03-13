@@ -159,6 +159,7 @@
             this.diff = moment.duration(
               moment().subtract(1, 'days').diff(this.date)
             )
+
             this.$store.commit('updateDateDiff', this.diff.humanize())
             break
           }
