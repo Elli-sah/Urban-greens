@@ -14,11 +14,7 @@
     components: {
       ShowPlant,
       MyBestTips,
-
-      // LogIn,
-
       PlantIcon,
-      // InlogModal
       MoreInfoPlant,
       AddedPlant
     },
@@ -100,8 +96,7 @@
 
 <template>
   <div v-if="plant" class="view-divs">
-    x
-    <div class="plantBox">
+    <div class="plant-box">
       <div id="ccc">
         <b-carousel
           v-model="slide"
@@ -111,15 +106,15 @@
           ride="carousel"
         >
           <b-carousel-slide
-            class="carouselImg"
+            class="carousel-img"
             v-for="(image, index) in plant.image"
             :key="index"
             :img-src="image"
           />
         </b-carousel>
       </div>
-      <div id="plantInfoContainer">
-        <div class="plantShortInfo" v-if="!selectedPlant">
+      <div id="plant-info-container">
+        <div class="plant-short-info" v-if="!selectedPlant">
           <h1>{{ plant.name }}</h1>
 
           <h3>{{ plant.latin }}</h3>
@@ -150,39 +145,41 @@
           </p>
 
           <hr class="line" />
-          <div class="plantContainer">
-            <div class="plantDesc">
-              <PlantIcon
-                css-icon="bi bi-brightness-high icons-hover"
-                icon-title="Placering"
-                :icon-short="plant.placement.short"
-                modal-info="placement"
-                @open="openModal"
-              />
+          <div class="plant-container">
+            <div class="plant-icons">
+              <div class="plant-desc">
+                <PlantIcon
+                  css-icon="bi bi-brightness-high icons-hover"
+                  icon-title="Placering"
+                  :icon-short="plant.placement.short"
+                  modal-info="placement"
+                  @open="openModal"
+                />
 
-              <PlantIcon
-                css-icon="bi bi-thermometer-low icons-hover"
-                icon-title="Temperatur"
-                :icon-short="plant.temperature.short"
-                modal-info="temperature"
-                @open="openModal"
-              />
-            </div>
-            <div class="plantDescTwo">
-              <PlantIcon
-                css-icon="bi bi-moisture icons-hover"
-                icon-title="Bevattning"
-                :icon-short="plant.watering.short"
-                modal-info="watering"
-                @open="openModal"
-              />
-              <PlantIcon
-                css-icon="bi bi-flower1 icons-hover"
-                icon-title="Näring"
-                :icon-short="plant.fertilization.short"
-                modal-info="fertilization"
-                @open="openModal"
-              />
+                <PlantIcon
+                  css-icon="bi bi-thermometer-low icons-hover"
+                  icon-title="Temperatur"
+                  :icon-short="plant.temperature.short"
+                  modal-info="temperature"
+                  @open="openModal"
+                />
+              </div>
+              <div class="plant-desc-two">
+                <PlantIcon
+                  css-icon="bi bi-moisture icons-hover"
+                  icon-title="Bevattning"
+                  :icon-short="plant.watering.short"
+                  modal-info="watering"
+                  @open="openModal"
+                />
+                <PlantIcon
+                  css-icon="bi bi-flower1 icons-hover"
+                  icon-title="Näring"
+                  :icon-short="plant.fertilization.short"
+                  modal-info="fertilization"
+                  @open="openModal"
+                />
+              </div>
             </div>
 
             <AddedPlant
@@ -203,7 +200,7 @@
       </div>
     </div>
 
-    <div class="secondPlantBox">
+    <div class="second-plant-box">
       <MoreInfoPlant
         more-info="Mer information"
         :plant-description="plant.description"
@@ -214,7 +211,7 @@
       />
     </div>
   </div>
-  <MyBestTips :plant-name="plant.name" :plant="plant" :id="plant.id" />
+  <MyBestTips :plant="plant" />
 </template>
 
 <style scoped>
@@ -228,15 +225,8 @@
     font-size: 0.8rem;
     background-color: #f0e8e2;
     z-index: 1;
-    /* box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.1); */
   }
-  .icons-hover {
-    font-size: 10rem;
-    transition: transform 0.2s ease-in-out;
-  }
-  .icons-hover:hover {
-    transform: scale(1.5);
-  }
+
   #login-div {
     margin: 5px;
   }
@@ -245,39 +235,34 @@
     align-self: flex-end;
   }
 
-  .plantBox {
+  .plant-box {
     width: 100%;
     padding: 20px 20px 20px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* justify-content: space-around; */
     background-color: white;
     margin: auto;
     border-radius: 10px;
     margin-top: 50px;
   }
-  .plantShortInfo {
-    /* flex-direction: column; */
+  .plant-short-info {
     text-align: center;
-
-    /* display: flex; */
     justify-content: center;
   }
 
-  .plantContainer {
+  .plant-container {
     text-align: center;
     position: relative;
   }
-  .secondPlantBox {
+  .second-plant-box {
     width: 100%;
     padding: 45px 20px 20px 20px;
     background-color: white;
     margin: auto;
     border-radius: 10px;
     margin-top: 10px;
-    /* width: 500px; */
     padding: 50px;
     margin-bottom: 50px;
     justify-content: space-between;
@@ -290,7 +275,7 @@
     display: flex;
     justify-content: center;
   }
-  .carouselImg {
+  .carousel-img {
     object-fit: cover;
 
     width: 300px;
@@ -304,11 +289,11 @@
     border-radius: 50%;
     display: inline-block;
   }
-  .plantDesc {
+  .plant-desc {
     display: flex;
     flex-direction: column;
   }
-  .plantDescTwo {
+  .plant-desc-two {
     display: flex;
     flex-direction: column;
   }
@@ -317,7 +302,7 @@
     width: 100%;
   }
 
-  #plantInfoContainer {
+  #plant-info-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -325,7 +310,7 @@
   }
 
   @media (min-width: 600px) {
-    .carouselImg {
+    .carousel-img {
       object-fit: cover;
       width: 450px;
       height: 450px;
@@ -336,31 +321,16 @@
       display: flex;
       justify-content: center;
     }
+    @media (min-width: 800px) {
+      .plant-icons {
+        flex-direction: row;
+        display: flex;
+      }
+    }
   }
-  /* @media (min-width: 900px) {
-    .plantBox {
-      display: flex;
-
-      flex-direction: row;
-      width: 80%;
-    }
-    #ccc {
-      width: 70vw;
-    }
-    .carouselImg {
-      object-fit: cover;
-      width: 400px;
-      height: 350px;
-    }
-    .secondPlantBox {
-      height: 50%;
-      width: 80%;
-      display: flex;
-    }
-  } */
 
   @media (min-width: 1200px) {
-    .plantDesc {
+    .plant-desc {
       display: flex;
       flex-direction: row;
       margin: 10px;
@@ -370,32 +340,26 @@
       border-style: 1px solid rgba(0, 0, 0, 0.15);
     }
 
-    .plantDescTwo {
+    .plant-desc-two {
       display: flex;
       flex-direction: row;
       margin: 10px;
     }
-    .plantBox {
+    .plant-box {
       display: flex;
       justify-content: space-between;
       flex-direction: row;
       width: 80%;
     }
 
-    .secondPlantBox {
+    .second-plant-box {
       height: 50%;
       width: 80%;
       display: flex;
     }
-  }
-  @media only screen and (max-width: 1600px) and (min-width: 1200px) {
-    .line {
-      border-style: 1px solid rgba(0, 0, 0, 0.15);
-      /* width: 90%; */
-    }
-
-    .secondPlantBox {
+    .plant-icons {
       display: flex;
+      flex-direction: column;
     }
   }
 </style>

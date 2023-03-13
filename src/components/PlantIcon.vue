@@ -10,42 +10,45 @@
   }
 </script>
 <template>
-  <div class="plantShortInfo">
-    <i
-      @click="$emit('open', modalInfo)"
-      class="icons-hover"
-      :class="cssIcon"
-      style="font-size: 2em"
-    />
+  <div id="plant-short-info" @click="$emit('open', modalInfo)">
+    <i id="icons-hover" :class="cssIcon" style="font-size: 2em" />
 
     <div>
-      <p class="shortText title">{{ iconTitle }}</p>
-      <p class="shortText">{{ iconShort }}</p>
+      <p class="short-text title :hover">{{ iconTitle }}</p>
+      <p id="short-text">{{ iconShort }}</p>
     </div>
   </div>
-  <!-- <p>Temp:</p> -->
 </template>
 
 <style scoped>
-  .plantShortInfo {
+  #plant-short-info {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 100%;
   }
-  .shortText {
+  .short-text {
     text-align: center;
     align-items: center;
     width: 100px;
     margin: 0;
     padding: 0;
   }
-  .icons-hover {
+  #icons-hover {
     font-size: 10rem;
     transition: transform 0.2s ease-in-out;
   }
-  .icons-hover:hover {
+  #icons-hover:hover {
     transform: scale(1.5);
+  }
+  .short-text title :hover {
+    font-size: 10rem;
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1.5);
+  }
+  .short-text.title:hover {
+    font-size: 1.2em;
+    cursor: pointer;
   }
 </style>
