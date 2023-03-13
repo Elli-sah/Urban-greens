@@ -45,7 +45,10 @@
           return this.result.filter((plant) => {
             if (this.searchText) {
               const lowerCaseName = plant.name.toLowerCase()
-              const lowerCaseCategory = plant.category.toLowerCase()
+              const lowerCaseCategory =
+                typeof plant.category === 'string'
+                  ? plant.category.toLowerCase()
+                  : ''
               const lowerCaseSearchText = this.searchText.toLowerCase()
               return (
                 lowerCaseName.includes(lowerCaseSearchText) ||
@@ -62,9 +65,10 @@
               (plant.name
                 .toLowerCase()
                 .includes(this.searchText.toLowerCase()) ||
-                plant.category
-                  .toLowerCase()
-                  .includes(this.searchText.toLowerCase()))
+                (typeof plant.category === 'string' &&
+                  plant.category
+                    .toLowerCase()
+                    .includes(this.searchText.toLowerCase())))
           )
         }
       }
@@ -107,7 +111,12 @@
               {{ plant.name }}
 
               <p>
-                {{ plant.category }}
+                {{
+                  Array.isArray(plant.category)
+                    ? plant.category.join(',  ')
+                    : plant.category
+                }}
+                <!-- {{ plant.category }} -->
               </p>
             </RouterLink>
           </span>
@@ -162,7 +171,7 @@
       flex-direction: column;
     }
     #searchfield {
-      width: 200px;
+      width: 350px;
     }
     #linkdiv {
       background-color: rgba(225, 186, 107, 0.9);
