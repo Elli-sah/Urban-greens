@@ -33,7 +33,7 @@
         console.log('hej')
         if (this.loggedInUser !== '') {
           if (
-            this.userFavorites.find((plant) => plant.name === this.plantName)
+            this.userFavorites.find((plantName) => plantName === this.plantName)
           ) {
             this.AlreadyAddedplant = true
             setTimeout(() => {

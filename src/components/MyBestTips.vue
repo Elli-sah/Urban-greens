@@ -50,7 +50,7 @@
 
   <div class="container">
     <div class="tipBox">
-      <h2>Ge dina bästa tips för att ta hand om {{ plant.name }}</h2>
+      <h2>Ge dina bästa tips för att ta hand om {{ plantName }}</h2>
 
       <form>
         <textarea
