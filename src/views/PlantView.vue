@@ -1,18 +1,15 @@
 <script>
   import axios from 'axios'
-  import { mapState } from 'vuex'
   import ShowPlant from '../components/ShowPlant.vue'
   import MyBestTips from '../components/MyBestTips.vue'
-  import LogIn from '../components/LogIn.vue'
-  // import PlantIcon from '../components/PlantIcon.vue'
+  import PlantIcon from '../components/PlantIcon.vue'
   // import InlogModal from '../components/InlogModal.vue'
 
   export default {
     components: {
       ShowPlant,
       MyBestTips,
-      LogIn
-      // PlantIcon,
+      PlantIcon
       // InlogModal
     },
     props: {
@@ -117,8 +114,8 @@
         document.body.style.overflow = 'hidden'
       },
       closeModal() {
-        this.NotLoggedIn = false
         this.selectedPlant = null
+        this.NotLoggedIn = false
         document.body.style.overflow = 'auto'
       }
     },
