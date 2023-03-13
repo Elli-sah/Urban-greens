@@ -1027,6 +1027,10 @@
     },
     "pruning": "Beskärning är viktig för att förhindra att basilikan blir för ranglig och för att främja tillväxt av nya blad. Klipp av toppen på plantan när den har nått en höjd på cirka 15-20 cm och ta bort blommor när de dyker upp.",
     "pests": "Basilika kan drabbas av skadedjur som bladlöss, spinnkvalster och trips. Använd en mild insektsmedel om problem uppstår.",
+    "poison": {
+      "short": false,
+      "description": ""
+    },
 
     "difficulty": "Lätt",
     "category": "Örter",
@@ -1062,6 +1066,10 @@
     },
     "pruning": "Beskärning är viktig för att hålla timjan tät och buskig. Klipp av toppen på plantan när den har nått en höjd på cirka 15-20 cm och ta bort döda blad och stjälkar.",
     "pests": "Timjan kan drabbas av skadedjur som spinnkvalster och trips. Använd en mild insektsmedel om problem uppstår.",
+    "poison": {
+      "short": false,
+      "description": ""
+    },
 
     "difficulty": "Lätt",
     "category": "Örter",
@@ -1097,6 +1105,10 @@
     },
     "pruning": "Beskärning är viktig för att hålla myntan tät och buskig. Klipp av toppen på plantan när den har nått en höjd på cirka 10-15 cm och ta bort döda blad och stjälkar.",
     "pests": "Mynta kan drabbas av skadedjur som spinnkvalster, bladlöss och trips. Använd en mild insektsmedel om problem uppstår.",
+    "poison": {
+      "short": false,
+      "description": ""
+    },
 
     "difficulty": "Lätt",
     "category": "Örter",
@@ -1136,6 +1148,10 @@
     },
     "pruning": "Beskärning är viktig för att hålla rosmarinen tät och buskig. Klipp av toppen på plantan när den har nått en höjd på cirka 10-15 cm och ta bort döda blad och stjälkar.",
     "pests": "Rosmarin kan drabbas av skadedjur som bladlöss och spinnkvalster. Använd en mild insektsmedel om problem uppstår.",
+    "poison": {
+      "short": false,
+      "description": ""
+    },
 
     "difficulty": "Lätt",
     "category": "Örter",
@@ -1174,6 +1190,10 @@
     },
     "pruning": "Persilja behöver inte beskäras så mycket, men ta bort döda blad och stjälkar för att främja ny tillväxt.",
     "pests": "Persilja kan drabbas av skadedjur som bladlöss, spinnkvalster och bladmögel. Använd en mild insektsmedel eller svampmedel vid behov.",
+    "poison": {
+      "short": false,
+      "description": ""
+    },
 
     "difficulty": "Lätt",
     "category": "Örter",
@@ -1213,6 +1233,10 @@
     },
     "pruning": "Dill behöver inte beskäras så mycket, men ta bort eventuella döda blad och stjälkar för att främja ny tillväxt.",
     "pests": "Dill kan drabbas av skadedjur som bladlöss och spinnkvalster. Använd en mild insektsmedel vid behov.",
+    "poison": {
+      "short": false,
+      "description": ""
+    },
 
     "difficulty": "Lätt",
     "category": "Örter",
@@ -1248,6 +1272,10 @@
     },
     "pruning": "Citronmeliss kan beskäras för att hålla den kompakt och frodig. Beskärningen kan också hjälpa till att förhindra att plantan blir ranglig. Det är bäst att beskära plantan under tidig sommar när den är i full tillväxt.",
     "pests": "Citronmeliss kan drabbas av spindelkvalster och bladlöss. Om du märker några tecken på skadedjur är det bäst att ta itu med dem så snart som möjligt.",
+    "poison": {
+      "short": false,
+      "description": ""
+    },
 
     "difficulty": "Lätt",
     "category": "Örter",
@@ -1287,6 +1315,10 @@
     },
     "pruning": "Oregano kan beskäras för att hålla den kompakt och frodig. Beskärningen kan också hjälpa till att förhindra att plantan blir ranglig. Det är bäst att beskära plantan tidigt på sommaren när den är i full tillväxt.",
     "pests": "Oregano kan drabbas av spindelkvalster och bladlöss. Om du märker några tecken på skadedjur är det bäst att ta itu med dem så snart som möjligt.",
+    "poison": {
+      "short": false,
+      "description": ""
+    },
 
     "difficulty": "Lätt",
     "category": "Örter",
@@ -1326,6 +1358,10 @@
     },
     "pruning": "Salvia kan beskäras för att hålla den kompakt och frodig. Beskärningen kan också hjälpa till att förhindra att plantan blir ranglig. Det är bäst att beskära plantan tidigt på sommaren när den är i full tillväxt.",
     "pests": "Salvia kan drabbas av bladlöss och spindelkvalster. Om du märker några tecken på skadedjur är det bäst att ta itu med dem så snart som möjligt.",
+    "poison": {
+      "short": false,
+      "description": ""
+    },
 
     "difficulty": "Lätt",
     "category": "Örter",
@@ -1361,6 +1397,10 @@
     },
     "pruning": "Dragon kan beskäras för att hålla den kompakt och frodig. Beskärningen kan också hjälpa till att förhindra att plantan blir ranglig. Det är bäst att beskära plantan tidigt på sommaren när den är i full tillväxt.",
     "pests": "Dragon kan drabbas av bladlöss och spindelkvalster. Om du märker några tecken på skadedjur är det bäst att ta itu med dem så snart som möjligt.",
+    "poison": {
+      "short": false,
+      "description": ""
+    },
 
     "difficulty": "Lätt",
     "category": "Örter",
@@ -1400,6 +1440,10 @@
     },
     "pruning": "Koriander kan beskäras för att hålla den kompakt och frodig. Beskärningen kan också hjälpa till att förhindra att plantan blir ranglig. Klipp av bladen när de är mogna och använd dem i matlagning.",
     "pests": "Koriander kan drabbas av bladlöss, spinnkvalster och mjöldagg. Om du märker några tecken på skadedjur är det bäst att ta itu med dem så snart som möjligt.",
+    "poison": {
+      "short": false,
+      "description": ""
+    },
 
     "difficulty": "Lätt",
     "category": "Örter",
@@ -1438,6 +1482,10 @@
     },
     "pruning": " Gräslök kan beskäras när som helst under växtsäsongen. Klipp bort torra blad och blommor för att främja ny tillväxt och förhindra sjukdomar. Att regelbundet klippa av bladen kan också hjälpa till att förhindra att plantan blir för ranglig.",
     "pests": "Gräslök är generellt motståndskraftig mot skadedjur och sjukdomar, men kan drabbas av bladlöss och trips. Om dessa skadedjur upptäcks kan de behandlas med en mild tvållösning eller insektsmedel.",
+    "poison": {
+      "short": false,
+      "description": ""
+    },
 
     "difficulty": "Lätt",
     "category": "Örter",
