@@ -3,9 +3,11 @@
   import { mapState } from 'vuex'
   import ShowPlant from '../components/ShowPlant.vue'
   import MyBestTips from '../components/MyBestTips.vue'
+  import MoreInfoPlant from '../components/MoreInfoPlant.vue'
+  import AddedPlant from '../components/AddedPlant.vue'
 
   export default {
-    components: { ShowPlant, MyBestTips },
+    components: { ShowPlant, MyBestTips, MoreInfoPlant, AddedPlant },
     props: {
       name: { type: String, required: true }
     },
@@ -26,57 +28,14 @@
         plantTip: ''
       }
     },
-    computed: {
-      ...mapState({
-        loggedInUser: (state) => state.loggedInUser,
-        userFavorites: (state) => {
-          if (state.loggedInUser) {
-            return state.users[state.loggedInUser.user]?.favorites || []
-          } else {
-            return []
-          }
-        }
-      })
-    },
+
     methods: {
       axiosGetPlants() {
         axios.get('/plants.json').then((response) => {
           this.plant = response.data.filter(
             (plant) => plant.name === this.name
           )[0]
-          console.log('rad 34', this.plant)
         })
-      },
-      // atAddPlant() {
-      //   this.$store.commit('addPlant', {
-      //     user: this.loggedInUser.user,
-      //     addplant: this.plant
-      //   })
-      atAddPlant() {
-        if (this.loggedInUser !== '') {
-          if (
-            this.userFavorites.find((plant) => plant.name === this.plant.name)
-          ) {
-            this.AlreadyAddedplant = true
-            setTimeout(() => {
-              this.AlreadyAddedplant = false
-            }, 3000)
-          } else {
-            this.$store.commit('addPlant', {
-              user: this.loggedInUser.user,
-              addplant: this.plant
-            })
-            this.Addedplant = true
-            setTimeout(() => {
-              this.Addedplant = false
-            }, 3000)
-          }
-        } else {
-          this.NotLoggedIn = true
-        }
-      },
-      onClick() {
-        this.NotLoggedIn = false
       },
 
       openModal(modalInfo) {
@@ -164,33 +123,12 @@
               />
             </div>
 
-            <button class="button" @click="atAddPlant">
-              Ställ på fönsterbrädan
-            </button>
-            <div class="popup-divs" v-show="Addedplant">
-              <p class="paragraph added-paragraph">
-                {{ plant.name }} är tillagd på din fönsterbräda!
-              </p>
-            </div>
-            <div class="popup-divs" v-show="AlreadyAddedplant">
-              <p class="paragraph added-paragraph">
-                Du har redan lagt till {{ plant.name }} på din fönsterbräda!
-              </p>
-            </div>
-            <div class="popup-divs" v-show="NotLoggedIn">
-              <i @click="onClick" class="bi bi-x-lg" />
-              <div id="login-div">
-                <p>Du behöver logga in först</p>
-                <b-button
-                  variant="link"
-                  to="/login"
-                  type="button"
-                  id="button-secondary"
-                  class="btn btn-link"
-                  >Logga in här!</b-button
-                >
-              </div>
-            </div>
+            <AddedPlant
+              added-plant="Ställ på fönsterbrädan"
+              :plant-name="plant.name"
+              logg-in="Du behöver logga in först"
+              logg-in-here="Logga in här!"
+            />
           </div>
         </div>
         <ShowPlant
@@ -202,38 +140,19 @@
         />
       </div>
     </div>
-    <!-- </div> -->
+
     <div class="secondPlantBox">
-      <!-- <div class="boxes"> -->
-      <div class="moreInfo">
-        <h2 id="more-info-heading">Mer information</h2>
-        <p id="more-info-text">{{ plant.description }}</p>
-        <!-- </div> -->
-      </div>
-
-      <!-- <div class="boxes"> -->
-      <div class="textBox">
-        <div class="prunBugDesc">
-          <div class="pruning">
-            <h5 class="heading">Beskärning</h5>
-            <i class="bi bi-scissors" />
-          </div>
-
-          <p>{{ plant.pruning }}</p>
-        </div>
-        <div class="prunBugDesc">
-          <div class="bug">
-            <h5 class="heading">Skadedjur</h5>
-            <i class="bi bi-bug" />
-          </div>
-          <p>{{ plant.pests }}</p>
-        </div>
-      </div>
-      <!-- </div> -->
+      <MoreInfoPlant
+        more-info="Mer information"
+        :plant-description="plant.description"
+        pruning-heading="Beskärning"
+        :pruning-info="plant.pruning"
+        bug-heading="Skadedjur"
+        :bug-info="plant.pests"
+      />
     </div>
   </div>
   <MyBestTips :message="plantTip" />
-  <!-- </div> -->
 </template>
 
 <style scoped>
@@ -256,13 +175,6 @@
 
   i {
     align-self: flex-end;
-  }
-
-  .moreInfo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
 
   .plantBox {
@@ -312,14 +224,12 @@
   }
   .carouselImg {
     object-fit: cover;
-    /* display: flex;
-    justify-content: center; */
+
     width: 300px;
     height: 300px;
   }
   .plantDesc {
     display: flex;
-
     flex-direction: column;
   }
   .plantDescTwo {
@@ -333,13 +243,6 @@
   .bi {
     margin: 10px;
   }
-  .plantPlace {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
 
   #plantInfoContainer {
     display: flex;
@@ -348,30 +251,17 @@
     width: 50%;
   }
 
-  .pruning {
-    text-align: center;
-  }
-  .bug {
-    text-align: center;
-  }
-  /* .pruningDesc {
-    margin-top: 10px;
-  } */
-
   @media (min-width: 600px) {
     .carouselImg {
       object-fit: cover;
-      /* min-width: 350px; */
       width: 450px;
       height: 450px;
-      /* height: 60vh; */
     }
     #ccc {
       width: 450px;
       height: 450px;
       display: flex;
       justify-content: center;
-      /* height: 20vh; */
     }
   }
   /* @media (min-width: 900px) {
@@ -417,26 +307,8 @@
 
     .line {
       border-style: 1px solid rgba(0, 0, 0, 0.15);
-      /* width: 90%; */
-    }
-    /* .heading {
-      font-size: 16px;
-    } */
-
-    .moreInfo {
-      display: flex;
-      justify-content: center;
-      width: 50%;
-      align-items: center;
-      flex-direction: column;
     }
 
-    .textBox {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      max-width: 40%;
-    }
     .plantDescTwo {
       display: flex;
       flex-direction: row;
@@ -448,15 +320,7 @@
       flex-direction: row;
       width: 80%;
     }
-    .prunBugDesc {
-      text-align: center;
-      max-width: 500px;
-    }
-    .bigPlantBox {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-    }
+
     .secondPlantBox {
       height: 50%;
       width: 80%;
@@ -467,16 +331,6 @@
     .line {
       border-style: 1px solid rgba(0, 0, 0, 0.15);
       /* width: 90%; */
-    }
-
-    #more-info-text {
-      width: 300px;
-    }
-    #more-info-heading {
-      width: 300px;
-    }
-    .pruning {
-      margin-top: 20px;
     }
 
     .secondPlantBox {
