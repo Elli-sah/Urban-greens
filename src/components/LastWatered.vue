@@ -44,12 +44,12 @@
   }
 
   .slide-in-enter-active {
-    animation: slide-in 0.9s forwards;
+    animation: slide-in 1s forwards;
   }
 
   @keyframes slide-in {
     from {
-      transform: translateX(100%);
+      transform: translateX(-200%);
     }
     to {
       transform: translateX(0);
