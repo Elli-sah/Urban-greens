@@ -69,6 +69,7 @@
         eventIndex: '',
         showDiv: 'false',
         plantsWatered: false,
+        todaysDate: new Date().toISOString().slice(0, 10), //Today´s date in FullCalendar format
         calendarOptions: {
           plugins: [dayGridPlugin, interactionPlugin],
           initialView: 'dayGridMonth',
@@ -158,6 +159,7 @@
             this.diff = moment.duration(
               moment().subtract(1, 'days').diff(this.date)
             )
+
             this.$store.commit('updateDateDiff', this.diff.humanize())
             break
           }
@@ -191,22 +193,26 @@
           <p>{{ selectedDate }}</p>
           <i @click="closeModal" id="remove-icon" class="bi bi-x-lg" />
         </div>
-        <input
-          type="radio"
-          name="options"
-          id="water-check"
-          value="Vattnat"
-          v-model="titleInput"
-          @click="selectWater"
-        /><label for="water-check">Vattnat idag</label>
-        <input
-          type="radio"
-          name="options"
-          id="event-check"
-          v-model="showDiv"
-          @click="selectOther"
-          value="true"
-        /><label for="event-check">Egen händelse</label>
+        <div v-if="this.selectedDate <= todaysDate">
+          <input
+            type="radio"
+            name="options"
+            id="water-check"
+            value="Vattnat"
+            v-model="titleInput"
+            @click="selectWater"
+          /><label for="water-check">Vattnat idag</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            name="options"
+            id="event-check"
+            v-model="showDiv"
+            @click="selectOther"
+            value="true"
+          /><label for="event-check">Egen händelse</label>
+        </div>
         <div v-if="showDiv === 'true'">
           <input
             type="text"
@@ -220,7 +226,9 @@
             placeholder="Beskrivning"
           />
         </div>
-        <button type="submit" class="button">Lägg till</button>
+        <button v-if="titleInput" type="submit" class="button">
+          Lägg till
+        </button>
       </div>
     </form>
 
