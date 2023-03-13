@@ -100,6 +100,7 @@
               (item) => item.id === info.event.id
             )
             this.eventIndex = this.myEvents.indexOf(this.selectedEvent)
+            this.showModal = false
             console.log('eventIndex', this.eventIndex)
             console.log('info.event', info.event.title)
             console.log('selectedEvent', this.selectedEvent)
@@ -110,6 +111,7 @@
           dateClick: (info) => {
             this.selectedDate = info.dateStr
             this.showModal = true
+            this.showEvent = false
           }
         }
       }
