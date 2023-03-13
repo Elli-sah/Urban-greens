@@ -69,6 +69,7 @@
         this.showLoginForm = false
       },
       AtCreateAccount() {
+        this.users = this.myState
         if (this.createUserName in this.myState) {
           this.showError = true
         } else {
