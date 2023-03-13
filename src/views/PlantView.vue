@@ -214,7 +214,7 @@
       />
     </div>
   </div>
-  <MyBestTips :plantName="plant.name" plant="plant" id="plant.id" />
+  <MyBestTips :plant-name="plant.name" plant="plant" id="plant.id" />
 </template>
 
 <style scoped>
