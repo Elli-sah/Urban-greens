@@ -57,10 +57,23 @@
       })
     },
 
+    // axios.get('/plants.json').then((response) => {
+    //       this.result = response.data
+    //     })
+
     methods: {
       axiosGetPlants() {
         axios.get('/plants.json').then((response) => {
-          this.result = response.data
+          //Sorterar planterna alfabetiskt
+          this.result = response.data.sort((a, b) => {
+            if (a.name < b.name) {
+              return -1
+            } else if (a.name > b.name) {
+              return 1
+            } else {
+              return 0
+            }
+          })
         })
       }
     },
@@ -72,7 +85,6 @@
         this.category = newValue
 
         //Errormeddelande om searchText inte matchar resultatet
-
         this.notFound = !this.result.some((plant) =>
           plant.name.toLowerCase().includes(this.searchText.toLowerCase())
         )
@@ -114,7 +126,7 @@
       <RouterLink to="/plantlist/Gröna växter" class="categoryLinks">
         <button class="button">Gröna växter</button>
       </RouterLink>
-      <Router-Link to="/plantlist/Giftiga_växter" class="categoryLinks">
+      <Router-Link to="/plantlist/Örter" class="categoryLinks">
         <button class="button">Örter</button>
       </Router-Link>
     </div>

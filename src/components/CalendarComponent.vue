@@ -23,6 +23,7 @@
           }
         }
       })
+
       // showInputDiv() {
       //   return this.showDiv === true
       // }
@@ -226,9 +227,7 @@
             placeholder="Beskrivning"
           />
         </div>
-        <button v-if="titleInput" type="submit" class="button">
-          Lägg till
-        </button>
+        <button disabled type="submit" class="button">Lägg till</button>
       </div>
     </form>
 
