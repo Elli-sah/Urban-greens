@@ -4,6 +4,7 @@
   import ShowPlant from '../components/ShowPlant.vue'
   import MyBestTips from '../components/MyBestTips.vue'
   import LogIn from '../components/LogIn.vue'
+  import PlantIcon from '../components/PlantIcon.vue'
   // import InlogModal from '../components/InlogModal.vue'
   import MoreInfoPlant from '../components/MoreInfoPlant.vue'
   import AddedPlant from '../components/AddedPlant.vue'
@@ -13,6 +14,7 @@
       ShowPlant,
       MyBestTips,
       LogIn,
+      PlantIcon,
       // InlogModal
       MoreInfoPlant,
       AddedPlant
