@@ -194,40 +194,46 @@
           <p>{{ selectedDate }}</p>
           <i @click="closeModal" id="remove-icon" class="bi bi-x-lg" />
         </div>
-        <div v-if="this.selectedDate <= todaysDate">
-          <input
-            type="radio"
-            name="options"
-            id="water-check"
-            value="Vattnat"
-            v-model="titleInput"
-            @click="selectWater"
-          /><label for="water-check">Vattnat idag</label>
+        <div id="createEventContainer">
+          <div id="radioEvent">
+            <div v-if="this.selectedDate <= todaysDate">
+              <input
+                type="radio"
+                name="options"
+                id="water-check"
+                value="Vattnat"
+                v-model="titleInput"
+                @click="selectWater"
+              /><label for="water-check">Vattnat idag</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="options"
+                id="event-check"
+                v-model="showDiv"
+                @click="selectOther"
+                value="true"
+              /><label for="event-check">Egen händelse</label>
+            </div>
+          </div>
+          <div id="inputBox" v-if="showDiv === 'true'">
+            <input
+              type="text"
+              v-model="titleInput"
+              placeholder="Namn på händelse"
+              required
+            />
+            <input
+              type="text"
+              v-model="descriptionInput"
+              placeholder="Beskrivning"
+            />
+          </div>
+          <button :disabled="!titleInput" type="submit" class="button">
+            Lägg till
+          </button>
         </div>
-        <div>
-          <input
-            type="radio"
-            name="options"
-            id="event-check"
-            v-model="showDiv"
-            @click="selectOther"
-            value="true"
-          /><label for="event-check">Egen händelse</label>
-        </div>
-        <div v-if="showDiv === 'true'">
-          <input
-            type="text"
-            v-model="titleInput"
-            placeholder="Namn på händelse"
-            required
-          />
-          <input
-            type="text"
-            v-model="descriptionInput"
-            placeholder="Beskrivning"
-          />
-        </div>
-        <button disabled type="submit" class="button">Lägg till</button>
       </div>
     </form>
 
@@ -252,6 +258,33 @@
   /* input {
     text-transform: capitalize;
   } */
+  #inputBox {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  #inputBox > input {
+    width: 90%;
+    margin: auto;
+    border-radius: 30px;
+    border-style: none;
+    padding: 7px;
+    margin-bottom: 5px;
+  }
+  #radioEvent {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 110px;
+  }
+  #createEventContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+  }
   #plant-calendar {
     margin-top: 50px;
     background-color: rgb(255, 255, 255, 0.9);
@@ -298,12 +331,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 9999;
-    background-color: white;
+    background-color: rgb(252, 252, 252);
     padding: 20px;
     width: 300px;
-    height: 300px;
+    height: 350px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: column;
     align-items: center;
     border-radius: 5px;
