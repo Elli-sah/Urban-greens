@@ -48,12 +48,12 @@
     <img :src="`http://openweathermap.org/img/wn/${img}.png`" />
   </div>
   <transition class="slide-in-enter-active" name="slide-in">
-    <div id="weather" v-if="temp !== null" ref="box">
-      <p v-if="temp > 15 && img === '01d'">
+    <div v-if="temp !== null" ref="box">
+      <p class="weather" v-if="temp > 15 && img === '01d'">
         Temperaturen hos dig är över 15℃ och sol... tänk på att vattna dina
         växter, och skydda dom från direkt solljus då!
       </p>
-      <p v-if="temp < 5 && img">
+      <p class="weather" v-if="temp < 5 && img">
         Temperaturen hos dig är under 5℃... tänk på att skydda dina växter från
         kalla luftdrag!
       </p>
@@ -73,12 +73,14 @@
     align-items: center;
     justify-content: end;
   }
-  #weather {
+  .weather {
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 300px;
+    text-align: center;
+    width: 500px;
+    padding: 10px;
     background-color: white;
     border-radius: 20px;
     height: 100px;
@@ -95,12 +97,12 @@
   }
 
   .slide-in-enter-active {
-    animation: slide-in 0.9s forwards;
+    animation: slide-in 1s forwards;
   }
 
   @keyframes slide-in {
     from {
-      transform: translateX(100%);
+      transform: translateX(200%);
     }
     to {
       transform: translateX(0);
