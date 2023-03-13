@@ -5,17 +5,13 @@
   import MyBestTips from '../components/MyBestTips.vue'
   import LogIn from '../components/LogIn.vue'
   // import InlogModal from '../components/InlogModal.vue'
-  import MoreInfoPlant from '../components/MoreInfoPlant.vue'
-  import AddedPlant from '../components/AddedPlant.vue'
 
   export default {
     components: {
       ShowPlant,
       MyBestTips,
-      LogIn,
+      LogIn
       // InlogModal
-      MoreInfoPlant,
-      AddedPlant
     },
     props: {
       name: { type: String, required: true }
@@ -44,7 +40,18 @@
         modal: false
       }
     },
-
+    computed: {
+      ...mapState({
+        loggedInUser: (state) => state.loggedInUser,
+        userFavorites: (state) => {
+          if (state.loggedInUser) {
+            return state.users[state.loggedInUser.user]?.favorites || []
+          } else {
+            return []
+          }
+        }
+      })
+    },
     methods: {
       axiosGetPlants() {
         axios.get('/plants.json').then((response) => {
@@ -68,11 +75,43 @@
           }
         })
       },
+      // atAddPlant() {
+      //   this.$store.commit('addPlant', {
+      //     user: this.loggedInUser.user,
+      //     addplant: this.plant
+      //   })
+      atAddPlant() {
+        if (this.loggedInUser !== '') {
+          if (
+            this.userFavorites.find((plant) => plant.name === this.plant.name)
+          ) {
+            this.AlreadyAddedplant = true
+            setTimeout(() => {
+              this.AlreadyAddedplant = false
+            }, 3000)
+          } else {
+            this.$store.commit('addPlant', {
+              user: this.loggedInUser.user,
+              addplant: this.plant
+            })
+            this.Addedplant = true
+            setTimeout(() => {
+              this.Addedplant = false
+            }, 3000)
+          }
+        } else {
+          // this.NotLoggedIn = true
+          this.modal = true
+        }
+      },
+      onClick() {
+        this.NotLoggedIn = false
+      },
 
-      openModal(modalInfo) {
-        this.selectedPlant = this.plant
-        this.plantHeading = this.plant[modalInfo].title
-        this.longDescription = this.plant[modalInfo].description
+      openModal(plant, plantHeading, description) {
+        this.selectedPlant = plant
+        this.plantHeading = plantHeading
+        this.longDescription = description
         document.body.style.overflow = 'hidden'
       },
       closeModal() {
@@ -91,11 +130,16 @@
       }
     }
   }
+
+  // toggleText() {
+  //   this.showText = !this.showText
+  // }
+  // hejsan
 </script>
 
 <template>
   <div v-if="plant" class="view-divs">
-    x
+    <!-- <div v-if="plant !== null" class="bigPlantBox"> -->
     <div class="plantBox">
       <div id="ccc">
         <b-carousel
@@ -147,69 +191,154 @@
           <hr class="line" />
           <div class="plantContainer">
             <div class="plantDesc">
-              <PlantIcon
-                css-icon="bi bi-brightness-high icons-hover"
-                icon-title="Placering"
-                :icon-short="plant.placement.short"
-                modal-info="placement"
-                @open="openModal"
-              />
+              <!-- <p>Placering:</p> -->
+              <div class="plantPlace">
+                <i
+                  @click="
+                    openModal(
+                      plant,
+                      plant.placement.plantHeading,
+                      plant.placement.description
+                    )
+                  "
+                  class="bi bi-brightness-high icons-hover"
+                  style="font-size: 2em"
+                />
 
-              <PlantIcon
-                css-icon="bi bi-thermometer-low icons-hover"
-                icon-title="Temperatur"
-                :icon-short="plant.temperature.short"
-                modal-info="temperature"
-                @open="openModal"
-              />
+                <div>
+                  <p class="shortText title">Placering</p>
+                  <p class="shortText">{{ plant.placement.short }}</p>
+                </div>
+              </div>
+              <!-- <p>Temp:</p> -->
+              <div class="plantTemp">
+                <i
+                  @click="
+                    openModal(
+                      plant,
+                      plant.temperature.plantHeading,
+                      plant.temperature.description
+                    )
+                  "
+                  class="bi bi-thermometer-low icons-hover"
+                  style="font-size: 2em"
+                />
+
+                <div>
+                  <p class="shortText title">Temperatur</p>
+                  <p class="shortText">
+                    {{ plant.temperature.short }}
+                  </p>
+                </div>
+              </div>
             </div>
             <div class="plantDescTwo">
-              <PlantIcon
-                css-icon="bi bi-moisture icons-hover"
-                icon-title="Bevattning"
-                :icon-short="plant.watering.short"
-                modal-info="watering"
-                @open="openModal"
-              />
-              <PlantIcon
-                css-icon="bi bi-flower1 icons-hover"
-                icon-title="Näring"
-                :icon-short="plant.fertilization.short"
-                modal-info="fertilization"
-                @open="openModal"
-              />
+              <div class="plantWater">
+                <i
+                  @click="
+                    openModal(
+                      plant,
+                      plant.watering.plantHeading,
+                      plant.watering.description
+                    )
+                  "
+                  class="bi bi-moisture iconsize icons-hover"
+                  style="font-size: 2em"
+                />
+
+                <div>
+                  <p class="shortText title">Bevattning</p>
+                  <p class="shortText">{{ plant.watering.short }}</p>
+                </div>
+              </div>
+              <div class="plantFert">
+                <i
+                  @click="
+                    openModal(
+                      plant,
+                      plant.fertilization.plantHeading,
+                      plant.fertilization.description
+                    )
+                  "
+                  class="bi bi-flower1 icons-hover"
+                  style="font-size: 2em"
+                />
+
+                <div>
+                  <p class="shortText title">Näring</p>
+                  <p class="shortText">{{ plant.fertilization.short }}</p>
+                </div>
+              </div>
             </div>
 
-            <AddedPlant
-              added-plant="Ställ på fönsterbrädan"
-              :plant-name="plant.name"
-              logg-in="Du behöver logga in först"
-              logg-in-here="Logga in här!"
-            />
+            <button class="button" @click="atAddPlant">
+              Ställ på fönsterbrädan
+            </button>
+            <div class="popup-divs" v-show="Addedplant">
+              <p class="paragraph added-paragraph">
+                {{ plant.name }} är tillagd på din fönsterbräda!
+              </p>
+            </div>
+            <div class="popup-divs" v-show="AlreadyAddedplant">
+              <p class="paragraph added-paragraph">
+                Du har redan lagt till {{ plant.name }} på din fönsterbräda!
+              </p>
+            </div>
+            <!-- <div class="popup-divs" v-show="NotLoggedIn"> -->
+            <div id="login-div">
+              <div id="inlogModal-div">
+                <b-modal hide-footer v-model="modal">
+                  <h1>Du måste logga in först!</h1>
+                  <LogIn />
+                </b-modal>
+              </div>
+              <!-- </div> -->
+            </div>
           </div>
         </div>
         <ShowPlant
           v-if="selectedPlant"
-          :selected-plant="Placering"
+          :selected-plant="selectedPlant"
           :plant-heading="plantHeading"
           :long-description="longDescription"
           @close="closeModal"
         />
       </div>
     </div>
-
+    <!-- </div> -->
     <div class="secondPlantBox">
-      <MoreInfoPlant
-        more-info="Mer information"
-        :plant-description="plant.description"
-        pruning-heading="Beskärning"
-        :pruning-info="plant.pruning"
-        bug-heading="Skadedjur"
-        :bug-info="plant.pests"
-      />
+      <!-- <div class="boxes"> -->
+      <div class="moreInfo">
+        <h2 id="more-info-heading">Mer information</h2>
+        <p id="more-info-text">{{ plant.description }}</p>
+        <!-- </div> -->
+      </div>
+
+      <!-- <div class="boxes"> -->
+      <div class="textBox">
+        <div class="prunBugDesc">
+          <div class="pruning">
+            <h5 class="heading">Beskärning</h5>
+            <i class="bi bi-scissors" />
+          </div>
+
+          <p>{{ plant.pruning }}</p>
+        </div>
+        <div class="prunBugDesc">
+          <div class="bug">
+            <h5 class="heading">Skadedjur</h5>
+            <i class="bi bi-bug" />
+          </div>
+          <p>{{ plant.pests }}</p>
+        </div>
+      </div>
+      <!-- </div> -->
     </div>
   </div>
-  <MyBestTips :message="plantTip" />
+  <div v-if="plant">
+    <MyBestTips :plant-name="plant.name" :plant="plant" :id="plant.id" />
+  </div>
+  <!-- </div> -->
 </template>
 
 <style scoped>
@@ -253,6 +382,13 @@
     align-self: flex-end;
   }
 
+  .moreInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
   .plantBox {
     width: 100%;
     padding: 20px 20px 20px 20px;
@@ -267,10 +403,10 @@
     margin-top: 50px;
   }
   .plantShortInfo {
-    /* flex-direction: column; */
+    flex-direction: column;
     text-align: center;
 
-    /* display: flex; */
+    display: flex;
     justify-content: center;
   }
 
@@ -300,7 +436,8 @@
   }
   .carouselImg {
     object-fit: cover;
-
+    /* display: flex;
+    justify-content: center; */
     width: 300px;
     height: 300px;
   }
@@ -314,6 +451,7 @@
   }
   .plantDesc {
     display: flex;
+
     flex-direction: column;
   }
   .plantDescTwo {
@@ -327,25 +465,82 @@
   .bi {
     margin: 10px;
   }
+  .plantPlace {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
 
+  /* gör en gemensam klass för skötsel och media query för desctop 50% width */
+  .plantTemp {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .plantWater {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .plantFert {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
   #plantInfoContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 50%;
   }
+  .shortText {
+    text-align: center;
+    align-items: center;
+    width: 100px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  p.title {
+    font-weight: bold !important;
+    font-size: 16px;
+  }
+  .pruning {
+    text-align: center;
+  }
+  .bug {
+    text-align: center;
+  }
+  /* .pruningDesc {
+    margin-top: 10px;
+  } */
 
   @media (min-width: 600px) {
     .carouselImg {
       object-fit: cover;
+      /* min-width: 350px; */
       width: 450px;
       height: 450px;
+      /* height: 60vh; */
     }
     #ccc {
       width: 450px;
       height: 450px;
       display: flex;
       justify-content: center;
+      /* height: 20vh; */
     }
   }
   /* @media (min-width: 900px) {
@@ -388,11 +583,33 @@
       flex-direction: row;
       margin: 10px;
     }
-
+    .secondText {
+      flex-direction: row;
+      display: flex;
+      justify-content: space-around;
+    }
     .line {
       border-style: 1px solid rgba(0, 0, 0, 0.15);
+      /* width: 90%; */
+    }
+    /* .heading {
+      font-size: 16px;
+    } */
+
+    .moreInfo {
+      display: flex;
+      justify-content: center;
+      width: 50%;
+      align-items: center;
+      flex-direction: column;
     }
 
+    .textBox {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 40%;
+    }
     .plantDescTwo {
       display: flex;
       flex-direction: row;
@@ -404,19 +621,97 @@
       flex-direction: row;
       width: 80%;
     }
-
+    .prunBugDesc {
+      text-align: center;
+      max-width: 500px;
+    }
+    .bigPlantBox {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
     .secondPlantBox {
       height: 50%;
       width: 80%;
       display: flex;
     }
+    .plantPlace {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 10px;
+    }
+    .plantTemp {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 10px;
+    }
+    .plantWater {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 50%;
+      margin: 10px;
+    }
+    .plantFert {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 50%;
+      margin: 10px;
+    }
+    /* #ccc {
+      width: 600px;
+      height: 600px;
+    }
+    .carouselImg {
+      width: 600px;
+      height: 600px;
+    } */
+    /* .heading {
+      font-size: 16px;
+    } */
   }
   @media only screen and (max-width: 1600px) and (min-width: 1200px) {
+    /* .carouselImg {
+      width: 500px;
+      height: 500px;
+    }
+    #ccc {
+      width: 500px;
+      height: 500px;
+    } */
     .line {
       border-style: 1px solid rgba(0, 0, 0, 0.15);
       /* width: 90%; */
     }
 
+    #more-info-text {
+      width: 300px;
+    }
+    #more-info-heading {
+      width: 300px;
+    }
+    .pruning {
+      margin-top: 20px;
+    }
+
+    /* .moreInfo {
+      padding: 0;
+      width: 50%;
+    } */
+    /* .textBox {
+      display: flex;
+      justify-content: center;
+      width: 400px;
+    } */
+    .pruningDesc {
+      width: 300px;
+    }
+    .bugDesc {
+      width: 300px;
+    }
     .secondPlantBox {
       display: flex;
     }
