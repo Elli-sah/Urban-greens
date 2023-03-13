@@ -191,10 +191,10 @@
     margin-top: 50px;
   }
   .plantShortInfo {
-    flex-direction: column;
+    /* flex-direction: column; */
     text-align: center;
 
-    display: flex;
+    /* display: flex; */
     justify-content: center;
   }
 
