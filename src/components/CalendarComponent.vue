@@ -97,7 +97,7 @@
             this.eventTitle = info.event.title
             this.showEvent = true
             this.selectedEvent = this.myEvents.find(
-              (item) => item.title === info.event.title
+              (item) => item.id === info.event.id
             )
             this.eventIndex = this.myEvents.indexOf(this.selectedEvent)
             console.log('eventIndex', this.eventIndex)
@@ -123,9 +123,12 @@
       },
       addEvent() {
         const event = {
+          id: this.selectedDate,
           title: this.titleInput,
           start: this.selectedDate,
-          description: this.descriptionInput
+          description: this.descriptionInput,
+          backgroundColor: this.titleInput === 'Vattnat' ? '#83d5f8' : '',
+          borderColor: this.titleInput === 'Vattnat' ? '#83d5f8' : ''
         }
         console.log('value:', this.titleInput)
         console.log('date', this.selectedDate)
