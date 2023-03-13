@@ -1,25 +1,15 @@
 <script>
   import PlantCategory from '../components/PlantCategory.vue'
-  import { mapState } from 'vuex'
 
   export default {
     components: {
       PlantCategory
-    },
-    computed: {
-      ...mapState({
-        loggedInUser: (state) => state.loggedInUser
-      })
     }
   }
 </script>
 
 <template>
   <div id="start-div">
-    <div id="welcome-popup" v-show="loggedInUser !== ''">
-      <p>Välkommen {{ loggedInUser.name }}!</p>
-    </div>
-
     <img
       id="primary-logo"
       src="../../assets/Logo-primary-svart.png"
@@ -60,18 +50,6 @@
     height: 150vh;
   }
 
-  #welcome-popup {
-    position: absolute;
-    top: 70px;
-    left: 50%;
-    margin-left: -90px;
-    width: 200px;
-  }
-
-  #welcome-popup > p {
-    font-size: 1rem;
-  }
-
   #primary-logo {
     margin-left: 20px;
     width: 80%;
@@ -110,10 +88,6 @@
       width: 50%;
     }
 
-    #welcome-popup {
-      visibility: hidden;
-    }
-
     p {
       width: 50%;
       // font-size: 1.2rem;
@@ -121,6 +95,7 @@
     }
     #div-desktop {
       display: flex;
+      align-items: center;
     }
     #kom-igang {
       border-radius: 50%;

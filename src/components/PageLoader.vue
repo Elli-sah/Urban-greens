@@ -1,16 +1,21 @@
+<script>
+  export default {}
+</script>
+
 <template>
   <div class="loader">
     <div class="spinner" />
   </div>
 </template>
 
-<style>
+<style scoped>
   .loader {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     width: 100%;
+    z-index: 9999;
   }
 
   .spinner {

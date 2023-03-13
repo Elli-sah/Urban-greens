@@ -1,4 +1,6 @@
-<script></script>
+<script>
+  export default {}
+</script>
 
 <template>
   <h3><strong>Kategorier</strong></h3>
@@ -57,6 +59,18 @@
               class="category-pic"
               src="../../assets/Växter/feey-R0_-WVpFQRI-unsplash.jpg"
               alt="Gröna Växter"
+            />
+          </div></div
+      ></RouterLink>
+      <RouterLink class="link-dark text-decoration-none" to="/plantlist/Örter"
+        ><div class="plantbox-category">
+          <div>
+            <h4>Örter</h4>
+
+            <img
+              class="category-pic"
+              src="../../assets/Växter/herbs.jpg"
+              alt="Örter"
             />
           </div></div
       ></RouterLink>

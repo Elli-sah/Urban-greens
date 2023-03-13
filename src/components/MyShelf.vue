@@ -1,20 +1,50 @@
 <script>
   import { mapState } from 'vuex'
+  import AWN from 'awesome-notifications'
 
   export default {
+    data() {
+      return {
+        notifier: new AWN()
+      }
+    },
     computed: {
       ...mapState({
-        myPlants: (state) => state.users[state.loggedInUser.user].favorites,
-        loggedInUser: (state) => state.loggedInUser
+        loggedInUser: (state) => state.loggedInUser,
+        myPlants: (state) => {
+          if (state.loggedInUser) {
+            return state.users[state.loggedInUser.user]?.favorites || []
+          } else {
+            return []
+          }
+        },
+        dateDiff: (state) => state.dateDiff
       })
     },
     methods: {
-      removePlant(index) {
+      removePlant(plant, index) {
+        let onOK = () => {
+          this.notifier.success(
+            `${plant.name} är borttagen från fönsterbrädan.`
+          )
+          this.$store.commit('removePlant', {
+            user: this.loggedInUser.user,
+            index: index
+          })
+        }
+        let onCancel
+        this.notifier.confirm(
+          `Är du säker på att du vill ta bort ${plant.name}?`,
+          onOK,
+          onCancel,
+          {
+            labels: {
+              confirm: 'Varning!'
+            }
+          }
+        )
         console.log(index)
-        this.$store.commit('removePlant', {
-          user: this.loggedInUser.user,
-          index: index
-        })
+        console.log(plant)
       }
     }
   }
@@ -30,7 +60,7 @@
     >
       <img :src="plant.image[0]" :alt="plant.name" />
       <div class="descriptionBox">
-        <h2>{{ plant.name }}</h2>
+        <h3>{{ plant.name }}</h3>
         <div class="description-divs">
           <i class="bi bi-brightness-high" style="font-size: 0.7em" />
           <p class="description-p">{{ plant.placement.short }}</p>
@@ -44,7 +74,11 @@
           <p class="description-p">{{ plant.watering.short }}</p>
         </div>
       </div>
-      <i @click="removePlant(index)" id="remove-icon" class="bi bi-x-lg" />
+      <i
+        @click="removePlant(plant, index)"
+        id="remove-icon"
+        class="bi bi-x-lg"
+      />
     </div>
   </div>
 </template>
@@ -99,6 +133,7 @@
     cursor: pointer;
     margin-left: 15px;
   }
+
   @media (min-width: 500px) {
     .descriptionBox {
       margin-top: 30px;
@@ -106,6 +141,9 @@
     }
   }
   @media (min-width: 900px) {
+    #my-shelf-view {
+      margin-top: 0;
+    }
     .shelf-plants {
       margin-right: 20px;
       width: 400px;

@@ -1,24 +1,23 @@
 <script>
   import axios from 'axios'
   import PlantCard from '../components/PlantCard.vue'
+  import PageLoader from '../components/PageLoader.vue'
+  import { mapState } from 'vuex'
 
   export default {
     components: {
-      PlantCard
+      PlantCard,
+      PageLoader
     },
     created() {
       this.axiosGetPlants()
       console.log(this.category)
     },
 
-    // props: {
-    //   category: {
-    //     type: String,
-    //     default: 'Alla_väter'
-    //   }
-    // },
-
     computed: {
+      ...mapState({
+        loggedInUser: (state) => state.loggedInUser
+      }),
       filterdPlants() {
         const category = this.$route.params.category
         if (category === 'Alla_växter') {
@@ -34,7 +33,7 @@
         } else {
           return this.result.filter(
             (plant) =>
-              plant.category === category &&
+              plant.category.includes(category) &&
               plant.name.toLowerCase().includes(this.searchText.toLowerCase())
           )
         }
@@ -45,8 +44,15 @@
       return {
         result: [],
         searchText: '',
-        notFound: false
+        notFound: false,
+        isLoading: true
       }
+    },
+
+    mounted() {
+      setTimeout(() => {
+        this.isLoading = false
+      })
     },
 
     methods: {
@@ -61,6 +67,8 @@
       searchText(newValue) {
         console.log(newValue)
         this.name = newValue
+
+        //Errormeddelande om searchText inte matchar resultatet
 
         this.notFound = !this.result.some((plant) =>
           plant.name.toLowerCase().includes(this.searchText.toLowerCase())
@@ -77,40 +85,48 @@
       <input type="text" v-model="searchText" />
       <i @click="submit" class="bi bi-search" />
 
-      <span class="error-message" v-if="notFound">
+      <span v-if="notFound">
         <p>"{{ searchText }}" hittades inte.</p>
         <p>
-          Saknar du en planta? Här i Växtguiden kan du lägga till vilken du
-          vill!
+          Men på
+          <RouterLink class="links" :to="`/profile/${loggedInUser.user}`"
+            >fönsterbrädan</RouterLink
+          >
+          kan du lägga till dina egna växter!
         </p>
       </span>
     </div>
 
     <div class="scrolling-wrapper">
-      <Router-Link to="/plantlist/Alla_växter" class="categoryLinks">
+      <RouterLink to="/plantlist/Alla_växter" class="categoryLinks">
         <button class="button">Alla växter</button>
-      </Router-Link>
+      </RouterLink>
 
-      <Router-Link to="/plantlist/Blommande" class="categoryLinks">
+      <RouterLink to="/plantlist/Blommande" class="categoryLinks">
         <button class="button">Blommande växter</button>
-      </Router-Link>
-      <Router-Link to="/plantlist/Suckulent" class="categoryLinks">
+      </RouterLink>
+      <RouterLink to="/plantlist/Suckulent" class="categoryLinks">
         <button class="button">Suckulenter</button>
-      </Router-Link>
-      <Router-Link to="/plantlist/Gröna växter" class="categoryLinks">
+      </RouterLink>
+      <RouterLink to="/plantlist/Gröna växter" class="categoryLinks">
         <button class="button">Gröna växter</button>
+      </RouterLink>
+      <Router-Link to="/plantlist/Giftiga_växter" class="categoryLinks">
+        <button class="button">Örter</button>
       </Router-Link>
-      <!-- <Router-Link to="/plantlist/Giftiga_växter" class="categoryLinks">
-        <button class="button">Giftiga växter</button>
-      </Router-Link> -->
     </div>
     <!-- <h2>{{ category }}</h2> -->
-    <div id="filteredPlants">
-      <PlantCard
-        v-for="plant in filterdPlants"
-        :key="plant.name"
-        :plant="plant"
-      />
+    <div>
+      <div v-if="isLoading" class="overlay">
+        <PageLoader />
+      </div>
+      <div v-else id="filteredPlants">
+        <PlantCard
+          v-for="plant in filterdPlants"
+          :key="plant.name"
+          :plant="plant"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -125,10 +141,10 @@
     justify-content: center;
   }
 
-  // #list-view-heading {
-  //   text-align: center;
-  //   margin: 20px 0 60px 0;
-  // }
+  a:hover {
+    color: inherit;
+    font-weight: 600;
+  }
 
   .input-div i {
     position: absolute;
@@ -161,6 +177,13 @@
     width: 100%;
     display: flex;
     justify-content: flex-start;
+  }
+  .overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
   }
 
   @media screen and (min-width: 800px) {

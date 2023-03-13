@@ -17,7 +17,7 @@
     mounted() {
       setTimeout(() => {
         this.loading = false
-      }, 2000)
+      })
     }
   }
 </script>
@@ -35,7 +35,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
   .overlay {
     position: fixed;
     top: 0;

@@ -28,44 +28,47 @@
         dem blomstra med hjälp av vår app. Kontakta oss om du behöver hjälp.
         Lycka till med dina växter!
       </p> -->
-        <RouterLink v-if="isLoggedIn" to="/login">
+        <RouterLink v-if="!isLoggedIn" to="/login">
           <button id="komIgang" class="button">Logga in</button>
         </RouterLink>
       </div>
 
       <div id="container">
-        <div class="text-number-container">
-          <p class="text">
-            I vår <strong>växtguide</strong> hittar du en stor samling av vackra
-            växter som du kanske har hemma eller vill ha. I
-            <strong>växtguide</strong> kan du ställa de växter som du har hemma
-            på din virituella fönstebräda för att få kontroll på dina växter.
-          </p>
-          <p class="number">01</p>
-        </div>
-        <div class="text-number-container">
-          <p class="number">02</p>
+        <div id="inner-container">
+          <div class="text-number-container">
+            <p class="text">
+              I vår <strong>växtguide</strong> hittar du en stor samling av
+              vackra växter som du kanske har hemma eller vill ha. I
+              <strong>växtguide</strong> kan du ställa de växter som du har
+              hemma på din virituella fönstebräda för att få kontroll på dina
+              växter.
+            </p>
+            <p class="number">01</p>
+          </div>
+          <div class="text-number-container">
+            <p class="number">02</p>
 
-          <p class="text">
-            Genom att klicka på en växt kan du se viktig information om dess
-            behov och förutsättningar för att växa och frodas. Detta inkluderar
-            detaljer om bevattning, temperatur, ljusbehov och annan relevant
-            information. Att ta reda på sådana detaljer kan hjälpa dig att ta
-            bättre hand om dina växter och se till att de trivs på bästa möjliga
-            sätt.
-          </p>
-        </div>
+            <p class="text">
+              Genom att klicka på en växt kan du se viktig information om dess
+              behov och förutsättningar för att växa och frodas. Detta
+              inkluderar detaljer om bevattning, temperatur, ljusbehov och annan
+              relevant information. Att ta reda på sådana detaljer kan hjälpa
+              dig att ta bättre hand om dina växter och se till att de trivs på
+              bästa möjliga sätt.
+            </p>
+          </div>
 
-        <div class="text-number-container">
-          <p class="text">
-            Genom att lägga till dina växter i
-            <strong>Min fönsterbräda</strong> kan du enkelt samla alla dina
-            växter på ett ställe. På detta sätt kan du effektivt organisera dina
-            växter och säkerställa att du ger dem rätt vård och uppmärksamhet.
-            Detta gör det också lättare att övervaka deras tillstånd och se till
-            att de fortsätter att trivas.
-          </p>
-          <p class="number">03</p>
+          <div class="text-number-container">
+            <p class="text">
+              Genom att lägga till dina växter i
+              <strong>Min fönsterbräda</strong> kan du enkelt samla alla dina
+              växter på ett ställe. På detta sätt kan du effektivt organisera
+              dina växter och säkerställa att du ger dem rätt vård och
+              uppmärksamhet. Detta gör det också lättare att övervaka deras
+              tillstånd och se till att de fortsätter att trivas.
+            </p>
+            <p class="number">03</p>
+          </div>
         </div>
         <!-- <img id="my-shelf" src="../../assets/shelf.png" alt="my shelf" /> -->
       </div>
@@ -83,7 +86,7 @@
   }
   #container {
     width: 100%;
-    padding: 10px;
+    padding: 20px;
     border-radius: 20px;
 
     color: white;
@@ -136,8 +139,15 @@
     }
     #container {
       height: 700px;
-      overflow: auto;
     }
+    #inner-container {
+      overflow: auto;
+      height: 650px;
+      padding: 10px;
+      scrollbar-width: thin;
+      scrollbar-color: #ccc #577751;
+    }
+
     #info {
       height: 700px;
     }

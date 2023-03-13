@@ -3,11 +3,20 @@
   import { mapState } from 'vuex'
   import ShowPlant from '../components/ShowPlant.vue'
   import MyBestTips from '../components/MyBestTips.vue'
+  import LogIn from '../components/LogIn.vue'
+  // import InlogModal from '../components/InlogModal.vue'
   import MoreInfoPlant from '../components/MoreInfoPlant.vue'
   import AddedPlant from '../components/AddedPlant.vue'
 
   export default {
-    components: { ShowPlant, MyBestTips, MoreInfoPlant, AddedPlant },
+    components: {
+      ShowPlant,
+      MyBestTips,
+      LogIn,
+      // InlogModal
+      MoreInfoPlant,
+      AddedPlant
+    },
     props: {
       name: { type: String, required: true }
     },
@@ -25,7 +34,14 @@
         Addedplant: false,
         NotLoggedIn: false,
         AlreadyAddedplant: false,
-        plantTip: ''
+        plantTip: '',
+        isEasy: false,
+        isMid: false,
+        isHard: false,
+        poisonist: false,
+        noPoison: false,
+        hover: false,
+        modal: false
       }
     },
 
@@ -35,6 +51,21 @@
           this.plant = response.data.filter(
             (plant) => plant.name === this.name
           )[0]
+          console.log('rad 34', this.plant)
+          // Funktion för att kontrollera svårighetsgrad
+          if (this.plant.difficulty === 'Lätt') {
+            this.isEasy = true
+          } else if (this.plant.difficulty === 'Medel') {
+            this.isMid = true
+          } else {
+            this.isHard = true
+          }
+          // Funktion för att visa om plantan är giftig
+          if (this.plant.poison.short === true) {
+            this.poisonist = true
+          } else {
+            this.noPoison = true
+          }
         })
       },
 
@@ -45,11 +76,12 @@
         document.body.style.overflow = 'hidden'
       },
       closeModal() {
+        this.NotLoggedIn = false
         this.selectedPlant = null
         document.body.style.overflow = 'auto'
       }
     },
-    created() {
+    mounted() {
       this.axiosGetPlants()
     },
 
@@ -86,6 +118,31 @@
           <h1>{{ plant.name }}</h1>
 
           <h3>{{ plant.latin }}</h3>
+          <div
+            id="poison-parent"
+            @mouseover="hover = true"
+            @mouseleave="hover = false"
+          >
+            <p v-show="poisonist">Denna växt är giftig</p>
+
+            <p class="description" v-if="hover" v-show="poisonist">
+              {{ plant.poison.description }}
+            </p>
+          </div>
+          <p v-show="noPoison">Denna växt är inte giftig</p>
+
+          <p id="easy-p" v-show="isEasy">
+            Svårighetsgrad: {{ plant.difficulty }}
+            <span class="spans" style="background-color: green" />
+          </p>
+          <p id="mid-p" v-show="isMid">
+            Svårighetsgrad: {{ plant.difficulty }}
+            <span class="spans" style="background-color: orange" />
+          </p>
+          <p id="hard-p" v-show="isHard">
+            Svårighetsgrad: {{ plant.difficulty }}
+            <span class="spans" style="background-color: red" />
+          </p>
 
           <hr class="line" />
           <div class="plantContainer">
@@ -156,11 +213,30 @@
 </template>
 
 <style scoped>
+  #poison-parent {
+    position: relative;
+    cursor: pointer;
+  }
+  .description {
+    position: absolute;
+    padding: 10px;
+    font-size: 0.8rem;
+    background-color: #f0e8e2;
+    z-index: 1;
+    /* box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.1); */
+  }
+  .icons-hover {
+    font-size: 10rem;
+    transition: transform 0.2s ease-in-out;
+  }
+  .icons-hover:hover {
+    transform: scale(1.5);
+  }
   #login-div {
     margin: 5px;
   }
   .popup-divs {
-    background-color: #c8c8c8;
+    /* background-color: #c8c8c8; */
     border-radius: 10px;
     position: absolute;
     display: flex;
@@ -227,6 +303,14 @@
 
     width: 300px;
     height: 300px;
+  }
+
+  .spans {
+    margin-left: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
   }
   .plantDesc {
     display: flex;

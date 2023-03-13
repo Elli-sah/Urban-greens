@@ -7,31 +7,39 @@ const state = {
     klarab: {
       name: 'Klara',
       password: 'klarab',
-      favorites: []
+      favorites: [],
+      calendar: []
     },
     sannaa: {
       name: 'Sanna',
       password: 'sannaa',
-      favorites: []
+      favorites: [],
+      calendar: []
     },
     ellinors: {
       name: 'Ellinor',
       password: 'ellinors',
-      favorites: []
+      favorites: [],
+      calendar: []
     },
     tovek: {
       name: 'Tove',
       password: 'tovek',
-      favorites: []
+      favorites: [],
+      calendar: []
     },
     isabelll: {
       name: 'Isabell',
       password: 'isabelll',
-      favorites: []
+      favorites: [],
+      calendar: []
     }
   },
-  plantTip: [],
+
+  plantTips: {},
+
   loggedInUser: '',
+  dateDiff: '',
   searchText: ''
 }
 
@@ -44,17 +52,29 @@ const mutations = {
   //   state.users = { ...users }
   // },
 
-  setPlantTip(state, tip) {
-    state.plantTip.push(tip)
+  setPlantTip(state, tipAndId) {
+    let plantId = state.plantTips[tipAndId.id]
+
+    if (plantId) {
+      plantId.tips.push(tipAndId.tip)
+    } else {
+      let temporaryTip = { tips: [] }
+      temporaryTip.tips.push(tipAndId.tip)
+      state.plantTips[tipAndId.id] = temporaryTip
+    }
   },
-  removePlantTip(state, index) {
-    state.plantTip.splice(index, 1)
+  // removePlantTip(state, index) {
+  //   state.plantTip.splice(index, 1)
+  // },
+  removePlantTip(state, deletePlantTip) {
+    state.plantTips[deletePlantTip.id].tips.splice(deletePlantTip.index, 1)
   },
   // removePlantTip(state, deletePlant) {
   //   state.plantTip[deletePlant.tip].tip.splice(deletePlant.index, 1)
   // },
   logutUser(state) {
     state.loggedInUser = ''
+    state.dateDiff = ''
   },
   setSearchText(state, searchText) {
     state.searchText = searchText
@@ -69,7 +89,8 @@ const mutations = {
     state.users[newUser.user] = {
       name: newUser.name,
       password: newUser.password,
-      favorites: []
+      favorites: [],
+      calendar: []
     }
   },
   addPlant(state, newPlant) {
@@ -77,6 +98,15 @@ const mutations = {
   },
   removePlant(state, deletePlant) {
     state.users[deletePlant.user].favorites.splice(deletePlant.index, 1)
+  },
+  addEventToUserCalendar(state, event) {
+    state.users[state.loggedInUser.user].calendar.push(event)
+  },
+  removeEvent(state, event) {
+    state.users[event.user].calendar.splice(event.index, 1)
+  },
+  updateDateDiff(state, date) {
+    state.dateDiff = date
   }
 }
 const plugins = [vuexLocal.plugin]

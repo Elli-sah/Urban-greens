@@ -1,7 +1,13 @@
 <script>
   import { mapState } from 'vuex'
+  // import InlogModal from './InlogModal.vue'
+  import LogIn from './LogIn.vue'
 
   export default {
+    components: {
+      // InlogModal
+      LogIn
+    },
     props: {
       plant: {
         type: Object,
@@ -10,10 +16,12 @@
     },
     data() {
       return {
+        showModal: false,
         Addedplant: false,
         NotLoggedIn: false,
         AlreadyAddedplant: false,
-        showDescription: false
+        showDescription: false,
+        modal: false
       }
     },
     computed: {
@@ -49,10 +57,14 @@
             }, 3000)
           }
         } else {
-          this.NotLoggedIn = true
+          // this.NotLoggedIn = true
+          this.modal = true
         }
       },
       onClick() {
+        this.NotLoggedIn = false
+      },
+      closeModal() {
         this.NotLoggedIn = false
       }
     }
@@ -85,18 +97,16 @@
         Du har redan lagt till {{ plant.name }} på din fönsterbräda!
       </p>
     </div>
-    <div class="popup-divs" v-show="NotLoggedIn">
-      <i @click="onClick" class="bi bi-x-lg" />
+    <div>
       <div id="login-div">
-        <p>Du behöver logga in först</p>
-        <b-button
-          variant="link"
-          to="/login"
-          type="button"
-          id="button-secondary"
-          class="btn btn-link"
-          >Logga in här!</b-button
-        >
+        <div id="inlogModal-div">
+          <b-modal hide-footer v-model="modal">
+            <h1>Du måste logga in först!</h1>
+
+            <LogIn />
+          </b-modal>
+          <!-- <InlogModal @close="closeModal" /> -->
+        </div>
       </div>
     </div>
   </div>
@@ -105,8 +115,8 @@
 <style lang="scss" scoped>
   .plantBox {
     position: relative;
-    width: 250px;
-    height: 300px;
+    width: 270px;
+    height: 320px;
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -166,10 +176,18 @@
     border-radius: 10px;
     position: absolute;
     bottom: 4px;
+    z-index: 1;
   }
 
   #login-div {
     padding: 40px;
+    position: absolute;
+    // object-fit: cover;
+  }
+
+  #inlogModal-div {
+    // position: absolute;
+    object-fit: contain;
   }
 
   .added-paragraph {
