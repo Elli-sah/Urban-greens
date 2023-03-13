@@ -1,9 +1,9 @@
 <script>
   import axios from 'axios'
-  import { mapState } from 'vuex'
+
   import ShowPlant from '../components/ShowPlant.vue'
   import MyBestTips from '../components/MyBestTips.vue'
-  import LogIn from '../components/LogIn.vue'
+  // import LogIn from '../components/LogIn.vue'
   import PlantIcon from '../components/PlantIcon.vue'
   // import InlogModal from '../components/InlogModal.vue'
   import MoreInfoPlant from '../components/MoreInfoPlant.vue'
@@ -13,7 +13,7 @@
     components: {
       ShowPlant,
       MyBestTips,
-      LogIn,
+      // LogIn,
       PlantIcon,
       // InlogModal
       MoreInfoPlant,
