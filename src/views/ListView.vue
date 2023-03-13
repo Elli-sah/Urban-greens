@@ -57,10 +57,23 @@
       })
     },
 
+    // axios.get('/plants.json').then((response) => {
+    //       this.result = response.data
+    //     })
+
     methods: {
       axiosGetPlants() {
         axios.get('/plants.json').then((response) => {
-          this.result = response.data
+          //Sorterar planterna alfabetiskt
+          this.result = response.data.sort((a, b) => {
+            if (a.name < b.name) {
+              return -1
+            } else if (a.name > b.name) {
+              return 1
+            } else {
+              return 0
+            }
+          })
         })
       }
     },

@@ -4,6 +4,9 @@
   import ShowPlant from '../components/ShowPlant.vue'
   import MyBestTips from '../components/MyBestTips.vue'
   // import LogIn from '../components/LogIn.vue'
+
+  import ShowPlant from '../components/ShowPlant.vue'
+  import MyBestTips from '../components/MyBestTips.vue'
   import PlantIcon from '../components/PlantIcon.vue'
   // import InlogModal from '../components/InlogModal.vue'
   import MoreInfoPlant from '../components/MoreInfoPlant.vue'
@@ -13,7 +16,9 @@
     components: {
       ShowPlant,
       MyBestTips,
+
       // LogIn,
+
       PlantIcon,
       // InlogModal
       MoreInfoPlant,
@@ -78,8 +83,8 @@
         document.body.style.overflow = 'hidden'
       },
       closeModal() {
-        this.NotLoggedIn = false
         this.selectedPlant = null
+        this.NotLoggedIn = false
         document.body.style.overflow = 'auto'
       }
     },
@@ -211,7 +216,7 @@
       />
     </div>
   </div>
-  <MyBestTips :message="plantTip" />
+  <MyBestTips :plantName="plant.name" plant="plant" id="plant.id" />
 </template>
 
 <style scoped>
