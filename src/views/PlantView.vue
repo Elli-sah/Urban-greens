@@ -27,7 +27,7 @@
     },
     data() {
       return {
-        plant: '',
+        plant: null,
         longDescription: '',
         plantHeading: '',
         plantdescription: '',
@@ -71,6 +71,7 @@
           } else {
             this.noPoison = true
           }
+          console.log(this.plant)
         })
       },
 
@@ -214,7 +215,7 @@
       />
     </div>
   </div>
-  <MyBestTips :plant-name="plant.name" :plant="plant" :id="plant.id" />
+  <MyBestTips v-if="plant" :plant="plant" />
 </template>
 
 <style scoped>

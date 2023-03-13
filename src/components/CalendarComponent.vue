@@ -70,6 +70,7 @@
         eventIndex: '',
         showDiv: 'false',
         plantsWatered: false,
+        latestWatered: null,
         todaysDate: new Date().toISOString().slice(0, 10), //Today´s date in FullCalendar format
         calendarOptions: {
           plugins: [dayGridPlugin, interactionPlugin],
@@ -135,6 +136,7 @@
         this.showModal = false
         this.descriptionInput = ''
         this.titleInput = ''
+        this.findWaterDate()
       },
 
       removeEvent(eventIndex) {
@@ -144,6 +146,7 @@
           user: this.loggedInUser.user,
           index: eventIndex
         })
+        this.findWaterDate()
         this.showEvent = false
       },
       selectWater() {
@@ -153,17 +156,31 @@
       selectOther() {
         this.titleInput = ''
       },
+      // Hämta senaste eventet "vattnat" och skicka differensen till store.js
       findWaterDate() {
-        for (let i = this.myEvents.length - 1; i >= 0; i--) {
-          if (this.myEvents[i].title === 'Vattnat') {
-            this.date = moment(this.myEvents[i].start)
-            this.diff = moment.duration(
-              moment().subtract(1, 'days').diff(this.date)
-            )
+        const filterWater = this.myEvents.filter(
+          (event) => event.title === 'Vattnat'
+        )
+        const sortedWater = filterWater.sort((a, b) => {
+          const aStart = moment(a.start)
+          const bStart = moment(b.start)
 
-            this.$store.commit('updateDateDiff', this.diff.humanize())
-            break
-          }
+          const aDiff = Math.abs(aStart.diff(moment(), 'days'))
+          const bDiff = Math.abs(bStart.diff(moment(), 'days'))
+
+          return aDiff - bDiff
+        })
+
+        this.latestWatered = sortedWater[0]
+        if (this.latestWatered !== undefined) {
+          console.log(this.latestWatered)
+          this.date = moment(this.latestWatered.start)
+          this.diff = moment.duration(
+            moment().subtract(1, 'days').diff(this.date)
+          )
+          this.$store.commit('updateDateDiff', this.diff.humanize())
+        } else {
+          this.$store.commit('emptyDateDiff')
         }
       }
     }

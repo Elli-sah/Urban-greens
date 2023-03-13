@@ -2,9 +2,7 @@
   import { mapState } from 'vuex'
   export default {
     props: {
-      plant: { required: true, type: Object },
-      id: { required: true, type: Number },
-      plantName: { required: true, type: String }
+      plant: { required: true, type: Object }
     },
     data() {
       return {
@@ -12,7 +10,6 @@
       }
     },
     computed: {
-      // ...mapState({ myState: (state) => state.plantTip })
       ...mapState({
         loggedInUser: (state) => state.loggedInUser,
         plantTips: (state) => state.plantTip,
@@ -22,19 +19,18 @@
     },
 
     methods: {
-      // ...mapMutations(['setPlantTip']),
+      // Lägg till en kommentar
       onSubmit(event) {
         this.$store.commit('setPlantTip', {
-          id: this.id,
+          id: this.plant.id,
           tip: this.tip,
-          user: this.loggedInUser.name
+          user: this.loggedInUser.user,
+          name: this.loggedInUser.name
         })
         event.preventDefault()
         this.tip = ''
       },
-      // removePlantTip() {
-      //   this.$store.commit('removePlantTip', this.tip)
-      // },
+      // Ta bort en kommentar
       removePlantTip(id, index) {
         this.$store.commit('removePlantTip', {
           id,
@@ -49,11 +45,9 @@
 </script>
 
 <template>
-  <!-- {{ plantTips }} -->
-
   <div class="container">
-    <div class="tipBox">
-      <h2>Ge dina bästa tips för att ta hand om {{ plantName }}</h2>
+    <div class="tip-box">
+      <h2>Ge dina bästa tips för att ta hand om {{ plant.name }}</h2>
 
       <form>
         <textarea
@@ -70,11 +64,11 @@
         />
       </form>
       <div id="scroll">
-        <div v-if="specifikPlant[id]">
+        <div v-if="specifikPlant[plant.id]">
           <h3 id="tip">Alla växttips</h3>
           <div
             class="tips-div"
-            v-for="(plantTip, index) in specifikPlant[id].tips"
+            v-for="(plantTip, index) in specifikPlant[plant.id].tips"
             :key="plantTip"
           >
             <div>
@@ -85,8 +79,8 @@
             </div>
 
             <i
-              v-if="isAdmin"
-              @click="removePlantTip(id, index)"
+              v-if="isAdmin || plantTip.user === loggedInUser.user"
+              @click="removePlantTip(plant.id, index)"
               id="remove-icon"
               class="bi bi-x-lg"
             />
@@ -149,7 +143,7 @@
     border-radius: 10px;
     margin-bottom: 30px;
   }
-  .tipBox {
+  .tip-box {
     text-align: left;
 
     padding: 20px 20px 20px 20px;
