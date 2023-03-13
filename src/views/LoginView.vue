@@ -9,26 +9,23 @@
 </script>
 
 <template>
-  <div id="login-divs">
-    <div id="login-texts">
-      <h1>Logga in</h1>
-      <p>
-        Att logga in på Urban Greens ger dig tillgång till en mer personlig
-        upplevelse med skräddarsydda funktioner. Skapa din egen fönsterbräda med
-        dina växter för att få en översikt över hur dina växter ska tas omhand.
-      </p>
-    </div>
-  </div>
   <div id="view-divs">
+    <div id="login-divs">
+      <div id="login-texts">
+        <h1>Logga in</h1>
+        <p>
+          Att logga in på Urban Greens ger dig tillgång till en mer personlig
+          upplevelse med skräddarsydda funktioner. Skapa din egen fönsterbräda
+          med dina växter för att få en översikt över hur dina växter ska tas
+          omhand.
+        </p>
+      </div>
+    </div>
     <LogIn />
   </div>
 </template>
 
 <style scoped>
-  /* main {
-    margin-top: 10%;
-  } */
-
   #login-divs {
     width: 90%;
     margin: auto;
@@ -36,7 +33,14 @@
     padding: 20px;
   }
 
-  #login-text {
+  /* #login-text {
     position: absolute;
+  } */
+
+  @media (min-width: 992px) {
+    #login-text {
+      margin-top: 450px;
+      padding-top: 300px;
+    }
   }
 </style>
