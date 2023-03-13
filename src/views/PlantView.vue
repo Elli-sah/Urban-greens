@@ -4,7 +4,7 @@
   import ShowPlant from '../components/ShowPlant.vue'
   import MyBestTips from '../components/MyBestTips.vue'
   import LogIn from '../components/LogIn.vue'
-  import PlantIcon from '../components/PlantIcon.vue'
+  // import PlantIcon from '../components/PlantIcon.vue'
   // import InlogModal from '../components/InlogModal.vue'
 
   export default {
@@ -12,7 +12,7 @@
       ShowPlant,
       MyBestTips,
       LogIn
-      PlantIcon,
+      // PlantIcon,
       // InlogModal
     },
     props: {
