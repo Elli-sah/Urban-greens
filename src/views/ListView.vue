@@ -42,6 +42,8 @@
 
     data() {
       return {
+        category: 'all',
+
         result: [],
         searchText: '',
         notFound: false,
@@ -67,6 +69,7 @@
       searchText(newValue) {
         console.log(newValue)
         this.name = newValue
+        this.category = newValue
 
         //Errormeddelande om searchText inte matchar resultatet
 
