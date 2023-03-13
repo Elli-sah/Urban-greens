@@ -41,7 +41,7 @@
     ]
   },
   {
-    "id": 1,
+    "id": 2,
     "name": "Echeveria",
     "latin": "Echeveria agavoides",
     "description": "Echeveria agavoides används ofta som prydnadsväxt i trädgårdar, krukväxter eller i landskapsarkitektur. På grund av dess dekorativa utseende används den också ofta i buketter och arrangemang. Echeveria agavoides är en av de mer populära sorterna av Echeveria på grund av dess unika form, som liknar en rosett med triangulära blad. Dess vanliga namn 'Lipstick Echeveria' kommer från de röda blommorna som påminner om läppstift. ",
@@ -78,7 +78,7 @@
     "image": ["/images/lip.jpg", "/images/lip1.jpg", "/images/lip2.jpg"]
   },
   {
-    "id": 2,
+    "id": 3,
     "name": "Ampellilja",
     "latin": "Chlorophytum",
     "description": "Ampelliljan är en vacker och tacksam växt som är vanlig att ha hängande i kruka eller ampel. Ampelliljan trivs i hög luftfuktighet, så om den placeras i ett rum med låg luftfuktighet kan det vara bra att spraya den med vatten eller placera den bredvid andra växter för att öka luftfuktigheten",
@@ -118,7 +118,7 @@
     ]
   },
   {
-    "id": 3,
+    "id": 5,
     "name": "Begonia",
     "latin": "Begonia",
     "description": "Begoniasläktet omfattar många olika arter och sorter av växter som ursprungligen kommer från subtropiska och tropiska områden runt om i världen. Begonior finns i många olika färger, former och storlekar och odlas ofta som prydnadsväxter. Begonior trivs i hög luftfuktighet, så att placera en skål med vatten nära växten kan hjälpa till att höja luftfuktigheten. Undvik dock att vattna direkt på bladen, eftersom det kan orsaka svampangrepp.",
@@ -157,49 +157,8 @@
       "/images/begonia3.jpg"
     ]
   },
-
   {
-    "id": 0,
-    "name": "Doftranka",
-    "latin": "Stephanotis floribunda",
-    "description": "",
-    "placement": {
-      "plantHeading": "Ljusbehov",
-      "short": "Ljust",
-      "description": "Doftranka trivs bäst i ljust men indirekt solljus. För mycket direkt solljus kan skada bladen."
-    },
-    "temperature": {
-      "plantHeading": "Temperatur",
-      "short": "18-24°C",
-      "description": "Doftranka trivs bäst i temperaturer mellan 18-24 ° C och tål inte kalla drag eller temperaturer under 10 ° C."
-    },
-    "watering": {
-      "plantHeading": "Bevattning",
-      "short": "Måttligt",
-      "description": "Växten bör vattnas regelbundet, men se till att inte övervattna eftersom det kan leda till rötterna ruttnar. Låt jorden torka ut något mellan bevattningarna."
-    },
-
-    "fertilization": {
-      "plantHeading": "Näring",
-      "short": "Lite",
-      "description": "Doftranka behöver inte mycket näring för att växa, men det är bra att ge växten en allmän gödsel varannan månad under vår- och sommarsäsongen."
-    },
-    "pruning": "Beskärning av doftranka kan hjälpa till att forma växten och främja blomning. Beskär efter blomning genom att klippa av grenar som har blommat till halva sin längd.",
-    "pests": "Vanliga skadedjur som kan angripa doftranka inkluderar spindelmider, mjöldagg och bladlöss. Det är viktigt att reagera snabbt om du märker några tecken på skadedjur och behandla växten med ett lämpligt bekämpningsmedel.",
-    "poison": {
-      "short": false,
-      "description": ""
-    },
-    "difficulty": "Lätt",
-    "category": "Blommande",
-    "image": [
-      "/images/fredskalla.jpg",
-      "/images/fredskalla1.jpg",
-      "/images/fredskalla2.jpg"
-    ]
-  },
-  {
-    "id": 4,
+    "id": 6,
     "name": "Elefantöra",
     "latin": "Pilea peperomioides",
     "description": "Elefantöra, även känd som Pilea peperomioides eller Elefantörsblad, är en växtart som tillhör familjen Pilea. Elefantöra trivs i en hög luftfuktighet, så se till att spraya växten regelbundet med vatten eller placera en luftfuktare i närheten av växten. Under vintermånaderna, när uppvärmningen kan torka ut luften i hemmet, kan det vara nödvändigt att öka luftfuktigheten runt växten med hjälp av en luftfuktare.",
@@ -238,7 +197,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": 7,
     "name": "Fiolfikus",
     "latin": "Ficus Lyrata",
     "description": "Fiolfikus är en populär inomhusväxt som trivs i ljus till halvskuggig miljö och kan bli upp till flera meter hög med tiden. Fiolfikusens bladverk har luftrenande egenskaper. Fiolfikusen trivs i hög luftfuktighet, så det kan vara en bra idé att placera den nära en luftfuktare eller spraya bladen med vatten regelbundet",
@@ -277,7 +236,7 @@
     ]
   },
   {
-    "id": 0,
+    "id": 8,
     "name": "Fredskalla",
     "latin": "Spathiphyllum",
     "description": "Fredskalla (Spathiphyllum) är en prydnadsväxt som har gröna blad och vita blommor som sitter på en stängel ovanför bladen. Blommorna består av en vit blomställning som omges av en vit eller grönaktig flikig hölsterblad. Växten är vanligt förekommande som inomhusväxt eftersom den är lätt att sköta och tål relativt skuggiga förhållanden. Den är också känd för sin förmåga att rena luften och avlägsna skadliga kemikalier.",
@@ -317,7 +276,7 @@
     ]
   },
   {
-    "id": 6,
+    "id": 9,
     "name": "Garderobsblomma",
     "latin": "Zamioculcas zamiifolia",
     "description": "Zamiakalla, även kallad Garderobsblomma, är en populär krukväxt som är känd för sin förmåga att överleva i olika miljöer och för sin enkla skötsel. Det är en tålig växt som kan överleva under långa perioder utan vatten och trivs i både högt och lågt ljus. Zamiakalla är också känd för att hjälpa till att rena luften genom att ta bort skadliga föroreningar. Garderobsblomman trivs i normal till låg luftfuktighet, vilket gör den lämplig för den torra inomhusluften i Sverige. Du behöver inte spraya bladen med vatten.",
@@ -357,7 +316,7 @@
     ]
   },
   {
-    "id": 7,
+    "id": 10,
     "name": "Hortensia",
     "latin": "Hydrangea macrophylla",
     "description": "Hortensia är en vacker blommande växt som kan trivas bra i Sverige, men den kräver lite extra omsorg för att blomma rikligt och för att bibehålla sin hälsa. Hortensior trivs bäst i en luftfuktighet på cirka 50-60%. Hortensior är ursprungligen skogsbuskar och trivs därför i en fuktig miljö. Om luftfuktigheten är för låg kan hortensians blad och blommor torka ut och visa tecken på stress.",
@@ -397,7 +356,7 @@
     ]
   },
   {
-    "id": 8,
+    "id": 11,
     "name": "Jordviva",
     "latin": "Primula",
     "description": "Jordviva är en populär växt i Sverige och är relativt lättskött.",
@@ -437,7 +396,7 @@
     ]
   },
   {
-    "id": 10,
+    "id": 12,
     "name": "Kaktus",
     "latin": "Cactaceae",
     "description": "Kaktusar är en grupp av suckulenta växter som har anpassat sig till torra och varma miljöer genom att lagra vatten i sina tjocka och köttiga stammar och blad. De finns i många olika former och storlekar, från små kuddformade kaktusar till höga pelarkaktusar. En del kaktusarter kan leva i hundratals år, och vissa av dem kan producera blommor i olika färger och former. Kaktusar används också ofta som symboler för tuffhet, uthållighet och överlevnad.",
@@ -477,7 +436,7 @@
     ]
   },
   {
-    "id": 10,
+    "id": 13,
     "name": "Kaktus Opuntia",
     "latin": "Opuntia",
     "description": "Opuntia är en kaktussläkt med över 200 arter som är spridda i Nord- och Sydamerika. De är kända för sina platta blad. Opuntia-kaktusen har en rad användningsområden, inklusive matlagning, medicin, kosmetika och dekorativa ändamål. Fruktarna kallas ibland 'fikon' och används i maträtter som sylt, soppa, sallader och tacos. De är också kända för sin höga näringsprofil, med höga halter av vitaminer, mineraler och antioxidanter. I medicinen används kaktusen för att behandla högt blodtryck, diabetes och inflammatoriska tillstånd. Opuntia-kaktusen har utvecklat ett unikt försvarssystem mot rovdjur genom sina taggar och platta blad, som gör det svårt för djur att äta dem. Några av de mest kända arterna inom släktet är prickly pear, som är den mest odlade opuntia-kaktusen i världen.",
@@ -517,7 +476,7 @@
     ]
   },
   {
-    "id": 9,
+    "id": 14,
     "name": "Kalanchoe",
     "latin": "Kalanchoe Blossfeldiana",
     "description": "Kalanchoe, även kallad Våreld, är en tacksam och lättskött växt som är relativt enkel att ta hand om. Trivs vid hög luftfuktighet och vill ha vatten regelbundet, undvik att jorden torkar ut helt. Näringsvattna en gång per vecka. ",
@@ -557,7 +516,7 @@
     ]
   },
   {
-    "id": 10,
+    "id": 15,
     "name": "Krukros",
     "latin": "Rosa",
     "description": "Att ta hand om en krukros i Sverige kan vara utmanande eftersom klimatet och ljusförhållandena kan variera mycket beroende på säsong. Krukrosor trivs bäst i en relativt hög luftfuktighet, eftersom de är tropiska växter som är vana vid en fuktig miljö. Idealiskt sett bör luftfuktigheten vara mellan 40-60% för att krukrosor ska trivas. Om luftfuktigheten är för låg kan det leda till att bladen torkar ut och att plantan blir mer mottaglig för skadedjur och sjukdomar.",
@@ -597,7 +556,7 @@
     ]
   },
   {
-    "id": 11,
+    "id": 16,
     "name": "Monstera",
     "latin": "Monstera deliciosa",
     "description": "Monstera är en relativt lättodlad växt som är lämplig för odling inomhus i Sverige. Monstera trivs i en hög luftfuktighet, så se till att spraya växten regelbundet med vatten eller placera en luftfuktare i närheten av växten. En annan möjlighet är att ställa Monstera på en bricka med vatten.",
@@ -637,7 +596,7 @@
     ]
   },
   {
-    "id": 12,
+    "id": 17,
     "name": "Murgröna",
     "latin": "Hedera helix",
     "description": "Murgröna är en tålig och lättodlad växt som trivs i Sverige.Murgröna trivs i hög luftfuktighet, så att placera en skål med vatten nära växten kan hjälpa till att höja luftfuktigheten. Du kan också duscha bladen med vatten med jämna mellanrum för att öka fuktigheten.",
@@ -677,7 +636,7 @@
     ]
   },
   {
-    "id": 13,
+    "id": 18,
     "name": "Orkidé",
     "latin": "Orchidaceae",
     "description": "Orkidéer är en vanlig krukväxt i Sverige som kan vara lite knepig att ta hand om. Orkidéer trivs i hög luftfuktighet. Du kan öka luftfuktigheten genom att placera en bricka med vatten bredvid växten eller genom att använda en luftfuktare.",
@@ -717,7 +676,7 @@
     ]
   },
   {
-    "id": 14,
+    "id": 19,
     "name": "Paradisträd",
     "latin": "Crassula ovata",
     "description": "Paradisträdet är en suckulent växt som är känd för sin tjocka, köttiga stam och blad som kan lagra vatten. Den kan växa upp till en höjd av 1,5 meter och bilda små vita blommor under sommaren. Paradisträdet används ofta som en inomhusväxt på grund av dess låga ljuskrav och enkel vård. Vissa tror att det ger tur och välgång till hemmet och det används också ofta som en bonsai-planta. Paradisträdet är också känt som 'penningträdet' eller 'pengarträdet' på grund av myten om att det ger tur och rikedom till sitt hem. I dess naturliga livsmiljö kan paradisträdet bli över 6 meter högt och har i dess hemland Sydafrika kallats 'jadeplantan'.",
@@ -757,7 +716,7 @@
     ]
   },
   {
-    "id": 14,
+    "id": 20,
     "name": "Pelargon",
     "latin": "Pelargonium",
     "description": "Pelargoner är en populär krukväxt i Sverige som trivs i både inomhus- och utomhusmiljöer. Pelargoner trivs bäst vid en luftfuktighet på mellan 40 och 60 procent. För torr luft kan torka ut bladen och göra växten mer mottaglig för skadedjur, medan hög luftfuktighet kan öka risken för svampinfektioner. Det är därför viktigt att balansera luftfuktigheten för att hålla pelargonerna friska. Om rummet är för torrt, kan man öka luftfuktigheten genom att använda en luftfuktare, spraya vatten runt växterna eller placera en bricka med vatten bredvid växterna. Å andra sidan, om luften är för fuktig, kan man öka ventilationen för att hjälpa till att torka ut överflödig fukt.",
@@ -797,7 +756,7 @@
     ]
   },
   {
-    "id": 15,
+    "id": 21,
     "name": "Porslinsblomma",
     "latin": "Hoya carnosa",
     "description": "Porslinsblomma är en vanlig krukväxt i Sverige som trivs bäst inomhus. Porslinsblomma trivs i en högre luftfuktighet och kan må bra av att sprayas med vatten då och då, men kan också klara sig bra i normal inomhusluft.",
@@ -838,7 +797,7 @@
     ]
   },
   {
-    "id": 16,
+    "id": 22,
     "name": "Rosenskärm",
     "latin": "Medinilla",
     "description": "Rosenskärm är en tålig och anpassningsbar växt som trivs bra i många olika miljöer.  Rosenskärm en relativt enkel växt att ta hand om och kan vara en vacker och användbar tillägg till trädgården eller landskapet i Sverige. Rosenskärm trivs bäst i en relativt torr miljö med låg luftfuktighet. För hög luftfuktighet kan orsaka problem med svamp och sjukdomar. En luftfuktighet på runt 40-50% kan vara lämpligt för rosenskärm. Det är dock viktigt att notera att rosenskärm är en relativt tålig växt och kan klara sig även i omgivningar med högre luftfuktighet, så länge det inte är alltför fuktigt.",
@@ -875,7 +834,7 @@
     "image": ["/images/rosenskarm.png"]
   },
   {
-    "id": 17,
+    "id": 23,
     "name": "Rosenkalla",
     "latin": "nthurium Andreanum",
     "description": "Rosenkallor är vackra och populära växter som trivs i Sverige. Rosenkalla trivs i hög luftfuktighet, så att placera en skål med vatten nära växten kan hjälpa till att höja luftfuktigheten. Undvik dock att vattna direkt på bladen, eftersom det kan orsaka svampangrepp.",
@@ -916,7 +875,7 @@
   },
 
   {
-    "id": 18,
+    "id": 24,
     "name": "Svärmors tunga",
     "latin": "Sansevieria trifasciata",
     "description": "Svärmors tunga är en grönbladig växt med strimmor i grönt, vitt eller silver och har en spetsig form som påminner om en tunga. Bladen är hårda och tjocka, och växten har en långsam växttakt. Svärmors tunga är vanligt förekommande som inomhusväxt eftersom den är lättskött och tålig, samt att den anses ha förmågan att rena luften och avlägsna skadliga kemikalier.",
@@ -957,7 +916,7 @@
   },
 
   {
-    "id": 18,
+    "id": 25,
     "name": "Guldpalm",
     "latin": "Dypsis lutescens",
     "description": " En populär inomhusväxt som är relativt lättskött och trivs i ljus till halvskugga. Gulpalmen trivs i hög luftfuktighet. Placera en vattenskål bredvid plantan eller använd en luftfuktare för att öka fuktigheten. ",
@@ -999,7 +958,7 @@
   },
 
   {
-    "id": 0,
+    "id": 26,
     "name": "Basilika",
     "latin": "Genovese",
     "description": "Basilika är en populär ört som används i matlagning och som prydnadsväxt. Basilika är en relativt enkel växt att odla, särskilt om du ger den tillräckligt med ljus och värme. Den är vanligtvis inte särskilt känslig för sjukdomar eller skadedjur. ",
@@ -1038,7 +997,7 @@
   },
 
   {
-    "id": 0,
+    "id": 27,
     "name": "Timjan",
     "latin": "Thymus",
     "description": "Timjan är en kryddväxt med en stark och aromatisk doft. Den används ofta i matlagning och som medicinalväxt. Timjan är relativt enkel att odla och trivs i soliga, varma förhållanden. Den behöver regelbunden bevattning och gödsling för att växa ordentligt och kan beskäras för att hålla den tät och buskig. ",
@@ -1077,7 +1036,7 @@
   },
 
   {
-    "id": 0,
+    "id": 28,
     "name": "Mynta",
     "latin": "Mentha",
     "description": "Mynta är en ört med en stark och uppfriskande doft. Den används ofta i matlagning och som medicinalväxt. Mynta är relativt enkel att odla och trivs i halvskugga eller fullt solljus. Den behöver regelbunden bevattning och gödsling för att växa ordentligt och kan beskäras för att hålla den tät och buskig. Mynta är en relativt enkel växt att odla, särskilt om du ger den tillräckligt med ljus och värme. Den är vanligtvis inte särskilt känslig för sjukdomar eller skadedjur och är därför en relativt lätt växt att sköta.",
@@ -1120,7 +1079,7 @@
   },
 
   {
-    "id": 0,
+    "id": 29,
     "name": "Rosmarin",
     "latin": "Rosmarinus officinalis",
     "description": "Rosmarin är en medelhavsört med en distinkt aromatisk doft och smak som används i matlagning, doftande produkter och medicinalväxter. Rosmarin är en flerårig buske med nålformade blad och blåviolett blommor. Den är relativt enkel att odla och trivs i fullt solljus. Den behöver regelbunden bevattning och gödsling för att växa ordentligt och kan beskäras för att hålla den tät och buskig.",
@@ -1162,7 +1121,7 @@
     ]
   },
   {
-    "id": 0,
+    "id": 30,
     "name": "Persilja",
     "latin": "Petroselinum crispum",
     "description": "Persilja är en vanlig kryddväxt som används i matlagning och som medicinalväxt. Det är en tvåårig växt som är vanligtvis odlas som en ettårig växt. Persilja har en distinkt smak och doft och finns i två sorter: bladpersilja och rotpersilja. Bladpersilja är den vanligaste typen av persilja som används i matlagning, medan rotpersilja används mer sällan.  Persilja kan vara känslig för sjukdomar och skadedjur, men med rätt vård är det vanligtvis inte svårt att odla.",
@@ -1205,7 +1164,7 @@
   },
 
   {
-    "id": 0,
+    "id": 31,
     "name": "Dill",
     "latin": "Anethum graveolens",
     "description": "Dill är en ört som används för smaksättning och som en medicinalväxt. Dillväxten är en ettårig växt som kan nå en höjd på upp till 1 meter. Dill har bladen som används som smaksättning och fröna som används för att göra kryddor och te. Dill är en relativt enkel växt att odla. Den kräver inte mycket uppmärksamhet eller speciell vård. Dock är det viktigt att se till att plantan får tillräckligt med solljus och inte torkar ut mellan vattningarna.",
@@ -1244,7 +1203,7 @@
   },
 
   {
-    "id": 0,
+    "id": 32,
     "name": "Citronmeliss",
     "latin": "Melissa officinalis",
     "description": "Citronmeliss är en flerårig ört som tillhör myntfamiljen. Den är känd för sin citrusdoftande bladverk och används ofta för att smaksätta mat och drycker samt för sina medicinska egenskaper. Det är viktigt att se till att den får tillräckligt med ljus, vatten och näring. Om du odlar den inomhus, se till att den får tillräckligt med luftcirkulation och undvik att övervattna.",
@@ -1287,7 +1246,7 @@
   },
 
   {
-    "id": 0,
+    "id": 33,
     "name": "Oregano",
     "latin": "Origanum vulgare",
     "description": " Oregano är en flerårig ört som tillhör myntfamiljen. Den är känd för sin kryddiga och aromatiska smak och används ofta i matlagning, särskilt inom medelhavs- och mexikansk matlagning. Oregano är också en populär medicinalväxt. Det är viktigt att se till att den får tillräckligt med ljus, vatten och näring. Oregano är också en torktålig växt som kan klara korta perioder av torka.",
@@ -1330,7 +1289,7 @@
   },
 
   {
-    "id": 0,
+    "id": 34,
     "name": "Salvia",
     "latin": "Salvia officinalis",
     "description": " Salvia  är en flerårig ört som tillhör myntfamiljen. Den är känd för sin karakteristiska smak och används ofta i matlagning, särskilt inom medelhavs- och italiensk matlagning. Salvia är också en populär medicinalväxt som har använts i århundraden för att behandla olika sjukdomar. Salvia har använts sedan antiken för sina medicinska egenskaper och ansågs ha helande krafter. Den anses ha många hälsofördelar och används bland annat för att förbättra minnet, lindra ångest och hjälpa till att sänka blodsockernivåerna. Salvia används också ofta i aromaterapi och hudvårdsprodukter. I matlagning används salvia ofta för att smaksätta kött, fisk och grönsaker. Den kan också användas för att göra te och smaksätta olika typer av matoljor.",
@@ -1369,7 +1328,7 @@
   },
 
   {
-    "id": 0,
+    "id": 35,
     "name": "Dragon",
     "latin": "Artemisia dracunculus",
     "description": " Dragon är en flerårig ört som vanligtvis används i matlagning. Det finns två vanliga sorter av dragon: rysk dragon och fransk dragon. Fransk dragon är den mest använda sorten och har en mildare smak än rysk dragon. Dragon används vanligtvis för att smaksätta kött, fisk och sallader. Den kan också användas för att smaksätta vinägrett och andra dressingar. Dragon har en lätt anissmak och kan också användas för att smaksätta desserter. Förutom dess användning i matlagning, har dragon också medicinska egenskaper och har använts för att lindra magbesvär och öka aptiten. Dragon kan producera små gulaktiga blommor på sommaren. Blommorna är dock inte särskilt dekorativa och många trädgårdsmästare väljer att avlägsna dem för att främja tillväxten av de aromatiska bladen istället.",
@@ -1412,7 +1371,7 @@
   },
 
   {
-    "id": 0,
+    "id": 36,
     "name": "Korinader",
     "latin": "Coriandrum sativum",
     "description": " Koriander är en årlig ört som används i matlagning för sin distinkta smak och doft. Alla delar av korianderplantan är användbara - bladen, stjälkarna och fröna. Koriander används i en mängd olika maträtter, särskilt i asiatisk och mexikansk matlagning. Det används ofta som smaksättning i salsor, curryrätter, soppor, grytor och marinader. Koriander kan också användas för att göra te och kryddblandningar. Förutom dess användning i matlagning har koriander också medicinska egenskaper och har använts för att lindra magbesvär och förbättra matsmältningen.",
@@ -1454,7 +1413,7 @@
     ]
   },
   {
-    "id": 0,
+    "id": 37,
     "name": "Gräslök",
     "latin": "Allium schoenoprasum",
     "description": " Gräslök  är en flerårig lökväxt som är en del av familjen Alliaceae. Gräslök används vanligtvis som krydda i matlagning och kan tillsättas till sallader, såser, soppor och många andra rätter. Den kan också användas som en dekorativ kantväxt i trädgården. Den anses vara en av de äldsta kryddorna som används av människan, och har använts i matlagning i över 5 000 år. Gräslök är rik på antioxidanter och kan ha positiva hälsoeffekter.",
