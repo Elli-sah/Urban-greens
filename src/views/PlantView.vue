@@ -235,19 +235,6 @@
   #login-div {
     margin: 5px;
   }
-  .popup-divs {
-    /* background-color: #c8c8c8; */
-    border-radius: 10px;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    top: 60%;
-    /* right: 10%; */
-    /* right: 100px; */
-  }
 
   i {
     align-self: flex-end;
@@ -324,9 +311,6 @@
     border-style: 1px solid rgba(0, 0, 0, 0.15);
     width: 100%;
   }
-  .bi {
-    margin: 10px;
-  }
 
   #plantInfoContainer {
     display: flex;
@@ -371,18 +355,6 @@
   } */
 
   @media (min-width: 1200px) {
-    .popup-divs {
-      background-color: #c8c8c8;
-      border-radius: 10px;
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 200px;
-      right: 25%;
-      top: 70%;
-    }
     .plantDesc {
       display: flex;
       flex-direction: row;
@@ -419,17 +391,6 @@
 
     .secondPlantBox {
       display: flex;
-    }
-    .popup-divs {
-      background-color: #c8c8c8;
-      border-radius: 10px;
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      top: 70%;
-      right: 100px;
     }
   }
 </style>
