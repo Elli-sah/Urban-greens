@@ -56,13 +56,6 @@
         this.isLoading = false
       })
     },
-
-    // axiosGetPlants() {
-    //     axios.get('/plants.json').then((response) => {
-    //       this.result = response.data
-    //     })
-    //   }
-
     methods: {
       axiosGetPlants() {
         axios.get('/plants.json').then((response) => {
