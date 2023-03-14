@@ -30,7 +30,7 @@
     },
     methods: {
       atAddPlant() {
-        console.log('hej')
+        console.log(this.plant)
         if (this.loggedInUser !== '') {
           if (
             this.userFavorites.find((plant) => plant.name === this.plant.name)
