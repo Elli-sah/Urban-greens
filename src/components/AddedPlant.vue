@@ -108,6 +108,4 @@
     justify-content: center;
     padding: 10px;
   }
-
-  @media();
 </style>
