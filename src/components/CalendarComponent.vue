@@ -194,12 +194,12 @@
   </div>
   <div id="calendar-container">
     <form @submit.prevent="addEvent">
-      <div class="showEventContainer" v-show="showModal">
+      <div class="show-event-container" v-show="showModal">
         <div class="date-close-container">
           <p>{{ selectedDate }}</p>
           <i @click="closeModal" id="remove-icon" class="bi bi-x-lg" />
         </div>
-        <div id="createEventContainer">
+        <div id="create-event-container">
           <div id="radio-event">
             <div v-if="this.selectedDate <= todaysDate">
               <input
