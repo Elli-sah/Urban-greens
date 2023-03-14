@@ -18,7 +18,7 @@
       ...mapState({
         loggedInUser: (state) => state.loggedInUser
       }),
-      filterdPlants() {
+      filteredPlants() {
         const category = this.$route.params.category
         if (category === 'Alla_växter') {
           return this.result.filter((plant) => {
@@ -136,9 +136,9 @@
       <div v-if="isLoading" class="overlay">
         <PageLoader />
       </div>
-      <div v-else id="filteredPlants">
+      <div v-else id="filtered-plants">
         <PlantCard
-          v-for="plant in filterdPlants"
+          v-for="plant in filteredPlants"
           :key="plant.name"
           :plant="plant"
         />
@@ -148,7 +148,7 @@
 </template>
 
 <style lang="scss" scoped>
-  #filteredPlants {
+  #filtered-plants {
     display: flex;
     flex-wrap: wrap;
     align-items: start;
