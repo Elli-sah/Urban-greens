@@ -1,9 +1,27 @@
 <script>
   import PlantCategory from '../components/PlantCategory.vue'
+  import { mapState } from 'vuex'
 
   export default {
     components: {
       PlantCategory
+    },
+    computed: {
+      ...mapState({
+        loggedInUser: (state) => state.loggedInUser,
+        userFavorites: (state) => {
+          if (state.loggedInUser) {
+            return state.users[state.loggedInUser.user]?.favorites || []
+          } else {
+            return []
+          }
+        }
+      })
+    },
+    methods: {
+      EmptyFavorites() {
+        this.$store.commit('EmptyFavorites')
+      }
     }
   }
 </script>
@@ -28,6 +46,7 @@
         <button id="kom-igang" class="button">Kom igång</button>
       </RouterLink>
     </div>
+    <button @click="EmptyFavorites">Töm favoriter</button>
 
     <PlantCategory />
   </div>

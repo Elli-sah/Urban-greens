@@ -124,6 +124,9 @@ const mutations = {
   },
   emptyDateDiff(state) {
     state.dateDiff = ''
+  },
+  EmptyFavorites(state) {
+    state.users[state.loggedInUser.user].favorites.length = 0
   }
 }
 const plugins = [vuexLocal.plugin]
