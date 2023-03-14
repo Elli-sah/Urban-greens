@@ -59,7 +59,6 @@
     padding: 10px;
     width: 100%;
     background-color: rgba(225, 186, 107, 0.9);
-    // box-shadow: 0 0 9px 0 black;
   }
 
   #navbar {
@@ -70,7 +69,6 @@
 
   #navbar {
     width: 100%;
-    // display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -136,22 +134,21 @@
       flex-direction: row;
     }
 
-    a:hover {
-      color: inherit;
-    }
+    // a:hover {
+    //   color: inherit;
+    // }
 
-    .navbar-brand-img {
-      display: none;
-    }
+    // .navbar-brand-img {
+    //   display: none;
+    // }
 
-    .navbar-toggler[aria-expanded='false'] ~ .navbar-brand-img {
-      display: block;
-    }
+    // .navbar-toggler[aria-expanded='false'] ~ .navbar-brand-img {
+    //   display: block;
+    // }
   }
 </style>
 
 <template>
-  <!-- <div> -->
   <b-navbar id="navbar-container" toggleable="lg" fixed="top">
     <div id="navbar" class="d-flex justify-content-between navbar">
       <RouterLink to="/"
@@ -183,7 +180,7 @@
               @link-clicked="handleLinkClicked"
             />
           </b-nav-form>
-          <!-- vrf funkar b-nav-item inte som routerlink??? -->
+
           <b-container>
             <b-nav id="links" justify="end">
               <b-nav-item @click="handleLinkClicked" to="/">Hem</b-nav-item>

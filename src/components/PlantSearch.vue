@@ -89,7 +89,7 @@
     <div>
       <div v-if="searchText !== ''" id="linkdiv">
         <span @click="handleClick">
-          <span class="error-message" v-if="notFound">
+          <span v-if="notFound">
             <p>"{{ searchText }}" hittades inte.</p>
             <p>
               Men på
