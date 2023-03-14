@@ -23,10 +23,6 @@
           }
         }
       })
-
-      // showInputDiv() {
-      //   return this.showDiv === true
-      // }
     },
     created() {
       this.calendarOptions.events = this.myEvents
@@ -41,7 +37,6 @@
       if (eventsOnDate.length > 0) {
         for (let i = 0; i < eventsOnDate.length; i++) {
           if (eventsOnDate[i].title !== 'Vattnat') {
-            console.log('hej', eventsOnDate[i].title)
             this.notifier.success(eventsOnDate[i].title, {
               labels: {
                 success: 'Idag ',
@@ -102,12 +97,6 @@
             )
             this.eventIndex = this.myEvents.indexOf(this.selectedEvent)
             this.showModal = false
-            console.log('eventIndex', this.eventIndex)
-            console.log('info.event', info.event.title)
-            console.log('selectedEvent', this.selectedEvent)
-            console.log('myEvents', this.myEvents)
-            // this.selectedEvent = info.event
-            // console.log('event', this.selectedEvent)
           },
           dateClick: (info) => {
             this.selectedDate = info.dateStr
@@ -133,8 +122,6 @@
           backgroundColor: this.titleInput === 'Vattnat' ? '#83d5f8' : '',
           borderColor: this.titleInput === 'Vattnat' ? '#83d5f8' : ''
         }
-        console.log('value:', this.titleInput)
-        console.log('date', this.selectedDate)
         this.$store.commit('addEventToUserCalendar', event)
         // this.calendarOptions.events.push(event)
 
@@ -145,8 +132,6 @@
       },
 
       removeEvent(eventIndex) {
-        console.log('index', eventIndex)
-
         this.$store.commit('removeEvent', {
           user: this.loggedInUser.user,
           index: eventIndex
@@ -156,7 +141,6 @@
       },
       selectWater() {
         this.showDiv = 'false'
-        console.log(this.showDiv)
       },
       selectOther() {
         this.titleInput = ''
@@ -178,7 +162,6 @@
 
         this.latestWatered = sortedWater[0]
         if (this.latestWatered !== undefined) {
-          console.log(this.latestWatered)
           this.date = moment(this.latestWatered.start)
           this.diff = moment.duration(
             moment().subtract(1, 'days').diff(this.date)
@@ -217,7 +200,7 @@
           <i @click="closeModal" id="remove-icon" class="bi bi-x-lg" />
         </div>
         <div id="createEventContainer">
-          <div id="radioEvent">
+          <div id="radio-event">
             <div v-if="this.selectedDate <= todaysDate">
               <input
                 type="radio"
@@ -239,7 +222,7 @@
               /><label for="event-check">Egen händelse</label>
             </div>
           </div>
-          <div id="inputBox" v-if="showDiv === 'true'">
+          <div id="input-box" v-if="showDiv === 'true'">
             <input
               type="text"
               v-model="titleInput"
@@ -259,7 +242,7 @@
       </div>
     </form>
 
-    <div class="showEventContainer" v-show="showEvent">
+    <div class="show-event-container" v-show="showEvent">
       <div class="date-close-container">
         <p>{{ eventDate }}</p>
         <i @click="closeEvent" class="bi bi-x-lg" />
@@ -269,7 +252,6 @@
       <button class="button" type="submit" @click="removeEvent(eventIndex)">
         Ta bort
       </button>
-      <!-- <div class="modal-blur" @click="closeEvent" /> -->
     </div>
 
     <FullCalendar :options="calendarOptions" />
@@ -277,16 +259,13 @@
 </template>
 
 <style>
-  /* input {
-    text-transform: capitalize;
-  } */
-  #inputBox {
+  #input-box {
     height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
   }
-  #inputBox > input {
+  #input-box > input {
     width: 90%;
     margin: auto;
     border-radius: 30px;
@@ -294,13 +273,13 @@
     padding: 7px;
     margin-bottom: 5px;
   }
-  #radioEvent {
+  #radio-event {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     height: 110px;
   }
-  #createEventContainer {
+  #create-event-container {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -346,7 +325,7 @@
     border-radius: 0 0 20px 20px;
     padding: 20px;
   }
-  .showEventContainer {
+  .show-event-container {
     overflow: hidden;
     position: fixed;
     top: 50%;

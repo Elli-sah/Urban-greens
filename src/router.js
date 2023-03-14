@@ -40,5 +40,12 @@ export default createRouter({
       component: GeneralAdviceView,
       path: '/general_advice'
     }
-  ]
+  ],
+  scrollBehavior() {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve({ left: 0, top: 0 })
+      }, 300)
+    })
+  }
 })
