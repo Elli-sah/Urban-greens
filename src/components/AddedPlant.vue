@@ -62,37 +62,45 @@
 
 <template>
   <button class="button" @click="atAddPlant">{{ addedPlant }}</button>
-  <div class="popup-divs" v-show="Addedplant">
-    <p class="paragraph added-paragraph">
-      {{ plantName }} är tillagd på din fönsterbräda!
-    </p>
-  </div>
-  <div class="popup-divs" v-show="AlreadyAddedplant">
-    <p class="paragraph added-paragraph">
-      Du har redan lagt till {{ plantName }} på din fönsterbräda!
-    </p>
-  </div>
-  <div class="popup-divs" v-show="NotLoggedIn">
-    <i @click="onClick" class="bi bi-x-lg" />
-    <div id="login-div">
-      <p>{{ loggIn }}</p>
-      <b-button
-        variant="link"
-        to="/login"
-        type="button"
-        id="button-secondary"
-        class="btn btn-link"
-        >{{ loggInHere }}</b-button
-      >
+  <div id="popup.container">
+    <div class="popup-divs" v-show="Addedplant">
+      <p class="paragraph added-paragraph">
+        {{ plantName }} är tillagd på din fönsterbräda!
+      </p>
+    </div>
+    <div class="popup-divs" v-show="AlreadyAddedplant">
+      <p class="paragraph added-paragraph">
+        Du har redan lagt till {{ plantName }} på din fönsterbräda!
+      </p>
+    </div>
+    <div class="popup-divs" v-show="NotLoggedIn">
+      <i @click="onClick" class="bi bi-x-lg" />
+      <div id="login-div">
+        <p>{{ loggIn }}</p>
+        <b-button
+          variant="link"
+          to="/login"
+          type="button"
+          id="button-secondary"
+          class="btn btn-link"
+          >{{ loggInHere }}</b-button
+        >
+      </div>
     </div>
   </div>
 </template>
 
 <style>
+  #popup-container {
+    position: relative;
+  }
+
   .popup-divs {
     background-color: #c8c8c8;
     border-radius: 10px;
-    position: relative;
+    bottom: 15px;
+    left: 40px;
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;

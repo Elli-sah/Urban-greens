@@ -90,7 +90,7 @@
 </script>
 
 <template>
-  <div v-if="plant">
+  <div v-if="plant" class="view-divs">
     <div id="plant-box">
       <div id="ccc">
         <b-carousel
@@ -205,8 +205,9 @@
         :bug-info="plant.pests"
       />
     </div>
+
+    <MyBestTips v-if="plant" :plant="plant" />
   </div>
-  <MyBestTips v-if="plant" :plant="plant" />
 </template>
 
 <style scoped>
