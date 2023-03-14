@@ -116,13 +116,13 @@
   </div>
 </template>
 
-<style>
+<style scoped>
   #popup-container {
     position: relative;
   }
 
   .popup-divs {
-    background-color: #c8c8c8;
+    background-color: #e8cac3;
     border-radius: 10px;
     bottom: 15px;
     left: 40px;
