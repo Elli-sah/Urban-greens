@@ -179,7 +179,7 @@
 
             <AddedPlant
               added-plant="Ställ på fönsterbrädan"
-              :plant-name="plant.name"
+              :plant="plant"
               logg-in="Du behöver logga in först"
               logg-in-here="Logga in här!"
             />

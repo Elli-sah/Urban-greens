@@ -3,7 +3,7 @@
   export default {
     props: {
       addedPlant: { required: true, type: String },
-      plantName: { required: true, type: String },
+      plant: { required: true, type: Object },
       loggIn: { required: true, type: String },
       loggInHere: { required: true, type: String }
     },
@@ -33,7 +33,7 @@
         console.log('hej')
         if (this.loggedInUser !== '') {
           if (
-            this.userFavorites.find((plantName) => plantName === this.plantName)
+            this.userFavorites.find((plant) => plant.name === this.plant.name)
           ) {
             this.AlreadyAddedplant = true
             setTimeout(() => {
@@ -64,12 +64,12 @@
   <button class="button" @click="atAddPlant">{{ addedPlant }}</button>
   <div class="popup-divs" v-show="Addedplant">
     <p class="paragraph added-paragraph">
-      {{ plantName }} är tillagd på din fönsterbräda!
+      {{ plant.name }} är tillagd på din fönsterbräda!
     </p>
   </div>
   <div class="popup-divs" v-show="AlreadyAddedplant">
     <p class="paragraph added-paragraph">
-      Du har redan lagt till {{ plantName }} på din fönsterbräda!
+      Du har redan lagt till {{ plant.name }} på din fönsterbräda!
     </p>
   </div>
   <div class="popup-divs" v-show="NotLoggedIn">
