@@ -136,7 +136,7 @@
       style="background-color: rgba(0, 0, 0, 0.2)"
     >
       © {{ currentYear }} Copyright:
-      <a class="text-dark" href="#">UrbanGreens &co</a>
+      <a class="text-light" href="#">UrbanGreens &co</a>
     </div>
   </footer>
 </template>
@@ -155,7 +155,7 @@
     color: white;
   }
   .copyright {
-    color: black;
+    color: white;
   }
 
   h5 {
