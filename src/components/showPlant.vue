@@ -5,12 +5,9 @@
       plantHeading: { required: true, type: String },
       longDescription: { required: true, type: String }
     },
-    data() {
-      return {}
-    },
+
     emits: ['close'],
 
-    methods: {},
     close() {
       this.$emit('close')
     }
@@ -34,5 +31,6 @@
     color: white;
     text-align: center;
     padding: 10%;
+    margin-top: 10px;
   }
 </style>

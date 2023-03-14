@@ -32,10 +32,6 @@
     padding: 20px;
   }
 
-  /* #login-text {
-    position: absolute;
-  } */
-
   @media (min-width: 992px) {
     #login-divs {
       padding-top: 100px;

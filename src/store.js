@@ -67,13 +67,13 @@ const mutations = {
         name: tipAndId.name
       })
     } else {
-      let temporaryTip = { tips: [] }
-      temporaryTip.tips.unshift({
+      let tempTip = { tips: [] }
+      tempTip.tips.unshift({
         tip: tipAndId.tip,
         user: tipAndId.user,
         name: tipAndId.name
       })
-      state.plantTips[tipAndId.id] = temporaryTip
+      state.plantTips[tipAndId.id] = tempTip
     }
   },
   // removePlantTip(state, index) {
@@ -124,6 +124,9 @@ const mutations = {
   },
   emptyDateDiff(state) {
     state.dateDiff = ''
+  },
+  EmptyFavorites(state) {
+    state.users[state.loggedInUser.user].favorites.length = 0
   }
 }
 const plugins = [vuexLocal.plugin]

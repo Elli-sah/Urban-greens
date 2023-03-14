@@ -10,12 +10,14 @@
   }
 </script>
 <template>
-  <div id="plant-short-info" @click="$emit('open', modalInfo)">
-    <i id="icons-hover" :class="cssIcon" style="font-size: 2em" />
+  <div>
+    <div id="plant-short-info" @click="$emit('open', modalInfo)">
+      <i id="icons-hover" :class="cssIcon" style="font-size: 2em" />
 
-    <div>
-      <p class="short-text title :hover">{{ iconTitle }}</p>
-      <p id="short-text">{{ iconShort }}</p>
+      <div>
+        <p class="short-text title :hover">{{ iconTitle }}</p>
+        <p id="short-text">{{ iconShort }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -24,9 +26,10 @@
   #plant-short-info {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     width: 100%;
+    margin: 10px;
   }
   .short-text {
     text-align: center;

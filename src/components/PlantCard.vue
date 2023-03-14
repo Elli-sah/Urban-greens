@@ -99,7 +99,7 @@
     </div>
     <div>
       <div id="login-div">
-        <div id="inlogModal-div">
+        <div id="inlog-modal-div">
           <b-modal hide-footer v-model="modal">
             <h1>Du måste logga in först!</h1>
 
@@ -185,7 +185,7 @@
     // object-fit: cover;
   }
 
-  #inlogModal-div {
+  #inlog-modal-div {
     // position: absolute;
     object-fit: contain;
   }
