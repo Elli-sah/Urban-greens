@@ -114,20 +114,20 @@
     </div>
 
     <div class="scrolling-wrapper">
-      <RouterLink to="/plantlist/Alla_växter" class="categoryLinks">
+      <RouterLink to="/plantlist/Alla_växter" class="category-links">
         <button class="button">Alla växter</button>
       </RouterLink>
 
-      <RouterLink to="/plantlist/Blommande" class="categoryLinks">
+      <RouterLink to="/plantlist/Blommande" class="category-links">
         <button class="button">Blommande växter</button>
       </RouterLink>
-      <RouterLink to="/plantlist/Suckulent" class="categoryLinks">
+      <RouterLink to="/plantlist/Suckulent" class="category-links">
         <button class="button">Suckulenter</button>
       </RouterLink>
-      <RouterLink to="/plantlist/Gröna växter" class="categoryLinks">
+      <RouterLink to="/plantlist/Gröna växter" class="category-links">
         <button class="button">Gröna växter</button>
       </RouterLink>
-      <Router-Link to="/plantlist/Örter" class="categoryLinks">
+      <Router-Link to="/plantlist/Örter" class="category-links">
         <button class="button">Örter</button>
       </Router-Link>
     </div>

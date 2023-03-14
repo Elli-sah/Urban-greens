@@ -1,3 +1,13 @@
+<script>
+  import WaterChart from '../components/WaterChart.vue'
+  // import WateringChart from '../components/WateringChart.vue'
+
+  export default {
+    name: 'WaterChart',
+    components: { WaterChart }
+  }
+</script>
+
 <template>
   <div class="view-divs">
     <div id="header">
@@ -77,8 +87,17 @@
                 upplyst omgivning, men undvik att placera dem i direkt solljus
                 då det kan bränna bladen. De flesta inomhusväxter trivs bäst i
                 en temperatur mellan 18 och 24 grader Celsius, undvik att
-                placera dem i utkast och kalla områden.
+                placera dem i utkast och kalla områden. För att få rätt växt
+                till rätt ställe bör man reda ut om det är hel- eller halvskugga
+                där man skall plantera.
               </p>
+              <ul>
+                <li>Helskugga är om det finns solljus max 2 timmar per dag.</li>
+                <li>
+                  Halvskugga är när platsen erbjuder växterna solljus minst 4
+                  timmar/dag.
+                </li>
+              </ul>
             </div>
             <div>
               <!-- <img src="../../assets/Växter/feey-0M1QwymIzxw-unsplash.jpg" alt="" /> -->
@@ -96,6 +115,9 @@
                 vattna i botten och låt inte vattnet stå kvar i krukan för länge
                 då detta kan orsaka röta och skador på växten.
               </p>
+              <div id="chart">
+                <WaterChart />
+              </div>
             </div>
             <div>
               <h4>Gödsling</h4>
@@ -120,7 +142,7 @@
                 Krukväxter behöver ibland planteras om, när de växer ur sin
                 nuvarande kruka. Välj en större kruka och byt ut jorden
                 samtidigt. Var noga med att inte skada rötterna när du planterar
-                om växten.
+                om växten och vattna dem alltid efteråt.
               </p>
             </div>
             <div>
@@ -199,6 +221,9 @@
 </template>
 
 <style scoped>
+  #chart {
+    margin: 40px;
+  }
   #img {
     background-image: url('../../assets/Växter/vadim-kaipov-8ZELrodSvTc-unsplash.jpg');
     width: inherit;
@@ -212,10 +237,10 @@
   #text-box {
     padding: 5% 15% 5% 15%;
   }
+
   #big-box {
     border-radius: 10px;
     height: auto;
-
     margin-top: 70px;
     background-color: rgba(255, 255, 255, 0.888);
   }
@@ -224,17 +249,20 @@
     /* border-bottom-style: dotted; */
     font-size: 300%;
   }
+
   h2 {
     margin-bottom: 20px;
     display: flex;
     text-align: left;
     font-weight: bolder;
   }
+
   h4 {
     display: flex;
     text-align: left;
     font-weight: 600;
   }
+
   #steps {
     width: 100%;
     padding: 30px 40px 30px 40px;
@@ -243,6 +271,7 @@
     background-color: #577751;
     color: white;
   }
+
   p {
     margin-bottom: 30px;
   }
@@ -264,9 +293,11 @@
     #header {
       font-size: small;
     }
+
     #steps {
       padding: 10px;
     }
+
     #text-box {
       padding: 5% 5% 5% 5%;
     }

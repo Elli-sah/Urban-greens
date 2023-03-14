@@ -63,7 +63,7 @@
         </div> -->
 
         <div class="col-lg text-center">
-          <h5 class="text-uppercase mb-0">Kontakt</h5>
+          <h2 class="text-uppercase mb-0">Kontakt</h2>
 
           <ul class="list-unstyled">
             <li>UrbanGreens & co</li>
@@ -97,8 +97,8 @@
                   v-model="email"
                 />
               </div>
-              <div v-if="showPopup" class="popup">
-                <h6>Du prenumererar nu på vårat nyhetsbrev!</h6>
+              <div v-if="showPopup" class="pop-up">
+                <h3>Du prenumererar nu på vårat nyhetsbrev!</h3>
               </div>
             </div>
 
@@ -114,10 +114,10 @@
               class="list-unstyled d-flex flex-row justify-content-center"
             >
               <li class="m-3">
-                <a class="termsAndPolicy" href="#">Terms of Service</a>
+                <a class="terms-and-policy" href="#">Terms of Service</a>
               </li>
               <li class="m-3">
-                <a class="termsAndPolicy" href="#">Privacy Policy</a>
+                <a class="terms-and-policy" href="#">Privacy Policy</a>
               </li>
             </ul>
           </div>
@@ -151,14 +151,14 @@
     font-size: small;
     /* color: white; */
   }
-  .termsAndPolicy {
+  .terms-and-policy {
     color: white;
   }
   .copyright {
     color: black;
   }
 
-  h5 {
+  h2 {
     font-weight: bolder;
     text-decoration: underline;
   }
@@ -169,7 +169,7 @@
     width: 0;
   }
 
-  .popup {
+  .pop-up {
     position: fixed;
     top: 57%;
     left: 50%;
@@ -185,7 +185,7 @@
   }
 
   @media (min-width: 688px) {
-    .popup {
+    .pop-up {
       width: auto;
       top: 50%;
     }
