@@ -16,12 +16,6 @@
     <div id="big-box">
       <div id="img" />
       <div id="text-box">
-        <!-- <div>
-          <WateringChart ref="Chart" />
-        </div> -->
-        <div>
-          <WaterChart />
-        </div>
         <div class="how-to">
           <h2>Hur man tar sticklingar</h2>
           <p>
@@ -121,6 +115,9 @@
                 vattna i botten och låt inte vattnet stå kvar i krukan för länge
                 då detta kan orsaka röta och skador på växten.
               </p>
+              <div id="chart">
+                <WaterChart />
+              </div>
             </div>
             <div>
               <h4>Gödsling</h4>
@@ -224,6 +221,9 @@
 </template>
 
 <style scoped>
+  #chart {
+    margin: 40px;
+  }
   #img {
     background-image: url('../../assets/Växter/vadim-kaipov-8ZELrodSvTc-unsplash.jpg');
     width: inherit;
