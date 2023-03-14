@@ -4,15 +4,13 @@
   import ShowPlant from '../components/ShowPlant.vue'
   import MyBestTips from '../components/MyBestTips.vue'
   import LogIn from '../components/LogIn.vue'
-  import WaterChart from '../components/WaterChart.vue'
   // import InlogModal from '../components/InlogModal.vue'
 
   export default {
     components: {
       ShowPlant,
       MyBestTips,
-      LogIn,
-      WaterChart
+      LogIn
       // InlogModal
     },
     props: {
@@ -336,9 +334,6 @@
       </div>
       <!-- </div> -->
     </div>
-  </div>
-  <div>
-    <WaterChart />
   </div>
   <div v-if="plant">
     <MyBestTips :plant-name="plant.name" :plant="plant" :id="plant.id" />

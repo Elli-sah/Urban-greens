@@ -1,3 +1,13 @@
+<script>
+  import WaterChart from '../components/WaterChart.vue'
+  // import WateringChart from '../components/WateringChart.vue'
+
+  export default {
+    name: 'App',
+    components: { WaterChart }
+  }
+</script>
+
 <template>
   <div class="view-divs">
     <div id="header">
@@ -6,6 +16,12 @@
     <div id="big-box">
       <div id="img" />
       <div id="text-box">
+        <!-- <div>
+          <WateringChart ref="Chart" />
+        </div> -->
+        <div>
+          <WaterChart ref="bar" />
+        </div>
         <div class="how-to">
           <h2>Hur man tar sticklingar</h2>
           <p>
