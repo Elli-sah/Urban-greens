@@ -25,7 +25,7 @@
 <template>
   <div class="view-divs">
     <h1>{{ loggedInUser.name }}s fönsterbräda</h1>
-    <div id="wather-weather">
+    <div id="water-weather">
       <MyWeather />
       <LastWatered />
     </div>
@@ -46,7 +46,7 @@
 </template>
 
 <style lang="scss">
-  #wather-weather {
+  #water-weather {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;

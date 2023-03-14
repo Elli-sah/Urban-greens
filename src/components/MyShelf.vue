@@ -23,6 +23,7 @@
     },
     methods: {
       removePlant(plant, index) {
+        // notifikation för att säkerställa att användaren vill gå vidare.
         let onOK = () => {
           this.notifier.success(
             `${plant.name} är borttagen från fönsterbrädan.`
@@ -45,6 +46,13 @@
         )
         console.log(index)
         console.log(plant)
+        console.log(this.myPlants)
+      },
+      routeClick(plant) {
+        console.log(plant.id)
+        if (plant.id !== undefined) {
+          this.$router.push(`/plants/${plant.name}`)
+        }
       }
     }
   }
@@ -52,26 +60,28 @@
 
 <template>
   <h2>Dina växter</h2>
-  <div id="plantShelfBox" v-if="myPlants.length !== 0">
+  <div id="plantshelf-box" v-if="myPlants.length !== 0">
     <div
       class="shelf-plants"
       :key="plant.name"
       v-for="(plant, index) in myPlants"
     >
-      <img :src="plant.image[0]" :alt="plant.name" />
-      <div class="descriptionBox">
-        <h3>{{ plant.name }}</h3>
-        <div class="description-divs">
-          <i class="bi bi-brightness-high" style="font-size: 0.7em" />
-          <p class="description-p">{{ plant.placement.short }}</p>
-        </div>
-        <div class="description-divs">
-          <i class="bi bi-thermometer-low" style="font-size: 0.7em" />
-          <p class="description-p">{{ plant.temperature.short }}</p>
-        </div>
-        <div class="description-divs">
-          <i class="bi bi-moisture iconsize" style="font-size: 0.7em" />
-          <p class="description-p">{{ plant.watering.short }}</p>
+      <div class="img-desc-container" @click="routeClick(plant)">
+        <img :src="plant.image[0]" :alt="plant.name" />
+        <div class="description-box">
+          <h3>{{ plant.name }}</h3>
+          <div class="description-divs">
+            <i class="bi bi-brightness-high" style="font-size: 0.7em" />
+            <p class="description-p">{{ plant.placement.short }}</p>
+          </div>
+          <div class="description-divs">
+            <i class="bi bi-thermometer-low" style="font-size: 0.7em" />
+            <p class="description-p">{{ plant.temperature.short }}</p>
+          </div>
+          <div class="description-divs">
+            <i class="bi bi-moisture iconsize" style="font-size: 0.7em" />
+            <p class="description-p">{{ plant.watering.short }}</p>
+          </div>
         </div>
       </div>
       <i
@@ -84,7 +94,7 @@
 </template>
 
 <style lang="scss" scoped>
-  #plantShelfBox {
+  #plantshelf-box {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -110,9 +120,14 @@
     border-radius: 5px;
   }
 
-  .descriptionBox {
+  .description-box {
     margin-left: 10px;
     width: 40%;
+  }
+
+  .img-desc-container {
+    display: flex;
+    cursor: pointer;
   }
 
   .description-divs {
@@ -135,7 +150,7 @@
   }
 
   @media (min-width: 500px) {
-    .descriptionBox {
+    .description-box {
       margin-top: 30px;
       margin-left: 30px;
     }
@@ -149,7 +164,7 @@
       width: 400px;
     }
 
-    .descriptionBox {
+    .description-box {
       margin-top: 20px;
       margin-left: 20px;
     }
