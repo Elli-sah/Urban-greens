@@ -7,7 +7,7 @@
       loggIn: { required: true, type: String },
       loggInHere: { required: true, type: String }
     },
-    emits: [],
+
     data() {
       return {
         Addedplant: false,
@@ -97,5 +97,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 10px;
   }
 </style>

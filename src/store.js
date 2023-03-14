@@ -61,10 +61,18 @@ const mutations = {
     let plantId = state.plantTips[tipAndId.id]
 
     if (plantId) {
-      plantId.tips.unshift({ tip: tipAndId.tip, name: tipAndId.user })
+      plantId.tips.unshift({
+        tip: tipAndId.tip,
+        user: tipAndId.user,
+        name: tipAndId.name
+      })
     } else {
       let temporaryTip = { tips: [] }
-      temporaryTip.tips.unshift({ tip: tipAndId.tip, name: tipAndId.user })
+      temporaryTip.tips.unshift({
+        tip: tipAndId.tip,
+        user: tipAndId.user,
+        name: tipAndId.name
+      })
       state.plantTips[tipAndId.id] = temporaryTip
     }
   },
@@ -113,6 +121,9 @@ const mutations = {
   },
   updateDateDiff(state, date) {
     state.dateDiff = date
+  },
+  emptyDateDiff(state) {
+    state.dateDiff = ''
   }
 }
 const plugins = [vuexLocal.plugin]

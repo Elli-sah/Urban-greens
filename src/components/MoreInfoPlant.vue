@@ -12,22 +12,22 @@
 </script>
 
 <template>
-  <div class="moreInfo">
+  <div class="more-info">
     <h2 id="more-info-heading">{{ moreInfo }}</h2>
     <p id="more-info-text">{{ plantDescription }}</p>
   </div>
 
-  <div class="textBox">
-    <div class="prunBugDesc">
-      <div class="pruning">
+  <div class="text-box">
+    <div class="desc">
+      <div class="text-icon">
         <h5 class="heading">{{ pruningHeading }}</h5>
         <i class="bi bi-scissors" />
       </div>
 
       <p>{{ pruningInfo }}</p>
     </div>
-    <div class="prunBugDesc">
-      <div class="bug">
+    <div class="desc">
+      <div class="text-icon">
         <h5 class="heading">{{ bugHeading }}</h5>
         <i class="bi bi-bug" />
       </div>
@@ -37,40 +37,37 @@
 </template>
 
 <style>
-  .moreInfo {
+  .more-info {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .textBox {
+  .text-box {
     display: flex;
     flex-direction: column;
     width: 100%;
-    /* max-width: 40%; */
+    text-align: center;
+    justify-content: center;
   }
-  .prunBugDesc {
+  .desc {
     text-align: center;
     max-width: 500px;
   }
-  .pruning {
+  .text-icon {
     text-align: center;
   }
-  .bug {
-    text-align: center;
-  }
-  @media (min-width: 600px) {
-    .textBox {
+
+  @media (min-width: 900px) {
+    .text-box {
       display: flex;
-      /* flex-direction: column; */
       width: 100%;
       text-align: center;
       justify-content: center;
-      /* max-width: 40%; */
     }
   }
   @media (min-width: 1200px) {
-    .moreInfo {
+    .more-info {
       display: flex;
       justify-content: center;
       width: 50%;
@@ -78,26 +75,15 @@
       flex-direction: column;
     }
 
-    .textBox {
+    .text-box {
       display: flex;
       flex-direction: column;
       width: 100%;
       max-width: 40%;
     }
-    .prunBugDesc {
+    .desc {
       text-align: center;
       max-width: 500px;
-    }
-  }
-  @media only screen and (max-width: 1600px) and (min-width: 1200px) {
-    .pruning {
-      margin-top: 20px;
-    }
-    #more-info-text {
-      width: 300px;
-    }
-    #more-info-heading {
-      width: 300px;
     }
   }
 </style>

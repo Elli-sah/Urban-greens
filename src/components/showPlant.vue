@@ -4,7 +4,6 @@
       selectedPlant: { required: true, type: Object },
       plantHeading: { required: true, type: String },
       longDescription: { required: true, type: String }
-      // plantplacement: { required: true, type: String }
     },
     data() {
       return {}
@@ -15,15 +14,11 @@
     close() {
       this.$emit('close')
     }
-    // closeModal() {
-    //   this.showmodal = false
-    // }
   }
 </script>
 
 <template>
-  <!-- <div class="container"> -->
-  <div class="newContainer">
+  <div id="new-container">
     <h3>{{ plantHeading }}</h3>
 
     <p>{{ longDescription }}</p>
@@ -33,17 +28,11 @@
 </template>
 
 <style scoped>
-  .newContainer {
+  #new-container {
     background-color: #4e7c4f;
     border-radius: 10px;
     color: white;
     text-align: center;
     padding: 10%;
-  }
-
-  @media (max-width: 1000px) {
-    .newContainer {
-      margin-top: 10%;
-    }
   }
 </style>
