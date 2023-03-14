@@ -20,7 +20,7 @@
   )
 
   export default {
-    name: 'BarChart',
+    name: 'WaterChart',
     components: { Bar },
     data() {
       return {
@@ -33,7 +33,7 @@
             'Maj',
             'juni',
             'Juli',
-            'augusti',
+            'aug',
             'Sept',
             'okt',
             'Nov',
@@ -41,16 +41,37 @@
           ],
           datasets: [
             {
-              label: 'Vatten-diagram, Aloe vera',
+              label: 'Generellt Bevattnings-diagram för årets alla säsonger',
               backgroundColor: '#79B473',
-              data: [5, 15, 50, 25, 15, 12, 24, 11, 14, 89]
+              data: [1, 1.5, 2, 2.5, 3, 3, 3, 2.5, 2, 1.5, 1, 1]
             }
           ]
+        },
+        options: {
+          scales: {
+            y: {
+              ticks: {
+                callback: function (value) {
+                  if (value === 1) {
+                    return 'Sparsamt'
+                  } else if (value === 1.5) {
+                    return ''
+                  } else if (value === 2) {
+                    return 'måttligt'
+                  } else if (value === 2.5) {
+                    return ''
+                  } else if (value === 3) {
+                    return 'Rikligt'
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
   }
 </script>
 <template>
-  <Bar :data="chartData" />
+  <Bar :data="chartData" :options="options" />
 </template>

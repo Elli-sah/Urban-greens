@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <h3><strong>Kategorier</strong></h3>
+  <h2><strong>Kategorier</strong></h2>
   <div id="box">
     <div id="plantbox-container">
       <RouterLink
@@ -11,7 +11,7 @@
         to="/plantlist/Alla_växter"
       >
         <div class="plantbox-category">
-          <h4>Alla växter</h4>
+          <h3>Alla växter</h3>
 
           <div>
             <img
@@ -26,7 +26,7 @@
         to="/plantlist/Blommande"
         ><div class="plantbox-category">
           <div>
-            <h4>Blommande växter</h4>
+            <h3>Blommande växter</h3>
             <img
               class="category-pic"
               src="../../assets/Växter/pexels-julia-filirovska-7141249.jpg"
@@ -39,7 +39,7 @@
         to="plantlist/Suckulent"
         ><div class="plantbox-category">
           <div>
-            <h4>Suckulenter</h4>
+            <h3>Suckulenter</h3>
 
             <img
               class="category-pic"
@@ -53,7 +53,7 @@
         to="/plantlist/Gröna växter"
         ><div class="plantbox-category">
           <div>
-            <h4>Gröna Växter</h4>
+            <h3>Gröna Växter</h3>
 
             <img
               class="category-pic"
@@ -65,7 +65,7 @@
       <RouterLink class="link-dark text-decoration-none" to="/plantlist/Örter"
         ><div class="plantbox-category">
           <div>
-            <h4>Örter</h4>
+            <h3>Örter</h3>
 
             <img
               class="category-pic"
@@ -93,13 +93,13 @@
 </template>
 
 <style lang="scss" scoped>
-  h3 {
+  h2 {
     display: flex;
     justify-content: center;
     margin: 30px;
     margin-top: 100px;
   }
-  h4 {
+  h3 {
     margin-top: 15px;
     display: flex;
     justify-content: center;

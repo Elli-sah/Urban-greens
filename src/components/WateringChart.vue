@@ -100,3 +100,75 @@
     }
   }
 </script>
+<template>
+  <Line :data="chartData" :options="options" />
+</template>
+
+<script>
+  import { Line } from 'vue-chartjs'
+  import {
+    Chart as ChartJS,
+    LineController,
+    LineElement,
+    PointElement,
+    LinearScale,
+    Title,
+    Tooltip,
+    Legend,
+    CategoryScale
+  } from 'chart.js'
+
+  ChartJS.register(
+    LineController,
+    LineElement,
+    PointElement,
+    LinearScale,
+    Title,
+    Tooltip,
+    Legend,
+    CategoryScale
+  )
+
+  export default {
+    name: 'WaterChart',
+    extends: Line,
+    data() {
+      return {
+        chartData: {
+          labels: ['jan', 'feb', 'mars'],
+          datasets: [
+            {
+              label: 'Generellt Bevattnings-diagram för årets alla säsonger',
+              borderColor: '#79B473',
+              pointBackgroundColor: '#79B473',
+              pointRadius: 5,
+              pointHoverRadius: 8,
+              data: [1, 2, 3]
+            }
+          ]
+        },
+        options: {
+          scales: {
+            y: {
+              ticks: {
+                callback: function (value) {
+                  if (value === 1) {
+                    return 'Sparsamt'
+                  } else if (value === 1.5) {
+                    return ''
+                  } else if (value === 2) {
+                    return 'måttligt'
+                  } else if (value === 2.5) {
+                    return ''
+                  } else if (value === 3) {
+                    return 'Rikligt'
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+</script>
