@@ -99,8 +99,8 @@
   .popup-divs {
     background-color: #e8cac3;
     border-radius: 10px;
-    bottom: 15px;
-    left: 40px;
+    bottom: 7px;
+    left: 9px;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -108,4 +108,6 @@
     justify-content: center;
     padding: 10px;
   }
+
+  @media();
 </style>
