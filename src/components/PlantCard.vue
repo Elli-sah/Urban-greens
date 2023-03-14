@@ -72,7 +72,7 @@
 </script>
 
 <template>
-  <div class="plantBox">
+  <div class="plant-box">
     <RouterLink :to="`/plants/${plant.name}`" class="plant-container">
       <img alt="plant.name" :src="plant.image[0]" />
       <h2>{{ plant.name }}</h2>
@@ -113,7 +113,7 @@
 </template>
 
 <style lang="scss" scoped>
-  .plantBox {
+  .plant-box {
     position: relative;
     width: 270px;
     height: 320px;
@@ -124,7 +124,7 @@
     border-radius: 10px;
   }
 
-  .plantBox:hover {
+  .plant-box:hover {
     transition: all 0.3s ease-out;
     box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.1);
     top: -1px;

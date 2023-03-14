@@ -200,7 +200,7 @@
           <i @click="closeModal" id="remove-icon" class="bi bi-x-lg" />
         </div>
         <div id="createEventContainer">
-          <div id="radioEvent">
+          <div id="radio-event">
             <div v-if="this.selectedDate <= todaysDate">
               <input
                 type="radio"
@@ -222,7 +222,7 @@
               /><label for="event-check">Egen händelse</label>
             </div>
           </div>
-          <div id="inputBox" v-if="showDiv === 'true'">
+          <div id="input-box" v-if="showDiv === 'true'">
             <input
               type="text"
               v-model="titleInput"
@@ -242,7 +242,7 @@
       </div>
     </form>
 
-    <div class="showEventContainer" v-show="showEvent">
+    <div class="show-event-container" v-show="showEvent">
       <div class="date-close-container">
         <p>{{ eventDate }}</p>
         <i @click="closeEvent" class="bi bi-x-lg" />
@@ -263,13 +263,13 @@
   /* input {
     text-transform: capitalize;
   } */
-  #inputBox {
+  #input-box {
     height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
   }
-  #inputBox > input {
+  #input-box > input {
     width: 90%;
     margin: auto;
     border-radius: 30px;
@@ -277,13 +277,13 @@
     padding: 7px;
     margin-bottom: 5px;
   }
-  #radioEvent {
+  #radio-event {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     height: 110px;
   }
-  #createEventContainer {
+  #create-event-container {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -329,7 +329,7 @@
     border-radius: 0 0 20px 20px;
     padding: 20px;
   }
-  .showEventContainer {
+  .show-event-container {
     overflow: hidden;
     position: fixed;
     top: 50%;
