@@ -138,7 +138,7 @@
       </div>
       <div v-else id="filtered-plants">
         <PlantCard
-          v-for="plant in filterdPlants"
+          v-for="plant in filteredPlants"
           :key="plant.name"
           :plant="plant"
         />
