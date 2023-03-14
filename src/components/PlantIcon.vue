@@ -10,23 +10,40 @@
   }
 </script>
 <template>
-  <div id="plant-short-info" @click="$emit('open', modalInfo)">
-    <i id="icons-hover" :class="cssIcon" style="font-size: 2em" />
-
-    <div>
-      <p class="short-text title :hover">{{ iconTitle }}</p>
-      <p id="short-text">{{ iconShort }}</p>
+  <div>
+    <div id="plant-short-info" @click="$emit('open', modalInfo)">
+      <div id="all-info">
+        <i id="icons-hover" :class="cssIcon" style="font-size: 2em" />
+        <div id="p-info">
+          <p class="short-text title :hover">{{ iconTitle }}</p>
+          <p id="short-text">{{ iconShort }}</p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
+  #all-info:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+  }
+
+  #all-info {
+    display: flex;
+  }
+
+  p {
+    cursor: pointer;
+  }
   #plant-short-info {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     width: 100%;
+    margin: 10px;
   }
   .short-text {
     text-align: center;
@@ -34,21 +51,22 @@
     width: 100px;
     margin: 0;
     padding: 0;
-  }
-  #icons-hover {
-    font-size: 10rem;
-    transition: transform 0.2s ease-in-out;
-  }
-  #icons-hover:hover {
-    transform: scale(1.5);
-  }
-  .short-text title :hover {
-    font-size: 10rem;
-    transition: transform 0.2s ease-in-out;
-    transform: scale(1.5);
-  }
-  .short-text.title:hover {
-    font-size: 1.2em;
     cursor: pointer;
   }
+  /* #icons-hover {
+    font-size: 10rem;
+    transition: transform 0.2s ease-in-out;
+  } */
+  /* #icons-hover:hover {
+    transform: scale(1.5);
+  } */
+  /* .short-text title :hover {
+    font-size: 10rem;
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1.5);
+  } */
+  /* .short-text.title:hover {
+    font-size: 1.2em;
+    cursor: pointer;
+  } */
 </style>

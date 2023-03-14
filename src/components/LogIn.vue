@@ -95,7 +95,7 @@
 
 <template>
   <div class="login-divs" v-show="showLoginForm">
-    <form @submit.prevent="AtLogin" class="form">
+    <form @submit.prevent="AtLogin">
       <label for="username">Användarnamn</label
       ><input id="username" v-model="userName" required minlength="5" />
       <label for="password">Lösenord</label
@@ -126,7 +126,7 @@
   </div>
   <div class="login-divs" v-show="showCreateForm">
     <h2>Skapa konto</h2>
-    <form @submit.prevent="AtCreateAccount" class="form">
+    <form @submit.prevent="AtCreateAccount">
       <label for="name">Namn</label
       ><input id="name" v-model="createName" required />
       <label for="create-user">Användarnamn</label
@@ -157,9 +157,8 @@
         class="bi bi-arrow-left-circle"
       />
     </form>
-    <div v-if="showError">
-      <p>Användarnamnet du har valt finns redan. Försök igen!</p>
-    </div>
+
+    <p v-if="showError">Användarnamnet du har valt finns redan. Försök igen!</p>
   </div>
 </template>
 
@@ -180,7 +179,7 @@
     margin: auto;
     padding: 20px;
   }
-  .form {
+  form {
     position: relative;
     display: flex;
     flex-direction: column;

@@ -1,9 +1,27 @@
 <script>
   import PlantCategory from '../components/PlantCategory.vue'
+  import { mapState } from 'vuex'
 
   export default {
     components: {
       PlantCategory
+    },
+    computed: {
+      ...mapState({
+        loggedInUser: (state) => state.loggedInUser,
+        userFavorites: (state) => {
+          if (state.loggedInUser) {
+            return state.users[state.loggedInUser.user]?.favorites || []
+          } else {
+            return []
+          }
+        }
+      })
+    },
+    methods: {
+      EmptyFavorites() {
+        this.$store.commit('EmptyFavorites')
+      }
     }
   }
 </script>
@@ -28,20 +46,9 @@
         <button id="kom-igang" class="button">Kom igång</button>
       </RouterLink>
     </div>
+    <button @click="EmptyFavorites">Töm favoriter</button>
 
     <PlantCategory />
-    <!-- <div id="text-container">
-      <div id="start-text-middle">
-        <p id="text-2">
-          <strong>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum
-            quia, saepe doloremque corrupti suscipit magnam vel maiores a id
-            quaerat amet eaque, libero aspernatur excepturi alias assumenda sed
-            fugit ipsam.
-          </strong>
-        </p>
-      </div>
-    </div> -->
   </div>
 </template>
 
@@ -63,26 +70,12 @@
   #kom-igang {
     margin: 30px;
   }
-  // #start-text-middle {
-  //   display: flex;
-  //   width: 400px;
-  //   border-radius: 10px;
-  //   margin-top: 100px;
-  //   padding: 20px;
-  //   text-align: center;
-  // }
-  // #text-2 {
-  //   font-size: large;
-  // }
-
-  // #text-container {
-  //   display: flex;
-  // }
 
   @media (min-width: 800px) {
     #start-div {
       padding-top: 15px;
     }
+
     #primary-logo {
       margin-top: 20px;
       width: 50%;
@@ -90,18 +83,18 @@
 
     p {
       width: 50%;
-      // font-size: 1.2rem;
       padding-left: 30px;
     }
+
     #div-desktop {
       display: flex;
       align-items: center;
     }
+
     #kom-igang {
       border-radius: 50%;
       height: 120px;
       width: 120px;
-
       font-size: 0.9rem;
     }
 

@@ -145,7 +145,6 @@
   }
   .tip-box {
     text-align: left;
-
     padding: 20px 20px 20px 20px;
   }
 </style>

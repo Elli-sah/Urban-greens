@@ -1,12 +1,8 @@
 <script>
   import axios from 'axios'
-
   import ShowPlant from '../components/ShowPlant.vue'
   import MyBestTips from '../components/MyBestTips.vue'
-  // import LogIn from '../components/LogIn.vue'
-
   import PlantIcon from '../components/PlantIcon.vue'
-  // import InlogModal from '../components/InlogModal.vue'
   import MoreInfoPlant from '../components/MoreInfoPlant.vue'
   import AddedPlant from '../components/AddedPlant.vue'
 
@@ -52,7 +48,6 @@
           this.plant = response.data.filter(
             (plant) => plant.name === this.name
           )[0]
-          console.log('rad 34', this.plant)
           // Funktion för att kontrollera svårighetsgrad
           if (this.plant.difficulty === 'Lätt') {
             this.isEasy = true
@@ -67,7 +62,6 @@
           } else {
             this.noPoison = true
           }
-          console.log(this.plant)
         })
       },
 
@@ -97,7 +91,7 @@
 
 <template>
   <div v-if="plant" class="view-divs">
-    <div class="plant-box">
+    <div id="plant-box">
       <div id="ccc">
         <b-carousel
           v-model="slide"
@@ -118,7 +112,7 @@
         <div class="plant-short-info" v-if="!selectedPlant">
           <h1>{{ plant.name }}</h1>
 
-          <h3>{{ plant.latin }}</h3>
+          <h2 id="font-size">{{ plant.latin }}</h2>
           <div
             id="poison-parent"
             @mouseover="hover = true"
@@ -126,7 +120,7 @@
           >
             <p v-show="poisonist">Denna växt är giftig</p>
 
-            <p class="description" v-if="hover" v-show="poisonist">
+            <p id="description" v-if="hover" v-show="poisonist">
               {{ plant.poison.description }}
             </p>
           </div>
@@ -145,8 +139,8 @@
             <span class="spans" style="background-color: red" />
           </p>
 
-          <hr class="line" />
-          <div class="plant-container">
+          <hr id="line" />
+          <div id="plant-container">
             <div class="plant-icons">
               <div class="plant-desc">
                 <PlantIcon
@@ -185,7 +179,7 @@
 
             <AddedPlant
               added-plant="Ställ på fönsterbrädan"
-              :plant-name="plant.name"
+              :plant="plant"
               logg-in="Du behöver logga in först"
               logg-in-here="Logga in här!"
             />
@@ -201,7 +195,7 @@
       </div>
     </div>
 
-    <div class="second-plant-box">
+    <div id="second-plant-box">
       <MoreInfoPlant
         more-info="Mer information"
         :plant-description="plant.description"
@@ -211,16 +205,20 @@
         :bug-info="plant.pests"
       />
     </div>
+
+    <MyBestTips v-if="plant" :plant="plant" />
   </div>
-  <MyBestTips v-if="plant" :plant="plant" />
 </template>
 
 <style scoped>
+  #font-size {
+    font-size: 25px;
+  }
   #poison-parent {
     position: relative;
     cursor: pointer;
   }
-  .description {
+  #description {
     position: absolute;
     padding: 10px;
     font-size: 0.8rem;
@@ -236,7 +234,7 @@
     align-self: flex-end;
   }
 
-  .plant-box {
+  #plant-box {
     width: 100%;
     padding: 20px 20px 20px 20px;
     display: flex;
@@ -253,11 +251,11 @@
     justify-content: center;
   }
 
-  .plant-container {
+  #plant-container {
     text-align: center;
     position: relative;
   }
-  .second-plant-box {
+  #second-plant-box {
     width: 100%;
     padding: 45px 20px 20px 20px;
     background-color: white;
@@ -298,7 +296,7 @@
     display: flex;
     flex-direction: column;
   }
-  .line {
+  #line {
     border-style: 1px solid rgba(0, 0, 0, 0.15);
     width: 100%;
   }
@@ -337,7 +335,7 @@
       margin: 10px;
     }
 
-    .line {
+    #line {
       border-style: 1px solid rgba(0, 0, 0, 0.15);
     }
 
@@ -346,14 +344,14 @@
       flex-direction: row;
       margin: 10px;
     }
-    .plant-box {
+    #plant-box {
       display: flex;
       justify-content: space-between;
       flex-direction: row;
       width: 80%;
     }
 
-    .second-plant-box {
+    #second-plant-box {
       height: 50%;
       width: 80%;
       display: flex;
