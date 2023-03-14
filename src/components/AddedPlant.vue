@@ -3,7 +3,7 @@
   export default {
     props: {
       addedPlant: { required: true, type: String },
-      plantName: { required: true, type: String },
+      plant: { required: true, type: Object },
       loggIn: { required: true, type: String },
       loggInHere: { required: true, type: String }
     },
@@ -33,7 +33,7 @@
         console.log('hej')
         if (this.loggedInUser !== '') {
           if (
-            this.userFavorites.find((plantName) => plantName === this.plantName)
+            this.userFavorites.find((plant) => plant.name === this.plant.name)
           ) {
             this.AlreadyAddedplant = true
             setTimeout(() => {
@@ -62,6 +62,7 @@
 
 <template>
   <button class="button" @click="atAddPlant">{{ addedPlant }}</button>
+
   <div id="popup.container">
     <div class="popup-divs" v-show="Addedplant">
       <p class="paragraph added-paragraph">
@@ -85,6 +86,31 @@
           class="btn btn-link"
           >{{ loggInHere }}</b-button
         >
+      </div>
+
+      <div class="popup-divs" v-show="Addedplant">
+        <p class="paragraph added-paragraph">
+          {{ plant.name }} är tillagd på din fönsterbräda!
+        </p>
+      </div>
+      <div class="popup-divs" v-show="AlreadyAddedplant">
+        <p class="paragraph added-paragraph">
+          Du har redan lagt till {{ plant.name }} på din fönsterbräda!
+        </p>
+      </div>
+      <div class="popup-divs" v-show="NotLoggedIn">
+        <i @click="onClick" class="bi bi-x-lg" />
+        <div id="login-div">
+          <p>{{ loggIn }}</p>
+          <b-button
+            variant="link"
+            to="/login"
+            type="button"
+            id="button-secondary"
+            class="btn btn-link"
+            >{{ loggInHere }}</b-button
+          >
+        </div>
       </div>
     </div>
   </div>

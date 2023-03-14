@@ -52,7 +52,7 @@
   }
   .desc {
     text-align: center;
-    max-width: 500px;
+    /* max-width: 500px; */
   }
   .text-icon {
     text-align: center;
