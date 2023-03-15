@@ -28,10 +28,6 @@
       this.calendarOptions.events = this.myEvents
 
       this.findWaterDate()
-      // for (let x = 0; x < this.myEvents.length; x++) {
-      //   this.calendarOptions.events.push(this.myEvents[x])
-      //   console.log('myEvent', this.myEvent)
-      // }
 
       const today = moment().format('YYYY-MM-DD')
       const eventsOnDate = this.myEvents.filter((item) => item.start === today)
@@ -116,10 +112,8 @@
           backgroundColor: this.titleInput === 'Vattnat' ? '#83d5f8' : '',
           borderColor: this.titleInput === 'Vattnat' ? '#83d5f8' : ''
         }
-        //Push event into store
+        //Lägger till event i store
         this.$store.commit('addEventToUserCalendar', event)
-        // this.calendarOptions.events.push(event)
-
         this.showModal = false
         this.descriptionInput = ''
         this.titleInput = ''
