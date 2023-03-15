@@ -17,7 +17,7 @@
     <p id="more-info-text">{{ plantDescription }}</p>
   </div>
 
-  <div class="text-box">
+  <div id="text-box">
     <div class="desc">
       <div class="text-icon">
         <h5 class="heading">{{ pruningHeading }}</h5>
@@ -37,7 +37,7 @@
 </template>
 
 <style>
-  .more-info {
+  #more-info {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,7 +52,6 @@
   }
   .desc {
     text-align: center;
-    /* max-width: 500px; */
   }
   .text-icon {
     text-align: center;

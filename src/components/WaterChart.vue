@@ -43,7 +43,7 @@
             {
               label: 'Generellt Bevattnings-diagram för årets alla säsonger',
               backgroundColor: '#79B473',
-              data: [1, 1.5, 2, 2.5, 3, 3, 3, 2.5, 2, 1.5, 1, 1]
+              data: [1, 1.5, 2, 2.5, 2.5, 3, 3, 2.5, 2, 1.5, 1, 1]
             }
           ]
         },
@@ -57,7 +57,7 @@
                   } else if (value === 1.5) {
                     return ''
                   } else if (value === 2) {
-                    return 'måttligt'
+                    return 'Måttligt'
                   } else if (value === 2.5) {
                     return ''
                   } else if (value === 3) {
