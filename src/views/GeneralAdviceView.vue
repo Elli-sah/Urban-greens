@@ -290,7 +290,7 @@
     }
 
     #text-box {
-      padding: 5% 5% 5% 5%;
+      padding: 8% 8% 8% 8%;
     }
 
     ul {

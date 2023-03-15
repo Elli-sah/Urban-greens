@@ -74,20 +74,6 @@
             />
           </div></div
       ></RouterLink>
-      <!-- <RouterLink
-      class="link-dark text-decoration-none"
-      to="/plantlist/Giftiga_växter"
-      ><div class="plantbox-category">
-        <div>
-          <h4>Giftiga Växter</h4>
-
-          <img
-            class="category-pic"
-            src="../../assets/Växter/eslah-saad-QszuWY_zo7k-unsplash.jpg"
-            alt="Giftiga Växter"
-          />
-        </div></div
-    ></RouterLink> -->
     </div>
   </div>
 </template>
