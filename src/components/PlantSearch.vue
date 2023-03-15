@@ -8,8 +8,8 @@
     data() {
       return {
         result: [],
-        category: 'all',
         name: 'all',
+        category: 'all',
         searchText: '',
         notFound: false
       }
@@ -49,27 +49,17 @@
                 typeof plant.category === 'string'
                   ? plant.category.toLowerCase()
                   : ''
+
               const lowerCaseSearchText = this.searchText.toLowerCase()
+
               return (
-                lowerCaseName.includes(lowerCaseSearchText) ||
-                lowerCaseCategory.includes(lowerCaseSearchText)
+                lowerCaseCategory.includes(lowerCaseSearchText) ||
+                lowerCaseName.includes(lowerCaseSearchText)
               )
-            } else {
-              return true
             }
           })
         } else {
-          return this.result.filter(
-            (plant) =>
-              plant.category === this.category &&
-              (plant.name
-                .toLowerCase()
-                .includes(this.searchText.toLowerCase()) ||
-                (typeof plant.category === 'string' &&
-                  plant.category
-                    .toLowerCase()
-                    .includes(this.searchText.toLowerCase())))
-          )
+          return console.log('error')
         }
       }
     }
