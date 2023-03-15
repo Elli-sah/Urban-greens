@@ -12,7 +12,7 @@
 </script>
 
 <template>
-  <div class="more-info">
+  <div id="more-info">
     <h2 id="more-info-heading">{{ moreInfo }}</h2>
     <p id="more-info-text">{{ plantDescription }}</p>
   </div>
@@ -43,10 +43,9 @@
     align-items: center;
     justify-content: center;
   }
-  .text-box {
+  #text-box {
     display: flex;
     flex-direction: column;
-    width: 100%;
     text-align: center;
     justify-content: center;
   }
@@ -58,26 +57,24 @@
   }
 
   @media (min-width: 900px) {
-    .text-box {
+    #text-box {
       display: flex;
-      width: 100%;
       text-align: center;
       justify-content: center;
     }
   }
   @media (min-width: 1200px) {
-    .more-info {
+    #more-info {
       display: flex;
       justify-content: center;
-      width: 50%;
+      max-width: 40%;
       align-items: center;
       flex-direction: column;
     }
 
-    .text-box {
+    #text-box {
       display: flex;
       flex-direction: column;
-      width: 100%;
       max-width: 40%;
     }
     .desc {
