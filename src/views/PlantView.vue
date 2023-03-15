@@ -64,13 +64,14 @@
           }
         })
       },
-
+      // Funktion för att visa info om varje ikon på varje blomma
       openModal(modalInfo) {
         this.selectedPlant = this.plant
         this.plantHeading = this.plant[modalInfo].title
         this.longDescription = this.plant[modalInfo].description
         document.body.style.overflow = 'hidden'
       },
+      // Funktion för att stänga informationsrutan
       closeModal() {
         this.selectedPlant = null
         this.NotLoggedIn = false
