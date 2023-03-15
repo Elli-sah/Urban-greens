@@ -9,6 +9,7 @@
     emits: ['open']
   }
 </script>
+
 <template>
   <div>
     <div id="plant-short-info" @click="$emit('open', modalInfo)">
@@ -53,20 +54,4 @@
     padding: 0;
     cursor: pointer;
   }
-  /* #icons-hover {
-    font-size: 10rem;
-    transition: transform 0.2s ease-in-out;
-  } */
-  /* #icons-hover:hover {
-    transform: scale(1.5);
-  } */
-  /* .short-text title :hover {
-    font-size: 10rem;
-    transition: transform 0.2s ease-in-out;
-    transform: scale(1.5);
-  } */
-  /* .short-text.title:hover {
-    font-size: 1.2em;
-    cursor: pointer;
-  } */
 </style>

@@ -116,7 +116,6 @@
                     ? plant.category.join(',  ')
                     : plant.category
                 }}
-                <!-- {{ plant.category }} -->
               </p>
             </RouterLink>
           </span>
