@@ -26,6 +26,7 @@
     },
     created() {
       this.calendarOptions.events = this.myEvents
+
       this.findWaterDate()
       // for (let x = 0; x < this.myEvents.length; x++) {
       //   this.calendarOptions.events.push(this.myEvents[x])
@@ -66,7 +67,7 @@
         showDiv: 'false',
         plantsWatered: false,
         latestWatered: null,
-        todaysDate: new Date().toISOString().slice(0, 10), //Today´s date in FullCalendar format
+        todaysDate: new Date().toISOString().slice(0, 10), //Dagens datum FullCalendar format
         calendarOptions: {
           plugins: [dayGridPlugin, interactionPlugin],
           initialView: 'dayGridMonth',
@@ -74,19 +75,11 @@
             today: 'Idag'
           },
 
-          events: [
-            // {
-            //   title: 'My event',
-            //   start: '2023-03-10',
-            //   description: 'More information about my event.'
-            // },
-          ],
-
           eventColor: '#e1ba6b',
           eventTextColor: 'black',
           firstDay: 1,
           locale: 'sv',
-
+          //Funktion i fullCalendar, få information om ett event när du klickar på den
           eventClick: (info) => {
             this.eventDate = info.event.startStr
             this.eventDescription = info.event.extendedProps.description
@@ -98,6 +91,7 @@
             this.eventIndex = this.myEvents.indexOf(this.selectedEvent)
             this.showModal = false
           },
+          //Funktion i fullCalendar, få info om man klickar på datum
           dateClick: (info) => {
             this.selectedDate = info.dateStr
             this.showModal = true
@@ -122,6 +116,7 @@
           backgroundColor: this.titleInput === 'Vattnat' ? '#83d5f8' : '',
           borderColor: this.titleInput === 'Vattnat' ? '#83d5f8' : ''
         }
+        //Push event into store
         this.$store.commit('addEventToUserCalendar', event)
         // this.calendarOptions.events.push(event)
 
