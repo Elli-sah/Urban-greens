@@ -177,12 +177,7 @@
               </div>
             </div>
 
-            <AddedPlant
-              added-plant="Ställ på fönsterbrädan"
-              :plant="plant"
-              logg-in="Du behöver logga in först"
-              logg-in-here="Logga in här!"
-            />
+            <AddedPlant added-plant="Ställ på fönsterbrädan" :plant="plant" />
           </div>
         </div>
         <ShowPlant

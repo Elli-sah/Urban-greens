@@ -1,19 +1,22 @@
 <script>
   import { mapState } from 'vuex'
+  import LogIn from './LogIn.vue'
   export default {
+    components: {
+      LogIn
+    },
+
     props: {
       addedPlant: { required: true, type: String },
-      plant: { required: true, type: Object },
-      loggIn: { required: true, type: String },
-      loggInHere: { required: true, type: String }
+      plant: { required: true, type: Object }
     },
 
     data() {
       return {
         Addedplant: false,
-        NotLoggedIn: false,
         AlreadyAddedplant: false,
-        plantTip: ''
+        plantTip: '',
+        modal: false
       }
     },
     computed: {
@@ -50,11 +53,8 @@
             }, 3000)
           }
         } else {
-          this.NotLoggedIn = true
+          this.modal = true
         }
-      },
-      onClick() {
-        this.NotLoggedIn = false
       }
     }
   }
@@ -74,19 +74,12 @@
         Du har redan lagt till {{ plant.name }} på din fönsterbräda!
       </p>
     </div>
-    <div class="popup-divs" v-show="NotLoggedIn">
-      <i @click="onClick" class="bi bi-x-lg" />
-      <div id="login-div">
-        <p>{{ loggIn }}</p>
-        <b-button
-          variant="link"
-          to="/login"
-          type="button"
-          id="button-secondary"
-          class="btn btn-link"
-          >{{ loggInHere }}</b-button
-        >
-      </div>
+
+    <div id="inlog-modal-div">
+      <b-modal hide-footer v-model="modal">
+        <h1>Du måste logga in först!</h1>
+        <LogIn />
+      </b-modal>
     </div>
   </div>
 </template>
