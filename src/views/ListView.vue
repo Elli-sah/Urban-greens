@@ -19,6 +19,7 @@
         loggedInUser: (state) => state.loggedInUser
       }),
       filteredPlants() {
+        //Filtrerar plantor efter kategori och namn
         const category = this.$route.params.category
         if (category === 'Alla_växter') {
           return this.result.filter((plant) => {
@@ -124,7 +125,6 @@
         <button class="button">Örter</button>
       </Router-Link>
     </div>
-    <!-- <h2>{{ category }}</h2> -->
     <div>
       <div v-if="isLoading" class="overlay">
         <PageLoader />
