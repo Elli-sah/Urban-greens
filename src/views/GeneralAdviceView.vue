@@ -114,7 +114,7 @@
                 vattna i botten och låt inte vattnet stå kvar i krukan för länge
                 då detta kan orsaka röta och skador på växten.
               </p>
-              <div id="chart">
+              <div id="chart-box">
                 <WaterChart />
               </div>
             </div>
@@ -220,8 +220,8 @@
 </template>
 
 <style scoped>
-  #chart {
-    margin: 40px;
+  #chart-box {
+    margin-bottom: 40px;
   }
   #img {
     background-image: url('../../assets/Växter/vadim-kaipov-8ZELrodSvTc-unsplash.jpg');
@@ -255,6 +255,7 @@
     display: flex;
     text-align: left;
     font-weight: 600;
+    font-size: 23px;
   }
 
   #steps {
@@ -275,7 +276,7 @@
   }
 
   li {
-    margin-top: 20px;
+    margin-top: 15px;
     font-family: 'Lato', sans serif;
   }
 
@@ -285,11 +286,15 @@
     }
 
     #steps {
-      padding: 10px;
+      padding: 20px;
     }
 
     #text-box {
       padding: 5% 5% 5% 5%;
+    }
+
+    ul {
+      font-size: small;
     }
   }
 
