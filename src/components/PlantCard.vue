@@ -1,13 +1,12 @@
 <script>
   import { mapState } from 'vuex'
-  // import InlogModal from './InlogModal.vue'
   import LogIn from './LogIn.vue'
 
   export default {
     components: {
-      // InlogModal
       LogIn
     },
+    //Hämtar "plant" från ListView
     props: {
       plant: {
         type: Object,
@@ -86,7 +85,7 @@
       alt="potted-plant"
     />
     <p class="description" v-show="showDescription">Ställ på fönsterbrädan</p>
-    <!-- <i @click="addPlant" class="bi bi-suit-heart-fill" /> -->
+
     <div class="popup-divs" v-show="Addedplant">
       <p class="paragraph added-paragraph">
         {{ plant.name }} är tillagd på din fönsterbräda!
@@ -105,7 +104,6 @@
 
             <LogIn />
           </b-modal>
-          <!-- <InlogModal @close="closeModal" /> -->
         </div>
       </div>
     </div>

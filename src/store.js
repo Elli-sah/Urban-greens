@@ -1,5 +1,4 @@
 import { createStore } from 'vuex'
-// import vuexPersist from './vuexPersist'
 import vuexLocal from './vuexPersist'
 
 const state = {
@@ -48,14 +47,8 @@ const state = {
   searchText: ''
 }
 
-// const plugins = [vuexLocal]
-// const plugins = [vuexPersist.plugin]
-
 const mutations = {
   RESTORE_MUTATION: vuexLocal.RESTORE_MUTATION,
-  // SET_USERS(state, users) {
-  //   state.users = { ...users }
-  // },
 
   setPlantTip(state, tipAndId) {
     let plantId = state.plantTips[tipAndId.id]
@@ -76,15 +69,9 @@ const mutations = {
       state.plantTips[tipAndId.id] = tempTip
     }
   },
-  // removePlantTip(state, index) {
-  //   state.plantTip.splice(index, 1)
-  // },
   removePlantTip(state, deletePlantTip) {
     state.plantTips[deletePlantTip.id].tips.splice(deletePlantTip.index, 1)
   },
-  // removePlantTip(state, deletePlant) {
-  //   state.plantTip[deletePlant.tip].tip.splice(deletePlant.index, 1)
-  // },
   logutUser(state) {
     state.loggedInUser = ''
     state.dateDiff = ''
@@ -130,20 +117,5 @@ const mutations = {
   }
 }
 const plugins = [vuexLocal.plugin]
-
-// createStore.Store({
-//   modules: {
-//     userObjects: usersModules
-//   },
-//   plugins: [
-//     new VuexPersist({
-//       modules: {
-//         userObjects: {
-//           path: ['users']
-//         }
-//       }
-//     })
-//   ]
-// })
 
 export default createStore({ mutations, state, plugins, strict: true })
