@@ -1,6 +1,5 @@
 <script>
   import WaterChart from '../components/WaterChart.vue'
-  // import WateringChart from '../components/WateringChart.vue'
 
   export default {
     name: 'WaterChart',
@@ -80,7 +79,7 @@
 
           <div class="advice">
             <div>
-              <h4>Placering</h4>
+              <h3>Placering</h3>
               <p>
                 En viktig faktor för att dina krukväxter ska trivas är att de
                 placeras på rätt plats. De flesta krukväxter trivs i en väl
@@ -105,7 +104,7 @@
           </div>
           <div class="advice">
             <div>
-              <h4>Bevattning</h4>
+              <h3>Bevattning</h3>
               <p>
                 Att vattna dina växter regelbundet är viktigt, men övervattna
                 inte och se till att jorden inte torkar ut helt mellan
@@ -120,7 +119,7 @@
               </div>
             </div>
             <div>
-              <h4>Gödsling</h4>
+              <h3>Gödsling</h3>
               <p>
                 Krukväxter behöver näring för att växa och trivas. Gödsla därför
                 med en lämplig gödsel, följ anvisningarna på förpackningen och
@@ -128,7 +127,7 @@
               </p>
             </div>
             <div>
-              <h4>Luftfuktighet</h4>
+              <h3>Luftfuktighet</h3>
               <p>
                 Vissa krukväxter trivs bättre i högre luftfuktighet än vad som
                 finns i våra hem. Du kan öka luftfuktigheten genom att spraya
@@ -137,7 +136,7 @@
               </p>
             </div>
             <div>
-              <h4>Omplantering</h4>
+              <h3>Omplantering</h3>
               <p>
                 Krukväxter behöver ibland planteras om, när de växer ur sin
                 nuvarande kruka. Välj en större kruka och byt ut jorden
@@ -146,7 +145,7 @@
               </p>
             </div>
             <div>
-              <h4>Skadedjur</h4>
+              <h3>Skadedjur</h3>
               <p>
                 Håll koll på skadedjur som bladlöss och spinnkvalster som kan
                 angripa dina krukväxter. Det finns många olika bekämpningsmedel
@@ -155,7 +154,7 @@
               </p>
             </div>
             <div>
-              <h4>Klippning</h4>
+              <h3>Klippning</h3>
               <p>
                 Klipp bort döda blad och blommor regelbundet för att hålla din
                 krukväxt i bra skick. Det kan också vara nödvändigt att beskära
@@ -164,7 +163,7 @@
               </p>
             </div>
             <div>
-              <h4>Rengöring</h4>
+              <h3>Rengöring</h3>
               <p>
                 Det finns olika sätt att rengöra växter på beroende på vilken
                 typ av växt det är och vad som behöver rengöras. Här är några
@@ -245,11 +244,6 @@
     background-color: rgba(255, 255, 255, 0.888);
   }
 
-  h1 {
-    /* border-bottom-style: dotted; */
-    font-size: 300%;
-  }
-
   h2 {
     margin-bottom: 20px;
     display: flex;
@@ -257,7 +251,7 @@
     font-weight: bolder;
   }
 
-  h4 {
+  h3 {
     display: flex;
     text-align: left;
     font-weight: 600;
@@ -274,10 +268,6 @@
 
   p {
     margin-bottom: 30px;
-  }
-
-  #header {
-    margin: 30px;
   }
 
   .how-to {
