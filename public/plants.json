@@ -6,23 +6,23 @@
     "description": "Aloe vera är en växt som ursprungligen kommer från torra områden i Afrika, men som också kan trivas inomhus i Sverige om den sköts på rätt sätt. Trivs i torra förhållanden och behöver inte hög luftfuktighet. Växten är även känd för sina läkande egenskaper och är effektiv vid inflammatoriska hudsjukdomar, sår, brännskador, solbränna, köldskador, akne, psoriasis, eksem och insetsbett. Enligt WHO är den färska gelen från äkta aloe bättre än bearbetade produkter som krämer och liknande. S¨skär gärna upp ett blad och använd dig av den synliga gelen! ",
 
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Halvskugga",
       "description": "Aloe vera trivs på en ljus plats med direkt solljus, men den kan också tåla att stå i lätt skugga. Placera den inte i direkt solljus under sommarmånaderna när solen är som starkast då det kan skada bladen."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "15-25°C",
       "description": "Trivs i en temperatur mellan 15-25°C och tål inte temperaturer under 5°C. Placera den på en plats som inte utsätts för drag eller kalla temperaturer."
     },
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Sparsamt",
       "description": "Aloe Vera är en tålig växt som kan klara sig utan vatten under långa perioder. Vattna sparsamt och se till att jorden torkar ut helt mellan vattningarna. För mycket vatten kan leda till röta i rötterna."
     },
 
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Sparsamt",
       "description": "Aloe Vera behöver inte mycket gödsel, men kan gynnas av en liten mängd kaktusgödsel eller annan näring under växtsäsongen (vår-sommar). Aloe vera trivs i en väldränerad jord med hög sandhalt. Använd en kaktusjord eller en annan jordblandning som är speciellt anpassad för växter som trivs i torra förhållanden."
     },
@@ -47,23 +47,23 @@
     "description": "Echeveria agavoides används ofta som prydnadsväxt i trädgårdar, krukväxter eller i landskapsarkitektur. På grund av dess dekorativa utseende används den också ofta i buketter och arrangemang. Echeveria agavoides är en av de mer populära sorterna av Echeveria på grund av dess unika form, som liknar en rosett med triangulära blad. Dess vanliga namn 'Lipstick Echeveria' kommer från de röda blommorna som påminner om läppstift. ",
 
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Ljus",
       "description": "Echeveria agavoides trivs bäst i full sol men kan också växa i delvis skugga. Om den odlas inomhus bör den placeras i ett fönster med mycket ljus."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "18-24°C",
       "description": "Echeveria agavoides trivs i varma klimat och tål inte frost. Den kan odlas utomhus i zonerna 9-11 eller som inomhusväxt i kallare områden."
     },
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Sparsamt",
       "description": " Echeveria agavoides behöver inte mycket vatten och bör låta jorden torka ut mellan bevattningar. Övervattning kan leda till rötterna ruttnar."
     },
 
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Sparsamt",
       "description": " Echeveria agavoides behöver inte mycket gödsel, men en allmän gödsel kan appliceras varannan månad under våren och sommaren."
     },
@@ -83,23 +83,23 @@
     "latin": "Chlorophytum",
     "description": "Ampelliljan är en vacker och tacksam växt som är vanlig att ha hängande i kruka eller ampel. Ampelliljan trivs i hög luftfuktighet, så om den placeras i ett rum med låg luftfuktighet kan det vara bra att spraya den med vatten eller placera den bredvid andra växter för att öka luftfuktigheten",
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Halvskugga",
       "description": "Ampelliljan trivs bäst i en ljus plats utan direkt solljus. Undvik att placera den i för dragiga platser då den kan torka ut för snabbt."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "15-25°C",
       "description": "Ampellilja trivs bäst vid en jämn temperatur mellan 15-25°C. Den tål dock temperaturer ner till 10°C och upp till 30°C, men om temperaturen är för hög eller låg under längre perioder kan det påverka växtens hälsa och tillväxt negativt. Det är också viktigt att undvika kalla dragiga platser och att inte placera ampelliljan i direkt solljus, vilket kan göra att bladen bränns och torkar ut."
     },
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Sparsamt",
       "description": "Ampelliljan behöver regelbunden bevattning, men se upp så att den inte övervattnas. Det kan vara en bra idé att vattna i ett fat och låta växten suga upp vattnet under en stund, istället för att vattna direkt i krukan. Se till att inte vattna för sällan då detta kan torka ut växten."
     },
 
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Medel",
       "description": "Ampelliljan behöver regelbunden gödsling för att blomma rikligt. Använd en lämplig växtnäring för inomhusväxter och följ doseringsanvisningarna på förpackningen."
     },
@@ -123,23 +123,23 @@
     "latin": "Begonia",
     "description": "Begoniasläktet omfattar många olika arter och sorter av växter som ursprungligen kommer från subtropiska och tropiska områden runt om i världen. Begonior finns i många olika färger, former och storlekar och odlas ofta som prydnadsväxter. Begonior trivs i hög luftfuktighet, så att placera en skål med vatten nära växten kan hjälpa till att höja luftfuktigheten. Undvik dock att vattna direkt på bladen, eftersom det kan orsaka svampangrepp.",
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Halvskugga",
       "description": "Begonior trivs bäst på en ljus plats, men undvik direkt solljus. Placera din Begonia i ett fönster som vetter mot norr eller öster. Undvik platser med drag eller temperaturförändringar."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "15-25°C",
       "description": "Begonior trivs bäst vid temperaturer mellan 15 och 25 grader Celsius. Undvik höga temperaturer, särskilt över 30 grader Celsius, eftersom det kan göra att bladen torkar ut och att blomningen minskar."
     },
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Måttligt",
       "description": "Begonior behöver regelbunden vattning för att trivas. Ge dem tillräckligt med vatten så att jorden är fuktig, men undvik att övervattna eftersom det kan leda till röta i rötterna. En tumregel är att vatten när jorden känns torr på toppen."
     },
 
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Medel",
       "description": "Begonior behöver regelbunden gödsling för att trivas. Du kan ge dem en liten mängd kvalitetsgödsel en gång i månaden under växtsäsongen."
     },
@@ -163,22 +163,22 @@
     "latin": "Pilea peperomioides",
     "description": "Elefantöra, även känd som Pilea peperomioides eller Elefantörsblad, är en växtart som tillhör familjen Pilea. Elefantöra trivs i en hög luftfuktighet, så se till att spraya växten regelbundet med vatten eller placera en luftfuktare i närheten av växten. Under vintermånaderna, när uppvärmningen kan torka ut luften i hemmet, kan det vara nödvändigt att öka luftfuktigheten runt växten med hjälp av en luftfuktare.",
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Halvskugga",
       "description": "Elefantöra trivs bäst i ett ljust och indirekt ljus, men undvik direkt solljus som kan bränna bladen. Placera växten i närheten av ett fönster som får ljust men inte direkt solljus. Under vintermånaderna kan det behövas extra belysning eftersom dagsljuset är begränsat."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "18-25°C",
       "description": "Elefantöra trivs bäst i en varm och fuktig miljö, med en temperatur på mellan 18 och 25 grader Celsius. Eftersom det kan vara kallt och torrt i Sverige under vintermånaderna, kan det vara en bra idé att placera Elefantöra på en bricka med vatten för att öka luftfuktigheten runt växten. Undvik utkast från dörrar och fönster som kan sänka temperaturen."
     },
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Måttligt",
       "description": "Elefantöra trivs bäst i en fuktig jord. Vattna regelbundet så att jorden hålls fuktig men undvik att övervattna vilket kan leda till röta i rötterna. Du kan kontrollera om det är dags att vattna genom att känna på jorden och vattna när den börjar kännas torr. Under vintermånaderna kan det vara nödvändigt att minska bevattningen eftersom växten inte växer lika aktivt."
     },
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Medel",
       "description": "Elefantöra gynnas av gödsling under växtsäsongen, som vanligtvis är mellan vår och höst. Använd en allroundgödsel för krukväxter en gång i månaden. Under vintermånaderna kan gödsling behöva minskas eftersom Elefantöra växer långsammare under den tiden."
     },
@@ -202,22 +202,22 @@
     "latin": "Ficus Lyrata",
     "description": "Fiolfikus är en populär inomhusväxt som trivs i ljus till halvskuggig miljö och kan bli upp till flera meter hög med tiden. Fiolfikusens bladverk har luftrenande egenskaper. Fiolfikusen trivs i hög luftfuktighet, så det kan vara en bra idé att placera den nära en luftfuktare eller spraya bladen med vatten regelbundet",
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Halvskugga",
       "description": "Fiolfikusen trivs i ljus till halvskuggig miljö, men undvik direkt solljus. Placera den helst nära ett fönster med öst- eller västläge, där den får morgonsol eller kvällssol."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "18-24°C",
       "description": "Fiolfikus trivs bäst vid en temperatur mellan 18-24°C, och den bör inte placeras i utkast eller för nära dörrar eller fönster där temperaturen kan sjunka för mycket. Växten tål dock temperaturer ner till cirka 15°C, men det är viktigt att undvika kalla dragiga platser eller ställen där temperaturen kan växla kraftigt, vilket kan leda till att bladen tappar fukt och blir sköra. Fiolfikus kan också påverkas negativt av för hög temperatur och hög luftfuktighet, så det är bäst att undvika alltför varma och fuktiga omgivningar."
     },
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Måttligt",
       "description": "Fiolfikusen trivs bäst om jorden hålls fuktig, men undvik övervattning. Vattna rikligt när jorden har torkat ut något, men se till att inte låta växten stå i vatten."
     },
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Medel",
       "description": "Fiolfikusen behöver gödslas regelbundet under växtsäsongen, vanligtvis från vår till höst. Använd lämpligt gödsel för inomhusväxter och följ doseringsanvisningarna på förpackningen."
     },
@@ -241,23 +241,23 @@
     "latin": "Spathiphyllum",
     "description": "Fredskalla (Spathiphyllum) är en prydnadsväxt som har gröna blad och vita blommor som sitter på en stängel ovanför bladen. Blommorna består av en vit blomställning som omges av en vit eller grönaktig flikig hölsterblad. Växten är vanligt förekommande som inomhusväxt eftersom den är lätt att sköta och tål relativt skuggiga förhållanden. Den är också känd för sin förmåga att rena luften och avlägsna skadliga kemikalier.",
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Halvskugga",
       "description": "Trivs bäst i halvskuggiga till skuggiga lägen. Ett ljust läge ger ökad blomning, men direkt solljus kan skada bladen. "
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "18-24°C",
       "description": "Fredskallan tål inte kalla drag eller temperaturer under 15 ° C "
     },
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Måttligt",
       "description": "Växten bör vattnas regelbundet, men se till att inte övervattna eftersom det kan leda till rötterna ruttnar. Låt jorden torka ut något mellan bevattningarna, men se till att inte låta den bli helt torr."
     },
 
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Lite",
       "description": "Fredskalla behöver inte mycket näring för att växa, men det är bra att ge växten en allmän gödsel varannan månad under vår- och sommarsäsongen"
     },
@@ -281,23 +281,23 @@
     "latin": "Zamioculcas zamiifolia",
     "description": "Zamiakalla, även kallad Garderobsblomma, är en populär krukväxt som är känd för sin förmåga att överleva i olika miljöer och för sin enkla skötsel. Det är en tålig växt som kan överleva under långa perioder utan vatten och trivs i både högt och lågt ljus. Zamiakalla är också känd för att hjälpa till att rena luften genom att ta bort skadliga föroreningar. Garderobsblomman trivs i normal till låg luftfuktighet, vilket gör den lämplig för den torra inomhusluften i Sverige. Du behöver inte spraya bladen med vatten.",
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Halvskugga",
       "description": "Garderobsblomman trivs i både högt och lågt ljus, men undvik direkt solljus eftersom det kan bränna bladen. Placera växten på en ljus plats, men undvik att placera den i direkt solljus. Garderobsblomman klarar även av att placeras skuggigt."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "18-24 grader",
       "description": "Trivs bäst vid normal rumstemperatur på mellan 18-24 grader Celsius. Växten är tålig och kan dock klara av en något lägre eller högre temperatur, så länge den inte utsätts för temperaturer under 12 grader Celsius eller över 30 grader Celsius under längre perioder. Det är viktigt att undvika temperaturförändringar, såsom att placera växten nära kalla drag eller varma värmekällor, eftersom detta kan påverka dess tillväxt och hälsa negativt."
     },
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Sparsamt",
       "description": "Garderobsblomma behöver inte mycket vatten och kan klara sig under långa perioder utan att vattnas. Vänta tills jorden har torkat ut innan du vattnar igen, och se till att inte övervattna eftersom det kan leda till röta."
     },
 
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Medel",
       "description": "Den behöver inte mycket gödsel, men du kan ge den lite gödsel några gånger om året under vår och sommar för att hjälpa till med tillväxten. Den behöver inte omplanteras så ofta, men om du ser att rötterna börjar tränga ut genom dräneringshålen i krukan eller om växten blir för stor för sin nuvarande kruka, är det dags att omplantera den i en något större kruka."
     },
@@ -321,23 +321,23 @@
     "latin": "Hydrangea macrophylla",
     "description": "Hortensia är en vacker blommande växt som kan trivas bra i Sverige, men den kräver lite extra omsorg för att blomma rikligt och för att bibehålla sin hälsa. Hortensior trivs bäst i en luftfuktighet på cirka 50-60%. Hortensior är ursprungligen skogsbuskar och trivs därför i en fuktig miljö. Om luftfuktigheten är för låg kan hortensians blad och blommor torka ut och visa tecken på stress.",
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Halvskugga",
       "description": "Trivs bäst i halvskuggiga till skuggiga lägen, och kan ta skada av starkt solljus. Placera den på en plats där den får några timmars morgonsol och sedan skugga under resten av dagen."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "15-20°C",
       "description": "Hortensian tål inte kraftig frost, så se till att skydda den genom att placera den på en skyddad plats eller täcka den med fiberduk eller granris om det är risk för frost."
     },
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Rikligt",
       "description": "Hortensian behöver regelbunden bevattning, särskilt under varma och torra perioder. Undvik att övervattna, men se till att jorden hålls fuktig. Det kan vara bra att vattna direkt på rotsystemet istället för att vattna bladen, eftersom blöta blad kan öka risken för sjukdomar."
     },
 
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Medel",
       "description": "Den behöver regelbunden gödsling för att blomma rikligt. Använd ett gödselmedel speciellt avsett för hortensior och följ doseringsanvisningarna på förpackningen."
     },
@@ -361,23 +361,23 @@
     "latin": "Primula",
     "description": "Jordviva är en populär växt i Sverige och är relativt lättskött.",
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Halvskugga",
       "description": "Jordviva trivs bäst på en ljus plats men undvik direkt solljus. Placera din Primula i ett fönster som vetter mot norr eller öster. Undvik platser med drag eller temperaturförändringar."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "10-18°C",
       "description": "Jordviva trivs bäst vid temperaturer mellan 10 och 18 grader Celsius. Undvik höga temperaturer, särskilt över 20 grader Celsius, eftersom det kan göra att blomningen minskar."
     },
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Måttligt",
       "description": "Jordviva behöver regelbunden vattning för att trivas. Ge dem tillräckligt med vatten så att jorden är fuktig, men undvik att övervattna eftersom det kan leda till röta i rötterna. En tumregel är att vatten när jorden känns torr på toppen."
     },
     "humidity": "",
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Medel",
       "description": "Jordviva behöver inte mycket gödsel, men du kan ge dem en liten mängd kvalitetsgödsel en gång i månaden under blomningssäsongen."
     },
@@ -401,23 +401,23 @@
     "latin": "Cactaceae",
     "description": "Kaktusar är en grupp av suckulenta växter som har anpassat sig till torra och varma miljöer genom att lagra vatten i sina tjocka och köttiga stammar och blad. De finns i många olika former och storlekar, från små kuddformade kaktusar till höga pelarkaktusar. En del kaktusarter kan leva i hundratals år, och vissa av dem kan producera blommor i olika färger och former. Kaktusar används också ofta som symboler för tuffhet, uthållighet och överlevnad.",
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Soligt",
       "description": "Kaktusar behöver mycket sol och trivs i direkt solljus. De kan dock tåla lite skugga, särskilt under de varmaste timmarna på dagen."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "18-27°C",
       "description": "Kaktusar trivs bäst i varma och torra miljöer och kan tåla temperaturer upp till 35-40 grader Celsius. Vissa arter kan dock tåla temperaturer under fryspunkten."
     },
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Lite",
       "description": "Kaktusar behöver inte mycket vatten, och det är viktigt att undvika att övervattna dem eftersom det kan leda till röta. De flesta arterna trivs bäst med att vattnas med jämna mellanrum, men sedan torkas ut mellan bevattningarna."
     },
 
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Lite",
       "description": "  Kaktusar behöver inte mycket näring, men det kan hjälpa till att hålla dem friska och välmående. Använd en kaktusgödsel en gång i månaden under våren och sommaren."
     },
@@ -441,23 +441,23 @@
     "latin": "Opuntia",
     "description": "Opuntia är en kaktussläkt med över 200 arter som är spridda i Nord- och Sydamerika. De är kända för sina platta blad. Opuntia-kaktusen har en rad användningsområden, inklusive matlagning, medicin, kosmetika och dekorativa ändamål. Fruktarna kallas ibland 'fikon' och används i maträtter som sylt, soppa, sallader och tacos. De är också kända för sin höga näringsprofil, med höga halter av vitaminer, mineraler och antioxidanter. I medicinen används kaktusen för att behandla högt blodtryck, diabetes och inflammatoriska tillstånd. Opuntia-kaktusen har utvecklat ett unikt försvarssystem mot rovdjur genom sina taggar och platta blad, som gör det svårt för djur att äta dem. Några av de mest kända arterna inom släktet är prickly pear, som är den mest odlade opuntia-kaktusen i världen.",
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Soligt",
       "description": "Opuntia-kaktusen behöver mycket solljus för att trivas och utvecklas ordentligt. Placera den i ett fönster som får minst 6 timmar av direkt solljus om dagen."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "18-27°C",
       "description": "Opuntia-kaktusen trivs i varma temperaturer och tål inte frost. De bästa temperaturerna för kaktusen är mellan 18 och 27 grader Celsius."
     },
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Lite",
       "description": "Opuntia-kaktusen behöver inte mycket vatten och kan klara sig länge utan vatten. Bevattning ska vara sparsam och inte ske alltför ofta. De föredrar också en torr jord och övervattning kan leda till rotförruttnelse."
     },
 
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Lite",
       "description": " Opuntia-kaktusen behöver inte mycket näring och kan överleva i fattig jord. Det kan vara bra att tillföra en kaktusgödsel en gång om året under våren eller sommaren."
     },
@@ -481,23 +481,23 @@
     "latin": "Kalanchoe Blossfeldiana",
     "description": "Kalanchoe, även kallad Våreld, är en tacksam och lättskött växt som är relativt enkel att ta hand om. Trivs vid hög luftfuktighet och vill ha vatten regelbundet, undvik att jorden torkar ut helt. Näringsvattna en gång per vecka. ",
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Halvskugga",
       "description": "Kalanchoe trivs bäst på en ljus plats men undvik direkt solljus. Placera din Kalanchoe i ett fönster som vetter mot norr eller öster. Undvik platser med drag eller temperaturförändringar."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "10-20°C",
       "description": "Kalanchoe trivs bäst vid temperaturer mellan 10 och 20 grader Celsius. Undvik höga temperaturer, särskilt över 25 grader Celsius, eftersom det kan göra att blomningen minskar."
     },
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Sparsamt",
       "description": "Kalanchoe behöver regelbunden vattning för att trivas. Ge dem tillräckligt med vatten så att jorden är fuktig, men undvik att övervattna eftersom det kan leda till röta i rötterna. En tumregel är att vattna när jorden känns torr på toppen."
     },
 
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Sparsamt",
       "description": "Kalanchoe behöver inte mycket gödsel, men du kan ge dem en liten mängd kvalitetsgödsel en gång i månaden under växtsäsongen."
     },
@@ -521,23 +521,23 @@
     "latin": "Rosa",
     "description": "Att ta hand om en krukros i Sverige kan vara utmanande eftersom klimatet och ljusförhållandena kan variera mycket beroende på säsong. Krukrosor trivs bäst i en relativt hög luftfuktighet, eftersom de är tropiska växter som är vana vid en fuktig miljö. Idealiskt sett bör luftfuktigheten vara mellan 40-60% för att krukrosor ska trivas. Om luftfuktigheten är för låg kan det leda till att bladen torkar ut och att plantan blir mer mottaglig för skadedjur och sjukdomar.",
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Soligt",
       "description": "Krukrosor trivs bäst på en solig plats där de får minst sex timmars direkt solljus om dagen. Undvik att placera dem på platser med drag eller där det är för blåsigt."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "18-24°C",
       "description": "Krukrosor trivs inomhus i temperaturer mellan 18-24 grader Celsius under dagen och något svalare på natten. Under vintern trivs de bäst i rum med en temperatur på 15-18 grader Celsius. Det är viktigt att undvika stora temperaturförändringar för krukrosor, så placera dem inte nära dörrar som öppnas och stängs ofta eller i utkast från luftkonditionering och uppvärmningssystem. Undvik också att placera krukrosor nära fönster som utsätts för direkt solljus på varma sommardagar, eftersom detta kan orsaka överhettning och skador på växten."
     },
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Rikligt",
       "description": "Krukrosor behöver regelbunden vattning för att trivas. Ge dem tillräckligt med vatten så att jorden är fuktig, men undvik att övervattna eftersom det kan leda till röta i rötterna. En tumregel är att vatten när jorden känns torr på toppen."
     },
 
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Medel",
       "description": "Krukrosor behöver regelbunden gödsling för att blomma och växa på bästa sätt. Använd en kvalitetsgödsel som är speciellt utformad för rosor, och följ instruktionerna på förpackningen."
     },
@@ -561,23 +561,23 @@
     "latin": "Monstera deliciosa",
     "description": "Monstera är en relativt lättodlad växt som är lämplig för odling inomhus i Sverige. Monstera trivs i en hög luftfuktighet, så se till att spraya växten regelbundet med vatten eller placera en luftfuktare i närheten av växten. En annan möjlighet är att ställa Monstera på en bricka med vatten.",
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Soligt",
       "description": "Monstera trivs bäst i ett ljust och indirekt ljus, men undvik direkt solljus som kan bränna bladen. Placera växten i närheten av ett fönster som får ljust men inte direkt solljus. Om du placerar växten längre ifrån ett fönster, kan det behövas en extra ljuskälla som ger tillräckligt med ljus."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "18-25°C",
       "description": "Monstera trivs bäst i en varm och fuktig miljö, med en temperatur på mellan 18 och 25 grader Celsius. Undvik utkast från dörrar och fönster som kan sänka temperaturen."
     },
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Måttligt",
       "description": "Monstera trivs bäst i en fuktig jord. Vattna regelbundet så att jorden hålls fuktig men undvik att övervattna vilket kan leda till röta i rötterna. Du kan kontrollera om det är dags att vattna genom att känna på jorden och vattna när den börjar kännas torr."
     },
 
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Medel",
       "description": "Monstera gynnas av gödsling under växtsäsongen, som vanligtvis är mellan vår och höst. Använd en allroundgödsel för krukväxter en gång i månaden."
     },
@@ -601,23 +601,23 @@
     "latin": "Hedera helix",
     "description": "Murgröna är en tålig och lättodlad växt som trivs i Sverige.Murgröna trivs i hög luftfuktighet, så att placera en skål med vatten nära växten kan hjälpa till att höja luftfuktigheten. Du kan också duscha bladen med vatten med jämna mellanrum för att öka fuktigheten.",
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Halvskugga",
       "description": "Murgröna trivs på en plats med delvis skugga till full sol, men undvik platser med direkt solljus under de varmaste delarna av dagen. De trivs även bra inomhus."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "15-25°C",
       "description": "Murgröna trivs bäst vid temperaturer mellan 15 och 25 grader Celsius. De tål kalla temperaturer väl, men det är viktigt att undvika höga temperaturer över 30 grader Celsius."
     },
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Sparsamt",
       "description": "Murgröna är relativt tåliga och behöver inte vattnas så ofta, men det är viktigt att inte låta jorden torka ut helt. Vattna när jorden känns torr på toppen. Undvik att övervattna eftersom det kan leda till röta i rötterna."
     },
 
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Sparsamt",
       "description": "Murgröna behöver inte gödslas så ofta, men en liten mängd gödsel en gång i månaden under vår och sommar kan hjälpa till att hålla växten frisk och frodig."
     },
@@ -641,23 +641,23 @@
     "latin": "Orchidaceae",
     "description": "Orkidéer är en vanlig krukväxt i Sverige som kan vara lite knepig att ta hand om. Orkidéer trivs i hög luftfuktighet. Du kan öka luftfuktigheten genom att placera en bricka med vatten bredvid växten eller genom att använda en luftfuktare.",
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Soligt",
       "description": "Orkidéer trivs på en ljus plats, men de ska inte utsättas för direkt solljus. En öst- eller västvänd fönsterbräda fungerar ofta bra. Undvik att placera din orkidé nära dragiga fönster eller luftkonditioneringsanläggningar."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "18-24°C",
       "description": "Orkidéer trivs bäst vid en temperatur på cirka 18-24 grader. De kan dock övervintra vid en något lägre temperatur, men det är viktigt att inte låta temperaturen sjunka under 10 grader."
     },
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Sparsamt",
       "description": "Orkidéer bör vattnas sparsamt och regelbundet. En vanlig metod är att doppa hela krukan i vatten i några minuter och sedan låta den rinna av ordentligt. Vänta tills jorden nästan har torkat ut innan du vattnar igen. Övervattning kan leda till rötterna förmultnar."
     },
 
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Medel",
       "description": "Orkidéer behöver näring för att blomstra. Använd en krukväxtnäring speciellt avsedd för orkidéer varannan vecka under sommarperioden."
     },
@@ -681,23 +681,23 @@
     "latin": "Crassula ovata",
     "description": "Paradisträdet är en suckulent växt som är känd för sin tjocka, köttiga stam och blad som kan lagra vatten. Den kan växa upp till en höjd av 1,5 meter och bilda små vita blommor under sommaren. Paradisträdet används ofta som en inomhusväxt på grund av dess låga ljuskrav och enkel vård. Vissa tror att det ger tur och välgång till hemmet och det används också ofta som en bonsai-planta. Paradisträdet är också känt som 'penningträdet' eller 'pengarträdet' på grund av myten om att det ger tur och rikedom till sitt hem. I dess naturliga livsmiljö kan paradisträdet bli över 6 meter högt och har i dess hemland Sydafrika kallats 'jadeplantan'.",
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Halvskugga",
       "description": "Paradisträdet trivs bäst i indirekt solljus, men tål även lite skugga."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "18-24°C",
       "description": "Paradisträdet trivs i rumstemperatur och kan tåla temperaturer ner till 10-12 grader Celsius, men det är bäst att undvika extrema temperaturförändringar. "
     },
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Lite",
       "description": "Paradisträdet behöver inte mycket vatten och kan faktiskt ta skada av för mycket. Det är viktigt att jorden torkar ut mellan bevattningar och att överskottsvatten töms från krukan. Paradisträdet kan klara tillfälliga temperaturförändringar om det inte är för långvarigt eller för extremt."
     },
 
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Sällan",
       "description": " Paradisträdet behöver inte mycket näring, men det kan hjälpa till att hålla den frisk och frodig. Använd en lågkvävegödsel en gång i månaden under våren och sommaren."
     },
@@ -708,7 +708,7 @@
       "description": "Paradisträdet är giftigt för både människor och djur om det äts. Det innehåller ämnen som kan orsaka illamående, kräkningar och diarré om det förtärs i stora mängder. Därför bör paradisträdet placeras utom räckhåll för husdjur och små barn som kan vara benägna att stoppa saker i munnen. Om någon eller något skulle äta av växten och visa symptom på förgiftning, bör du söka medicinsk eller veterinär hjälp så snart som möjligt."
     },
     "difficulty": "Lätt",
-    "category": ["Suckulent"],
+    "category": ["Suckulent", "Gröna växter"],
     "image": [
       "/images/paradis.jpg",
       "/images/paradis1.jpg",
@@ -721,23 +721,23 @@
     "latin": "Pelargonium",
     "description": "Pelargoner är en populär krukväxt i Sverige som trivs i både inomhus- och utomhusmiljöer. Pelargoner trivs bäst vid en luftfuktighet på mellan 40 och 60 procent. För torr luft kan torka ut bladen och göra växten mer mottaglig för skadedjur, medan hög luftfuktighet kan öka risken för svampinfektioner. Det är därför viktigt att balansera luftfuktigheten för att hålla pelargonerna friska. Om rummet är för torrt, kan man öka luftfuktigheten genom att använda en luftfuktare, spraya vatten runt växterna eller placera en bricka med vatten bredvid växterna. Å andra sidan, om luften är för fuktig, kan man öka ventilationen för att hjälpa till att torka ut överflödig fukt.",
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Soligt",
       "description": "Pelargonen trivs på en solig plats och bör placeras i närheten av ett fönster som får mycket solsken. Pelargoner kan också odlas utomhus under sommarmånaderna, men bör skyddas från starka vindar."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "18-24°C",
       "description": "Pelargoner trivs vanligtvis bäst vid en temperatur på mellan 18 och 24 grader Celsius på dagen och runt 13 till 15 grader Celsius på natten. De kan överleva temperaturer så låga som 10 grader Celsius, men för optimal tillväxt och blomning är det bäst att undvika temperaturer under denna nivå. Det är också viktigt att undvika extremt höga temperaturer över 30 grader Celsius, särskilt om luftfuktigheten är låg, eftersom detta kan orsaka stress och torka ut växten. Pelargoner är inte härdiga i Sverige och bör tas inomhus under höst- och vintermånaderna. Under vintermånaderna kan det vara lämpligt att minska bevattningen och placera växten på en svalare plats för att främja vila."
     },
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Måttligt",
       "description": "Pelargoner bör vattnas regelbundet, men undvik övervattning som kan leda till rötterna förmultnar. Låt jorden torka ut något mellan vattningarna och vattna hellre för lite än för mycket."
     },
 
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Regelbundet",
       "description": "Pelargoner behöver näring för att blomstra. Använd en krukväxtnäring speciellt avsedd för pelargoner en gång i månaden under sommarperioden."
     },
@@ -761,23 +761,23 @@
     "latin": "Hoya carnosa",
     "description": "Porslinsblomma är en vanlig krukväxt i Sverige som trivs bäst inomhus. Porslinsblomma trivs i en högre luftfuktighet och kan må bra av att sprayas med vatten då och då, men kan också klara sig bra i normal inomhusluft.",
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Soligt",
       "description": "Porslinsblomma trivs bäst på en ljus plats utan direkt solljus. Placera den gärna i närheten av ett fönster som inte utsätts för direkt solljus eller använd belysning av växtlampor om du inte har tillräckligt med naturligt ljus i rummet."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "15-25°C",
       "description": "Porslinsblomma trivs bäst i en rumstemperatur mellan 15-25 grader Celsius. Se till att undvika utkast från fönster och dörrar, eftersom detta kan sänka temperaturen och skada växten."
     },
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Sparsamt",
       "description": "Porslinsblomma bör vattnas sparsamt och låt jorden torka ut något mellan vattningarna. Se till att inte låta den torka helt, men undvik också att övervattna, särskilt under vintermånaderna. Använd gärna kalkfattigt vatten vid bevattning."
     },
 
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Sparsamt",
       "description": "Porslinsblomma behöver näring för att växa och blomstra. Använd en krukväxtnäring speciellt avsedd för blommande växter en gång i månaden under våren och sommaren."
     },
@@ -802,23 +802,23 @@
     "latin": "Medinilla",
     "description": "Rosenskärm är en tålig och anpassningsbar växt som trivs bra i många olika miljöer.  Rosenskärm en relativt enkel växt att ta hand om och kan vara en vacker och användbar tillägg till trädgården eller landskapet i Sverige. Rosenskärm trivs bäst i en relativt torr miljö med låg luftfuktighet. För hög luftfuktighet kan orsaka problem med svamp och sjukdomar. En luftfuktighet på runt 40-50% kan vara lämpligt för rosenskärm. Det är dock viktigt att notera att rosenskärm är en relativt tålig växt och kan klara sig även i omgivningar med högre luftfuktighet, så länge det inte är alltför fuktigt.",
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Soligt",
       "description": "Rosenskärm trivs bäst på soliga platser med väldränerad jord. Se till att du väljer en plats som får minst sex timmar solsken per dag."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "5-25°C",
       "description": "Rosenskärm trivs bäst i en temperatur mellan 15-20°C. Den tål dock temperaturer ner till 5°C och upp till 25°C. För att få bästa tillväxt och blomning är det dock viktigt att undvika extrema temperaturer och temperaturförändringar. Undvik även att placera rosenskärmen i dragiga eller för varma platser."
     },
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Sparsamt",
       "description": "Vatten regelbundet under de första veckorna efter plantering för att hjälpa roten att etablera sig. Därefter behöver rosenkärm inte vattnas ofta, om det inte är mycket torrt väder."
     },
 
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Sparsamt",
       "description": "Gödsla sparsamt. Rosenskärm trivs i mager jord och behöver inte mycket gödsel. Om du vill använda gödsel kan du använda en balanserad allroundgödsel med låg kvävehalt.",
       "pruning": " Skär ner på hösten: På hösten kan du klippa ner rosenkärmens stjälkar och löv till marknivå. Detta hjälper till att förbereda plantan för vintern och stimulerar ny tillväxt nästa vår. Om du vill undvika att rosenskärm sprider sig för mycket, se till att klippa av blomstjälkarna innan de hinner bilda frön."
@@ -839,23 +839,23 @@
     "latin": "nthurium Andreanum",
     "description": "Rosenkallor är vackra och populära växter som trivs i Sverige. Rosenkalla trivs i hög luftfuktighet, så att placera en skål med vatten nära växten kan hjälpa till att höja luftfuktigheten. Undvik dock att vattna direkt på bladen, eftersom det kan orsaka svampangrepp.",
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Halvskugga",
       "description": "Trivs bäst på en ljus plats, men undvik direkt solljus. Placera din rosenkalla i ett fönster som vetter mot norr eller öster. Undvik platser med drag eller temperaturförändringar."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "15-25°C",
       "description": "Rosenkalla trivs bäst vid temperaturer mellan 15 och 25 grader Celsius. Undvik höga temperaturer, särskilt över 30 grader Celsius, eftersom det kan göra att bladen torkar ut och att blomningen minskar."
     },
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Rikligt",
       "description": "Behöver regelbunden vattning för att trivas. Ge dem tillräckligt med vatten så att jorden är fuktig, men undvik att övervattna eftersom det kan leda till röta i rötterna. En tumregel är att vatten när jorden känns torr på toppen."
     },
 
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Regelbundet",
       "description": "Rosenkalla behöver regelbunden gödsling för att trivas. Du kan ge dem en liten mängd kvalitetsgödsel en gång i månaden under växtsäsongen."
     },
@@ -880,23 +880,23 @@
     "latin": "Sansevieria trifasciata",
     "description": "Svärmors tunga är en grönbladig växt med strimmor i grönt, vitt eller silver och har en spetsig form som påminner om en tunga. Bladen är hårda och tjocka, och växten har en långsam växttakt. Svärmors tunga är vanligt förekommande som inomhusväxt eftersom den är lättskött och tålig, samt att den anses ha förmågan att rena luften och avlägsna skadliga kemikalier.",
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Ljust",
       "description": "Svärmors tunga trivs i både starkt solsken och skugga. Det tål inte direkt solljus under långa perioder."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "15-30°C",
       "description": "Svärdoms tunga är en tålig växt som tål en bred temperaturskala."
     },
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Lite",
       "description": "Växten behöver inte mycket vatten och klarar sig bra utan vatten under en längre period. Övervattning kan leda till röta."
     },
 
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Sällan",
       "description": "Svärmors tunga behöver inte mycket näring för att växa, men det är bra att ge växten en allmän gödsel en gång i månaden under vår- och sommarsäsongen."
     },
@@ -907,7 +907,7 @@
       "description": "Svärmors tunga är giftig för både människor och djur om den äts i stora mängder."
     },
     "difficulty": "Lätt",
-    "category": "Gröna",
+    "category": "Gröna växter",
     "image": [
       "/images/svärmorstunga.jpg",
       "/images/svärmorstunga1.jpg",
@@ -921,24 +921,24 @@
     "latin": "Dypsis lutescens",
     "description": " En populär inomhusväxt som är relativt lättskött och trivs i ljus till halvskugga. Gulpalmen trivs i hög luftfuktighet. Placera en vattenskål bredvid plantan eller använd en luftfuktare för att öka fuktigheten. ",
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Halvskugga",
       "description": "Gulpalmen trivs bäst i ljusa, men inte direkt solbelysta platser. Placera den gärna nära ett fönster som inte exponeras för stark sol under sommaren. På vintern kan den behöva extra belysning om det är för mörkt inomhus."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "18-24°C",
       "description": "Trivs i normal rumstemperatur, 18–24°C"
     },
 
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Måttligt",
       "description": "Vattna din gulpalm 1-2 ggr/vecka och se till att jorden alltid är fuktig men inte blöt. Under sommaren kan det behövas att vattna den oftare, medan på vintern kan du minska på vattningen. Se till att inte vattna för mycket, då det kan leda till rötterna ruttnar."
     },
 
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Regelbundet",
       "description": "Gulpalmen behöver gödslas regelbundet under växtsäsongen (vår och sommar) med en gödsel speciellt avsedd för inomhusväxter. Följ anvisningarna på gödselmedlet noggrant."
     },
@@ -963,24 +963,24 @@
     "latin": "Genovese",
     "description": "Basilika är en populär ört som används i matlagning och som prydnadsväxt. Basilika är en relativt enkel växt att odla, särskilt om du ger den tillräckligt med ljus och värme. Den är vanligtvis inte särskilt känslig för sjukdomar eller skadedjur. ",
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Ljust",
       "description": "Basilika trivs bäst på en plats med mycket ljus, helst direkt solljus. Om du odlar inomhus, se till att placera basilikan på en söder- eller östfönster. Om det inte är möjligt, kan du använda växtbelysning för att ge den tillräckligt med ljus."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "18-27°C",
       "description": "Basilika är en värmekrävande växt och trivs bäst i temperaturer mellan 18-27 grader Celsius. Se till att undvika temperaturer under 10 grader och stora temperaturförändringar."
     },
 
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Måttligt",
       "description": "Basilika behöver jämn fuktighet, så se till att vattna regelbundet. Undvik dock att övervattna, eftersom det kan leda till rötterna förruttnar. Det är viktigt att jorden inte torkar ut helt."
     },
 
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Regelbundet",
       "description": "Basilika behöver regelbunden gödsling för att trivas och producera nya blad. Använd en allsidig flytande gödselmedel en gång i veckan eller följ anvisningarna på gödselpaketet."
     },
@@ -1002,24 +1002,24 @@
     "latin": "Thymus",
     "description": "Timjan är en kryddväxt med en stark och aromatisk doft. Den används ofta i matlagning och som medicinalväxt. Timjan är relativt enkel att odla och trivs i soliga, varma förhållanden. Den behöver regelbunden bevattning och gödsling för att växa ordentligt och kan beskäras för att hålla den tät och buskig. ",
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Ljust",
       "description": "Timjan trivs bäst i fullt solljus, men kan också odlas i halvskugga. Om du odlar inomhus, se till att placera den nära ett söder- eller östfönster eller använd växtbelysning för att ge den tillräckligt med ljus."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "15-25°C",
       "description": "Timjan trivs i varma förhållanden och föredrar temperaturer mellan 15-25 grader Celsius. Se till att undvika temperaturer under 10 grader Celsius och stora temperaturförändringar."
     },
 
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Måttligt",
       "description": "Timjan behöver regelbunden bevattning, men se till att jorden inte blir alltför fuktig. Det är bäst att vattna när jorden känns torr på toppen."
     },
 
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Regelbundet",
       "description": "Timjan behöver regelbunden gödsling för att trivas och producera nya blad. Använd en allsidig flytande gödselmedel en gång i månaden eller följ anvisningarna på gödselpaketet."
     },
@@ -1041,24 +1041,24 @@
     "latin": "Mentha",
     "description": "Mynta är en ört med en stark och uppfriskande doft. Den används ofta i matlagning och som medicinalväxt. Mynta är relativt enkel att odla och trivs i halvskugga eller fullt solljus. Den behöver regelbunden bevattning och gödsling för att växa ordentligt och kan beskäras för att hålla den tät och buskig. Mynta är en relativt enkel växt att odla, särskilt om du ger den tillräckligt med ljus och värme. Den är vanligtvis inte särskilt känslig för sjukdomar eller skadedjur och är därför en relativt lätt växt att sköta.",
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Ljust",
       "description": "Mynta trivs i halvskugga eller fullt solljus. Om du odlar inomhus, se till att placera den nära ett fönster som får tillräckligt med ljus."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "15-25°C",
       "description": "Mynta trivs i temperaturer mellan 15-25 grader Celsius. Se till att undvika temperaturer under 10 grader Celsius och stora temperaturförändringar."
     },
 
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Måttligt",
       "description": "Mynta behöver regelbunden bevattning, men se till att jorden inte blir alltför fuktig. Det är bäst att vattna när jorden känns torr på toppen."
     },
 
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Regelbundet",
       "description": "Mynta behöver regelbunden gödsling för att trivas och producera nya blad. Använd en allsidig flytande gödselmedel en gång i månaden eller följ anvisningarna på gödselpaketet."
     },
@@ -1084,24 +1084,24 @@
     "latin": "Rosmarinus officinalis",
     "description": "Rosmarin är en medelhavsört med en distinkt aromatisk doft och smak som används i matlagning, doftande produkter och medicinalväxter. Rosmarin är en flerårig buske med nålformade blad och blåviolett blommor. Den är relativt enkel att odla och trivs i fullt solljus. Den behöver regelbunden bevattning och gödsling för att växa ordentligt och kan beskäras för att hålla den tät och buskig.",
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Ljust",
       "description": "Rosmarin trivs i fullt solljus och behöver minst sex timmars direkt solljus varje dag."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "15-30°C",
       "description": "Rosmarin trivs i varma temperaturer mellan 15-30 grader Celsius och tål inte frost."
     },
 
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Måttligt",
       "description": "Rosmarin behöver regelbunden bevattning, men se till att jorden inte blir alltför fuktig. Det är bäst att vattna när jorden känns torr på toppen."
     },
 
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Regelbundet",
       "description": "Rosmarin behöver regelbunden gödsling för att trivas och producera nya blad. Använd en allsidig flytande gödselmedel en gång i månaden eller följ anvisningarna på gödselpaketet."
     },
@@ -1126,24 +1126,24 @@
     "latin": "Petroselinum crispum",
     "description": "Persilja är en vanlig kryddväxt som används i matlagning och som medicinalväxt. Det är en tvåårig växt som är vanligtvis odlas som en ettårig växt. Persilja har en distinkt smak och doft och finns i två sorter: bladpersilja och rotpersilja. Bladpersilja är den vanligaste typen av persilja som används i matlagning, medan rotpersilja används mer sällan.  Persilja kan vara känslig för sjukdomar och skadedjur, men med rätt vård är det vanligtvis inte svårt att odla.",
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Halvskugga",
       "description": "Persilja trivs i delvis skugga eller dappat solljus. För mycket direkt solljus kan orsaka att bladen bleknar och blir gula."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "10-20°C",
       "description": "Persilja trivs bäst vid svala temperaturer mellan 10-20 grader Celsius. Den tål dock temperaturer upp till 25 grader Celsius."
     },
 
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Måttligt",
       "description": "Persilja behöver jämn bevattning för att hålla jorden fuktig, men inte för mycket vatten. Se till att jorden inte torkar ut mellan vattningarna."
     },
 
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Regelbundet",
       "description": "Persilja behöver en allsidig gödsling en gång i månaden under tillväxtperioden. Använd en balanserad gödselmedel eller organisk gödsel."
     },
@@ -1169,24 +1169,24 @@
     "latin": "Anethum graveolens",
     "description": "Dill är en ört som används för smaksättning och som en medicinalväxt. Dillväxten är en ettårig växt som kan nå en höjd på upp till 1 meter. Dill har bladen som används som smaksättning och fröna som används för att göra kryddor och te. Dill är en relativt enkel växt att odla. Den kräver inte mycket uppmärksamhet eller speciell vård. Dock är det viktigt att se till att plantan får tillräckligt med solljus och inte torkar ut mellan vattningarna.",
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Ljust",
       "description": "Dill trivs bäst i fullt solljus, men den kan också växa i delvis skugga. För att undvika att plantan blir ranglig och spinkig, se till att den har tillräckligt med solljus."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "15-25°C",
       "description": "Dill trivs bäst vid milda temperaturer mellan 15-25 grader Celsius. För höga temperaturer kan orsaka att plantan går i blom och ger mindre skörd."
     },
 
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Måttligt",
       "description": "Dill behöver regelbunden bevattning för att hålla jorden fuktig, men inte för mycket vatten. Se till att jorden inte torkar ut mellan vattningarna."
     },
 
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Regelbundet",
       "description": "Dill behöver en balanserad gödsling en gång i månaden under tillväxtperioden. Använd en balanserad gödselmedel eller organisk gödsel."
     },
@@ -1208,24 +1208,24 @@
     "latin": "Melissa officinalis",
     "description": "Citronmeliss är en flerårig ört som tillhör myntfamiljen. Den är känd för sin citrusdoftande bladverk och används ofta för att smaksätta mat och drycker samt för sina medicinska egenskaper. Det är viktigt att se till att den får tillräckligt med ljus, vatten och näring. Om du odlar den inomhus, se till att den får tillräckligt med luftcirkulation och undvik att övervattna.",
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Ljust",
       "description": "Citronmeliss trivs bäst i full sol eller delvis skugga. För mycket skugga kan göra att plantan blir ranglig och mindre frodig."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "20-25°C",
       "description": "Citronmeliss är en härdig växt som klarar kalla temperaturer men trivs bäst i varmare klimat. Den kan övervintra utomhus i zon 4-9 och kan odlas som en inomhusväxt i kallare områden. Citronmeliss trivs bäst vid temperaturer mellan 20-25 °C på dagen och 15-18 °C på natten. Under varma sommardagar kan den klara högre temperaturer upp till 30-32 °C, men undvik att placera den i direkt solljus under de varmaste delarna av dagen. På vintern kan den övervintra vid lägre temperaturer på cirka 5-10 °C."
     },
 
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Måttligt",
       "description": "Citronmeliss behöver regelbunden vattning, särskilt under torra perioder. Jorden ska hållas fuktig men inte blöt. Det är viktigt att inte övervattna eftersom detta kan leda till rotproblem."
     },
 
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Regelbundet",
       "description": "Citronmeliss behöver regelbunden gödsling med en balanserad gödsel. Det rekommenderas att gödsla plantan varannan vecka under växtsäsongen."
     },
@@ -1251,24 +1251,24 @@
     "latin": "Origanum vulgare",
     "description": " Oregano är en flerårig ört som tillhör myntfamiljen. Den är känd för sin kryddiga och aromatiska smak och används ofta i matlagning, särskilt inom medelhavs- och mexikansk matlagning. Oregano är också en populär medicinalväxt. Det är viktigt att se till att den får tillräckligt med ljus, vatten och näring. Oregano är också en torktålig växt som kan klara korta perioder av torka.",
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Ljust",
       "description": "Oregano trivs bäst i fullt solljus, men kan också växa i delvis skugga. Om plantan inte får tillräckligt med ljus kan den bli ranglig och mindre frodig."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "10-30°C",
       "description": "Oregano trivs bäst vid varma temperaturer på mellan 20-30 °C på dagen och 10-20 °C på natten. Det är viktigt att skydda plantan från frost och hålla den varm under vintern."
     },
 
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Måttligt",
       "description": "Oregano behöver regelbunden vattning, men jorden ska inte vara för blöt. Låt jorden torka ut något mellan vattningarna. Vattna hellre för lite än för mycket, eftersom för mycket vatten kan leda till rötterna ruttnar."
     },
 
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Regelbundet",
       "description": "Oregano behöver regelbunden gödsling med en balanserad gödsel. Gödsla plantan en gång i månaden under växtsäsongen."
     },
@@ -1294,24 +1294,24 @@
     "latin": "Salvia officinalis",
     "description": " Salvia  är en flerårig ört som tillhör myntfamiljen. Den är känd för sin karakteristiska smak och används ofta i matlagning, särskilt inom medelhavs- och italiensk matlagning. Salvia är också en populär medicinalväxt som har använts i århundraden för att behandla olika sjukdomar. Salvia har använts sedan antiken för sina medicinska egenskaper och ansågs ha helande krafter. Den anses ha många hälsofördelar och används bland annat för att förbättra minnet, lindra ångest och hjälpa till att sänka blodsockernivåerna. Salvia används också ofta i aromaterapi och hudvårdsprodukter. I matlagning används salvia ofta för att smaksätta kött, fisk och grönsaker. Den kan också användas för att göra te och smaksätta olika typer av matoljor.",
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Ljust",
       "description": "Salvia trivs bäst i fullt solljus, men kan också växa i delvis skugga. Om plantan inte får tillräckligt med ljus kan den bli ranglig och mindre frodig."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "18-24°C",
       "description": "Salvia trivs bäst vid varma temperaturer på mellan 18-24 °C på dagen och 10-15 °C på natten. Det är viktigt att skydda plantan från frost och hålla den varm under vintern."
     },
 
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Måttligt",
       "description": "Salvia behöver regelbunden vattning, men jorden ska inte vara för blöt. Låt jorden torka ut något mellan vattningarna. Vattna hellre för lite än för mycket, eftersom för mycket vatten kan leda till rötterna ruttnar. Salvia är en torktålig växt som kan klara korta perioder av torka."
     },
 
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Regelbundet",
       "description": "Salvia behöver regelbunden gödsling med en balanserad gödsel. Gödsla plantan en gång i månaden under växtsäsongen."
     },
@@ -1333,24 +1333,24 @@
     "latin": "Artemisia dracunculus",
     "description": " Dragon är en flerårig ört som vanligtvis används i matlagning. Det finns två vanliga sorter av dragon: rysk dragon och fransk dragon. Fransk dragon är den mest använda sorten och har en mildare smak än rysk dragon. Dragon används vanligtvis för att smaksätta kött, fisk och sallader. Den kan också användas för att smaksätta vinägrett och andra dressingar. Dragon har en lätt anissmak och kan också användas för att smaksätta desserter. Förutom dess användning i matlagning, har dragon också medicinska egenskaper och har använts för att lindra magbesvär och öka aptiten. Dragon kan producera små gulaktiga blommor på sommaren. Blommorna är dock inte särskilt dekorativa och många trädgårdsmästare väljer att avlägsna dem för att främja tillväxten av de aromatiska bladen istället.",
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Ljust",
       "description": "Dragon trivs bäst i fullt solljus eller delvis skugga. Om plantan inte får tillräckligt med ljus kan den bli ranglig och mindre frodig."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "18-24°C",
       "description": "Dragon trivs bäst i varma temperaturer på mellan 18-24 °C på dagen och 10-15 °C på natten. Det är viktigt att skydda plantan från frost och hålla den varm under vintern."
     },
 
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Måttligt",
       "description": "Dragon behöver regelbunden vattning, men jorden ska inte vara för blöt. Låt jorden torka ut något mellan vattningarna. Vattna hellre för lite än för mycket, eftersom för mycket vatten kan leda till rötterna ruttnar.Dragon är en torktålig växt som kan klara korta perioder av torka."
     },
 
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Regelbundet",
       "description": "Dragon behöver regelbunden gödsling med en balanserad gödsel. Gödsla plantan en gång i månaden under växtsäsongen."
     },
@@ -1376,24 +1376,24 @@
     "latin": "Coriandrum sativum",
     "description": " Koriander är en årlig ört som används i matlagning för sin distinkta smak och doft. Alla delar av korianderplantan är användbara - bladen, stjälkarna och fröna. Koriander används i en mängd olika maträtter, särskilt i asiatisk och mexikansk matlagning. Det används ofta som smaksättning i salsor, curryrätter, soppor, grytor och marinader. Koriander kan också användas för att göra te och kryddblandningar. Förutom dess användning i matlagning har koriander också medicinska egenskaper och har använts för att lindra magbesvär och förbättra matsmältningen.",
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Ljust",
       "description": "Koriander trivs bäst i fullt solljus eller delvis skugga. Om plantan inte får tillräckligt med ljus kan den bli ranglig och mindre frodig. Koriander är en torktålig växt som kan klara korta perioder av torka."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "18-24°C",
       "description": "Koriander trivs bäst i varma temperaturer på mellan 18-24°C på dagen och 10-15°C på natten. Det är viktigt att skydda plantan från frost och hålla den varm under vintern."
     },
 
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Måttligt",
       "description": "Koriander behöver regelbunden vattning, men jorden ska inte vara för blöt. Låt jorden torka ut något mellan vattningarna. Vattna hellre för lite än för mycket, eftersom för mycket vatten kan leda till rötterna ruttnar."
     },
 
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Regelbundet",
       "description": "Koriander behöver regelbunden gödsling med en balanserad gödsel. Gödsla plantan en gång i månaden under växtsäsongen."
     },
@@ -1418,24 +1418,24 @@
     "latin": "Allium schoenoprasum",
     "description": " Gräslök  är en flerårig lökväxt som är en del av familjen Alliaceae. Gräslök används vanligtvis som krydda i matlagning och kan tillsättas till sallader, såser, soppor och många andra rätter. Den kan också användas som en dekorativ kantväxt i trädgården. Den anses vara en av de äldsta kryddorna som används av människan, och har använts i matlagning i över 5 000 år. Gräslök är rik på antioxidanter och kan ha positiva hälsoeffekter.",
     "placement": {
-      "plantHeading": "Ljusbehov",
+      "plantheading": "Ljusbehov",
       "short": "Ljust",
       "description": "Gräslök trivs bäst i full sol, men kan också växa i partiell skugga. Om den odlas inomhus, se till att den placeras på en plats med tillräckligt med ljus, eller använd en växtlampa om det behövs."
     },
     "temperature": {
-      "plantHeading": "Temperatur",
+      "plantheading": "Temperatur",
       "short": "18-24°C",
       "description": "Gräslök kan växa i olika temperaturer, men trivs bäst i temperaturer mellan 18-24 grader Celsius. Om det är för varmt eller för kallt kan tillväxten och kvaliteten på plantan påverkas."
     },
 
     "watering": {
-      "plantHeading": "Bevattning",
+      "plantheading": "Bevattning",
       "short": "Måttligt",
       "description": " Gräslök behöver regelbunden bevattning, men jorden bör inte vara för våt. Låt jorden torka ut något mellan bevattningarna för att undvika rotproblem. Gräslök behöver vanligtvis vattnas en gång i veckan, men detta kan variera beroende på faktorer som ljus, temperatur och storlek på krukan."
     },
 
     "fertilization": {
-      "plantHeading": "Näring",
+      "plantheading": "Näring",
       "short": "Regelbundet",
       "description": "Gräslök behöver regelbunden gödsling för att hålla sig frisk. Använd en balanserad gödsel en gång i månaden under växtsäsongen. Gräslök är inte särskilt krävande när det gäller näring, men en regelbunden tillförsel av gödsel kan hjälpa till att öka tillväxten och förbättra smaken på bladen."
     },
