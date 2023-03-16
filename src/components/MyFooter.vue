@@ -43,25 +43,6 @@
     </div>
     <div class="container p-3">
       <div class="row">
-        <!-- <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Om oss</h5>
-
-          <ul class="list-unstyled mb-0">
-            <li>
-              <a href="#!" class="text-dark">Om oss</a>
-            </li>
-            <li>
-              <a href="#!" class="text-dark">Vårt syfte</a>
-            </li>
-            <li>
-              <a href="#!" class="text-dark">blabla</a>
-            </li>
-            <li>
-              <a href="#!" class="text-dark">blablabla</a>
-            </li>
-          </ul>
-        </div> -->
-
         <div class="col-lg text-center">
           <h2 class="text-uppercase mb-0">Kontakt</h2>
 
@@ -149,7 +130,6 @@
   }
   li {
     font-size: small;
-    /* color: white; */
   }
   .terms-and-policy {
     color: white;
@@ -161,12 +141,21 @@
   h2 {
     font-weight: bolder;
     text-decoration: underline;
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: medium;
   }
 
   #shelf-img {
-    visibility: hidden;
-    height: 0;
-    width: 0;
+    width: 90px;
+    height: auto;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
   }
 
   .pop-up {
@@ -183,6 +172,11 @@
     z-index: 999;
     color: black;
   }
+  @media (min-width: 500px) {
+    #shelf-img {
+      width: 130px;
+    }
+  }
 
   @media (min-width: 688px) {
     .pop-up {
@@ -194,15 +188,7 @@
       margin-bottom: 0;
     }
     #shelf-img {
-      visibility: visible;
-      margin: 0;
-      width: 200px;
-      height: auto;
-      margin-bottom: 20px;
-      margin-left: 50px;
-      position: absolute;
-      bottom: 40px;
-      right: 40px;
+      width: 170px;
     }
 
     #shelf {
@@ -215,6 +201,15 @@
       justify-content: center;
       align-items: center;
       height: 70px;
+    }
+    h2 {
+      font-size: 25px;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    #shelf-img {
+      width: 200px;
     }
   }
 </style>

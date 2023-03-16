@@ -17,26 +17,32 @@
       this.getLocation()
     },
     methods: {
-      getLocation() {
-        navigator.geolocation.getCurrentPosition(({ coords }) => {
-          const { latitude, longitude } = coords
-          this.getWeatherData(latitude, longitude)
-        })
+      async getLocation() {
+        try {
+          navigator.geolocation.getCurrentPosition(({ coords }) => {
+            const { latitude, longitude } = coords
+            this.getWeatherData(latitude, longitude)
+          })
+        } catch (error) {
+          console.log(error)
+        }
       },
       async getWeatherData(latitude, longitude) {
-        await axios
-          .get(
+        try {
+          const response = await axios.get(
             `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&lang=sv,se&appid=522a9f3cd92ded5c0f211fd40fe17e5b`
           )
-          .then((response) => {
-            this.weather = response.data
 
-            const fahrenheit = this.weather.main.temp
-            const celsius = fahrenheit - 273.15
-            this.temp = celsius.toFixed(1)
-            this.img = this.weather.weather[0].icon
-            console.log(this.weather)
-          })
+          this.weather = response.data
+
+          const fahrenheit = this.weather.main.temp
+          const celsius = fahrenheit - 273.15
+          this.temp = celsius.toFixed(1)
+          this.img = this.weather.weather[0].icon
+          console.log(this.weather)
+        } catch (error) {
+          console.log(error)
+        }
       }
     }
   }

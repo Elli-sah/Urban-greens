@@ -64,21 +64,19 @@
           }
         })
       },
-      // Funktion för att visa info om varje ikon på varje blomma
+      // Funktion för att visa info om varje ikon för varje blomma
       openModal(modalInfo) {
         this.selectedPlant = this.plant
-        this.plantHeading = this.plant[modalInfo].title
+        this.plantHeading = this.plant[modalInfo].plantheading
         this.longDescription = this.plant[modalInfo].description
-        document.body.style.overflow = 'hidden'
       },
       // Funktion för att stänga informationsrutan
       closeModal() {
         this.selectedPlant = null
         this.NotLoggedIn = false
-        document.body.style.overflow = 'auto'
       }
     },
-    mounted() {
+    created() {
       this.axiosGetPlants()
     },
 
@@ -183,7 +181,7 @@
         </div>
         <ShowPlant
           v-if="selectedPlant"
-          :selected-plant="Placering"
+          :selected-plant="selectedPlant"
           :plant-heading="plantHeading"
           :long-description="longDescription"
           @close="closeModal"

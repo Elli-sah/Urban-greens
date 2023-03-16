@@ -41,7 +41,7 @@
           ],
           datasets: [
             {
-              label: 'Generellt Bevattnings-diagram för årets alla säsonger',
+              label: 'Generellt Bevattnings-diagram',
               backgroundColor: '#79B473',
               data: [1, 1.5, 2, 2.5, 2.5, 3, 3, 2.5, 2, 1.5, 1, 1]
             }
@@ -73,5 +73,11 @@
   }
 </script>
 <template>
-  <Bar :data="chartData" :options="options" />
+  <Bar id="chart" :data="chartData" :options="options" />
 </template>
+
+<style scoped>
+  #chart {
+    min-height: 200px;
+  }
+</style>

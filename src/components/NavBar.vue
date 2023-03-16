@@ -13,10 +13,6 @@
     },
     methods: {
       onClick() {
-        this.NotLoggedIn = false
-        // this.loggedInUser = false
-      },
-      handleLinkClicked() {
         this.visible = false
       },
       onLogoutClick() {
@@ -47,12 +43,73 @@
       '$route.params': {
         handler() {
           this.$route.path === '/plantlist'
+
           this.visible = false
         }
       }
     }
   }
 </script>
+
+<template>
+  <b-navbar id="navbar-container" toggleable="lg" fixed="top">
+    <div id="navbar" class="d-flex justify-content-between navbar">
+      <RouterLink to="/"
+        ><img
+          id="secondarylogo"
+          src="../../assets/logo-secondary.png"
+          alt="Primary logo"
+      /></RouterLink>
+
+      <RouterLink
+        v-if="isLoggedIn"
+        :to="`/profile/${loggedInUser.user}`"
+        class="navbar-brand-img d-lg-none"
+        ><img
+          id="windowsilllogo"
+          src="../../assets/plantplant.png"
+          alt="Window sill logo"
+        />{{ userFavorites.length }}</RouterLink
+      >
+
+      <b-navbar-toggle target="nav-collapse" />
+    </div>
+    <div id="nav-collapse-container">
+      <b-collapse id="nav-collapse" is-nav v-model="visible">
+        <b-navbar-nav id="navbar-desktop">
+          <b-nav-form>
+            <PlantSearch v-if="!isPlantList" @link-clicked="onClick" />
+          </b-nav-form>
+
+          <b-container>
+            <b-nav id="links" justify="end">
+              <b-nav-item @click="onClick" to="/">Hem</b-nav-item>
+              <b-nav-item @click="onClick" to="/plantlist/Alla_växter"
+                >Växtguide</b-nav-item
+              >
+
+              <b-nav-item
+                @click="onClick"
+                v-if="isLoggedIn"
+                :to="`/profile/${loggedInUser.user}`"
+                >Min fönsterbräda ({{ userFavorites.length }})</b-nav-item
+              >
+
+              <b-nav-item @click="onClick" to="/general_advice"
+                >Tips & råd</b-nav-item
+              >
+
+              <b-nav-item v-if="isLoggedIn" @click="onLogoutClick"
+                >Logga ut</b-nav-item
+              >
+              <b-nav-item v-else to="/login">Logga in / Skapa konto</b-nav-item>
+            </b-nav>
+          </b-container>
+        </b-navbar-nav>
+      </b-collapse>
+    </div>
+  </b-navbar>
+</template>
 
 <style lang="scss" scoped>
   #navbar-container {
@@ -133,80 +190,5 @@
       display: flex;
       flex-direction: row;
     }
-
-    // a:hover {
-    //   color: inherit;
-    // }
-
-    // .navbar-brand-img {
-    //   display: none;
-    // }
-
-    // .navbar-toggler[aria-expanded='false'] ~ .navbar-brand-img {
-    //   display: block;
-    // }
   }
 </style>
-
-<template>
-  <b-navbar id="navbar-container" toggleable="lg" fixed="top">
-    <div id="navbar" class="d-flex justify-content-between navbar">
-      <RouterLink to="/"
-        ><img
-          id="secondarylogo"
-          src="../../assets/logo-secondary.png"
-          alt="Primary logo"
-      /></RouterLink>
-
-      <RouterLink
-        v-if="isLoggedIn"
-        :to="`/profile/${loggedInUser.user}`"
-        class="navbar-brand-img d-lg-none"
-        ><img
-          id="windowsilllogo"
-          src="../../assets/plantplant.png"
-          alt="Window sill logo"
-        />{{ userFavorites.length }}</RouterLink
-      >
-
-      <b-navbar-toggle target="nav-collapse" />
-    </div>
-    <div id="nav-collapse-container">
-      <b-collapse id="nav-collapse" is-nav v-model="visible">
-        <b-navbar-nav id="navbar-desktop">
-          <b-nav-form>
-            <PlantSearch
-              v-if="!isPlantList"
-              @link-clicked="handleLinkClicked"
-            />
-          </b-nav-form>
-
-          <b-container>
-            <b-nav id="links" justify="end">
-              <b-nav-item @click="handleLinkClicked" to="/">Hem</b-nav-item>
-              <b-nav-item @click="handleLinkClicked" to="/plantlist/Alla_växter"
-                >Växtguide</b-nav-item
-              >
-
-              <b-nav-item
-                @click="handleLinkClicked"
-                v-if="isLoggedIn"
-                :to="`/profile/${loggedInUser.user}`"
-                >Min fönsterbräda ({{ userFavorites.length }})</b-nav-item
-              >
-
-              <b-nav-item @click="handleLinkClicked" to="/general_advice"
-                >Tips & råd</b-nav-item
-              >
-
-              <b-nav-item v-if="isLoggedIn" @click="onLogoutClick"
-                >Logga ut</b-nav-item
-              >
-              <b-nav-item v-else to="/login">Logga in / Skapa konto</b-nav-item>
-            </b-nav>
-          </b-container>
-        </b-navbar-nav>
-      </b-collapse>
-    </div>
-  </b-navbar>
-</template>
