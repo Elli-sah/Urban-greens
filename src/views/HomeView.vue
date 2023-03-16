@@ -17,12 +17,12 @@
           }
         }
       })
-    },
-    methods: {
-      EmptyFavorites() {
-        this.$store.commit('EmptyFavorites')
-      }
     }
+    // methods: {
+    //   EmptyFavorites() {
+    //     this.$store.commit('EmptyFavorites')
+    //   }
+    // }
   }
 </script>
 
@@ -46,7 +46,7 @@
         <button id="kom-igang" class="button">Kom igång</button>
       </RouterLink>
     </div>
-    <button @click="EmptyFavorites">Töm favoriter</button>
+    <!-- <button @click="EmptyFavorites">Töm favoriter</button> -->
 
     <PlantCategory />
   </div>
