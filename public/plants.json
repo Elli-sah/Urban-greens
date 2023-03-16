@@ -708,7 +708,7 @@
       "description": "Paradisträdet är giftigt för både människor och djur om det äts. Det innehåller ämnen som kan orsaka illamående, kräkningar och diarré om det förtärs i stora mängder. Därför bör paradisträdet placeras utom räckhåll för husdjur och små barn som kan vara benägna att stoppa saker i munnen. Om någon eller något skulle äta av växten och visa symptom på förgiftning, bör du söka medicinsk eller veterinär hjälp så snart som möjligt."
     },
     "difficulty": "Lätt",
-    "category": ["Suckulent"],
+    "category": ["Suckulent", "Gröna växter"],
     "image": [
       "/images/paradis.jpg",
       "/images/paradis1.jpg",
@@ -907,7 +907,7 @@
       "description": "Svärmors tunga är giftig för både människor och djur om den äts i stora mängder."
     },
     "difficulty": "Lätt",
-    "category": "Gröna",
+    "category": "Gröna växter",
     "image": [
       "/images/svärmorstunga.jpg",
       "/images/svärmorstunga1.jpg",
