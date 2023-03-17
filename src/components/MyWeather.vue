@@ -49,7 +49,7 @@
 </script>
 
 <template>
-  <div v-if="img !== null" id="weather-container">
+  <div v-if="img" id="weather-container">
     <p id="temp">{{ temp }}℃</p>
     <img :src="`http://openweathermap.org/img/wn/${img}.png`" />
   </div>
@@ -59,7 +59,7 @@
         Temperaturen hos dig är över 15℃ och sol... tänk på att vattna dina
         växter, och skydda dom från direkt solljus då!
       </p>
-      <p class="weather" v-if="temp < 5 && img">
+      <p class="weather" v-if="temp < 5">
         Temperaturen hos dig är under 5℃... tänk på att skydda dina växter från
         kalla luftdrag!
       </p>

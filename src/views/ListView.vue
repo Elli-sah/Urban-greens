@@ -26,9 +26,9 @@
             if (!this.searchText) {
               return true
             } else {
-              const lowerCaseName = plant.name.toLowerCase()
-              const lowerCaseSearchText = this.searchText.toLowerCase()
-              return lowerCaseName.includes(lowerCaseSearchText)
+              return plant.name
+                .toLowerCase()
+                .includes(this.searchText.toLowerCase())
             }
           })
         } else {
@@ -43,8 +43,7 @@
 
     data() {
       return {
-        category: 'all',
-
+        // category: 'all',
         result: [],
         searchText: '',
         notFound: false,
