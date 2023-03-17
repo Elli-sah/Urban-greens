@@ -8,13 +8,14 @@
     },
     computed: {
       slideText() {
+        // Visar olika text för varje slide
         switch (this.slide + 1) {
           case 1:
             return 'Navigera dig runt på sidan med hjälp av menyn'
           case 2:
             return 'I växtguiden kan du se alla växter. Här kan du enkelt lägga till växter på din fönsterbräda genom att klicka på den lilla krukan. Se mer information om växten genom att klicka på den'
           case 3:
-            return 'Det finns information om varje växt på dess specefika växtsida. Klickar du på ikonerna så kan du få ut en mer detaljerad beskrivning om specefik rubrik'
+            return 'Det finns information om varje växt på dess specifika växtsida. Klickar du på ikonerna så kan du få ut en mer detaljerad beskrivning om specifik rubrik'
           case 4:
             return 'På din fönsterbräda kan du hitta samlad information om dina växter. här får du även notiser och påminelser som ska hjälpa dig att ta hand om dina växter på bästa sätt'
           case 5:
@@ -22,7 +23,7 @@
           case 6:
             return 'Finns inte en växt med i vår växtgide kan du alltid lägga till din egen växt'
           case 7:
-            return 'På din fönsterbräda hittar du även din växtkalender, hös kan du lägga till när du senast vattnade och även skapa egena händelser genom att klicka på det datumet du vill hantera. klicka på en händelse för att se mer information om den.'
+            return 'På din fönsterbräda hittar du även din växtkalender, här kan du lägga till när du senast vattnade och även skapa egena händelser genom att klicka på det datumet du vill hantera. klicka på en händelse för att se mer information om den.'
           default:
             return ''
         }
