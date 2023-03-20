@@ -152,9 +152,7 @@
         this.latestWatered = sortedWater[0]
         if (this.latestWatered !== undefined) {
           this.date = moment(this.latestWatered.start)
-          this.diff = moment.duration(
-            moment().subtract(1, 'days').diff(this.date)
-          )
+          this.diff = moment.duration(moment().diff(this.date))
           this.$store.commit('updateDateDiff', this.diff.humanize())
         } else {
           this.$store.commit('emptyDateDiff')
