@@ -11,7 +11,7 @@
         loggedInUser: (state) => state.loggedInUser
       }),
       isLoggedIn() {
-        return !!this.loggedInUser
+        return !this.loggedInUser
       }
     }
   }
@@ -23,12 +23,8 @@
     <div id="box">
       <div id="info">
         <StepByStep />
-        <!-- <p class="text">
-        Få kontroll över ditt växtsamhälle! Ta hand om dina gröna vänner och se
-        dem blomstra med hjälp av vår app. Kontakta oss om du behöver hjälp.
-        Lycka till med dina växter!
-      </p> -->
-        <RouterLink v-if="!isLoggedIn" to="/login">
+
+        <RouterLink v-if="isLoggedIn" to="/login">
           <button id="komIgang" class="button">Logga in</button>
         </RouterLink>
       </div>

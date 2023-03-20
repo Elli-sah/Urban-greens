@@ -36,7 +36,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
   #more-info {
     display: flex;
     flex-direction: column;

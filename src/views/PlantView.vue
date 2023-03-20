@@ -117,7 +117,10 @@
             @mouseover="hover = true"
             @mouseleave="hover = false"
           >
-            <p v-show="poisonist">Denna växt är giftig</p>
+            <div v-show="poisonist" id="poison-container">
+              <p id="warning-text">Denna växt är giftig</p>
+              <i id="warning-icon" class="bi bi-exclamation-triangle" />
+            </div>
 
             <p id="description" v-if="hover" v-show="poisonist">
               {{ plant.poison.description }}
@@ -205,6 +208,22 @@
 </template>
 
 <style scoped>
+  #poison-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  #warning-icon {
+    margin: 2px 5px;
+    cursor: pointer;
+  }
+  #warning-text {
+    margin-bottom: 0;
+    cursor: pointer;
+  }
   #font-size {
     font-size: 25px;
   }

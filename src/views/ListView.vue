@@ -19,32 +19,18 @@
         loggedInUser: (state) => state.loggedInUser
       }),
       filteredPlants() {
-        //Filtrerar plantor efter kategori och namn
         const category = this.$route.params.category
-        if (category === 'Alla_växter') {
-          return this.result.filter((plant) => {
-            if (!this.searchText) {
-              return true
-            } else {
-              const lowerCaseName = plant.name.toLowerCase()
-              const lowerCaseSearchText = this.searchText.toLowerCase()
-              return lowerCaseName.includes(lowerCaseSearchText)
-            }
-          })
-        } else {
-          return this.result.filter(
-            (plant) =>
-              plant.category.includes(category) &&
-              plant.name.toLowerCase().includes(this.searchText.toLowerCase())
-          )
-        }
+        const filter = this.result.filter(
+          (plant) =>
+            (category === 'Alla_växter' || plant.category.includes(category)) &&
+            plant.name.toLowerCase().includes(this.searchText.toLowerCase())
+        )
+        return filter
       }
     },
 
     data() {
       return {
-        category: 'all',
-
         result: [],
         searchText: '',
         notFound: false,

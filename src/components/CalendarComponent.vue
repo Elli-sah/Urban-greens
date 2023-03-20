@@ -245,7 +245,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
   #input-box {
     height: 100px;
     display: flex;

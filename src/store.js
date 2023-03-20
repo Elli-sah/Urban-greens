@@ -73,6 +73,10 @@ const mutations = {
   removePlantTip(state, deletePlantTip) {
     state.plantTips[deletePlantTip.id].tips.splice(deletePlantTip.index, 1)
   },
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3fa1810b1478ac8054a1f1dae83f6316818e8cf5
   logutUser(state) {
     state.loggedInUser = ''
     state.dateDiff = ''
