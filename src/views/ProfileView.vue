@@ -29,13 +29,13 @@
       <MyWeather />
       <LastWatered />
     </div>
-    <div id="image-container">
+    <!-- <div id="image-container">
       <img
         id="window-image"
         src="../../assets/annie-spratt-S7viz8JWxwY-unsplash.jpg"
         alt="Fönsterbräda"
       />
-    </div>
+    </div> -->
 
     <div id="my-shelf-view">
       <MyShelf />
@@ -54,29 +54,29 @@
     height: 220px;
     margin: auto;
   }
-  #image-container {
+  /* #image-container {
     display: flex;
     width: 100%;
     margin: auto;
     background-color: white;
     border-radius: 5px;
-  }
+  } */
 
-  #window-image {
+  /* #window-image {
     margin: auto;
     padding: 10px;
     width: 100%;
     height: auto;
     object-fit: contain;
-  }
+  } */
 
   #my-shelf-view {
     margin-top: 50px;
   }
 
-  @media (min-width: 700px) {
+  /* @media (min-width: 700px) {
     #image-container {
       display: none;
     }
-  }
+  } */
 </style>

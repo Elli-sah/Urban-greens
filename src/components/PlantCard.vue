@@ -81,7 +81,7 @@
       @mouseout="showDescription = false"
       @mouseover="showDescription = true"
       @click="addPlant"
-      src="../../assets/icons 8/icons8-potted-plant-100.png"
+      src="../../assets/icons8/icons8-potted-plant-100.png"
       alt="potted-plant"
     />
     <p class="description" v-show="showDescription">Ställ på fönsterbrädan</p>
