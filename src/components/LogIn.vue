@@ -49,7 +49,6 @@
           this.users[this.userName] !== undefined &&
           this.users[this.userName].password === this.password
         ) {
-          console.log('hej')
           this.$store.commit('addLoggedInUser', this.userName)
           this.notifier.success(`Välkommen ${this.users[this.userName].name}!`)
           this.$router.push('/')
@@ -59,7 +58,6 @@
         ) {
           this.showWrongUser = true
         } else {
-          console.log('hejdå')
           this.showWrongUser = false
           this.showMessage = true
         }
