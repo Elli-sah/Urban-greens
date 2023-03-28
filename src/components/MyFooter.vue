@@ -44,14 +44,14 @@
     <div class="container p-3">
       <div class="row">
         <div class="col-lg text-center">
-          <h2 class="text-uppercase mb-0">Kontakt</h2>
+          <h2 class="text-uppercase mb-0">Skapad av</h2>
 
           <ul class="list-unstyled">
-            <li>UrbanGreens & co</li>
-            <li>0731234567</li>
-            <li>Urbangreens@gmail.com</li>
-            <li>Yadayadavägen 23</li>
-            <li>22243 Yada</li>
+            <li>Sanna Asp</li>
+            <li>Ellinor Sahlberg</li>
+            <li>Klara Bryntesson</li>
+            <li>Isabell Leoson</li>
+            <li>Tove Karlström</li>
           </ul>
         </div>
       </div>
@@ -117,7 +117,10 @@
       style="background-color: rgba(0, 0, 0, 0.2)"
     >
       © {{ currentYear }} Copyright:
-      <a class="text-light" href="#">UrbanGreens &co</a>
+      <a class="text-light" href="#"
+        >Sanna Asp, Ellinor Sahlberg, Klara Bryntesson, Isabell Leoson, Tove
+        Karlström
+      </a>
     </div>
   </footer>
 </template>

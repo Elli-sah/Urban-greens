@@ -11,7 +11,7 @@
         loggedInUser: (state) => state.loggedInUser
       }),
       isLoggedIn() {
-        return !this.loggedInUser
+        return this.loggedInUser
       }
     }
   }
@@ -24,7 +24,7 @@
       <div id="info">
         <StepByStep />
 
-        <RouterLink v-if="isLoggedIn" to="/login">
+        <RouterLink v-if="!isLoggedIn" to="/login">
           <button id="komIgang" class="button">Logga in</button>
         </RouterLink>
       </div>
