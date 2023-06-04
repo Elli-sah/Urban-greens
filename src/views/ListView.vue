@@ -18,6 +18,7 @@
       ...mapState({
         loggedInUser: (state) => state.loggedInUser
       }),
+      wishlist: (state) => state.wishlist,
       filteredPlants() {
         const category = this.$route.params.category
         const filter = this.result.filter(
@@ -25,7 +26,11 @@
             (category === 'Alla_växter' || plant.category.includes(category)) &&
             plant.name.toLowerCase().includes(this.searchText.toLowerCase())
         )
-        return filter
+        return filter.map((plant) => ({
+          ...plant,
+          isFavorite:
+            this.wishlist && this.wishlist.some((item) => item.id === plant.id)
+        }))
       }
     },
 

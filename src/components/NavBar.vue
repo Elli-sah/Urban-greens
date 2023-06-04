@@ -99,6 +99,10 @@
                 >Tips & råd</b-nav-item
               >
 
+              <b-nav-item @click="onClick" to="/wishlist"
+                >Önskelista</b-nav-item
+              >
+
               <b-nav-item v-if="isLoggedIn" @click="onLogoutClick"
                 >Logga ut</b-nav-item
               >
@@ -179,6 +183,7 @@
       display: flex;
       justify-content: space-around;
       width: 60%;
+      padding-left: 30px;
     }
     #nav-collapse {
       display: flex;

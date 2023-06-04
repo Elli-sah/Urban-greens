@@ -44,11 +44,20 @@ const state = {
 
   loggedInUser: '',
   dateDiff: '',
-  searchText: ''
+  searchText: '',
+  wishlist: []
 }
 
 const mutations = {
   RESTORE_MUTATION: vuexLocal.RESTORE_MUTATION,
+
+  [vuexLocal.RESTORE_MUTATION](state, savedState) {
+    vuexLocal.RESTORE_MUTATION(state, savedState)
+
+    if (!state.wishlist) {
+      state.wishlist = []
+    }
+  },
 
   setPlantTip(state, tipAndId) {
     let plantId = state.plantTips[tipAndId.id]
@@ -113,11 +122,31 @@ const mutations = {
   },
   emptyDateDiff(state) {
     state.dateDiff = ''
+  },
+  addToWishlist(state, plant) {
+    state.wishlist.push(plant)
+  },
+  removeFromWishlist(state, plant) {
+    const index = state.wishlist.findIndex((p) => p.id === plant.id)
+    if (index !== -1) {
+      state.wishlist.splice(index, 1)
+    }
   }
+
   // EmptyFavorites(state) {
   //   state.users[state.loggedInUser.user].favorites.length = 0
   // }
 }
+const actions = {
+  addToWishlistAction({ commit }, plant) {
+    commit('addToWishlist', plant)
+  },
+
+  removeFromWishlist({ commit }, plant) {
+    commit('removeFromWishlist', plant)
+  }
+}
+
 const plugins = [vuexLocal.plugin]
 
-export default createStore({ mutations, state, plugins, strict: true })
+export default createStore({ mutations, state, actions, plugins, strict: true })

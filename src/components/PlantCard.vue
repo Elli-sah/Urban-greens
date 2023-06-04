@@ -1,6 +1,7 @@
 <script>
   import { mapState } from 'vuex'
   import LogIn from './LogIn.vue'
+  import { mapActions } from 'vuex'
 
   export default {
     components: {
@@ -16,11 +17,15 @@
     data() {
       return {
         showModal: false,
-        Addedplant: false,
-        NotLoggedIn: false,
-        AlreadyAddedplant: false,
+        addedPlant: false,
+        notLoggedIn: false,
+        alreadyAddedPlant: false,
         showDescription: false,
-        modal: false
+        showDescriptionWish: false,
+        modal: false,
+        addToWishlist: false,
+        alreadyAddedToWishlist: false,
+        isInWishlist: false
       }
     },
     computed: {
@@ -41,31 +46,66 @@
           if (
             this.userFavorites.find((plant) => plant.name === this.plant.name)
           ) {
-            this.AlreadyAddedplant = true
+            this.alreadyAddedPlant = true
             setTimeout(() => {
-              this.AlreadyAddedplant = false
+              this.alreadyAddedPlant = false
             }, 3000)
           } else {
             this.$store.commit('addPlant', {
               user: this.loggedInUser.user,
               addplant: this.plant
             })
-            this.Addedplant = true
+            this.addedPlant = true
             setTimeout(() => {
-              this.Addedplant = false
+              this.addedPlant = false
             }, 3000)
           }
         } else {
-          // this.NotLoggedIn = true
           this.modal = true
         }
       },
-      onClick() {
-        this.NotLoggedIn = false
+
+      addPlantToWishlistFunc() {
+        if (this.loggedInUser !== '') {
+          if (
+            this.userFavorites.find((plant) => plant.name === this.plant.name)
+          ) {
+            this.alreadyAddedToWishlist = true
+            setTimeout(() => {
+              this.alreadyAddedToWishlist = false
+            }, 3000)
+          } else {
+            this.$store.commit('addToWishlist', {
+              user: this.loggedInUser.user,
+              plant: this.plant
+            })
+            this.addToWishlist = true
+            setTimeout(() => {
+              this.addToWishlist = false
+            }, 3000)
+          }
+        } else {
+          this.modal = true
+        }
       },
+
+      onClick() {
+        this.notLoggedIn = false
+      },
+
       closeModal() {
-        this.NotLoggedIn = false
-      }
+        this.notLoggedIn = false
+      },
+
+      addPlantToWishlist(plant) {
+        this.addToWishlistAction(plant)
+      },
+
+      removePlantFromWishlist(plant) {
+        this.removeFromWishlist(plant)
+      },
+
+      ...mapActions(['addToWishlistAction', 'removeFromWishlist'])
     }
   }
 </script>
@@ -76,34 +116,60 @@
       <img alt="plant.name" :src="plant.image[0]" />
       <h2>{{ plant.name }}</h2>
     </RouterLink>
-    <img
-      class="icon-image"
-      @mouseout="showDescription = false"
-      @mouseover="showDescription = true"
-      @click="addPlant"
-      src="../../assets/icons8/icons8-potted-plant-100.png"
-      alt="potted-plant"
-    />
-    <p class="description" v-show="showDescription">Ställ på fönsterbrädan</p>
+    <div class="icon-box-card">
+      <button v-if="isInWishlist" @click="removePlantFromWishlist(plant)">
+        Remove from Wishlist
+      </button>
+      <div class="wishlist-icon" v-else @click="addPlantToWishlist(plant)">
+        <i
+          class="bi bi-bookmark-heart"
+          @mouseout="showDescriptionWish = false"
+          @mouseover="showDescriptionWish = true"
+          @click="addPlantToWishlistFunc"
+        />
+        <p class="description2" v-show="showDescriptionWish">
+          Lägg till i önskelistan
+        </p>
+      </div>
+      <div class="popup-divs" v-show="addToWishlist">
+        <p class="paragraph added-paragraph">
+          {{ plant.name }} är tillagd på din Önskelista!
+        </p>
+      </div>
+      <div class="popup-divs" v-show="alreadyAddedToWishlist">
+        <p class="paragraph added-paragraph">
+          Du har redan lagt till {{ plant.name }} i din önskelista!
+        </p>
+      </div>
 
-    <div class="popup-divs" v-show="Addedplant">
-      <p class="paragraph added-paragraph">
-        {{ plant.name }} är tillagd på din fönsterbräda!
-      </p>
-    </div>
-    <div class="popup-divs" v-show="AlreadyAddedplant">
-      <p class="paragraph added-paragraph">
-        Du har redan lagt till {{ plant.name }} på din fönsterbräda!
-      </p>
-    </div>
-    <div>
-      <div id="login-div">
-        <div id="inlog-modal-div">
-          <b-modal hide-footer v-model="modal">
-            <h1>Du måste logga in först!</h1>
+      <img
+        class="icon-image"
+        @mouseout="showDescription = false"
+        @mouseover="showDescription = true"
+        @click="addPlant"
+        src="../../assets/icons8/icons8-potted-plant-100.png"
+        alt="potted-plant"
+      />
+      <p class="description" v-show="showDescription">Ställ på fönsterbrädan</p>
 
-            <LogIn />
-          </b-modal>
+      <div class="popup-divs" v-show="addedPlant">
+        <p class="paragraph added-paragraph">
+          {{ plant.name }} är tillagd på din fönsterbräda!
+        </p>
+      </div>
+      <div class="popup-divs" v-show="alreadyAddedPlant">
+        <p class="paragraph added-paragraph">
+          Du har redan lagt till {{ plant.name }} på din fönsterbräda!
+        </p>
+      </div>
+      <div>
+        <div id="login-div">
+          <div id="inlog-modal-div">
+            <b-modal hide-footer v-model="notLoggedIn">
+              <h1>Du måste logga in först!</h1>
+              <LogIn />
+            </b-modal>
+          </div>
         </div>
       </div>
     </div>
@@ -111,6 +177,16 @@
 </template>
 
 <style lang="scss" scoped>
+  .icon-box-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .wishlist-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 200px;
+  }
   .plant-box {
     position: relative;
     width: 270px;
@@ -149,6 +225,16 @@
     position: absolute;
     top: 70%;
     left: 80%;
+    padding: 10px;
+    font-size: 0.6rem;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.1);
+  }
+
+  .description2 {
+    position: absolute;
+    top: 70%;
+    right: 80%;
     padding: 10px;
     font-size: 0.6rem;
     background-color: white;

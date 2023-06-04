@@ -7,6 +7,7 @@ import ProfileView from './views/ProfileView.vue'
 import LoginView from './views/LoginView.vue'
 import GetStartedView from './views/GetStartedView.vue'
 import GeneralAdviceView from './views/GeneralAdviceView.vue'
+import WishList from './views/WishList.vue'
 
 export default createRouter({
   history: createWebHashHistory(),
@@ -39,6 +40,10 @@ export default createRouter({
     {
       component: GeneralAdviceView,
       path: '/general_advice'
+    },
+    {
+      component: WishList,
+      path: '/wishlist'
     }
   ],
   scrollBehavior() {
