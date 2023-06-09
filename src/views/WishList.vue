@@ -1,7 +1,12 @@
 <script>
+  import LogIn from '../components/LogIn.vue'
   import { mapState } from 'vuex'
 
   export default {
+    components: {
+      LogIn
+    },
+
     props: {
       plant: {
         type: Object,
@@ -26,14 +31,23 @@
       })
     },
 
+    mounted() {
+      this.logImageUrls()
+    },
+
     methods: {
+      logImageUrls() {
+        this.filteredPlants.forEach((plant) => {
+          console.log(plant.image)
+        })
+      },
       addPlant(plant) {
         if (this.loggedInUser !== '') {
-          if (this.userFavorites.find((p) => p.name === plant.name)) {
+          if (this.userFavorites.find((p) => p.name === this.plant.name)) {
             this.alreadyAddedPlant = plant
-            this.AlreadyAddedplant = true
+            this.alreadyAddedplant = true
             setTimeout(() => {
-              this.AlreadyAddedplant = false
+              this.alreadyAddedplant = false
             }, 3000)
           } else {
             this.$store.commit('addPlant', {
@@ -41,9 +55,9 @@
               addplant: plant
             })
             this.addedPlant = plant
-            this.Addedplant = true
+            this.addedplant = true
             setTimeout(() => {
-              this.Addedplant = false
+              this.addedplant = false
             }, 3000)
           }
         } else {
@@ -143,7 +157,7 @@
 
         <div
           class="popup-divs"
-          v-show="addedPlant && wishlistPlant === addedPlant"
+          v-show="addedPlant && wishlistPlant.id === addedPlant.id"
         >
           <p class="paragraph added-paragraph">
             {{ wishlistPlant.name }} är tillagd på din fönsterbräda!
@@ -151,7 +165,9 @@
         </div>
         <div
           class="popup-divs"
-          v-show="alreadyAddedPlant && wishlistPlant === alreadyAddedPlant"
+          v-show="
+            alreadyAddedPlant && wishlistPlant.id === alreadyAddedPlant.id
+          "
         >
           <p class="paragraph added-paragraph">
             Du har redan lagt till {{ wishlistPlant.name }} på din fönsterbräda!

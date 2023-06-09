@@ -99,7 +99,7 @@
                 >Tips & råd</b-nav-item
               >
 
-              <b-nav-item @click="onClick" to="/wishlist"
+              <b-nav-item v-if="isLoggedIn" @click="onClick" to="/wishlist"
                 >Önskelista</b-nav-item
               >
 

@@ -61,7 +61,7 @@
             }, 3000)
           }
         } else {
-          this.modal = true
+          this.notLoggedIn = true
         }
       },
 
@@ -85,15 +85,23 @@
             }, 3000)
           }
         } else {
-          this.modal = true
+          this.showLoginModal()
         }
       },
 
-      onClick() {
-        this.notLoggedIn = false
+      // onClick() {
+      //   this.notLoggedIn = false
+      // },
+
+      // closeModal() {
+      //   this.notLoggedIn = false
+      // },
+
+      showLoginModal() {
+        this.notLoggedIn = true
       },
 
-      closeModal() {
+      hideLoginModal() {
         this.notLoggedIn = false
       },
 
@@ -165,7 +173,7 @@
       <div>
         <div id="login-div">
           <div id="inlog-modal-div">
-            <b-modal hide-footer v-model="notLoggedIn">
+            <b-modal hide-footer v-model="notLoggedIn" @hide="hideLoginModal">
               <h1>Du måste logga in först!</h1>
               <LogIn />
             </b-modal>
